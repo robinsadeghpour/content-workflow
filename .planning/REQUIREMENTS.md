@@ -104,13 +104,43 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| (populated by roadmapper) | | |
+| INFR-01 | Phase 1 | Pending |
+| INFR-02 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Pending |
+| INFR-04 | Phase 1 | Pending |
+| VOIC-01 | Phase 1 | Pending |
+| VOIC-02 | Phase 1 | Pending |
+| VOIC-03 | Phase 1 | Pending |
+| DISC-01 | Phase 2 | Pending |
+| DISC-02 | Phase 2 | Pending |
+| DISC-03 | Phase 2 | Pending |
+| DISC-04 | Phase 2 | Pending |
+| TIKT-01 | Phase 3 | Pending |
+| TIKT-02 | Phase 3 | Pending |
+| TIKT-03 | Phase 3 | Pending |
+| TIKT-04 | Phase 3 | Pending |
+| TIKT-05 | Phase 3 | Pending |
+| TIKT-06 | Phase 3 | Pending |
+| TIKT-07 | Phase 3 | Pending |
+| LINK-01 | Phase 3 | Pending |
+| LINK-02 | Phase 3 | Pending |
+| LINK-03 | Phase 3 | Pending |
+| LINK-04 | Phase 3 | Pending |
+| VOIC-04 | Phase 3 | Pending |
+| PUBL-01 | Phase 4 | Pending |
+| PUBL-02 | Phase 4 | Pending |
+| PUBL-03 | Phase 4 | Pending |
+| PUBL-04 | Phase 4 | Pending |
+| PUBL-05 | Phase 4 | Pending |
+| ANLY-01 | Phase 4 | Pending |
+| ANLY-02 | Phase 4 | Pending |
+| ANLY-03 | Phase 4 | Pending |
 
 **Coverage:**
-- v1 requirements: 25 total
-- Mapped to phases: 0
-- Unmapped: 25
+- v1 requirements: 31 total
+- Mapped to phases: 31
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-04-08*
-*Last updated: 2026-04-08 after initial definition*
+*Last updated: 2026-04-08 after roadmap creation*

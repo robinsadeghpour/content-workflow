@@ -1,0 +1,80 @@
+# Roadmap: Content Workflow
+
+## Overview
+
+Four phases turn a collection of mature specialist skills into a cohesive end-to-end pipeline. Phase 1 wires up the infrastructure and voice profile so every downstream phase has a stable foundation and authentic output. Phase 2 builds the automated discovery and morning review loop. Phase 3 assembles the full content generation layer — TikTok/Instagram slideshows, LinkedIn formats, German localization, and the critic agent. Phase 4 closes the loop with publishing approval, Postiz scheduling across all channels, and the performance feedback cycle.
+
+## Phases
+
+**Phase Numbering:**
+- Integer phases (1, 2, 3): Planned milestone work
+- Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
+
+Decimal phases appear between their surrounding integers in numeric order.
+
+- [ ] **Phase 1: Foundation & Voice** - Infrastructure skeleton, data directory, CLI scaffolding, and Robin's voice profile
+- [ ] **Phase 2: Discovery Pipeline** - Daily pulse cron, idea backlog, and morning batch review workflow
+- [ ] **Phase 3: Content Generation** - TikTok/Instagram slideshows, LinkedIn formats, German localization, and critic agent
+- [ ] **Phase 4: Publishing & Analytics** - Approval gate, Postiz scheduling across all platforms, and performance feedback loop
+
+## Phase Details
+
+### Phase 1: Foundation & Voice
+**Goal**: The project infrastructure is in place and every AI-generated draft can be filtered through Robin's authentic voice
+**Depends on**: Nothing (first phase)
+**Requirements**: INFR-01, INFR-02, INFR-03, INFR-04, VOIC-01, VOIC-02, VOIC-03
+**Success Criteria** (what must be TRUE):
+  1. A unified `data/` directory exists and all pipeline state (ideas, drafts, performance) writes there without conflicts
+  2. All pipeline interactions are accessible via Claude Code CLI slash commands with no manual file navigation required
+  3. Subagent invocations can run in parallel (multiple platform drafts simultaneously without blocking)
+  4. The cron skeleton is registered and fires at configured times (6 AM pulse, 6 PM perf-check)
+  5. A voice profile built from 50+ real Robin posts exists per platform — LinkedIn formal-authentic, TikTok/Instagram casual — and the humanizer correctly applies it to a sample AI-generated draft
+**Plans**: TBD
+
+### Phase 2: Discovery Pipeline
+**Goal**: Topics flow automatically into a managed backlog and Robin can review and prioritize them in a single morning CLI session
+**Depends on**: Phase 1
+**Requirements**: DISC-01, DISC-02, DISC-03, DISC-04
+**Success Criteria** (what must be TRUE):
+  1. The daily-pulse cron runs automatically and populates the backlog with scored, deduplicated AI/tech topics from YouTube, X, TikTok, web, and changelogs
+  2. Robin can run a single CLI command in the morning and see the top ideas with KEEP/SKIP/STAR decisions — no manual file editing required
+  3. Transcript extraction from YouTube and TikTok URLs works and the output is available for content generation
+  4. The backlog persists correctly across days with no duplicate topics appearing in review
+**Plans**: TBD
+
+### Phase 3: Content Generation
+**Goal**: A selected topic produces platform-native draft content for all four channels (TikTok EN, TikTok DE, Instagram, LinkedIn) with Robin's voice applied and a critic review completed
+**Depends on**: Phase 2
+**Requirements**: TIKT-01, TIKT-02, TIKT-03, TIKT-04, TIKT-05, TIKT-06, TIKT-07, LINK-01, LINK-02, LINK-03, LINK-04, VOIC-04
+**Success Criteria** (what must be TRUE):
+  1. A TikTok/Instagram slideshow (hook → content slides → CTA) renders with correct text overlays, safe zones, and real visuals sourced from the photo library or AI generation fallback
+  2. TikTok EN content is ready to publish and TikTok DE is a properly localized version of the same master (not a direct translation — tone-adapted)
+  3. Instagram carousel reuses the TikTok slide format with no extra production step
+  4. LinkedIn produces the correct format for the content type: PDF slide carousel using Robin's template for tutorial/listicle topics, standalone text for opinion/hot-take topics, infographic for data topics, personal post for founder notes
+  5. A critic agent has reviewed every draft for voice authenticity and brand alignment before Robin sees it — Robin reviews critic-approved drafts only
+**Plans**: TBD
+**UI hint**: yes
+
+### Phase 4: Publishing & Analytics
+**Goal**: Approved content reaches all platforms via Postiz on schedule, and daily performance data feeds back into the discovery weighting so the system improves over time
+**Depends on**: Phase 3
+**Requirements**: PUBL-01, PUBL-02, PUBL-03, PUBL-04, PUBL-05, ANLY-01, ANLY-02, ANLY-03
+**Success Criteria** (what must be TRUE):
+  1. No post can reach Postiz scheduling without Robin's explicit approval — rejected drafts stay in draft state
+  2. Approved posts are scheduled to LinkedIn, TikTok EN, TikTok DE, and Instagram via Postiz with correct timing
+  3. Robin can see a per-platform review of content with humanizer diff (before/after voice pass) before approving
+  4. The end-of-day perf-check cron pulls impression data from Postiz and persists it to performance history
+  5. Topic and format weighting in the discovery layer updates based on performance results — high-performing topics surface more often
+**Plans**: TBD
+
+## Progress
+
+**Execution Order:**
+Phases execute in numeric order: 1 → 2 → 3 → 4
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 1. Foundation & Voice | 0/TBD | Not started | - |
+| 2. Discovery Pipeline | 0/TBD | Not started | - |
+| 3. Content Generation | 0/TBD | Not started | - |
+| 4. Publishing & Analytics | 0/TBD | Not started | - |
