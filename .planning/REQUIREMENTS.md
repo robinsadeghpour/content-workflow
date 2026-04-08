@@ -56,8 +56,8 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **INFR-01**: Unified data directory structure for all pipeline state (ideas, drafts, performance)
 - [x] **INFR-02**: All interaction via Claude Code CLI slash commands
-- [ ] **INFR-03**: Parallel subagent execution for multi-platform content generation
-- [ ] **INFR-04**: Cron automation for daily pulse and performance checks
+- [x] **INFR-03**: Parallel subagent execution for multi-platform content generation
+- [x] **INFR-04**: Cron automation for daily pulse and performance checks
 
 ## v2 Requirements
 
@@ -106,8 +106,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 |-------------|-------|--------|
 | INFR-01 | Phase 1 | Complete |
 | INFR-02 | Phase 1 | Complete |
-| INFR-03 | Phase 1 | Pending |
-| INFR-04 | Phase 1 | Pending |
+| INFR-03 | Phase 1 | Complete |
+| INFR-04 | Phase 1 | Complete |
 | VOIC-01 | Phase 1 | Pending |
 | VOIC-02 | Phase 1 | Pending |
 | VOIC-03 | Phase 1 | Pending |
