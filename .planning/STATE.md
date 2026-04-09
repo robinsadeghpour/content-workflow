@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 04-02-PLAN.md
-last_updated: "2026-04-09T17:09:18.235Z"
+stopped_at: Completed 04-03-PLAN.md
+last_updated: "2026-04-09T17:37:48.311Z"
 last_activity: 2026-04-09
 progress:
   total_phases: 4
   completed_phases: 4
-  total_plans: 11
-  completed_plans: 11
+  total_plans: 12
+  completed_plans: 12
   percent: 100
 ---
 
@@ -26,7 +26,7 @@ See: .planning/PROJECT.md (updated 2026-04-08)
 ## Current Position
 
 Phase: 04 (publishing-analytics) — EXECUTING
-Plan: 2 of 2
+Plan: 2 of 3
 Status: Ready to execute
 Last activity: 2026-04-09
 
@@ -63,6 +63,7 @@ Progress: [░░░░░░░░░░] 0%
 | Phase 03-content-generation P03 | 20 | 1 tasks | 1 files |
 | Phase 03-content-generation P04 | 15 | 2 tasks | 4 files |
 | Phase 04-publishing-analytics P02 | 10 | 2 tasks | 5 files |
+| Phase 04-publishing-analytics P03 | 8 | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -96,6 +97,8 @@ Recent decisions affecting current work:
 - [Phase 04-publishing-analytics]: Sequential analytics pull in perf-check.js to respect Postiz 30 req/hr rate limit
 - [Phase 04-publishing-analytics]: Performance record ID = draft_id + YYYY-MM-DD for idempotent daily upserts via ON CONFLICT
 - [Phase 04-publishing-analytics]: Multiplier formula: clamp(avg_score / global_avg_score, 0.7, 1.5) with config override support
+- [Phase 04-publishing-analytics]: original_text not truncated in --list output so SKILL.md can show full before/after diff
+- [Phase 04-publishing-analytics]: Idempotency via SELECT-then-UPDATE in apply-critic.js protects true original on re-runs
 
 ### Pending Todos
 
@@ -109,6 +112,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-09T17:09:18.232Z
-Stopped at: Completed 04-02-PLAN.md
+Last session: 2026-04-09T17:37:48.308Z
+Stopped at: Completed 04-03-PLAN.md
 Resume file: None
