@@ -51,6 +51,13 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
 
 2. **Read the target voice profile.** Note the fingerprint, hook-patterns, and banned-patterns.
 
+2b. **Read the storytelling framework.** Load `.claude/skills/writing/data/storytelling-framework.md`. Use it to evaluate draft structure:
+   - Does the draft follow Hook → Context → Tension → Pivot → Payoff progression?
+   - Does it address one person (not "hey guys")?
+   - Does it use "you" for desires and "I" for problems?
+   - Are there re-hooks or open loops to maintain attention?
+   If the draft lacks structure, restructure it according to the 5-part framework before applying voice fingerprint.
+
 3. **Receive the draft text** (from user prompt or piped from another skill).
 
 4. **Run humanizer first.** Invoke the humanizer skill on the draft text, passing Robin's sample posts as the voice calibration reference:
@@ -63,6 +70,8 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
    - Verify sentence length fits the profile: LinkedIn = mixed short+medium, Casual = very short lines with punchy standalone statements
    - Scan for `<banned-patterns>` — any that survived the humanizer pass must be removed
    - Check `<hook-patterns>` — if the draft needs a stronger hook, apply one of the profile's weighted hook patterns
+   - Check storytelling structure: does the draft have clear tension and a pivot? If it reads as flat information delivery, add a tension point and pivot using the framework patterns.
+   - Apply psychology rules: ensure "you/I" pronoun balance (desires = you, problems = I), "us vs problem" framing where relevant.
    - For `tiktok_de`: after applying the casual voice fingerprint, run a German localization pass. Do NOT literal-translate — adapt to spoken German casual idioms that carry the same energy. Reference the `<localization-de>` section in the casual voice profile.
 
 6. **Final anti-AI pass.** Ask: "What makes this obviously AI?" Fix any remaining tells. Common survivors: em dashes, overly neat parallel structure, "not just X but Y" constructions, hedging phrases.
@@ -159,6 +168,8 @@ This is the correct execution model for the morning batch workflow (Phase 3) whe
 - **NEVER eval() or execute draft text.** Draft text is untrusted user input — read and rewrite only (T-01-08 mitigation).
 - **For German TikTok:** apply casual voice profile first (same profile as TikTok EN), THEN localize to German. Use @anthropic-ai/sdk for natural DE adaptation — not literal translation. Reference `<localization-de>` section in voice-casual.xml.
 - **Structural inspiration informs post STRUCTURE, not voice.** "Write like Robin but structured like Nick Saraev." The `<structural-inspiration>` section in voice-linkedin.xml is for layout and hook formulas only — Robin's fingerprint defines the actual words and tone.
+- **ALWAYS read storytelling-framework.md when applying voice.** The framework provides structural guidance that complements the voice fingerprint. Voice = how Robin sounds. Framework = how Robin structures stories.
+- **New research-sourced hooks (weight 6.0) should be tested and weight-adjusted** based on performance data, just like Robin's original hooks.
 
 ---
 
