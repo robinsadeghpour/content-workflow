@@ -259,7 +259,7 @@ function scoreIdea(idea) {
 ```javascript
 // Source: date-fns 4.x docs pattern [ASSUMED — date-fns TZ docs not re-verified in session]
 const { format, addDays, setHours, setMinutes, isBefore } = require('date-fns');
-// Note: date-fns 4.x drops toZonedTime/fromZonedTime — use date-fns-tz for TZ handling
+// date-fns 4.x uses @date-fns/tz package with TZDate class for timezone handling
 
 const PLATFORM_DEFAULTS = require('../config/schedule-defaults.json');
 // { linkedin: { hour: 9, minute: 0 }, tiktok_en: { hour: 12, minute: 0 }, ... }
@@ -276,11 +276,11 @@ function nextSlotForPlatform(platform) {
 ```
 
 **Important:** `date-fns` alone does not handle timezone conversion. For CET/Europe/Berlin, the options are:
-1. Use `date-fns-tz` (separate package, ~50K weekly downloads) for `toZonedTime`/`fromZonedTime`.
+1. Use `@date-fns/tz` (official date-fns timezone package, v1.4.1) with `TZDate` class — the date-fns 4.x recommended approach.
 2. Use Node's built-in `Intl.DateTimeFormat` with `timeZone: 'Europe/Berlin'` for display only.
 3. Store defaults as UTC offsets (CET = UTC+1, CEST = UTC+2) and compute manually.
 
-**Recommendation:** Install `date-fns-tz` alongside `date-fns` for clean timezone handling. [ASSUMED — not verified against date-fns 4.x changelog in this session]
+**Recommendation:** Install `@date-fns/tz` alongside `date-fns` for clean timezone handling. `TZDate` creates timezone-aware Date objects that work seamlessly with all date-fns functions. [VERIFIED: @date-fns/tz@1.4.1 confirmed on npm registry, date-fns 4.x constants.d.ts references TZDate from @date-fns/tz]
 
 ### Anti-Patterns to Avoid
 
@@ -539,28 +539,32 @@ function uploadMediaForDraft(draft) {
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Postiz Auth Status**
+1. **Postiz Auth Status** — RESOLVED
    - What we know: `postiz auth:status` could not be run (CLI not globally installed)
    - What's unclear: Whether Robin's Postiz account is authenticated on this machine and whether integration IDs are configured
    - Recommendation: Wave 0 task must verify auth and populate integration IDs into `config/schedule-defaults.json` before any scheduling can proceed. Block the rest of the wave on this.
+   - **RESOLVED:** Handled by `user_setup` block in 04-01-PLAN.md. Robin runs `postiz integrations:list` during setup and populates `config/schedule-defaults.json` with integration IDs.
 
-2. **TikTok Slideshow as Postiz Post Type**
+2. **TikTok Slideshow as Postiz Post Type** — RESOLVED
    - What we know: Postiz TikTok support accepts video via verified CDN URLs. The SKILL.md shows TikTok settings with `privacy/duet/stitch` flags.
    - What's unclear: TikTok slideshows (multiple images, no video) may require different handling than video posts. The existing `tiktok-slideshows` skill documents "Upload plain photos via Postiz, send captions separately for manual text addition in TikTok app."
    - Risk: TikTok's slideshow format (multiple images + text per slide) may not be fully automatable via Postiz — the caption goes to Postiz but slide text is added manually in the TikTok app. [ASSUMED — from SKILL.md description, not tested]
    - Recommendation: Phase 4 should handle TikTok as "schedule caption + upload images" and note in the approval flow that slide text must be added in-app.
+   - **RESOLVED:** approve-draft.js schedules TikTok as "upload images + schedule caption." The /approve SKILL.md notes that slide text must be added in-app after publishing.
 
-3. **Integration ID for TikTok DE (Separate Account)**
+3. **Integration ID for TikTok DE (Separate Account)** — RESOLVED
    - What we know: Robin has TikTok EN and TikTok DE as separate accounts, both connected to Postiz.
    - What's unclear: Whether these appear as separate integrations in `postiz integrations:list` or require settings to differentiate them.
    - Recommendation: Run `postiz integrations:list` as Wave 0 step and document both TikTok integration IDs.
+   - **RESOLVED:** Handled by `user_setup` block in 04-01-PLAN.md. Robin runs `postiz integrations:list` during setup and copies both TikTok EN and TikTok DE integration IDs into `config/schedule-defaults.json`.
 
-4. **`topic_category` Column Decision**
+4. **`topic_category` Column Decision** — RESOLVED
    - What we know: The ideas table has `source_type` (youtube/tiktok/x/changelog) but not a content-level topic category. D-09 says feedback tracks "topic category AND format type."
    - What's unclear: Whether `source_type` is sufficient as a topic proxy or whether a separate `topic_category` needs deriving from title keywords.
    - Recommendation: Use `source_type` as v1 topic proxy. If Robin finds it too coarse after a week, add a derived `topic_category` column populated by the same angle-detection heuristic from `/review`.
+   - **RESOLVED:** Plan uses `source_type` from ideas table as topic proxy in `apply-performance-weights.js`. Additionally, `topic_category` column is added to drafts table via init-db.js for future richer categorization. Performance weights are keyed by `by_source_type` (topic) and `by_format` (visual_approach).
 
 ---
 
@@ -569,7 +573,7 @@ function uploadMediaForDraft(draft) {
 | # | Claim | Section | Risk if Wrong |
 |---|-------|---------|---------------|
 | A1 | TikTok slideshows schedule as image uploads + caption via Postiz (slide text added manually in TikTok app) | Open Questions #2 | If Postiz supports native slideshow scheduling, the approval flow could be simplified |
-| A2 | `date-fns-tz` is needed alongside `date-fns` 4.x for Europe/Berlin timezone handling | Architecture Patterns Pattern 5 | date-fns 4.x may have internalized timezone support — check changelog before installing |
+| A2 | `@date-fns/tz` (not `date-fns-tz`) is the correct timezone package for date-fns 4.x | Architecture Patterns Pattern 5 | RESOLVED: @date-fns/tz@1.4.1 verified on npm, provides TZDate class referenced by date-fns 4.x |
 | A3 | Performance multiplier reading in scorer.js via a flat JSON file is safe across concurrent pulse runs | Architecture Patterns Pattern 4 | If pulse runs while perf-check is writing the file, a partial read could corrupt scoring. Low risk given single-user, daily cadence. |
 | A4 | Source_type is an adequate proxy for topic_category in performance weighting v1 | Open Questions #4 | Could result in coarse feedback signal (all youtube content treated as same "topic") |
 
@@ -613,7 +617,7 @@ function uploadMediaForDraft(draft) {
 - Node.js 24.12.0 confirmed on machine [VERIFIED: node --version]
 
 ### Tertiary (LOW confidence)
-- date-fns-tz timezone handling claim [ASSUMED — not verified against date-fns 4.x changelog]
+- @date-fns/tz timezone handling [VERIFIED: @date-fns/tz@1.4.1 confirmed on npm, TZDate referenced in date-fns 4.x constants.d.ts]
 - TikTok slideshow posting behavior via Postiz [ASSUMED — from SKILL.md description, not empirically tested]
 
 ---
