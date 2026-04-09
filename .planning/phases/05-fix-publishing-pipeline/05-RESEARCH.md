@@ -201,17 +201,11 @@ if (missing.length) {
 | A1 | `transitionDraft()` is not called by `apply-critic.js` — it writes status directly via `db.prepare().run()` | Common Pitfalls / Pitfall 2 | If `transitionDraft()` IS called somewhere in `apply-critic.js`, the `'generated' → 'critic_failed'` transition gap is an active bug, not just a map completeness issue. Impact: low — source was read fully and no call to `transitionDraft` was found. [VERIFIED: scripts/apply-critic.js — direct SQL only] |
 | A2 | No rows with `status = 'critic-approved'` (hyphen) exist in the live `content.db` at this moment | Common Pitfalls / Pitfall 1 | If hyphenated rows exist from earlier test runs, a data migration is needed alongside the code fix. Impact: medium — easy to detect with one SELECT before fix. |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Postiz integration IDs**
-   - What we know: All 4 platforms have `"integration_id": "FILL_AT_SETUP"` in `config/schedule-defaults.json`
-   - What's unclear: Whether Robin has gone through Postiz dashboard to connect the accounts and obtain these IDs
-   - Recommendation: Plan must include a verification task that detects `FILL_AT_SETUP` and surfaces the gap clearly before attempting to schedule
+1. **Postiz integration IDs** -- RESOLVED by Plan 05-01: `user_setup` frontmatter declares the config requirement, and Task 2 Step 3 detects `FILL_AT_SETUP` values and surfaces the gap before scheduling is attempted.
 
-2. **Postiz CLI availability (`npx postiz upload` / `npx postiz posts:create`)**
-   - What we know: `approve-draft.js` uses `spawnSync('npx', ['postiz', 'upload', ...])` and `spawnSync('npx', ['postiz', 'posts:create', ...])`; `@postiz/node@1.0.8` is in the stack
-   - What's unclear: Whether `@postiz/node` exposes these CLI commands via `npx` or whether it is a programmatic-only SDK; `spawnSync('npx', ['postiz', ...])` requires a `postiz` CLI binary in PATH or as a local bin
-   - Recommendation: The plan should include a smoke-test task: `npx postiz --help` to confirm the CLI is available before Robin attempts a real schedule. If the CLI is not available, the scheduling calls will always fail with `spawnSync` errors regardless of status fix.
+2. **Postiz CLI availability (`npx postiz upload` / `npx postiz posts:create`)** -- RESOLVED by Plan 05-01 Task 2 Step 4: smoke-tests `npx postiz --help` and documents whether the CLI binary is available. If unavailable, the finding is recorded in the summary so Robin knows scheduling calls will fail regardless of the status fix.
 
 ## Environment Availability
 
