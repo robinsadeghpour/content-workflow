@@ -61,6 +61,13 @@ db.exec(`
   );
 `);
 
+// Phase 2: add transcript column to ideas table (idempotent)
+try {
+  db.exec('ALTER TABLE ideas ADD COLUMN transcript TEXT');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
 // Verify tables exist
 const tables = db.prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name").all();
 console.log('content.db initialized at:', DB_PATH);
