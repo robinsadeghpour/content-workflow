@@ -94,6 +94,13 @@ try {
   if (!err.message.includes('duplicate column')) throw err;
 }
 
+// Phase 4 gap closure: store pre-humanizer content for before/after diff (PUBL-05)
+try {
+  db.exec('ALTER TABLE drafts ADD COLUMN original_content TEXT');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
 // Verify tables exist
 const tables = db.prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name").all();
 console.log('content.db initialized at:', DB_PATH);
