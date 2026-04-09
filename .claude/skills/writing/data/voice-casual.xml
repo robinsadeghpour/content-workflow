@@ -35,6 +35,51 @@
     <hook weight="7.5" source="robin" pattern="imagine this: [aspirational scenario for audience]">
       <example>imagine this: you get a macbook, no job, you're broke — you have 30 days to make $1,000 online — what's your move?</example>
     </hook>
+
+    <hook weight="6.0" source="research" category="lesson">
+      <example>this mistake cost me months of progress.</example>
+      <example>the best advice i ever ignored… and why i regret it.</example>
+      <example>one decision changed everything for me.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="cliffhanger">
+      <example>i wasn't ready for what they said next.</example>
+      <example>little did i know, this would change everything.</example>
+      <example>nobody warned me about this part.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="emotional">
+      <example>if you've ever felt like giving up, this is for you.</example>
+      <example>this one's personal.</example>
+      <example>i didn't grow up with money or connections. but i had this.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="controversial">
+      <example>i know i'll get hate for saying this, but…</example>
+      <example>unpopular opinion coming in.</example>
+      <example>i don't follow the 'rules,' and it's the best decision i ever made.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="intrigue">
+      <example>i wasn't supposed to tell this story… but here we are.</example>
+      <example>nobody's talking about this.</example>
+      <example>if you had told me this a year ago, i would've laughed.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="trigger-phrase">
+      <example>nobody mentions this.</example>
+      <example>i wish i knew this earlier.</example>
+      <example>pause for a second.</example>
+      <example>let me save you hours.</example>
+      <example>i just figured this out.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="parameterized">
+      <example>[time] of [niche] in 60 seconds</example>
+      <example>one [niche] mistake i made when i was [age]</example>
+      <example>i tried [blank] for [days] and here's what happened</example>
+      <example>when [bad event], here's the one thing that saved me</example>
+    </hook>
   </hook-patterns>
 
   <localization-de note="German TikTok uses this same casual profile with DE localization on top">

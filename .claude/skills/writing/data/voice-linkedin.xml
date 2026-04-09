@@ -38,9 +38,43 @@
       <example>It's happening.</example>
       <example>This makes me unbelievably happy.</example>
     </hook>
+
+    <hook weight="6.0" source="research" category="lesson">
+      <example>This mistake cost me [specific thing]. Here's what I'd do differently.</example>
+      <example>The best advice I ever ignored (and why I regret it).</example>
+      <example>It took me [long time] to learn this. Here's the short version.</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="credibility-template">
+      <example>[Time period] of [niche] in one post.</example>
+      <example>I tried [approach] for [duration]. Here's what actually happened.</example>
+      <example>Over the past [timeframe], I grew my [thing] from [before] to [after].</example>
+    </hook>
+
+    <hook weight="6.0" source="research" category="trigger-phrase">
+      <example>Nobody mentions this about [topic].</example>
+      <example>I wish I knew this when I started [activity].</example>
+      <example>This may surprise you.</example>
+    </hook>
   </hook-patterns>
 
   <structural-inspiration>
+    <storytelling-hooks>
+      <framework name="5-part-story-structure">
+        <note>LinkedIn posts compress this into text paragraphs, not slides.</note>
+        <part name="hook">Opening line: one specific, curious, or surprising statement that stops the scroll</part>
+        <part name="context">1-2 sentences of setup — who, what, when. Just enough to understand the stakes</part>
+        <part name="tension">The problem, doubt, or conflict. Often introduced with a line break. This is where engagement lives</part>
+        <part name="pivot">The turn: "Here's what actually happened:" or "The real reason:" — signals the insight is coming</part>
+        <part name="payoff">The result, the lesson, the soft CTA. Let tension build before resolving</part>
+      </framework>
+      <re-hook-patterns>
+        <pattern>But here's the real reason...</pattern>
+        <pattern>And that's not even the best part.</pattern>
+        <pattern>This is where it gets interesting.</pattern>
+      </re-hook-patterns>
+    </storytelling-hooks>
+
     <source name="nick-saraev">
       <post-structure>Bold credibility claim upfront (dollar amount, student count, time period). Then "here's what I found" pivot. Value via numbered list or short paragraphs. Soft close: "I put together a full doc/course" or "reply if you want this".</post-structure>
       <hook-formulas>
