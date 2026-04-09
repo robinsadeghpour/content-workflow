@@ -48,7 +48,7 @@ Plans:
 **Plans:** 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Pulse discovery pipeline: source scrapers, scoring, dedup, transcripts, markdown review generation
+- [x] 02-01-PLAN.md — Pulse discovery pipeline: source scrapers, scoring, dedup, transcripts, markdown review generation
 - [ ] 02-02-PLAN.md — Interactive /review skill with KEEP/SKIP/STAR decision workflow
 
 ### Phase 3: Content Generation
