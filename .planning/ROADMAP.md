@@ -95,6 +95,10 @@ Plans:
   1. `apply-critic.js` and `approve-draft.js` use the same status string for critic-approved drafts
   2. `VALID_TRANSITIONS` state machine starts at `'generated'` (matching actual content entry point)
   3. `/approve` lists critic-approved drafts and scheduling to all 4 platforms completes without error
+**Plans:** 1 plan
+
+Plans:
+- [ ] 05-01-PLAN.md — Fix status string mismatch, state machine entry point, DB data migration, and pipeline verification
 
 ### Phase 6: Tech Debt Cleanup
 **Goal**: Stale references, missing config defaults, and checkbox drift from the audit are resolved
@@ -117,5 +121,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Discovery Pipeline | 2/2 | Complete   | 2026-04-09 |
 | 3. Content Generation | 4/4 | Complete   | 2026-04-09 |
 | 4. Publishing & Analytics | 3/3 | Complete   | 2026-04-09 |
-| 5. Fix Publishing Pipeline | 0/0 | Not Started | — |
+| 5. Fix Publishing Pipeline | 0/1 | Not Started | — |
 | 6. Tech Debt Cleanup | 0/0 | Not Started | — |
