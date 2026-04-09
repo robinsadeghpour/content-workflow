@@ -57,6 +57,12 @@ For each draft from `--list` output, use `AskUserQuestion` to present:
 
 ---
 
+### Voice Pass Diff
+
+**BEFORE (original):**
+<original_text from --list output — the pre-humanizer version>
+
+**AFTER (humanized):**
 <full final text — the humanized caption or post_text>
 
 ---
@@ -66,11 +72,14 @@ For each draft from `--list` output, use `AskUserQuestion` to present:
 → **Approve** / **Reject** / **Edit** / **Skip**
 ```
 
+If `original_text` is `null` (draft predates diff tracking), show only the final text with a note: "(Original text not available — draft created before diff tracking was added)"
+
 Display fields:
 - **Platform badge**: LINKEDIN / TIKTOK_EN / TIKTOK_DE / INSTAGRAM
 - **Draft ID**: from the list output
 - **Voice score**: critic's voice authenticity score (from content JSON if present)
-- **Full final text**: the humanized content — show `caption` for tiktok/instagram, `post_text` for linkedin
+- **BEFORE (original)**: the `original_text` field from list output — pre-critic version
+- **AFTER (humanized)**: the final humanized content — show `caption` for tiktok/instagram, `post_text` for linkedin
 - **Visual approach + slide count**: if applicable
 - **Default schedule time**: computed from config/schedule-defaults.json
 
@@ -110,7 +119,7 @@ After all drafts are processed, print a summary:
 ## Important Rules
 
 - **NEVER** schedule a post without Robin's explicit per-draft approval (PUBL-01)
-- Show the **final humanized text**, NOT a before/after diff (D-02)
+- Show a **before/after diff** of the humanizer pass — display the original text (pre-critic) and the final text side by side so Robin can see what changed (PUBL-05)
 - Edits are **final** — no re-critic pass happens after edit (D-04)
 - If scheduling fails for a draft, **inform Robin but continue** to the next draft (D-07)
 - If a draft has media (slides), the script handles upload to Postiz automatically before scheduling

@@ -44,7 +44,7 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **PUBL-02**: Postiz scheduling for LinkedIn posts
 - [ ] **PUBL-03**: Postiz scheduling for TikTok EN + DE posts
 - [ ] **PUBL-04**: Postiz scheduling for Instagram posts
-- [ ] **PUBL-05**: Draft review shows content per-platform with humanizer diff
+- [x] **PUBL-05**: Draft review shows content per-platform with humanizer diff
 
 ### Analytics & Feedback
 
@@ -131,7 +131,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PUBL-02 | Phase 4 | Pending |
 | PUBL-03 | Phase 4 | Pending |
 | PUBL-04 | Phase 4 | Pending |
-| PUBL-05 | Phase 4 | Pending |
+| PUBL-05 | Phase 4 | Complete |
 | ANLY-01 | Phase 4 | Complete |
 | ANLY-02 | Phase 4 | Complete |
 | ANLY-03 | Phase 4 | Complete |

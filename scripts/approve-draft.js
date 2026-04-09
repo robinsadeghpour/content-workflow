@@ -62,6 +62,19 @@ function getDisplayText(draft) {
   }
 }
 
+function getOriginalDisplayText(draft) {
+  if (!draft.original_content) return null;
+  try {
+    const content = safeJsonParse(draft.original_content, 'original_content');
+    if (draft.platform === 'linkedin') {
+      return content.post_text || content.text || JSON.stringify(content).slice(0, 500);
+    }
+    return content.caption || content.text || JSON.stringify(content).slice(0, 500);
+  } catch {
+    return null;
+  }
+}
+
 function getVoiceScore(draft) {
   if (!draft.content) return null;
   try {
@@ -288,10 +301,12 @@ function handleList(db, platform) {
     const displayText = getDisplayText(d);
     const voiceScore = getVoiceScore(d);
     const slideCount = getSlideCount(d);
+    const originalText = getOriginalDisplayText(d);
     return {
       id: d.id,
       platform: d.platform,
       display_text: displayText.slice(0, 200),
+      original_text: originalText,
       voice_score: voiceScore,
       visual_approach: d.visual_approach || null,
       slide_count: slideCount,
