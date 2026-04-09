@@ -98,7 +98,7 @@ Plans:
 **Plans:** 1 plan
 
 Plans:
-- [ ] 05-01-PLAN.md — Fix status string mismatch, state machine entry point, DB data migration, and pipeline verification
+- [x] 05-01-PLAN.md — Fix status string mismatch, state machine entry point, DB data migration, and pipeline verification
 
 ### Phase 6: Tech Debt Cleanup
 **Goal**: Stale references, missing config defaults, and checkbox drift from the audit are resolved

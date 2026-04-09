@@ -40,10 +40,10 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Publishing
 
-- [ ] **PUBL-01**: Manual approval gate — nothing publishes without Robin's explicit sign-off
-- [ ] **PUBL-02**: Postiz scheduling for LinkedIn posts
-- [ ] **PUBL-03**: Postiz scheduling for TikTok EN + DE posts
-- [ ] **PUBL-04**: Postiz scheduling for Instagram posts
+- [x] **PUBL-01**: Manual approval gate — nothing publishes without Robin's explicit sign-off
+- [x] **PUBL-02**: Postiz scheduling for LinkedIn posts
+- [x] **PUBL-03**: Postiz scheduling for TikTok EN + DE posts
+- [x] **PUBL-04**: Postiz scheduling for Instagram posts
 - [x] **PUBL-05**: Draft review shows content per-platform with humanizer diff
 
 ### Analytics & Feedback
@@ -127,10 +127,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LINK-03 | Phase 3 | Complete |
 | LINK-04 | Phase 3 | Complete |
 | VOIC-04 | Phase 3 | Complete |
-| PUBL-01 | Phase 5 | Pending |
-| PUBL-02 | Phase 5 | Pending |
-| PUBL-03 | Phase 5 | Pending |
-| PUBL-04 | Phase 5 | Pending |
+| PUBL-01 | Phase 5 | Complete |
+| PUBL-02 | Phase 5 | Complete |
+| PUBL-03 | Phase 5 | Complete |
+| PUBL-04 | Phase 5 | Complete |
 | PUBL-05 | Phase 4 | Complete |
 | ANLY-01 | Phase 4 | Complete |
 | ANLY-02 | Phase 4 | Complete |
