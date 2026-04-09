@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content Workflow Dashboard</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-title">
+      <span class="header-logo">&#9679;</span>
+      Content Workflow
+    </div>
+    <div id="stats-bar" class="stats-bar">
+      <div class="stat-card">
+        <span class="stat-label">Ideas</span>
+        <span class="stat-value" id="stat-ideas-total">--</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Kept</span>
+        <span class="stat-value" id="stat-ideas-kept">--</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Drafts Pending</span>
+        <span class="stat-value" id="stat-drafts-draft">--</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Scheduled</span>
+        <span class="stat-value" id="stat-drafts-scheduled">--</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Avg Score</span>
+        <span class="stat-value" id="stat-perf-avg">--</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Total Views</span>
+        <span class="stat-value" id="stat-perf-views">--</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" data-tab="ideas">Ideas</button>
+    <button class="tab-btn" data-tab="drafts">Drafts</button>
+    <button class="tab-btn" data-tab="performance">Performance</button>
+    <button class="tab-btn" data-tab="cron">Cron / Actions</button>
+  </nav>
+
+  <main class="main-content">
+
+    <!-- IDEAS TAB -->
+    <section id="tab-ideas" class="tab-section active">
+      <div class="section-header">
+        <h2>Idea Backlog</h2>
+        <span class="section-meta" id="ideas-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="ideas-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Source</th>
+              <th>Score</th>
+              <th>Status</th>
+              <th>Created</th>
+            </tr>
+          </thead>
+          <tbody id="ideas-tbody">
+            <tr><td colspan="5" class="loading">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DRAFTS TAB -->
+    <section id="tab-drafts" class="tab-section">
+      <div class="section-header">
+        <h2>Drafts</h2>
+        <span class="section-meta" id="drafts-count"></span>
+      </div>
+      <div id="drafts-container" class="cards-container">
+        <div class="loading">Loading...</div>
+      </div>
+    </section>
+
+    <!-- PERFORMANCE TAB -->
+    <section id="tab-performance" class="tab-section">
+      <div class="section-header">
+        <h2>Performance</h2>
+        <span class="section-meta" id="performance-count"></span>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table" id="performance-table">
+          <thead>
+            <tr>
+              <th>Platform</th>
+              <th>Content Preview</th>
+              <th>Views</th>
+              <th>Likes</th>
+              <th>Comments</th>
+              <th>Shares</th>
+              <th>Score</th>
+              <th>Checked</th>
+            </tr>
+          </thead>
+          <tbody id="performance-tbody">
+            <tr><td colspan="8" class="loading">Loading...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CRON TAB -->
+    <section id="tab-cron" class="tab-section">
+      <div class="section-header">
+        <h2>Cron Schedules &amp; Actions</h2>
+      </div>
+
+      <div class="cron-daemon-status" id="cron-daemon-status">
+        <span class="status-dot"></span>
+        <span id="cron-daemon-label">Checking daemon...</span>
+      </div>
+
+      <div class="cron-cards">
+        <div class="cron-card">
+          <div class="cron-card-header">
+            <span class="cron-name">Pulse</span>
+            <span class="cron-schedule">0 6 * * * (06:00 Berlin)</span>
+          </div>
+          <p class="cron-desc">Daily idea discovery — scrapes sources, scores ideas, populates backlog.</p>
+          <button class="trigger-btn" data-script="pulse" onclick="triggerScript('pulse')">Trigger Now</button>
+        </div>
+        <div class="cron-card">
+          <div class="cron-card-header">
+            <span class="cron-name">Perf Check</span>
+            <span class="cron-schedule">0 18 * * * (18:00 Berlin)</span>
+          </div>
+          <p class="cron-desc">Daily performance check — pulls analytics from Postiz, updates scores.</p>
+          <button class="trigger-btn" data-script="perf-check" onclick="triggerScript('perf-check')">Trigger Now</button>
+        </div>
+      </div>
+
+      <div class="trigger-log-wrap">
+        <div class="trigger-log-header">
+          Trigger Log
+          <button class="clear-btn" onclick="clearLog()">Clear</button>
+        </div>
+        <div id="trigger-log" class="trigger-log">
+          <p class="log-empty">No triggers yet. Use "Trigger Now" buttons above.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

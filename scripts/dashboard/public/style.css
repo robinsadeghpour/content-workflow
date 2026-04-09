@@ -1,0 +1,560 @@
+/* ============================================================
+   CSS Custom Properties
+   ============================================================ */
+:root {
+  --bg: #1a1a2e;
+  --surface: #16213e;
+  --surface-raised: #1e2a4a;
+  --accent: #0f3460;
+  --accent-bright: #1a4a80;
+  --text: #e0e0e0;
+  --text-muted: #8892a4;
+  --border: #2a3a5c;
+  --success: #4ade80;
+  --warning: #fbbf24;
+  --danger: #f87171;
+  --info: #60a5fa;
+  --purple: #a78bfa;
+
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --radius: 8px;
+  --radius-sm: 4px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ============================================================
+   Reset + Base
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ============================================================
+   Header
+   ============================================================ */
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow);
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.header-logo {
+  color: var(--info);
+  font-size: 10px;
+}
+
+/* ============================================================
+   Stats Bar
+   ============================================================ */
+.stats-bar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+
+.stat-card {
+  background: var(--accent);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--info);
+}
+
+/* ============================================================
+   Tab Navigation
+   ============================================================ */
+.tab-nav {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  gap: 4px;
+}
+
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-family: var(--font);
+  font-size: 14px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+  color: var(--text);
+}
+
+.tab-btn.active {
+  color: var(--info);
+  border-bottom-color: var(--info);
+}
+
+/* ============================================================
+   Main Content
+   ============================================================ */
+.main-content {
+  padding: 24px;
+  max-width: 1400px;
+}
+
+/* ============================================================
+   Tab Sections
+   ============================================================ */
+.tab-section {
+  display: none;
+}
+
+.tab-section.active {
+  display: block;
+}
+
+.section-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.section-header h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.section-meta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ============================================================
+   Tables
+   ============================================================ */
+.table-wrap {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.data-table thead {
+  background: var(--accent);
+  position: sticky;
+  top: 0;
+}
+
+.data-table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+
+.data-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background: var(--surface-raised);
+}
+
+.data-table tbody tr:hover {
+  background: var(--accent);
+}
+
+.loading {
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 24px !important;
+  text-align: center;
+}
+
+/* ============================================================
+   Status Badges
+   ============================================================ */
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Idea statuses */
+.badge-new { background: rgba(96, 165, 250, 0.2); color: var(--info); }
+.badge-kept { background: rgba(74, 222, 128, 0.2); color: var(--success); }
+.badge-skipped { background: rgba(255,255,255, 0.05); color: var(--text-muted); }
+
+/* Draft statuses */
+.badge-draft { background: rgba(251, 191, 36, 0.2); color: var(--warning); }
+.badge-critic_approved { background: rgba(74, 222, 128, 0.15); color: #86efac; }
+.badge-approved, .badge-user-approved { background: rgba(74, 222, 128, 0.2); color: var(--success); }
+.badge-rejected { background: rgba(248, 113, 113, 0.2); color: var(--danger); }
+.badge-scheduled { background: rgba(167, 139, 250, 0.2); color: var(--purple); }
+.badge-pending-schedule { background: rgba(251, 191, 36, 0.15); color: #fcd34d; }
+.badge-published { background: rgba(96, 165, 250, 0.2); color: var(--info); }
+.badge-tracked { background: rgba(255,255,255, 0.08); color: var(--text-muted); }
+.badge-generated { background: rgba(251, 191, 36, 0.1); color: #fde68a; }
+
+/* Platform badges */
+.badge-linkedin { background: rgba(10, 102, 194, 0.3); color: #7ab8f5; }
+.badge-tiktok-en,
+.badge-tiktok_en { background: rgba(0, 209, 255, 0.2); color: #67e8f9; }
+.badge-tiktok-de,
+.badge-tiktok_de { background: rgba(255, 105, 180, 0.2); color: #f9a8d4; }
+.badge-instagram {
+  background: linear-gradient(135deg, rgba(255, 84, 96, 0.2), rgba(193, 62, 209, 0.2));
+  color: #f0abfc;
+}
+
+/* ============================================================
+   Draft Cards
+   ============================================================ */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 16px;
+}
+
+.draft-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.draft-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.draft-title {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--text);
+  flex: 1;
+  min-width: 0;
+}
+
+.draft-content-preview {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+  background: var(--bg);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--border);
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.draft-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.draft-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.btn-approve {
+  background: rgba(74, 222, 128, 0.15);
+  color: var(--success);
+  border: 1px solid rgba(74, 222, 128, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-approve:hover {
+  background: rgba(74, 222, 128, 0.3);
+}
+
+.btn-reject {
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--danger);
+  border: 1px solid rgba(248, 113, 113, 0.3);
+  border-radius: var(--radius-sm);
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-reject:hover {
+  background: rgba(248, 113, 113, 0.25);
+}
+
+.btn-approve:disabled,
+.btn-reject:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   Cron Tab
+   ============================================================ */
+.cron-daemon-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.status-dot.running {
+  background: var(--success);
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.5);
+}
+
+.status-dot.stopped {
+  background: var(--danger);
+}
+
+.cron-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.cron-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cron-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.cron-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.cron-schedule {
+  font-family: 'Courier New', monospace;
+  font-size: 11px;
+  color: var(--text-muted);
+  background: var(--bg);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+}
+
+.cron-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.trigger-btn {
+  background: var(--accent-bright);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background 0.15s;
+}
+
+.trigger-btn:hover {
+  background: #2558a0;
+}
+
+.trigger-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ============================================================
+   Trigger Log
+   ============================================================ */
+.trigger-log-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.trigger-log-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.clear-btn {
+  background: none;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  padding: 2px 8px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.clear-btn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+
+.trigger-log {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  padding: 12px 14px;
+  min-height: 80px;
+  max-height: 200px;
+  overflow-y: auto;
+  color: var(--text);
+}
+
+.log-empty {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.log-entry {
+  padding: 2px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.log-entry.success { color: var(--success); }
+.log-entry.error { color: var(--danger); }
+.log-entry .log-time { color: var(--text-muted); margin-right: 8px; }
+
+/* ============================================================
+   Empty states
+   ============================================================ */
+.empty-state {
+  color: var(--text-muted);
+  font-style: italic;
+  text-align: center;
+  padding: 40px 20px;
+  grid-column: 1 / -1;
+}
+
+/* ============================================================
+   Scrollbar
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-bright); }
