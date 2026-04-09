@@ -1,4 +1,4 @@
-# Phase 3: Content Generation — Research
+# Phase 3: Content Generation -- Research
 
 **Researched:** 2026-04-09
 **Domain:** Multi-platform content generation, slide rendering pipelines, voice application, critic agent
@@ -13,29 +13,29 @@
 
 **Slide Pipeline Strategy**
 - D-01: Three rendering approaches coexist, routed by content type and platform:
-  - Photo-first + node-canvas overlay — primary for TikTok/Instagram slideshows
-  - AI-generated slides — TikTok/Instagram fallback via Nano Banana / Gemini (not OpenAI gpt-image-1.5)
-  - HTML→Playwright screenshot — LinkedIn PDF carousels only
+  - Photo-first + node-canvas overlay -- primary for TikTok/Instagram slideshows
+  - AI-generated slides -- TikTok/Instagram fallback via Nano Banana / Gemini (not OpenAI gpt-image-1.5)
+  - HTML->Playwright screenshot -- LinkedIn PDF carousels only
 - D-02: Robin picks visual approach (photo-first vs AI-generated) at KEEP time during `/review`
 - D-03: LinkedIn keeps its own Playwright pipeline. TikTok/Instagram use photo+overlay pipeline
-- D-04: Slide structure is flexible per content type — not a fixed 6-slide arc
+- D-04: Slide structure is flexible per content type -- not a fixed 6-slide arc
 - D-05: Text rendering on TikTok/Instagram slides uses node-canvas overlay (Larry's pattern). Output is final PNG per slide
 
 **LinkedIn Format Routing**
-- D-06: Auto-suggest format based on content type heuristics (tutorial → carousel, hot take → text, data-heavy → infographic, founder note → personal post). Robin can override during approval
-- D-07: Single branded template for LinkedIn PDF carousels — `slide-template.html`. Content varies, chrome stays the same
-- D-08: LinkedIn infographic posts use AI image generation (Nano Banana / Gemini), not HTML→screenshot
+- D-06: Auto-suggest format based on content type heuristics (tutorial -> carousel, hot take -> text, data-heavy -> infographic, founder note -> personal post). Robin can override during approval
+- D-07: Single branded template for LinkedIn PDF carousels -- `slide-template.html`. Content varies, chrome stays the same
+- D-08: LinkedIn infographic posts use AI image generation (Nano Banana / Gemini), not HTML->screenshot
 
 **German Localization**
 - D-09: Claude-only localization with tone prompt using `voice-casual.xml`. No DeepL dependency
 - D-10: German TikTok slides get their own text overlays rendered in German via node-canvas. Same photos/visuals as EN
-- D-11: Instagram does NOT get a German version — only TikTok EN and TikTok DE
+- D-11: Instagram does NOT get a German version -- only TikTok EN and TikTok DE
 
 **Critic Agent**
 - D-12: Critic runs as a separate Claude subagent (Task) after generation completes. Fresh context, no anchoring bias
 - D-13: Critic checks three dimensions: (1) voice authenticity, (2) slide quality (hook strength, text readability, safe zones, visual consistency), (3) factual accuracy against source material
 - D-14: On rejection: auto-revise + re-check loop up to 2-3 attempts. Robin only sees critic-approved drafts
-- D-15: Brand alignment is NOT a separate check — voice authenticity implicitly covers on-brand tone
+- D-15: Brand alignment is NOT a separate check -- voice authenticity implicitly covers on-brand tone
 
 ### Claude's Discretion
 - Specific heuristics for LinkedIn format auto-suggestion (what signals trigger each format)
@@ -46,7 +46,7 @@
 - German tone prompt design (how to instruct Claude for casual German)
 
 ### Deferred Ideas (OUT OF SCOPE)
-None — discussion stayed within phase scope
+None -- discussion stayed within phase scope
 </user_constraints>
 
 ---
@@ -56,7 +56,7 @@ None — discussion stayed within phase scope
 
 | ID | Description | Research Support |
 |----|-------------|------------------|
-| TIKT-01 | Slideshow generation using merged Larry + tiktok-slideshows pipeline (hook → content → CTA) | Larry's `add-text-overlay.js` is the proven node-canvas implementation; tiktok-slideshows has hook formulas + photo catalog |
+| TIKT-01 | Slideshow generation using merged Larry + tiktok-slideshows pipeline (hook -> content -> CTA) | Larry's `add-text-overlay.js` is the proven node-canvas implementation; tiktok-slideshows has hook formulas + photo catalog |
 | TIKT-02 | Text overlay rendering on slide images with proper safe zones and formatting | Directly implemented in `add-text-overlay.js`: 6.5% font, 75% maxWidth, 10% top / 80% bottom safe zones, white+black-outline style |
 | TIKT-03 | Photo library with text descriptions for AI selection without vision calls | `photo-catalog-template.json` is the schema; `media/images/tiktok/` is the project-local home; catalog.json manages descriptions |
 | TIKT-04 | AI image generation fallback via Nano Banana / Gemini when no real visuals available | Nano Banana SKILL.md: `gemini-2.5-flash-image` model, direct API via Python script or inline call |
@@ -74,11 +74,11 @@ None — discussion stayed within phase scope
 
 ## Summary
 
-Phase 3 builds on two proven pipelines that already exist in the project: Larry's `add-text-overlay.js` (node-canvas, battle-tested) and the LinkedIn Playwright/screenshot pipeline. The core challenge is not invention — it's **integration**: wiring these existing components into a unified `generate-content` skill that accepts a `kept` idea ID, routes to the correct pipeline(s) based on content type and visual approach, runs all four platforms in parallel via Claude Code's `Task` tool, then gates output through a critic subagent before saving approved drafts to `content.db`.
+Phase 3 builds on two proven pipelines that already exist in the project: Larry's `add-text-overlay.js` (node-canvas, battle-tested) and the LinkedIn Playwright/screenshot pipeline. The core challenge is not invention -- it's **integration**: wiring these existing components into a unified `generate-content` skill that accepts a `kept` idea ID, routes to the correct pipeline(s) based on content type and visual approach, runs all four platforms in parallel via Claude Code's `Task` tool, then gates output through a critic subagent before saving approved drafts to `content.db`.
 
-The `drafts` table schema exists and is ready (`drafts.status` tracks the generation → critic-approved → ready-for-publishing lifecycle). The `ideas` table has 5 `kept` records ready for testing. The primary gap is **missing npm packages**: `canvas` and `sharp` are not installed in `content-workflow` (only referenced from Larry's standalone directory). These must be installed as Wave 0 work. Python Playwright is available via the notebooklm venv (`~/.local/pipx/venvs/notebooklm-py`), so the LinkedIn screenshot pipeline is functional without new installs.
+The `drafts` table schema exists and is ready (`drafts.status` tracks the generation -> critic-approved -> ready-for-publishing lifecycle). The `ideas` table has 5 `kept` records ready for testing. The primary gap is **missing npm packages**: `canvas` and `sharp` are not installed in `content-workflow` (only referenced from Larry's standalone directory). These must be installed as Wave 0 work. Python Playwright is available via the notebooklm venv (`~/.local/pipx/venvs/notebooklm-py`), so the LinkedIn screenshot pipeline is functional without new installs.
 
-The photo library at `media/images/tiktok/` is currently empty — this is intentional (photos added on explicit user request). A `catalog.json` must be initialized in Wave 0 as an empty catalog using the template schema. The `generate-content` skill should handle the case where the catalog is empty (fall through to AI generation).
+The photo library at `media/images/tiktok/` is currently empty -- this is intentional (photos added on explicit user request). A `catalog.json` must be initialized in Wave 0 as an empty catalog using the template schema. The `generate-content` skill should handle the case where the catalog is empty (fall through to AI generation).
 
 **Primary recommendation:** Build a single `generate-content` skill that orchestrates all four content channels from one command, uses `Task` for parallel platform generation, and gates on critic approval before writing to `drafts`. Keep all Node.js pipeline scripts in `scripts/` and invoke them from the skill via `Bash`.
 
@@ -93,7 +93,7 @@ The photo library at `media/images/tiktok/` is currently empty — this is inten
 | `sharp` | 0.34.5 | Image resize, format conversion, final compositing | Fastest Node.js image processor (libvips). Used for output resize (1080x1440 TikTok, 1080x1350 Instagram) [VERIFIED: npm registry] |
 | `@anthropic-ai/sdk` | 0.86.1 | Content generation, German localization, critic agent | Already in package.json at `^0.86.1` [VERIFIED: package.json] |
 | `better-sqlite3` | 12.8.0 | Reading kept ideas, writing drafts | Already installed, WAL mode active [VERIFIED: package.json] |
-| Python playwright (notebooklm venv) | Available | LinkedIn HTML→screenshot pipeline | `~/.local/pipx/venvs/notebooklm-py/bin/python3 -c "import playwright"` passes [VERIFIED: shell check] |
+| Python playwright (notebooklm venv) | Available | LinkedIn HTML->screenshot pipeline | `~/.local/pipx/venvs/notebooklm-py/bin/python3 -c "import playwright"` passes [VERIFIED: shell check] |
 | Gemini API (direct HTTP) | gemini-2.5-flash-image | AI slide fallback + LinkedIn infographics | Nano Banana SKILL.md uses direct Python urllib call; no extra install needed [VERIFIED: SKILL.md] |
 
 ### Supporting
@@ -101,14 +101,14 @@ The photo library at `media/images/tiktok/` is currently empty — this is inten
 |---------|---------|---------|-------------|
 | `dotenv` | 17.4.1 | Load GEMINI_API_KEY, ANTHROPIC_API_KEY | All scripts that call external APIs [VERIFIED: package.json] |
 | `p-limit` | 4.0.0 (CJS) | Bound parallel image generation calls | When generating multiple AI slides concurrently (max 3) [VERIFIED: package.json] |
-| `PIL` (Pillow, Python) | Available | PNG-to-PDF assembly for LinkedIn carousel | Already used by `screenshot-slides.py` — `from PIL import Image` [VERIFIED: live check] |
+| `PIL` (Pillow, Python) | Available | PNG-to-PDF assembly for LinkedIn carousel | Already used by `screenshot-slides.py` -- `from PIL import Image` [VERIFIED: live check] |
 
 ### Alternatives Considered
 | Instead of | Could Use | Tradeoff |
 |------------|-----------|----------|
 | node-canvas 3.x | `@napi-rs/canvas` | Drop-in if Cairo system libs fail. canvas 3.2.3 requires Cairo; @napi-rs ships prebuilt Skia binaries. Use if `npm install canvas` fails on fresh machine |
 | Gemini direct API | OpenAI gpt-image-1.5 | Larry legacy only. D-01 explicitly prohibits gpt-image-1.5 for slides in this phase; Gemini via Nano Banana is the locked choice |
-| DeepL | `@anthropic-ai/sdk` inline | D-09 locked; Claude handles EN→DE in one pass with `<localization-de>` section of voice-casual.xml |
+| DeepL | `@anthropic-ai/sdk` inline | D-09 locked; Claude handles EN->DE in one pass with `<localization-de>` section of voice-casual.xml |
 
 **Installation (Wave 0):**
 ```bash
@@ -128,65 +128,66 @@ brew install pkg-config cairo pango libpng jpeg giflib librsvg
 ### Recommended Project Structure
 ```
 scripts/
-├── generate-content.js      # Main orchestrator — reads idea, routes pipelines, saves drafts
+├── generate-content.js      # Main orchestrator -- reads idea, routes pipelines, saves drafts
 ├── generate-tiktok-slides.js # node-canvas overlay pipeline for TikTok/Instagram PNGs
 ├── generate-linkedin-html.js # Claude writes HTML using slide-template.html as base
 ├── generate-ai-slides.js    # Nano Banana / Gemini fallback image generation
 ├── apply-critic.js          # Critic subagent invocation via @anthropic-ai/sdk
-└── init-db.js               # (existing) — Phase 3 will add ALTER TABLE for new columns
+└── init-db.js               # (existing) -- Phase 3 will add ALTER TABLE for new columns
 
 .claude/skills/
 └── generate-content/
-    └── SKILL.md             # Entry point skill — /generate-content --idea <id>
+    └── SKILL.md             # Entry point skill -- /generate-content --idea <id>
 
 data/
 └── content.db               # drafts table is Phase 3's primary write target
     
 media/
 └── images/
-    ├── tiktok/              # Robin's personal photos (currently empty — user adds explicitly)
+    ├── tiktok/              # Robin's personal photos (currently empty -- user adds explicitly)
     │   └── catalog.json     # Initialized in Wave 0 with empty schema
-    └── linkedin/            # Logos, screenshots for carousel slides
+    └── linkedin/            # Logos, screenshots, portrait for carousel slides
+        └── robin-portrait.png  # Copied from ~/WebstormProjects/11x/public/robin_cutout.png
 ```
 
 ### Pattern 1: Parallel Platform Generation via Task Tool
 
 **What:** Fire 4 subagents simultaneously (TikTok EN, TikTok DE, Instagram, LinkedIn), each reads their voice profile independently, and each runs the correct pipeline for the platform.
 
-**When to use:** Always — this is the core INFR-03 pattern documented in `writing/SKILL.md`.
+**When to use:** Always -- this is the core INFR-03 pattern documented in `writing/SKILL.md`.
 
 **Example:**
 ```
 // Source: .claude/skills/writing/SKILL.md (Parallel Subagent Support section)
-Task 1: Generate TikTok EN slides — photo+overlay pipeline, voice-casual.xml
-Task 2: Generate TikTok DE slides — same photos as EN, German text via voice-casual.xml <localization-de>
-Task 3: Generate Instagram carousel — reuse TikTok EN PNGs, no second render
-Task 4: Generate LinkedIn content — format-routed (carousel/text/infographic/personal)
+Task 1: Generate TikTok EN slides -- photo+overlay pipeline, voice-casual.xml
+Task 2: Generate TikTok DE slides -- same photos as EN, German text via voice-casual.xml <localization-de>
+Task 3: Generate Instagram carousel -- reuse TikTok EN PNGs, no second render
+Task 4: Generate LinkedIn content -- format-routed (carousel/text/infographic/personal)
 
 Parent waits for all 4, then runs critic on all outputs.
 ```
 
-### Pattern 2: Content Type → LinkedIn Format Routing (D-06 heuristics)
+### Pattern 2: Content Type -> LinkedIn Format Routing (D-06 heuristics)
 
 **What:** Auto-suggest the correct LinkedIn format based on the idea's `source_type`, `title` keywords, and `content_angle_suggestion` from the review skill.
 
-**Decision table (Claude's Discretion — recommended):**
+**Decision table (Claude's Discretion -- recommended):**
 ```
-content_angle = "Tutorial breakdown" OR title has (how to, guide, step, tutorial, tips) → carousel (PDF slides)
-content_angle = "Hot take" OR title has (wrong, actually, unpopular, controversial, opinion) → text-only post
-content_angle = "News reaction" AND has data/numbers → infographic
-content_angle = "News reaction" AND no data → text-only post
-source_type = "founder_note" OR pillar = "story" → personal post
-default → text-only post (safest fallback)
+content_angle = "Tutorial breakdown" OR title has (how to, guide, step, tutorial, tips) -> carousel (PDF slides)
+content_angle = "Hot take" OR title has (wrong, actually, unpopular, controversial, opinion) -> text-only post
+content_angle = "News reaction" AND has data/numbers -> infographic
+content_angle = "News reaction" AND no data -> text-only post
+source_type = "founder_note" OR pillar = "story" -> personal post
+default -> text-only post (safest fallback)
 ```
 
 Robin can override at approval time (Phase 4). The suggestion is saved in the draft as `linkedin_format` metadata.
 
 ### Pattern 3: Critic Agent as Separate Task (D-12)
 
-**What:** After all platform content is generated, spawn a separate Claude subagent with the drafts + voice profiles as context. The critic has no memory of the generation pass — avoids self-review anchoring bias.
+**What:** After all platform content is generated, spawn a separate Claude subagent with the drafts + voice profiles as context. The critic has no memory of the generation pass -- avoids self-review anchoring bias.
 
-**Critic prompt structure (recommended rubric — Claude's Discretion):**
+**Critic prompt structure (recommended rubric -- Claude's Discretion):**
 ```
 You are a content critic reviewing draft posts for Robin Faraj.
 Score each draft on 3 dimensions (0-10 each):
@@ -194,13 +195,13 @@ Score each draft on 3 dimensions (0-10 each):
 1. VOICE AUTHENTICITY: Does it match the voice profile exactly?
    - Check against: [voice profile XML excerpt]
    - Red flags: banned patterns, wrong opener style, wrong sentence rhythm
-   - Pass threshold: ≥7
+   - Pass threshold: >=7
 
 2. SLIDE QUALITY (TikTok/Instagram/LinkedIn carousel only):
    - Hook slide: strong enough to stop scroll?
    - Text: readable, within safe zones, no emoji (canvas limitation)?
    - Narrative flow: does progression make sense?
-   - Pass threshold: ≥7
+   - Pass threshold: >=7
 
 3. FACTUAL ACCURACY:
    - Every claim must trace to source transcript or idea summary
@@ -251,17 +252,17 @@ For LinkedIn, `content` stores:
 ```
 
 The `drafts` table needs two additional columns for Phase 3 (added via ALTER TABLE in `init-db.js`):
-- `visual_approach TEXT` — `photo_overlay` | `ai_generated` | `html_screenshot` | `none`
-- `media_dir TEXT` — path to generated slide PNGs / PDF for this draft
+- `visual_approach TEXT` -- `photo_overlay` | `ai_generated` | `html_screenshot` | `none`
+- `media_dir TEXT` -- path to generated slide PNGs / PDF for this draft
 
 ### Anti-Patterns to Avoid
 
 - **Hardcoding 6 slides:** `add-text-overlay.js` hardcodes `texts.length !== 6` with `process.exit(1)`. D-04 says slide count is flexible. The new `generate-tiktok-slides.js` must lift this constraint and accept variable slide counts.
-- **Generating TikTok DE slides from scratch:** D-10 says same photos as EN, different text. The pipeline should generate EN slide PNGs first, then re-run node-canvas overlay with German text on the same photos — not generate new photos.
-- **Instagram rendering as a separate pipeline:** D-03 + TIKT-07 — Instagram reuses the exact TikTok EN PNGs. The only difference is Postiz integration ID and aspect ratio (1080x1350 crop vs 1080x1440). A `sharp` resize/crop pass can handle the dimension difference.
+- **Generating TikTok DE slides from scratch:** D-10 says same photos as EN, different text. The pipeline should generate EN slide PNGs first, then re-run node-canvas overlay with German text on the same photos -- not generate new photos.
+- **Instagram rendering as a separate pipeline:** D-03 + TIKT-07 -- Instagram reuses the exact TikTok EN PNGs. The only difference is Postiz integration ID and aspect ratio (1080x1350 crop vs 1080x1440). A `sharp` resize/crop pass can handle the dimension difference.
 - **Running critic on the same context as generation:** D-12. Critic MUST be a separate Task subagent with its own fresh context. Never run self-review in the same generation pass.
 - **Missing voice profile read before generation:** Per writing/SKILL.md "NEVER generate content without reading the voice profile first." The skill must read `voice-linkedin.xml` or `voice-casual.xml` before writing any draft text.
-- **Using gpt-image-1 or gpt-image-1.5 for AI slides:** D-01 locks this to Nano Banana / Gemini. Larry's `generate-slides.js` uses OpenAI — do not replicate that script for this phase.
+- **Using gpt-image-1 or gpt-image-1.5 for AI slides:** D-01 locks this to Nano Banana / Gemini. Larry's `generate-slides.js` uses OpenAI -- do not replicate that script for this phase.
 
 ---
 
@@ -270,7 +271,7 @@ The `drafts` table needs two additional columns for Phase 3 (added via ALTER TAB
 | Problem | Don't Build | Use Instead | Why |
 |---------|-------------|-------------|-----|
 | Text overlay on slide images | Custom canvas text renderer | Larry's `add-text-overlay.js` | Battle-tested: font sizing, safe zones, word wrap, emoji stripping all solved |
-| HTML→PNG slide rendering | Custom headless browser | `screenshot-slides.py` via notebooklm venv | Already working; Playwright handles 2x DPR, font loading wait, `.slide` element query |
+| HTML->PNG slide rendering | Custom headless browser | `screenshot-slides.py` via notebooklm venv | Already working; Playwright handles 2x DPR, font loading wait, `.slide` element query |
 | PDF assembly from PNGs | Custom PDF writer | Pillow (`PIL.Image.save(..., save_all=True)`) | Already used in `screenshot-slides.py`; proven pattern |
 | AI image generation | Custom Gemini HTTP client | Nano Banana SKILL.md Method 1 (direct API) | Already documented with error handling and retry guidance |
 | German localization | DeepL + custom tone pass | `@anthropic-ai/sdk` with `<localization-de>` voice profile section | D-09 locked decision; Claude adapts idiomatically in one pass |
@@ -310,9 +311,9 @@ Fallback: if brew install fails, switch to `@napi-rs/canvas` which ships prebuil
 
 ### Pitfall 3: Playwright runs in notebooklm venv, not system Python
 
-**What goes wrong:** `python3 ~/.claude/skills/linkedin/scripts/screenshot-slides.py` uses system Python (3.14.0). `playwright` is NOT installed in system Python — `playwright CLI not found`, `playwright not installed`. [VERIFIED: shell check]
+**What goes wrong:** `python3 ~/.claude/skills/linkedin/scripts/screenshot-slides.py` uses system Python (3.14.0). `playwright` is NOT installed in system Python -- `playwright CLI not found`, `playwright not installed`. [VERIFIED: shell check]
 
-**Why it happens:** Playwright was installed into `~/.local/pipx/venvs/notebooklm-py` as a dependency of notebooklm. [VERIFIED: shell check — notebooklm venv playwright check passes]
+**Why it happens:** Playwright was installed into `~/.local/pipx/venvs/notebooklm-py` as a dependency of notebooklm. [VERIFIED: shell check -- notebooklm venv playwright check passes]
 
 **How to avoid:** Always invoke screenshot-slides.py via the notebooklm venv Python:
 ```bash
@@ -353,7 +354,7 @@ try {
 
 ### Pitfall 6: Critic anchoring from shared context
 
-**What goes wrong:** Running the critic review in the same Claude conversation as content generation causes self-serving approval — the model defends its own output.
+**What goes wrong:** Running the critic review in the same Claude conversation as content generation causes self-serving approval -- the model defends its own output.
 
 **Why it happens:** Shared context creates implicit bias toward approving what was just written.
 
@@ -392,10 +393,10 @@ ctx.font = `bold ${fontSize}px Arial`;
 const maxWidth = img.width * 0.75;
 ```
 
-### Variable slide count version (new — removes hardcoded 6-check)
+### Variable slide count version (new -- removes hardcoded 6-check)
 
 ```javascript
-// generate-tiktok-slides.js — modified fork for Phase 3
+// generate-tiktok-slides.js -- modified fork for Phase 3
 const texts = JSON.parse(fs.readFileSync(textsPath, 'utf-8'));
 const photoPaths = JSON.parse(fs.readFileSync(photosPath, 'utf-8')); // new arg
 if (texts.length < 2 || texts.length > 12) {
@@ -412,7 +413,7 @@ if (texts.length !== photoPaths.length) {
 
 ```bash
 # Source: .claude/skills/linkedin/SKILL.md
-# MUST use notebooklm venv — system python3 does NOT have playwright
+# MUST use notebooklm venv -- system python3 does NOT have playwright
 ~/.local/pipx/venvs/notebooklm-py/bin/python3 \
   ~/.claude/skills/linkedin/scripts/screenshot-slides.py \
   /tmp/linkedin-carousel-<topic>.html \
@@ -425,25 +426,25 @@ if (texts.length !== photoPaths.length) {
 ```javascript
 // Source: .claude/skills/writing/SKILL.md + voice-casual.xml <localization-de>
 // Step 1: apply casual voice profile to EN draft
-// Step 2: localize to German — adapt, do NOT literal-translate
+// Step 2: localize to German -- adapt, do NOT literal-translate
 // Key principle from voice-casual.xml <localization-de>:
-// "brooo" → "Alter, Bruder, krass"
+// "brooo" -> "Alter, Bruder, krass"
 // Keep lowercase where German grammar allows
-// Avoid formal German grammar — use spoken German
+// Avoid formal German grammar -- use spoken German
 const systemPrompt = `You are localizing Robin's TikTok content from English to German.
 Rules from voice-casual.xml <localization-de>:
-- Preserve raw energy — find German phrases with same casual punch
+- Preserve raw energy -- find German phrases with same casual punch
 - "brooo" energy in German: Alter, Bruder, krass
 - Keep lowercase where German grammar allows
 - Adapt milestone posts to German entrepreneur culture
-- Do NOT literal-translate — find German idioms with same casual energy
-- Avoid formal German grammar — use spoken German`;
+- Do NOT literal-translate -- find German idioms with same casual energy
+- Avoid formal German grammar -- use spoken German`;
 ```
 
 ### Nano Banana AI slide generation (Gemini direct API)
 
 ```python
-# Source: .claude/skills/nano-banana/SKILL.md — Method 1 Direct API
+# Source: .claude/skills/nano-banana/SKILL.md -- Method 1 Direct API
 import base64, json, urllib.request
 MODEL = "gemini-2.5-flash-image"  # fast generation
 payload = {
@@ -456,7 +457,7 @@ url = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL}:generate
 ### Drafts table write (new schema)
 
 ```javascript
-// generate-content.js — write draft after critic approval
+// generate-content.js -- write draft after critic approval
 const stmt = db.prepare(`
   INSERT INTO drafts (id, idea_id, platform, content, status, visual_approach, media_dir)
   VALUES (?, ?, ?, ?, 'critic_approved', ?, ?)
@@ -472,13 +473,13 @@ stmt.run(draftId, ideaId, platform, JSON.stringify(contentPayload), visualApproa
 |--------------|------------------|--------------|--------|
 | Fixed 6-slide arc (Larry) | Flexible slide count per content type (D-04) | Phase 3 design | Listicles get N slides, hot takes get 3-4 punchy slides |
 | TikTok: user adds text manually in app | node-canvas text overlay baked into PNG | Phase 3 design | Fully automated text render; Robin reviews output PNGs |
-| Each platform as separate manual skill | Unified generate-content skill with parallel Task subagents | Phase 3 design | One command → 4 platform drafts |
+| Each platform as separate manual skill | Unified generate-content skill with parallel Task subagents | Phase 3 design | One command -> 4 platform drafts |
 | No critic gate | Critic subagent reviews before Robin sees anything | Phase 3 design (D-12) | Robin only reviews pre-screened drafts |
 | OpenAI gpt-image-1.5 for AI slides (Larry legacy) | Nano Banana / Gemini for AI slides (D-01) | Phase 3 design | Decoupled from OpenAI dependency for slide visual generation |
 
 **Deprecated/outdated:**
 - Larry's fixed 6-slide `add-text-overlay.js`: still valid for 6-slide content, but cannot be used as-is for Phase 3's variable slide counts. Fork and generalize.
-- tiktok-slideshows' "upload plain photos, user adds text in app" workflow: Phase 3 replaces this with server-side text overlay baking (final PNGs). The tiktok-slideshows SKILL.md documents the old manual workflow — do not follow it for Phase 3.
+- tiktok-slideshows' "upload plain photos, user adds text in app" workflow: Phase 3 replaces this with server-side text overlay baking (final PNGs). The tiktok-slideshows SKILL.md documents the old manual workflow -- do not follow it for Phase 3.
 
 ---
 
@@ -486,30 +487,24 @@ stmt.run(draftId, ideaId, platform, JSON.stringify(contentPayload), visualApproa
 
 | # | Claim | Section | Risk if Wrong |
 |---|-------|---------|---------------|
-| A1 | Instagram carousel optimal at 1080x1350 (4:5) vs TikTok 1080x1440 (3:4) | Pitfall 7 + Code Examples | If Instagram accepts 1080x1440 without cropping, the sharp resize step is unnecessary overhead — low risk |
-| A2 | Critic pass/fail thresholds of ≥7/10 per dimension are appropriate | Pattern 3 critic rubric | Thresholds are Claude's Discretion — may need calibration after first run. Low risk to start at 7 |
-| A3 | LinkedIn format heuristics based on content_angle_suggestion keyword matching are sufficient | Pattern 2 | If heuristics route incorrectly often, Robin's approval override (D-06) catches it — low risk |
+| A1 | Instagram carousel optimal at 1080x1350 (4:5) vs TikTok 1080x1440 (3:4) | Pitfall 7 + Code Examples | If Instagram accepts 1080x1440 without cropping, the sharp resize step is unnecessary overhead -- low risk |
+| A2 | Critic pass/fail thresholds of >=7/10 per dimension are appropriate | Pattern 3 critic rubric | Thresholds are Claude's Discretion -- may need calibration after first run. Low risk to start at 7 |
+| A3 | LinkedIn format heuristics based on content_angle_suggestion keyword matching are sufficient | Pattern 2 | If heuristics route incorrectly often, Robin's approval override (D-06) catches it -- low risk |
 
 **All other claims verified against live codebase files, shell environment checks, or npm registry.**
 
 ---
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Photo catalog location for Phase 3**
-   - What we know: `media/images/tiktok/` directory exists but is empty. The tiktok-slideshows SKILL.md references `~/.openclaw/workspace/slidegen/photos/` which does not exist on this machine.
-   - What's unclear: Should `generate-content` skill use `media/images/tiktok/` as the canonical photo home, or keep photos under `.claude/skills/tiktok-slideshows/`?
-   - Recommendation: Use `media/images/tiktok/` as the project-local photo home, and place `catalog.json` there. The generate-content skill reads `media/images/tiktok/catalog.json`. This centralizes all media under `media/` consistent with Phase 1's data directory structure.
+1. **Photo catalog location for Phase 3** -- RESOLVED
+   - Resolution: Use `media/images/tiktok/` as the project-local photo home, with `catalog.json` there. Plan 03-01 Task 1 initializes `media/images/tiktok/catalog.json` from the template schema. The generate-content skill reads this path.
 
-2. **LinkedIn `slide-template.html` persona references**
-   - What we know: The linkedin skill references `~/WebstormProjects/11x/public/robin-portrait-clear-background.png` for the first slide photo. This path is machine-specific and outside the content-workflow repo.
-   - What's unclear: Should generate-content copy this to `media/` or reference it from its current location?
-   - Recommendation: Copy `robin-portrait-clear-background.png` to `media/images/linkedin/robin-portrait.png` in Wave 0. Update `slide-template.html` or pass it as a parameter so the path is repo-relative and portable.
+2. **LinkedIn `slide-template.html` persona portrait path** -- RESOLVED
+   - Resolution: The actual file on this machine is `~/WebstormProjects/11x/public/robin_cutout.png` (not `robin-portrait-clear-background.png` as documented in some skill files). Plan 03-01 Task 1 copies it to `media/images/linkedin/robin-portrait.png` -- a repo-relative, portable path. The generate-linkedin-content.js script (Plan 02) should reference this path when assembling the first carousel slide.
 
-3. **Critic failure handling when all 3 attempts fail**
-   - What we know: D-14 says auto-revise up to 2-3 attempts, then Robin only sees approved drafts.
-   - What's unclear: What happens to a draft that fails 3 critic passes? Should it surface with a warning, or be silently dropped?
-   - Recommendation: Save with `status='critic_failed'` and include it in the review output with a clear flag: "1 draft needed your attention — critic could not approve after 3 attempts." Robin decides whether to use it, edit it, or skip.
+3. **Critic failure handling when all 3 attempts fail** -- RESOLVED
+   - Resolution: Save with `status='critic_failed'` and include it in the review output with a clear flag: "X draft(s) failed critic review after 3 attempts -- review manually." Robin decides whether to use it, edit it, or skip. Implemented in Plan 03-04 Task 1 (apply-critic.js).
 
 ---
 
@@ -517,23 +512,23 @@ stmt.run(draftId, ideaId, platform, JSON.stringify(contentPayload), visualApproa
 
 | Dependency | Required By | Available | Version | Fallback |
 |------------|------------|-----------|---------|----------|
-| Node.js | All JS scripts | Yes | v24.12.0 | — |
-| `@anthropic-ai/sdk` | Content generation, critic, German localization | Yes | 0.86.1 (in package.json) | — |
-| `better-sqlite3` | DB reads/writes | Yes | 12.8.0 | — |
-| `canvas` (node-canvas) | TikTok/Instagram slide text overlay | **No** | — | `@napi-rs/canvas` (drop-in, prebuilt Skia) |
-| `sharp` | Instagram aspect ratio crop | **No** | — | Skip IG crop (accept 1080x1440) |
-| Python playwright | LinkedIn HTML→screenshot | Yes (notebooklm venv) | Available | — |
-| `PIL` (Pillow) | LinkedIn PNG→PDF | Yes (system) | Available | — |
-| `GEMINI_API_KEY` | AI slide fallback, LinkedIn infographics | **Not set** | — | Skip AI generation; flag for Robin |
-| `ANTHROPIC_API_KEY` | All Claude calls | **Not set in shell** | — | Loaded from `.env` at runtime |
+| Node.js | All JS scripts | Yes | v24.12.0 | -- |
+| `@anthropic-ai/sdk` | Content generation, critic, German localization | Yes | 0.86.1 (in package.json) | -- |
+| `better-sqlite3` | DB reads/writes | Yes | 12.8.0 | -- |
+| `canvas` (node-canvas) | TikTok/Instagram slide text overlay | **No** | -- | `@napi-rs/canvas` (drop-in, prebuilt Skia) |
+| `sharp` | Instagram aspect ratio crop | **No** | -- | Skip IG crop (accept 1080x1440) |
+| Python playwright | LinkedIn HTML->screenshot | Yes (notebooklm venv) | Available | -- |
+| `PIL` (Pillow) | LinkedIn PNG->PDF | Yes (system) | Available | -- |
+| `GEMINI_API_KEY` | AI slide fallback, LinkedIn infographics | **Not set** | -- | Skip AI generation; flag for Robin |
+| `ANTHROPIC_API_KEY` | All Claude calls | **Not set in shell** | -- | Loaded from `.env` at runtime |
 
 **Missing dependencies with no fallback:**
-- `canvas` — blocks TikTok/Instagram slide text overlay. Must install in Wave 0: `npm install canvas` (with Cairo system libs) or `npm install @napi-rs/canvas`
-- `GEMINI_API_KEY` — blocks AI slide generation fallback (TIKT-04) and LinkedIn infographics (LINK-03). Wave 0 must add to `.env`. Robin must provide the key.
+- `canvas` -- blocks TikTok/Instagram slide text overlay. Must install in Wave 0: `npm install canvas` (with Cairo system libs) or `npm install @napi-rs/canvas`
+- `GEMINI_API_KEY` -- blocks AI slide generation fallback (TIKT-04) and LinkedIn infographics (LINK-03). Wave 0 must add to `.env`. Robin must provide the key.
 
 **Missing dependencies with fallback:**
-- `sharp` — Instagram crop fallback is to publish at 1080x1440 (TikTok format). Instagram accepts this.
-- `ANTHROPIC_API_KEY` — not set in shell env, but `.env` loading via `dotenv` should cover runtime execution. Verify `.env` exists with the key before testing.
+- `sharp` -- Instagram crop fallback is to publish at 1080x1440 (TikTok format). Instagram accepts this.
+- `ANTHROPIC_API_KEY` -- not set in shell env, but `.env` loading via `dotenv` should cover runtime execution. Verify `.env` exists with the key before testing.
 
 ---
 
@@ -545,8 +540,8 @@ stmt.run(draftId, ideaId, platform, JSON.stringify(contentPayload), visualApproa
 
 | ASVS Category | Applies | Standard Control |
 |---------------|---------|-----------------|
-| V2 Authentication | No | No auth layer — CLI-only, single operator |
-| V3 Session Management | No | No sessions — stateless CLI invocations |
+| V2 Authentication | No | No auth layer -- CLI-only, single operator |
+| V3 Session Management | No | No sessions -- stateless CLI invocations |
 | V4 Access Control | No | Single-user system |
 | V5 Input Validation | Yes | Idea ID from DB (trusted), slide texts sanitized via node-canvas emoji stripping |
 | V6 Cryptography | No | No crypto operations |
@@ -564,31 +559,31 @@ stmt.run(draftId, ideaId, platform, JSON.stringify(contentPayload), visualApproa
 ## Sources
 
 ### Primary (HIGH confidence)
-- `Larry 1.0.0/scripts/add-text-overlay.js` — full node-canvas implementation; safe zone constants, font sizing, word wrap verified
-- `.claude/skills/linkedin/scripts/screenshot-slides.py` — Playwright pipeline; venv requirement verified via shell check
-- `.claude/skills/writing/SKILL.md` — Task-based parallel platform generation pattern (INFR-03)
-- `.claude/skills/writing/data/voice-casual.xml` — `<localization-de>` section; German localization principles
-- `.claude/skills/writing/data/voice-linkedin.xml` — LinkedIn fingerprint; hook patterns
-- `.claude/skills/nano-banana/SKILL.md` — Gemini direct API pattern; model names
-- `.claude/skills/tiktok-slideshows/SKILL.md` — photo catalog schema, hook formulas, 6-slide arc
-- `.claude/skills/humanizer/SKILL.md` — AI pattern detection, voice calibration
-- `scripts/init-db.js` — idempotent ALTER TABLE pattern for schema migration
-- `data/content.db` — verified: ideas (5 kept), drafts (0), performance tables exist
-- `package.json` — confirmed: `canvas` and `sharp` NOT installed; `@anthropic-ai/sdk`, `better-sqlite3`, `p-limit` v4 ARE installed
-- Shell environment check — node v24.12.0, python 3.14.0, playwright in notebooklm venv only, Pillow available, canvas/sharp/openai NOT in content-workflow node_modules
+- `Larry 1.0.0/scripts/add-text-overlay.js` -- full node-canvas implementation; safe zone constants, font sizing, word wrap verified
+- `.claude/skills/linkedin/scripts/screenshot-slides.py` -- Playwright pipeline; venv requirement verified via shell check
+- `.claude/skills/writing/SKILL.md` -- Task-based parallel platform generation pattern (INFR-03)
+- `.claude/skills/writing/data/voice-casual.xml` -- `<localization-de>` section; German localization principles
+- `.claude/skills/writing/data/voice-linkedin.xml` -- LinkedIn fingerprint; hook patterns
+- `.claude/skills/nano-banana/SKILL.md` -- Gemini direct API pattern; model names
+- `.claude/skills/tiktok-slideshows/SKILL.md` -- photo catalog schema, hook formulas, 6-slide arc
+- `.claude/skills/humanizer/SKILL.md` -- AI pattern detection, voice calibration
+- `scripts/init-db.js` -- idempotent ALTER TABLE pattern for schema migration
+- `data/content.db` -- verified: ideas (5 kept), drafts (0), performance tables exist
+- `package.json` -- confirmed: `canvas` and `sharp` NOT installed; `@anthropic-ai/sdk`, `better-sqlite3`, `p-limit` v4 ARE installed
+- Shell environment check -- node v24.12.0, python 3.14.0, playwright in notebooklm venv only, Pillow available, canvas/sharp/openai NOT in content-workflow node_modules
 
 ### Secondary (MEDIUM confidence)
-- npm registry — canvas 3.2.3 (latest), sharp 0.34.5 (latest) [VERIFIED: npm view]
+- npm registry -- canvas 3.2.3 (latest), sharp 0.34.5 (latest) [VERIFIED: npm view]
 
 ---
 
 ## Metadata
 
 **Confidence breakdown:**
-- Standard stack: HIGH — verified via package.json, npm registry, and shell environment checks
-- Architecture patterns: HIGH — derived directly from canonical skill files and existing working scripts
-- Pitfalls: HIGH — most verified empirically (playwright venv issue, canvas not installed, hardcoded 6-slide check)
-- German localization: HIGH — voice-casual.xml `<localization-de>` section is the locked specification
+- Standard stack: HIGH -- verified via package.json, npm registry, and shell environment checks
+- Architecture patterns: HIGH -- derived directly from canonical skill files and existing working scripts
+- Pitfalls: HIGH -- most verified empirically (playwright venv issue, canvas not installed, hardcoded 6-slide check)
+- German localization: HIGH -- voice-casual.xml `<localization-de>` section is the locked specification
 
 **Research date:** 2026-04-09
 **Valid until:** 2026-05-09 (stable codebase, no fast-moving dependencies)
