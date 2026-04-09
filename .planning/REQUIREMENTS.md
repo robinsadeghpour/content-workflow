@@ -19,24 +19,24 @@ Requirements for initial release. Each maps to roadmap phases.
 - [ ] **VOIC-01**: Voice profile built from Robin's existing posts (50+ samples) + admired accounts, platform-differentiated
 - [ ] **VOIC-02**: Humanizer pass strips AI patterns and applies Robin's voice to every draft
 - [ ] **VOIC-03**: Platform tone split — LinkedIn formal-authentic vs TikTok/Instagram casual
-- [ ] **VOIC-04**: Critic agent reviews every draft for quality, authenticity, and brand alignment before user review
+- [x] **VOIC-04**: Critic agent reviews every draft for quality, authenticity, and brand alignment before user review
 
 ### Content Generation — TikTok/Instagram
 
-- [ ] **TIKT-01**: Slideshow generation using merged Larry + tiktok-slideshows pipeline (hook → content → CTA)
-- [ ] **TIKT-02**: Text overlay rendering on slide images with proper safe zones and formatting
-- [ ] **TIKT-03**: Photo library with text descriptions for AI image selection without vision calls
-- [ ] **TIKT-04**: AI image generation fallback via Nano Banana / Gemini when no real visuals available
-- [ ] **TIKT-05**: TikTok English master content published to EN account
-- [ ] **TIKT-06**: TikTok German localization from English master for DE account
-- [ ] **TIKT-07**: Instagram carousel/slideshow reuses TikTok slide format
+- [x] **TIKT-01**: Slideshow generation using merged Larry + tiktok-slideshows pipeline (hook → content → CTA)
+- [x] **TIKT-02**: Text overlay rendering on slide images with proper safe zones and formatting
+- [x] **TIKT-03**: Photo library with text descriptions for AI image selection without vision calls
+- [x] **TIKT-04**: AI image generation fallback via Nano Banana / Gemini when no real visuals available
+- [x] **TIKT-05**: TikTok English master content published to EN account
+- [x] **TIKT-06**: TikTok German localization from English master for DE account
+- [x] **TIKT-07**: Instagram carousel/slideshow reuses TikTok slide format
 
 ### Content Generation — LinkedIn
 
-- [ ] **LINK-01**: PDF slide carousel posts using Robin's template with real logos/screenshots
-- [ ] **LINK-02**: Standalone text-only posts
-- [ ] **LINK-03**: Infographic posts with data/insights visualizations
-- [ ] **LINK-04**: Personal posts from rough user notes refined into polished posts with optional image
+- [x] **LINK-01**: PDF slide carousel posts using Robin's template with real logos/screenshots
+- [x] **LINK-02**: Standalone text-only posts
+- [x] **LINK-03**: Infographic posts with data/insights visualizations
+- [x] **LINK-04**: Personal posts from rough user notes refined into polished posts with optional image
 
 ### Publishing
 
@@ -48,9 +48,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Analytics & Feedback
 
-- [ ] **ANLY-01**: End-of-day performance check pulls impressions from Postiz analytics
-- [ ] **ANLY-02**: Performance feedback loop adjusts topic/format weighting based on results
-- [ ] **ANLY-03**: Performance history persisted for trend analysis
+- [x] **ANLY-01**: End-of-day performance check pulls impressions from Postiz analytics
+- [x] **ANLY-02**: Performance feedback loop adjusts topic/format weighting based on results
+- [x] **ANLY-03**: Performance history persisted for trend analysis
 
 ### Infrastructure
 
@@ -115,26 +115,26 @@ Which phases cover which requirements. Updated during roadmap creation.
 | DISC-02 | Phase 2 | Complete |
 | DISC-03 | Phase 2 | Complete |
 | DISC-04 | Phase 2 | Complete |
-| TIKT-01 | Phase 3 | Pending |
-| TIKT-02 | Phase 3 | Pending |
-| TIKT-03 | Phase 3 | Pending |
-| TIKT-04 | Phase 3 | Pending |
-| TIKT-05 | Phase 3 | Pending |
-| TIKT-06 | Phase 3 | Pending |
-| TIKT-07 | Phase 3 | Pending |
-| LINK-01 | Phase 3 | Pending |
-| LINK-02 | Phase 3 | Pending |
-| LINK-03 | Phase 3 | Pending |
-| LINK-04 | Phase 3 | Pending |
-| VOIC-04 | Phase 3 | Pending |
+| TIKT-01 | Phase 3 | Complete |
+| TIKT-02 | Phase 3 | Complete |
+| TIKT-03 | Phase 3 | Complete |
+| TIKT-04 | Phase 3 | Complete |
+| TIKT-05 | Phase 3 | Complete |
+| TIKT-06 | Phase 3 | Complete |
+| TIKT-07 | Phase 3 | Complete |
+| LINK-01 | Phase 3 | Complete |
+| LINK-02 | Phase 3 | Complete |
+| LINK-03 | Phase 3 | Complete |
+| LINK-04 | Phase 3 | Complete |
+| VOIC-04 | Phase 3 | Complete |
 | PUBL-01 | Phase 4 | Pending |
 | PUBL-02 | Phase 4 | Pending |
 | PUBL-03 | Phase 4 | Pending |
 | PUBL-04 | Phase 4 | Pending |
 | PUBL-05 | Phase 4 | Pending |
-| ANLY-01 | Phase 4 | Pending |
-| ANLY-02 | Phase 4 | Pending |
-| ANLY-03 | Phase 4 | Pending |
+| ANLY-01 | Phase 4 | Complete |
+| ANLY-02 | Phase 4 | Complete |
+| ANLY-03 | Phase 4 | Complete |
 
 **Coverage:**
 - v1 requirements: 31 total
