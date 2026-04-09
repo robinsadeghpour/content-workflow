@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Voice** - Infrastructure skeleton, data directory, CLI scaffolding, and Robin's voice profile (completed 2026-04-09)
 - [x] **Phase 2: Discovery Pipeline** - Daily pulse cron, idea backlog, and morning batch review workflow (completed 2026-04-09)
-- [ ] **Phase 3: Content Generation** - TikTok/Instagram slideshows, LinkedIn formats, German localization, and critic agent
+- [x] **Phase 3: Content Generation** - TikTok/Instagram slideshows, LinkedIn formats, German localization, and critic agent (completed 2026-04-09)
 - [ ] **Phase 4: Publishing & Analytics** - Approval gate, Postiz scheduling across all platforms, and performance feedback loop
 
 ## Phase Details
@@ -61,13 +61,13 @@ Plans:
   3. Instagram carousel reuses the TikTok slide format with no extra production step
   4. LinkedIn produces the correct format for the content type: PDF slide carousel using Robin's template for tutorial/listicle topics, standalone text for opinion/hot-take topics, infographic for data topics, personal post for founder notes
   5. A critic agent has reviewed every draft for voice authenticity and brand alignment before Robin sees it — Robin reviews critic-approved drafts only
-**Plans:** 4 plans
+**Plans:** 4/4 plans complete
 
 Plans:
-- [ ] 03-01-PLAN.md — Foundation: install canvas+sharp, migrate drafts schema, create TikTok slide renderer and AI slide generator
-- [ ] 03-02-PLAN.md — LinkedIn content pipeline: 4-format routing (carousel/text/infographic/personal)
-- [ ] 03-03-PLAN.md — Content orchestrator: Claude API generation for all platforms, German localization, Instagram crop
-- [ ] 03-04-PLAN.md — Critic agent with auto-revise loop, /generate-content skill, /review visual approach capture
+- [x] 03-01-PLAN.md — Foundation: install canvas+sharp, migrate drafts schema, create TikTok slide renderer and AI slide generator
+- [x] 03-02-PLAN.md — LinkedIn content pipeline: 4-format routing (carousel/text/infographic/personal)
+- [x] 03-03-PLAN.md — Content orchestrator: Claude API generation for all platforms, German localization, Instagram crop
+- [x] 03-04-PLAN.md — Critic agent with auto-revise loop, /generate-content skill, /review visual approach capture
 
 ### Phase 4: Publishing & Analytics
 **Goal**: Approved content reaches all platforms via Postiz on schedule, and daily performance data feeds back into the discovery weighting so the system improves over time
@@ -79,7 +79,11 @@ Plans:
   3. Robin can see a per-platform review of content with humanizer diff (before/after voice pass) before approving
   4. The end-of-day perf-check cron pulls impression data from Postiz and persists it to performance history
   5. Topic and format weighting in the discovery layer updates based on performance results — high-performing topics surface more often
-**Plans**: TBD
+**Plans:** 2 plans
+
+Plans:
+- [ ] 04-01-PLAN.md — Approval gate + Postiz scheduling across all platforms
+- [ ] 04-02-PLAN.md — Analytics feedback loop: perf-check cron, performance weights, scorer integration
 
 ## Progress
 
@@ -90,5 +94,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 |-------|----------------|--------|-----------|
 | 1. Foundation & Voice | 3/3 | Complete   | 2026-04-09 |
 | 2. Discovery Pipeline | 2/2 | Complete   | 2026-04-09 |
-| 3. Content Generation | 0/4 | In progress | - |
-| 4. Publishing & Analytics | 0/TBD | Not started | - |
+| 3. Content Generation | 4/4 | Complete   | 2026-04-09 |
+| 4. Publishing & Analytics | 0/2 | In progress | - |
