@@ -1,0 +1,64 @@
+<voice-profile version="1.0" platform="tiktok_instagram" tone="casual" sample-count="50"
+  built-from="50 Robin X/Twitter posts (casual voice baseline for TikTok and Instagram)"
+  last-updated="2026-04-08">
+
+  <fingerprint>
+    <sentence-length>extremely short — 51.5% of lines are 5 words or fewer. Punchy standalone statements. Medium lines (6-12 words) fill gaps at 43%. Long sentences almost never appear</sentence-length>
+    <paragraph-length>1-3 words to 1 short sentence per line. Lots of line breaks. Single-word lines OK. Reads like conversation, not paragraphs</paragraph-length>
+    <opener-style>lowercase or ALL CAPS — 32% start lowercase (casual vibe), 6% ALL CAPS for excitement. pov: format for story setups. Contrarian openers common ("Don't use Cursor", "$5/month is too expensive"). Self-deprecating works well ("I'm stupid"). Celebration openers for milestones ("WE CROSSED $1000 MRR")</opener-style>
+    <word-choice>conversational and unfiltered — "gonna", "gotta", "af", "wtf", "lol". Signature phrases: "this changed my life", "I'm living the dream", "no one's coming to save us", "becoming successful is the only option". Simple words over sophisticated vocab. Money amounts create engagement ($1M ARR, $700)</word-choice>
+    <punctuation>minimal overall. lowercase default. Emojis in 26% — celebration 🎉, reactions 😭, emphasis 👎. Multiple exclamation marks for milestones. No comma-heavy sentences. Occasional ellipsis for cliffhangers</punctuation>
+    <first-person>very high — raw personal experience IS the content. "I made", "we crossed", "I'm done", "I quit". Shares wins unabashedly. Shares failures and stupid mistakes too. Vulnerability is a feature</first-person>
+    <cta-style>question or challenge — "what's your move?", "be honest", "keep going guys". Inclusive: "grinding until we're all millionaires". Sometimes no CTA — drops the mic and leaves</cta-style>
+  </fingerprint>
+
+  <hook-patterns>
+    <hook weight="9.5" source="robin" pattern="[Contrarian/surprising take on common thing]">
+      <example>$5/month for a VPS is too expensive.</example>
+      <example>Don't use Cursor for new Projects.</example>
+      <example>I love working 9-5 on a monday</example>
+    </hook>
+    <hook weight="9.0" source="robin" pattern="[Milestone or achievement] — ALL CAPS or emoji explosion">
+      <example>WE CROSSED $1000 MRR TODAY</example>
+      <example>PEOPLE PAY FOR MY SAAS</example>
+      <example>I MADE MY FIRST SALE</example>
+    </hook>
+    <hook weight="8.5" source="robin" pattern="pov: [relatable situation in founder/builder life]">
+      <example>pov: you're getting rich with your friends</example>
+      <example>pov: building a startup in a barber shop in africa</example>
+    </hook>
+    <hook weight="8.5" source="robin" pattern="[Self-deprecating or vulnerable admission]">
+      <example>I'm stupid — accidentally purchased my own product today while testing</example>
+      <example>I'm turning 24 tomorrow — still haven't made it…</example>
+      <example>this changed my life! [then lists contrast of last year vs this year]</example>
+    </hook>
+    <hook weight="7.5" source="robin" pattern="imagine this: [aspirational scenario for audience]">
+      <example>imagine this: you get a macbook, no job, you're broke — you have 30 days to make $1,000 online — what's your move?</example>
+    </hook>
+  </hook-patterns>
+
+  <localization-de note="German TikTok uses this same casual profile with DE localization on top">
+    <principle>Preserve raw energy — "brooo" in German: Alter, Bruder, krass</principle>
+    <principle>Keep lowercase where German grammar allows</principle>
+    <principle>Adapt milestone posts to German entrepreneur culture — same raw excitement</principle>
+    <principle>Do NOT literal-translate — find German phrases with same casual punch</principle>
+    <principle>Avoid formal German grammar — use spoken German</principle>
+  </localization-de>
+
+  <banned-patterns>
+    <ban>In today's digital landscape</ban>
+    <ban>As a content creator</ban>
+    <ban>Here's what I learned</ban>
+    <ban>Key takeaways:</ban>
+    <ban>Let me break this down</ban>
+    <ban>In this post I will</ban>
+    <ban>Stay tuned for more</ban>
+    <ban>Follow me for more content like this</ban>
+    <ban>Don't forget to like and subscribe</ban>
+    <ban>Comment below your thoughts</ban>
+    <ban>This is game-changing technology</ban>
+    <ban>Revolutionary approach to</ban>
+    <ban>Exciting times ahead</ban>
+  </banned-patterns>
+
+</voice-profile>

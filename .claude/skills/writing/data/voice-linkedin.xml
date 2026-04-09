@@ -1,0 +1,99 @@
+<voice-profile version="1.0" platform="linkedin" tone="formal-authentic" sample-count="50"
+  built-from="50 Robin LinkedIn posts + Nick Saraev/Lenny Rachitsky structural extraction"
+  last-updated="2026-04-08">
+
+  <fingerprint>
+    <sentence-length>mixed — 45% short punchy (≤8 words), 43% medium (9-20 words), 12% long. Short sentences punch, medium explain, long are rare</sentence-length>
+    <paragraph-length>1-3 sentences. Lists use → arrows, not bullets. Frequent single-line paragraphs for emphasis</paragraph-length>
+    <opener-style>statement or observation — NOT a question. Bold factual claim or counterintuitive statement. Patterns: "X just dropped Y", "X has/is Z", "I [personal action]". Only 2/50 posts opened with a question</opener-style>
+    <word-choice>direct and concrete — specific product names (Linear, Claude Code, Postel) over abstractions. Informal contractions (it's, I've, don't). No jargon unless relevant</word-choice>
+    <punctuation>minimal em dashes, occasional ellipsis for drama, parentheticals in 40% of posts. → for lists. Emojis in 24% — 1-2 max, never decorative. No semicolons</punctuation>
+    <first-person>high — 72% use I/my/I've. Default lens: "I built", "I quit", "I tested". Personal experience is the credibility signal</first-person>
+    <cta-style>soft and conversational — invites reflection or asks for experience. "Would love to hear what's worked", "What's missing?", "Happy building". Never aggressive or sales-y</cta-style>
+  </fingerprint>
+
+  <hook-patterns>
+    <hook weight="9.0" source="robin" pattern="[Product/company] just [action] — [what it means]">
+      <example>Anthropic just dropped 13 free AI courses with certificates.</example>
+      <example>Claude Code dropped three features this week.</example>
+      <example>Google just killed thousands of startups.</example>
+    </hook>
+    <hook weight="9.0" source="robin" pattern="I [personal action/decision] + [consequence/twist]">
+      <example>I quit my job at Teclead Ventures last week after almost 4 years.</example>
+      <example>I haven't written a single line of code in the last six months...</example>
+      <example>My biggest mistake last year was thinking quality would do the work for us.</example>
+    </hook>
+    <hook weight="8.5" source="robin" pattern="[Counterintuitive claim about a product/tool/behavior]">
+      <example>Chat interfaces are terrible for SaaS</example>
+      <example>JIRA has way more features than Linear. So why do I use Linear instead?</example>
+      <example>tired of copy-pasting the same context into every ai tool?</example>
+    </hook>
+    <hook weight="8.0" source="robin" pattern="I built [specific thing] — here's how">
+      <example>I built a fully automated pipeline that turns YouTube videos into LinkedIn posts.</example>
+      <example>I built a viral tweet browser for X</example>
+      <example>I tested three agentic frameworks to see if any of them actually make Claude Code better.</example>
+    </hook>
+    <hook weight="7.5" source="robin" pattern="[Specific event/result] + emotional reaction">
+      <example>This cancellation flow changed how I think about churn...</example>
+      <example>It's happening.</example>
+      <example>This makes me unbelievably happy.</example>
+    </hook>
+  </hook-patterns>
+
+  <structural-inspiration>
+    <source name="nick-saraev">
+      <post-structure>Bold credibility claim upfront (dollar amount, student count, time period). Then "here's what I found" pivot. Value via numbered list or short paragraphs. Soft close: "I put together a full doc/course" or "reply if you want this".</post-structure>
+      <hook-formulas>
+        <formula>I [extraordinary result]. Here is exactly how I did it.</formula>
+        <formula>Most people [common approach]. I tried [different approach] and here's what happened.</formula>
+        <formula>I [credibility metric]. The real reason is [non-obvious insight].</formula>
+      </hook-formulas>
+      <engagement-tactics>
+        <tactic>Lead with specific dollar amounts and percentages as credibility anchors</tactic>
+        <tactic>Long-form value posts that work as carousels</tactic>
+        <tactic>Ends with invitation to get the full resource</tactic>
+        <tactic>Establishes authority before making the ask</tactic>
+      </engagement-tactics>
+    </source>
+    <source name="lenny-rachitsky">
+      <post-structure>Opens with surprising insight or data point. Shares "so what" in 2-3 tight paragraphs. Uses real quotes from named people. Closes with newsletter/podcast connection.</post-structure>
+      <hook-formulas>
+        <formula>[Person]'s best [thing] kept [failing/dying]. Here's why.</formula>
+        <formula>[Counterintuitive statement] — [brief one-line expansion]</formula>
+        <formula>[Specific data point] — here's what it means for [audience]</formula>
+      </hook-formulas>
+      <engagement-tactics>
+        <tactic>Named characters in stories create emotional connection</tactic>
+        <tactic>Data + narrative combo (charts/stats plus story context)</tactic>
+        <tactic>Positions reader as insider getting exclusive insight</tactic>
+        <tactic>Short posts that feel like the summary of a deeper piece</tactic>
+      </engagement-tactics>
+    </source>
+  </structural-inspiration>
+
+  <banned-patterns>
+    <ban>In today's rapidly evolving landscape</ban>
+    <ban>The key takeaway here is</ban>
+    <ban>Let's dive into</ban>
+    <ban>This is a testament to</ban>
+    <ban>It's worth noting that</ban>
+    <ban>In an era where</ban>
+    <ban>At the end of the day</ban>
+    <ban>Moving forward</ban>
+    <ban>Needless to say</ban>
+    <ban>It goes without saying</ban>
+    <ban>This is a game changer</ban>
+    <ban>The future looks bright</ban>
+    <ban>Exciting times lie ahead</ban>
+    <ban>Groundbreaking</ban>
+    <ban>Cutting-edge</ban>
+    <ban>Synergy</ban>
+    <ban>Leverage (as a verb)</ban>
+    <ban>Let's explore</ban>
+    <ban>Here's what you need to know</ban>
+    <ban>Without further ado</ban>
+    <ban>Delve into</ban>
+    <ban>Pivot (metaphorical business usage)</ban>
+  </banned-patterns>
+
+</voice-profile>

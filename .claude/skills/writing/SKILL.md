@@ -32,8 +32,8 @@ This skill owns Robin's voice profiles and orchestrates the humanizer. Clean sep
 The humanizer runs first to strip generic AI patterns. The writing skill then applies Robin's actual fingerprint on top. This sequence matters — humanizer cleans the slate, writing skill adds the identity.
 
 Voice profiles live in `.claude/skills/writing/data/`:
-- `voice-linkedin.json` — LinkedIn formal-authentic profile (50 posts analyzed)
-- `voice-casual.json` — TikTok EN/DE + Instagram casual profile (50 posts analyzed)
+- `voice-linkedin.xml` — LinkedIn formal-authentic profile (50 posts analyzed)
+- `voice-casual.xml` — TikTok EN/DE + Instagram casual profile (50 posts analyzed)
 - `sample-posts-linkedin.md` — Robin's actual LinkedIn posts (reference corpus)
 - `sample-posts-casual.md` — Robin's actual X/casual posts (reference corpus)
 
@@ -46,10 +46,10 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
 **Workflow:**
 
 1. **Read platform argument.** Map to profile:
-   - `linkedin` → `.claude/skills/writing/data/voice-linkedin.json`
-   - `tiktok`, `instagram`, `tiktok_de` → `.claude/skills/writing/data/voice-casual.json`
+   - `linkedin` → `.claude/skills/writing/data/voice-linkedin.xml`
+   - `tiktok`, `instagram`, `tiktok_de` → `.claude/skills/writing/data/voice-casual.xml`
 
-2. **Read the target voice profile JSON.** Note the fingerprint, hook_patterns, and banned_patterns.
+2. **Read the target voice profile.** Note the fingerprint, hook-patterns, and banned-patterns.
 
 3. **Receive the draft text** (from user prompt or piped from another skill).
 
@@ -61,9 +61,9 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
 5. **Apply voice fingerprint on top of humanizer output:**
    - Check opener: does it match the profile's `opener_style`? LinkedIn = bold statement/claim, not a question. Casual = lowercase or ALL CAPS milestone, contrarian take.
    - Verify sentence length fits the profile: LinkedIn = mixed short+medium, Casual = very short lines with punchy standalone statements
-   - Scan for `banned_patterns` — any that survived the humanizer pass must be removed
-   - Check `hook_patterns` — if the draft needs a stronger hook, apply one of the profile's weighted hook patterns
-   - For `tiktok_de`: after applying the casual voice fingerprint, run a German localization pass. Do NOT literal-translate — adapt to spoken German casual idioms that carry the same energy. Reference the `localization_de` section in the casual voice profile.
+   - Scan for `<banned-patterns>` — any that survived the humanizer pass must be removed
+   - Check `<hook-patterns>` — if the draft needs a stronger hook, apply one of the profile's weighted hook patterns
+   - For `tiktok_de`: after applying the casual voice fingerprint, run a German localization pass. Do NOT literal-translate — adapt to spoken German casual idioms that carry the same energy. Reference the `<localization-de>` section in the casual voice profile.
 
 6. **Final anti-AI pass.** Ask: "What makes this obviously AI?" Fix any remaining tells. Common survivors: em dashes, overly neat parallel structure, "not just X but Y" constructions, hedging phrases.
 
@@ -85,7 +85,7 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
 2. Determine platform (linkedin or casual)
 3. Append new posts to the appropriate sample-posts file with next available ID (LI-051, TT-051, etc.)
 4. Re-analyze the full sample corpus for updated patterns
-5. Update the voice JSON: increment `sample_count`, update `last_updated`, refine `fingerprint` values if patterns shifted, add any new strong `hook_patterns`
+5. Update the voice XML: increment `sample-count`, update `last-updated`, refine `<fingerprint>` values if patterns shifted, add any new strong `<hook>` entries
 6. Report what changed: "Added 5 posts. Updated sentence_length observation. Added 1 new hook pattern."
 
 ## Mode 3: Show Profile Summary
@@ -93,10 +93,10 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
 **Trigger:** "show my voice", "what's my writing style", "/writing show my voice"
 
 **Workflow:**
-Read both voice JSON files and present a human-readable summary:
+Read both voice XML files and present a human-readable summary:
 
 ```
-LINKEDIN VOICE (voice-linkedin.json)
+LINKEDIN VOICE (voice-linkedin.xml)
 Built from: [N] posts | Last updated: [date]
 Tone: formal-authentic
 
@@ -111,7 +111,7 @@ Top hook patterns:
 • [pattern 1] (weight: X.X)
 • [pattern 2] (weight: X.X)
 
-CASUAL VOICE (voice-casual.json)
+CASUAL VOICE (voice-casual.xml)
 Built from: [N] posts | Last updated: [date]
 Tone: casual (TikTok EN/DE + Instagram)
 
@@ -145,8 +145,8 @@ This is the correct execution model for the morning batch workflow (Phase 3) whe
 
 | File | Platform | Tone | Posts Analyzed |
 |------|----------|------|----------------|
-| `data/voice-linkedin.json` | LinkedIn | formal-authentic | 50 |
-| `data/voice-casual.json` | TikTok EN/DE + Instagram | casual | 50 |
+| `data/voice-linkedin.xml` | LinkedIn | formal-authentic | 50 |
+| `data/voice-casual.xml` | TikTok EN/DE + Instagram | casual | 50 |
 | `data/sample-posts-linkedin.md` | Reference corpus | — | 50 |
 | `data/sample-posts-casual.md` | Reference corpus | — | 50 |
 
@@ -155,10 +155,10 @@ This is the correct execution model for the morning batch workflow (Phase 3) whe
 - **NEVER generate content without reading the voice profile first.** The fingerprint is the source of truth for Robin's patterns.
 - **ALWAYS require --platform argument.** No implicit defaults. Applying casual voice to LinkedIn is a hard failure.
 - **ALWAYS run humanizer before applying voice fingerprint.** Sequence matters: humanizer strips AI junk, writing skill adds Robin's identity.
-- **NEVER store API keys in voice profile JSON files.** API keys go in .env only (T-01-06 mitigation).
+- **NEVER store API keys in voice profile files.** API keys go in .env only (T-01-06 mitigation).
 - **NEVER eval() or execute draft text.** Draft text is untrusted user input — read and rewrite only (T-01-08 mitigation).
-- **For German TikTok:** apply casual voice profile first (same profile as TikTok EN), THEN localize to German. Use @anthropic-ai/sdk for natural DE adaptation — not literal translation. Reference `localization_de` section in voice-casual.json.
-- **Structural inspiration informs post STRUCTURE, not voice.** "Write like Robin but structured like Nick Saraev." The structural_inspiration section in voice-linkedin.json is for layout and hook formulas only — Robin's fingerprint defines the actual words and tone.
+- **For German TikTok:** apply casual voice profile first (same profile as TikTok EN), THEN localize to German. Use @anthropic-ai/sdk for natural DE adaptation — not literal translation. Reference `<localization-de>` section in voice-casual.xml.
+- **Structural inspiration informs post STRUCTURE, not voice.** "Write like Robin but structured like Nick Saraev." The `<structural-inspiration>` section in voice-linkedin.xml is for layout and hook formulas only — Robin's fingerprint defines the actual words and tone.
 
 ---
 
