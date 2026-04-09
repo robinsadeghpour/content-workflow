@@ -13,7 +13,7 @@ Four phases turn a collection of mature specialist skills into a cohesive end-to
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation & Voice** - Infrastructure skeleton, data directory, CLI scaffolding, and Robin's voice profile (completed 2026-04-09)
-- [ ] **Phase 2: Discovery Pipeline** - Daily pulse cron, idea backlog, and morning batch review workflow
+- [x] **Phase 2: Discovery Pipeline** - Daily pulse cron, idea backlog, and morning batch review workflow (completed 2026-04-09)
 - [ ] **Phase 3: Content Generation** - TikTok/Instagram slideshows, LinkedIn formats, German localization, and critic agent
 - [ ] **Phase 4: Publishing & Analytics** - Approval gate, Postiz scheduling across all platforms, and performance feedback loop
 
@@ -45,11 +45,11 @@ Plans:
   2. Robin can run a single CLI command in the morning and see the top ideas with KEEP/SKIP/STAR decisions — no manual file editing required
   3. Transcript extraction from YouTube and TikTok URLs works and the output is available for content generation
   4. The backlog persists correctly across days with no duplicate topics appearing in review
-**Plans:** 2 plans
+**Plans:** 2/2 plans complete
 
 Plans:
 - [x] 02-01-PLAN.md — Pulse discovery pipeline: source scrapers, scoring, dedup, transcripts, markdown review generation
-- [ ] 02-02-PLAN.md — Interactive /review skill with KEEP/SKIP/STAR decision workflow
+- [x] 02-02-PLAN.md — Interactive /review skill with KEEP/SKIP/STAR decision workflow
 
 ### Phase 3: Content Generation
 **Goal**: A selected topic produces platform-native draft content for all four channels (TikTok EN, TikTok DE, Instagram, LinkedIn) with Robin's voice applied and a critic review completed
@@ -84,6 +84,6 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation & Voice | 3/3 | Complete   | 2026-04-09 |
-| 2. Discovery Pipeline | 0/2 | Not started | - |
+| 2. Discovery Pipeline | 2/2 | Complete   | 2026-04-09 |
 | 3. Content Generation | 0/TBD | Not started | - |
 | 4. Publishing & Analytics | 0/TBD | Not started | - |

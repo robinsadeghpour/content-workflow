@@ -11,7 +11,7 @@ Requirements for initial release. Each maps to roadmap phases.
 
 - [x] **DISC-01**: Automated daily pulse scrapes YouTube, X, TikTok, web, changelogs for trending AI/tech topics via cron
 - [x] **DISC-02**: Idea backlog persists discovered topics with scoring and deduplication
-- [ ] **DISC-03**: Morning batch review presents top ideas for KEEP/SKIP/STAR decisions via CLI
+- [x] **DISC-03**: Morning batch review presents top ideas for KEEP/SKIP/STAR decisions via CLI
 - [x] **DISC-04**: Transcript extraction from YouTube and TikTok videos for content repurposing via Supadata
 
 ### Voice & Brand
@@ -113,7 +113,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VOIC-03 | Phase 1 | Pending |
 | DISC-01 | Phase 2 | Complete |
 | DISC-02 | Phase 2 | Complete |
-| DISC-03 | Phase 2 | Pending |
+| DISC-03 | Phase 2 | Complete |
 | DISC-04 | Phase 2 | Complete |
 | TIKT-01 | Phase 3 | Pending |
 | TIKT-02 | Phase 3 | Pending |
