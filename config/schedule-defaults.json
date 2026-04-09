@@ -1,0 +1,32 @@
+{
+  "platforms": {
+    "linkedin": {
+      "integration_id": "FILL_AT_SETUP",
+      "default_hour": 9,
+      "default_minute": 0,
+      "timezone": "Europe/Berlin"
+    },
+    "tiktok_en": {
+      "integration_id": "FILL_AT_SETUP",
+      "default_hour": 12,
+      "default_minute": 0,
+      "timezone": "Europe/Berlin"
+    },
+    "tiktok_de": {
+      "integration_id": "FILL_AT_SETUP",
+      "default_hour": 12,
+      "default_minute": 30,
+      "timezone": "Europe/Berlin"
+    },
+    "instagram": {
+      "integration_id": "FILL_AT_SETUP",
+      "default_hour": 18,
+      "default_minute": 0,
+      "timezone": "Europe/Berlin"
+    }
+  },
+  "retry": {
+    "max_attempts": 3,
+    "backoff_base_seconds": 5
+  }
+}

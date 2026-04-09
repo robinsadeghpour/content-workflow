@@ -68,6 +68,32 @@ try {
   if (!err.message.includes('duplicate column')) throw err;
 }
 
+// Phase 3: add visual_approach and media_dir columns to drafts table (idempotent)
+try {
+  db.exec('ALTER TABLE drafts ADD COLUMN visual_approach TEXT');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+try {
+  db.exec('ALTER TABLE drafts ADD COLUMN media_dir TEXT');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
+// Phase 3: add visual_approach column to ideas table for Robin's KEEP-time choice (D-02)
+try {
+  db.exec('ALTER TABLE ideas ADD COLUMN visual_approach TEXT');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
+// Phase 4: add topic_category column to drafts for performance tracking (D-09)
+try {
+  db.exec('ALTER TABLE drafts ADD COLUMN topic_category TEXT');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
 // Verify tables exist
 const tables = db.prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name").all();
 console.log('content.db initialized at:', DB_PATH);
