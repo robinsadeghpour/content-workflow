@@ -89,7 +89,7 @@ async function runPulse() {
 
   // Step 6: Insert into DB
   const insertStmt = db.prepare(`
-    INSERT INTO ideas (id, title, summary, source_url, source_type, score, status, dedup_hash, scraped_at, transcript)
+    INSERT OR IGNORE INTO ideas (id, title, summary, source_url, source_type, score, status, dedup_hash, scraped_at, transcript)
     VALUES (?, ?, ?, ?, ?, ?, 'new', ?, ?, ?)
   `);
 
