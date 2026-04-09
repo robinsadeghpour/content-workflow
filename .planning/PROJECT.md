@@ -12,7 +12,17 @@ One morning session turns a curated idea backlog into platform-native content sc
 
 ### Validated
 
-(None yet — ship to validate)
+- [x] TikTok/Instagram slideshow generation (merged Larry pipeline + tiktok-slideshows skill): hook slide, content slides, CTA slide — Validated in Phase 3: content-generation
+- [x] TikTok English + German localization from single English master — Validated in Phase 3: content-generation
+- [x] LinkedIn content in multiple formats: PDF slides, standalone text, infographics, personal posts — Validated in Phase 3: content-generation
+- [x] Photo library with text descriptions for AI image selection without vision calls — Validated in Phase 3: content-generation
+- [x] AI image generation (Nano Banana / Gemini) as fallback when no real visuals available — Validated in Phase 3: content-generation
+- [x] Humanizer pass on all AI-generated content to match Robin's voice — Validated in Phase 3: content-generation (critic agent with voice scoring)
+- [x] Scheduling and publishing via Postiz across all platforms — Validated in Phase 4: publishing-analytics
+- [x] End-of-day performance check based on impressions — Validated in Phase 4: publishing-analytics
+- [x] Performance feedback loop: adjust topic/format weighting based on results — Validated in Phase 4: publishing-analytics
+- [x] Manual approval required before any post goes live — Validated in Phase 4: publishing-analytics
+- [x] Draft review shows humanizer diff (before/after) per-platform — Validated in Phase 4: publishing-analytics (gap closure)
 
 ### Active
 
@@ -20,17 +30,7 @@ One morning session turns a curated idea backlog into platform-native content sc
 - [ ] Idea backlog where pulse results accumulate for review
 - [ ] Morning batch workflow: review ideas, select topics, approve drafts, schedule posts
 - [ ] Voice profile built from Robin's existing posts + admired accounts
-- [ ] Humanizer pass on all AI-generated content to match Robin's voice
-- [ ] TikTok/Instagram slideshow generation (merged Larry pipeline + tiktok-slideshows skill): hook slide, content slides, CTA slide
-- [ ] TikTok English + German localization from single English master
-- [ ] LinkedIn content in multiple formats: PDF slides, standalone text, infographics, personal posts
 - [ ] LinkedIn slides use Robin's template with real logos/screenshots/product visuals
-- [ ] Photo library with text descriptions for AI image selection without vision calls
-- [ ] AI image generation (Nano Banana / Gemini) as fallback when no real visuals available
-- [ ] Scheduling and publishing via Postiz across all platforms
-- [ ] End-of-day performance check based on impressions
-- [ ] Performance feedback loop: adjust topic/format weighting based on results
-- [ ] Manual approval required before any post goes live
 
 ### Out of Scope
 
@@ -103,4 +103,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-09 after Phase 2 (Discovery Pipeline) completion — pulse scraping, scoring, dedup, transcripts, and interactive /review all operational*
+*Last updated: 2026-04-09 after Phase 4 (Publishing & Analytics) completion — approval gate, Postiz scheduling, performance feedback loop, and humanizer diff all operational*
