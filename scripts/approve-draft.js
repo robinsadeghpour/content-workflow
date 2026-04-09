@@ -18,8 +18,8 @@ const CONFIG_PATH = path.join(__dirname, '..', 'config', 'schedule-defaults.json
 // ------------------------------------------------------------------ state machine
 
 const VALID_TRANSITIONS = {
-  'draft':            ['critic-approved'],
-  'critic-approved':  ['user-approved', 'rejected'],
+  'generated':        ['critic_approved', 'critic_failed'],
+  'critic_approved':  ['user-approved', 'rejected'],
   'user-approved':    ['scheduled', 'pending-schedule'],
   'pending-schedule': ['scheduled'],
   'scheduled':        ['published'],
@@ -288,7 +288,7 @@ function handleEdit(db, draft, newContent, scheduleAt) {
 // ------------------------------------------------------------------ list handlers
 
 function handleList(db, platform) {
-  let query = "SELECT * FROM drafts WHERE status = 'critic-approved'";
+  let query = "SELECT * FROM drafts WHERE status = 'critic_approved'";
   const params = [];
   if (platform) {
     query += ' AND platform = ?';
@@ -411,8 +411,8 @@ function handleListPending(db) {
     process.exit(1);
   }
 
-  if (draft.status !== 'critic-approved') {
-    console.error(`Draft ${id} has status "${draft.status}" — only "critic-approved" drafts can be actioned here.`);
+  if (draft.status !== 'critic_approved') {
+    console.error(`Draft ${id} has status "${draft.status}" — only "critic_approved" drafts can be actioned here.`);
     db.close();
     process.exit(1);
   }
