@@ -86,6 +86,26 @@ Plans:
 - [x] 04-02-PLAN.md — Analytics feedback loop: perf-check cron, performance weights, scorer integration
 - [x] 04-03-PLAN.md — Gap closure: humanizer diff (before/after voice pass) in approval review (PUBL-05)
 
+### Phase 5: Fix Publishing Pipeline
+**Goal**: The publishing pipeline works end-to-end — critic-approved drafts appear in the approval list and can be scheduled to all platforms via Postiz
+**Depends on**: Phase 4
+**Requirements**: PUBL-01, PUBL-02, PUBL-03, PUBL-04
+**Gap Closure:** Closes gaps from v1.0 audit (status string mismatch, state machine entry, broken Flow 3)
+**Success Criteria** (what must be TRUE):
+  1. `apply-critic.js` and `approve-draft.js` use the same status string for critic-approved drafts
+  2. `VALID_TRANSITIONS` state machine starts at `'generated'` (matching actual content entry point)
+  3. `/approve` lists critic-approved drafts and scheduling to all 4 platforms completes without error
+
+### Phase 6: Tech Debt Cleanup
+**Goal**: Stale references, missing config defaults, and checkbox drift from the audit are resolved
+**Depends on**: Phase 5
+**Requirements**: None (tech debt)
+**Gap Closure:** Closes tech debt items from v1.0 audit
+**Success Criteria** (what must be TRUE):
+  1. `/review` SKILL.md schedule table and next-step pointer reflect current state
+  2. `config/schedule-defaults.json` includes `perf_check` section with multiplier bounds
+  3. Voice profile XML format deviation is documented
+
 ## Progress
 
 **Execution Order:**
@@ -97,3 +117,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 2. Discovery Pipeline | 2/2 | Complete   | 2026-04-09 |
 | 3. Content Generation | 4/4 | Complete   | 2026-04-09 |
 | 4. Publishing & Analytics | 3/3 | Complete   | 2026-04-09 |
+| 5. Fix Publishing Pipeline | 0/0 | Not Started | — |
+| 6. Tech Debt Cleanup | 0/0 | Not Started | — |

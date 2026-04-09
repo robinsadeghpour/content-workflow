@@ -16,9 +16,9 @@ Requirements for initial release. Each maps to roadmap phases.
 
 ### Voice & Brand
 
-- [ ] **VOIC-01**: Voice profile built from Robin's existing posts (50+ samples) + admired accounts, platform-differentiated
+- [x] **VOIC-01**: Voice profile built from Robin's existing posts (50+ samples) + admired accounts, platform-differentiated
 - [ ] **VOIC-02**: Humanizer pass strips AI patterns and applies Robin's voice to every draft
-- [ ] **VOIC-03**: Platform tone split — LinkedIn formal-authentic vs TikTok/Instagram casual
+- [x] **VOIC-03**: Platform tone split — LinkedIn formal-authentic vs TikTok/Instagram casual
 - [x] **VOIC-04**: Critic agent reviews every draft for quality, authenticity, and brand alignment before user review
 
 ### Content Generation — TikTok/Instagram
@@ -108,9 +108,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 | INFR-02 | Phase 1 | Complete |
 | INFR-03 | Phase 1 | Complete |
 | INFR-04 | Phase 1 | Complete |
-| VOIC-01 | Phase 1 | Pending |
+| VOIC-01 | Phase 1 | Complete |
 | VOIC-02 | Phase 1 | Pending |
-| VOIC-03 | Phase 1 | Pending |
+| VOIC-03 | Phase 1 | Complete |
 | DISC-01 | Phase 2 | Complete |
 | DISC-02 | Phase 2 | Complete |
 | DISC-03 | Phase 2 | Complete |
@@ -127,10 +127,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | LINK-03 | Phase 3 | Complete |
 | LINK-04 | Phase 3 | Complete |
 | VOIC-04 | Phase 3 | Complete |
-| PUBL-01 | Phase 4 | Pending |
-| PUBL-02 | Phase 4 | Pending |
-| PUBL-03 | Phase 4 | Pending |
-| PUBL-04 | Phase 4 | Pending |
+| PUBL-01 | Phase 5 | Pending |
+| PUBL-02 | Phase 5 | Pending |
+| PUBL-03 | Phase 5 | Pending |
+| PUBL-04 | Phase 5 | Pending |
 | PUBL-05 | Phase 4 | Complete |
 | ANLY-01 | Phase 4 | Complete |
 | ANLY-02 | Phase 4 | Complete |
