@@ -973,19 +973,20 @@
             </div>` : ''}
           <div class="preview__icons">♡ &nbsp; 💬 &nbsp; ➤ <span style="margin-left:auto">🔖</span></div>
           <div class="preview__likes">1,248 likes</div>
-          <div class="preview__caption"><b>robinsadeghpour</b>${escHtml(text || '')}</div>
+          <div class="preview__caption"><b>robinsadeghpour</b> ${escHtml(text || '')}</div>
         </div>`;
     }
 
     if (platform === 'tiktok_en' || platform === 'tiktok_de' || platform === 'tiktok') {
       const handle = platform === 'tiktok_de' ? '@robinsadeghpour.de' : '@robinsadeghpour';
+      const showCaption = draft.format !== 'photo_overlay' && draft.visual_approach !== 'photo_overlay';
       return `
         <div class="preview preview--tiktok">
           <div class="tiktok-phone">
             ${firstSlide ? `<img src="${escHtml(firstSlide)}" alt="" />` : '<div style="height:100%;background:#111"></div>'}
             <div class="tiktok-phone__overlay">
               <div class="tiktok-phone__handle">${escHtml(handle)}</div>
-              <div class="tiktok-phone__caption">${escHtml(text || '')}</div>
+              ${showCaption ? `<div class="tiktok-phone__caption">${escHtml(text || '')}</div>` : ''}
             </div>
             <div class="tiktok-phone__side">
               <div><div class="tiktok-phone__icon">♡</div>12.4K</div>

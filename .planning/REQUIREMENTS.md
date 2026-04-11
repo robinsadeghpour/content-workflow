@@ -17,7 +17,7 @@ Requirements for initial release. Each maps to roadmap phases.
 ### Voice & Brand
 
 - [x] **VOIC-01**: Voice profile built from Robin's existing posts (50+ samples) + admired accounts, platform-differentiated
-- [ ] **VOIC-02**: Humanizer pass strips AI patterns and applies Robin's voice to every draft
+- [x] **VOIC-02**: Humanizer pass strips AI patterns and applies Robin's voice to every draft
 - [x] **VOIC-03**: Platform tone split — LinkedIn formal-authentic vs TikTok/Instagram casual
 - [x] **VOIC-04**: Critic agent reviews every draft for quality, authenticity, and brand alignment before user review
 

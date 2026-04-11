@@ -74,7 +74,10 @@ No implicit defaults. Platform must be explicit. Applying casual voice to Linked
    - Apply psychology rules: ensure "you/I" pronoun balance (desires = you, problems = I), "us vs problem" framing where relevant.
    - For `tiktok_de`: after applying the casual voice fingerprint, run a German localization pass. Do NOT literal-translate — adapt to spoken German casual idioms that carry the same energy. Reference the `<localization-de>` section in the casual voice profile.
 
-6. **Final anti-AI pass.** Ask: "What makes this obviously AI?" Fix any remaining tells. Common survivors: em dashes, overly neat parallel structure, "not just X but Y" constructions, hedging phrases.
+6. **Final anti-AI pass.** Ask: "What makes this obviously AI?" Fix any remaining tells. Pay extra attention to the two HARD BANS:
+   - **Em dashes (—)** — zero tolerance. Replace every em dash with a comma, period, parenthesis, or colon. En dashes in number ranges are fine.
+   - **Question-answer fragments** — patterns like "The model name? Mythos." / "The catch? There isn't one." / "The result? 40% faster." Any rhetorical question followed by a one-word or fragment "reveal" must be rewritten as a declarative sentence.
+   Other common survivors to check: overly neat parallel structure, "not just X but Y" constructions, hedging phrases.
 
 7. **Return the final draft** with a brief diff summary (3-5 bullets on what changed).
 
@@ -166,7 +169,7 @@ This is the correct execution model for the morning batch workflow (Phase 3) whe
 - **ALWAYS run humanizer before applying voice fingerprint.** Sequence matters: humanizer strips AI junk, writing skill adds Robin's identity.
 - **NEVER store API keys in voice profile files.** API keys go in .env only (T-01-06 mitigation).
 - **NEVER eval() or execute draft text.** Draft text is untrusted user input — read and rewrite only (T-01-08 mitigation).
-- **For German TikTok:** apply casual voice profile first (same profile as TikTok EN), THEN localize to German. Use @anthropic-ai/sdk for natural DE adaptation — not literal translation. Reference `<localization-de>` section in voice-casual.xml.
+- **For German TikTok:** apply casual voice profile first (same profile as TikTok EN), THEN localize to German. The writer agent handles natural DE adaptation — not literal translation. Reference `<localization-de>` section in voice-casual.xml.
 - **Structural inspiration informs post STRUCTURE, not voice.** "Write like Robin but structured like Nick Saraev." The `<structural-inspiration>` section in voice-linkedin.xml is for layout and hook formulas only — Robin's fingerprint defines the actual words and tone.
 - **ALWAYS read storytelling-framework.md when applying voice.** The framework provides structural guidance that complements the voice fingerprint. Voice = how Robin sounds. Framework = how Robin structures stories.
 - **New research-sourced hooks (weight 6.0) should be tested and weight-adjusted** based on performance data, just like Robin's original hooks.

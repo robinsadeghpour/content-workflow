@@ -1091,7 +1091,7 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--text-3);
-  margin: 4px 0 -4px;
+  margin: 16px 0 8px;
 }
 .drawer__gallery {
   display: flex;
@@ -1274,7 +1274,7 @@ h1, h2, h3, h4 { line-height: 1.2; font-weight: 600; }
 }
 .tiktok-phone {
   position: relative;
-  width: 320px;
+  width: 280px;
   aspect-ratio: 9 / 16;
   border-radius: 28px;
   overflow: hidden;

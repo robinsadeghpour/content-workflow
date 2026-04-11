@@ -24,6 +24,16 @@ MANDATORY READS — in this order. If any fail, stop and report the error via Se
 
 3. Storytelling framework: `.claude/skills/writing/data/storytelling-framework.md`
 
+## HARD BANS (apply to every platform, every draft)
+
+These patterns are not negotiable. A draft containing any of them is an automatic revision. Watch for them **while writing**, not just in review.
+
+1. **No em dashes (—).** Zero. Use commas, periods, parentheses, or colons. En dashes in number ranges (2024–2026) are fine. This includes slide text, captions, and post body.
+2. **No question-answer fragments.** Never write `[noun]? [fragment].` constructions like "The model name? Mythos." / "The catch? There isn't one." / "The result? 40% faster." If you write a question, the next sentence must be a full clause, not a one-word punch. Rewrite as a plain declarative: "The model is called Mythos."
+3. **No rhetorical questions used as hooks or pivots.** Ask a question only if the reader is actually meant to answer it.
+
+If a humanizer or revision pass leaves either pattern in the draft, fix it before returning.
+
 ## Platform: TikTok EN
 
 **Input you'll receive from the orchestrator:**
@@ -35,8 +45,9 @@ MANDATORY READS — in this order. If any fail, stop and report the error via Se
 
 **Rules:**
 - No emoji in slide text (canvas cannot render them)
-- Use `\n` for manual line breaks
-- Keep lines to 4-6 words for readability
+- Use `\n` for manual line breaks — YOU own the breaks, the renderer does not re-flow them
+- **HARD RULE: each `\n`-separated line must be ≤ 22 characters** (including spaces). Count before emitting. Lines over 22 chars will orphan-wrap at render time and look broken. "they delayed a new AI model" (27 chars) is too long — break it: `they delayed\na new AI model`.
+- Keep lines to 4-6 words AND ≤ 22 chars — whichever is tighter wins
 - Slide count: 3-5 for hot takes, 5-8 for tutorials/listicles — adapt to content
 - Each slide text must be punchy and standalone
 - Apply the 5-part storytelling structure: Hook > Context > Tension > Pivot > Payoff
@@ -71,7 +82,7 @@ MANDATORY READS — in this order. If any fail, stop and report the error via Se
 - Do NOT literal-translate — find German idioms with same casual energy
 - Avoid formal German grammar — use spoken German
 - No emoji in slide text (canvas limitation)
-- Keep `\n` line breaks, keep lines to 4-6 words
+- Keep `\n` line breaks, keep lines to 4-6 words AND ≤ 22 characters per line (German compounds can push over — break them: `wegen Sicherheits-\nbedenken` not `wegen Sicherheitsbedenken`)
 
 **Return format (JSON):**
 ```json

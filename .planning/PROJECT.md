@@ -46,16 +46,13 @@ One morning session turns a curated idea backlog into platform-native content sc
 **Business context:** Robin is building personal brand authority in AI & Tech to generate inbound for 11x Agency (Berlin-based AI automation consulting). Target audience: developers, founders, AI enthusiasts who know Claude Code, Codex, etc.
 
 **Existing assets:**
-- `tiktok-slideshows` skill — mature cron-based TikTok automation with photo library, performance tracking, learning loop
-- `Larry 1.0.0` — battle-tested Node.js slide generation system with text overlays, analytics, and revenue attribution
-- `linkedin` skill — working pipeline with browse/card/topic modes, slide + infographic generation
+- `Larry 1.0.0` — battle-tested Node.js slide generation system with text overlays, analytics, and revenue attribution (merged into `generate-content` orchestrator in Phase 3)
 - `humanizer` skill — 29 documented AI patterns to strip, voice calibration from samples
 - `postiz` skill — scheduling to 28+ platforms with analytics
 - `supadata` skill — YouTube/TikTok/Instagram transcript extraction + web scraping
 - `apify-ultimate-scraper` skill — 55+ scraping actors for social media and web
 - `yt-search` — YouTube search integration
 - `nano-banana` skill — Gemini-based image generation
-- `notebooklm` skill — podcast/content generation from sources
 
 **Inspiration:**
 - Jens Heitmann's pipeline: content radar pulse → creator pack validation → viral content generation
@@ -78,7 +75,7 @@ One morning session turns a curated idea backlog into platform-native content sc
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Merge Larry 1.0.0 + tiktok-slideshows | Larry has superior slide generation pipeline; tiktok-slideshows has cron automation + learning loop | -- Pending |
+| Merge Larry 1.0.0 + tiktok-slideshows | Larry has superior slide generation pipeline; tiktok-slideshows has cron automation + learning loop | Resolved 2026-04-11 — slide generation reimplemented inside the `generate-content` orchestrator (Phase 3); standalone `tiktok-slideshows` skill removed |
 | CLI-first interaction model | Robin works in Claude Code daily, no need for separate UI | -- Pending |
 | Automated daily pulse (not on-demand) | Consistent idea flow without manual triggers | -- Pending |
 | Morning batch review workflow | Concentrated decision-making, no context-switching throughout the day | -- Pending |

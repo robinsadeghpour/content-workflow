@@ -57,8 +57,17 @@ Formula: `score = max(0, 10 - cuts * 2)`
 
 Do NOT apply a hard slide count cap — economy is a heuristic, not a fixed range. A 9-slide tutorial scoring 10 on economy is fine if every slide earns its place. No hard slide count cap.
 
+### HARD-BAN CHECK (auto-fail, runs before scoring)
+
+Before scoring the three dimensions, scan the draft for these banned patterns. If any hit, set `overall_pass = false`, set `hook_score = 0`, and put the specific offending string in `rewrite_instructions` regardless of the other dimension scores.
+
+1. **Em dashes (—).** Any occurrence in any slide text, caption, or post body is an auto-fail. En dashes (–) in number ranges are allowed.
+2. **Question-answer fragments.** Patterns like `[noun]? [fragment].` — for example "The model name? Mythos." / "The catch? There isn't one." / "The result? 40% faster." Any rhetorical question followed by a one-word or sentence-fragment "reveal" is an auto-fail.
+
+The rewrite_instructions for a hard-ban hit must quote the exact offending string and say "rewrite as a declarative sentence" (for question-answer) or "replace with comma/period/parenthesis" (for em dash). Do not proceed to score hook/facts/economy until these are clean.
+
 ### Overall pass
-`overall_pass = (hook_score >= 8 AND facts_score >= 8 AND economy_score >= 8)`
+`overall_pass = (hook_score >= 8 AND facts_score >= 8 AND economy_score >= 8 AND no hard-ban hits)`
 
 Return format (JSON):
 ```json

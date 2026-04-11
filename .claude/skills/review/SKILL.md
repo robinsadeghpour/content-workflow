@@ -129,6 +129,35 @@ Update counters after each decision:
 
 If Robin typed `quit`, stop iterating and go directly to Step 5.
 
+#### Step 4a: Capture visual approach when Robin KEEPs an idea (D-02)
+
+When Robin selects `k` or `keep`, **immediately after** running `review-update.js`, ask:
+
+> "Visual approach for this topic?"
+> - **photo** — Use photos from the catalog with text overlays (default if catalog has photos)
+> - **ai** — Generate slide images with AI (Gemini)
+
+Accept `photo` or `ai` (case-insensitive). Default to `photo` if Robin just presses Enter.
+
+First, ensure the `visual_approach` column exists (idempotent — safe to run every time):
+
+```bash
+node -e "
+  const Database = require('better-sqlite3');
+  const db = new Database('data/content.db');
+  try { db.exec('ALTER TABLE ideas ADD COLUMN visual_approach TEXT'); } catch(e) { if (!e.message.includes('duplicate column')) throw e; }
+  db.close();
+"
+```
+
+Then update the idea with Robin's visual approach choice:
+
+```bash
+node scripts/review-update.js --id <actual_idea_id> --status kept --visual-approach <photo|ai>
+```
+
+This stores Robin's visual approach in the database so the content-orchestrator agent can read it at content generation time (via `idea.visual_approach`). This is D-02: visual approach chosen at KEEP time, not at generation time.
+
 ---
 
 ### Step 5: Show review summary
@@ -144,7 +173,7 @@ Review complete!
 ```
 
 If kept > 0, add:
-> "Run a content generation skill (/linkedin, /tiktok-slideshows, etc.) on any kept idea to create platform-native content."
+> "Run /generate-content on any kept idea to produce TikTok EN, TikTok DE, Instagram, and LinkedIn drafts."
 
 ---
 
@@ -168,7 +197,7 @@ If kept > 0, add:
 |------|---------|-------|--------|
 | 6:00 AM | /pulse | Phase 2 | Active |
 | Manual | /review | Phase 2 | Active |
-| Manual | /linkedin, /tiktok-slideshows | Phase 3 | Active |
+| Manual | /generate-content | Phase 3 | Active |
 | 6:00 PM | perf-check | Phase 4 | Not yet created |
 
 Registration commands (per D-07, using Claude Code /schedule):

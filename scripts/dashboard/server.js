@@ -9,6 +9,7 @@ const { handleApi } = require('./api.js');
 
 const PORT = 3456;
 const PUBLIC_DIR = path.join(__dirname, 'public');
+const MEDIA_DIR = path.join(__dirname, '..', '..', 'media');
 const DB_PATH = path.join(__dirname, '..', '..', 'data', 'content.db');
 
 // MIME type map
@@ -20,6 +21,9 @@ const MIME_TYPES = {
   '.png': 'image/png',
   '.jpg': 'image/jpeg',
   '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.gif': 'image/gif',
+  '.mp4': 'video/mp4',
   '.svg': 'image/svg+xml',
   '.ico': 'image/x-icon',
 };
@@ -60,11 +64,41 @@ function serveStatic(req, res) {
   });
 }
 
+function serveMedia(req, res) {
+  if (req.method !== 'GET') {
+    res.writeHead(405, { 'Content-Type': 'text/plain' });
+    res.end('Method Not Allowed');
+    return;
+  }
+  const urlPath = new URL(req.url, 'http://localhost').pathname;
+  const rel = urlPath.replace(/^\/media\/?/, '');
+  const resolved = path.resolve(path.join(MEDIA_DIR, rel));
+  const mediaDirNormalized = MEDIA_DIR.endsWith(path.sep) ? MEDIA_DIR : MEDIA_DIR + path.sep;
+  if (!resolved.startsWith(mediaDirNormalized) && resolved !== MEDIA_DIR) {
+    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.end('Forbidden');
+    return;
+  }
+  fs.readFile(resolved, (err, data) => {
+    if (err) {
+      res.writeHead(404, { 'Content-Type': 'text/plain' });
+      res.end('Not found');
+      return;
+    }
+    const ext = path.extname(resolved).toLowerCase();
+    const mime = MIME_TYPES[ext] || 'application/octet-stream';
+    res.writeHead(200, { 'Content-Type': mime, 'Cache-Control': 'public, max-age=3600' });
+    res.end(data);
+  });
+}
+
 const server = http.createServer((req, res) => {
   const urlPath = new URL(req.url, 'http://localhost').pathname;
 
   if (urlPath.startsWith('/api/')) {
     handleApi(req, res, dbRead, dbWrite);
+  } else if (urlPath.startsWith('/media/')) {
+    serveMedia(req, res);
   } else {
     serveStatic(req, res);
   }
