@@ -101,6 +101,20 @@ try {
   if (!err.message.includes('duplicate column')) throw err;
 }
 
+// Phase 06.1: add research_thin flag to drafts for research-thin briefs (D-05)
+try {
+  db.exec('ALTER TABLE drafts ADD COLUMN research_thin INTEGER DEFAULT 0');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
+// Phase 06.1: add did_not_pass_critic flag to drafts for critic max-iters failures (D-12)
+try {
+  db.exec('ALTER TABLE drafts ADD COLUMN did_not_pass_critic INTEGER DEFAULT 0');
+} catch (err) {
+  if (!err.message.includes('duplicate column')) throw err;
+}
+
 // Verify tables exist
 const tables = db.prepare("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name").all();
 console.log('content.db initialized at:', DB_PATH);
