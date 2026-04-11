@@ -324,7 +324,7 @@ function handleApi(req, res, db, dbWrite) {
       }
       let limit = parseInt(params.get('limit') || '20', 10);
       if (!Number.isFinite(limit) || limit <= 0) limit = 20;
-      if (limit > 50) limit = 50;
+      if (limit > 1000) limit = 1000;
       const cursor = params.get('cursor');
 
       const where = [];

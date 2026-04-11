@@ -607,7 +607,7 @@
     async mount() {
       if (!state.backlog.loaded) {
         try {
-          const data = await api.get('/api/ideas/feed?status=all&limit=500');
+          const data = await api.get('/api/ideas/feed?status=all&limit=1000');
           const items = Array.isArray(data) ? data : (data.items || data.ideas || []);
           state.backlog.rows = items;
           state.backlog.loaded = true;
@@ -650,6 +650,10 @@
 
     const rows = filteredBacklog();
     const total = rows.length;
+    if (total === 0) {
+      tbody.innerHTML = `<tr><td colspan="7" style="text-align:center;color:var(--text-3);padding:32px">No ideas match this filter.</td></tr>`;
+      return;
+    }
     const scrollTop = scroll.scrollTop;
     const viewportH = scroll.clientHeight || 600;
     const startIdx = Math.max(0, Math.floor(scrollTop / ROW_H) - 10);
@@ -661,7 +665,7 @@
 
     const chunk = rows.slice(startIdx, endIdx);
     const html = [];
-    if (padTop) html.push(`<tr style="height:${padTop}px"><td colspan="8"></td></tr>`);
+    if (padTop) html.push(`<tr style="height:${padTop}px"><td colspan="7"></td></tr>`);
     chunk.forEach((r) => {
       const checked = state.backlog.selected.has(r.id) ? 'checked' : '';
       const score = r.score != null ? Number(r.score) : 0;
@@ -677,11 +681,10 @@
           <td><div class="score-bar"><div class="score-bar__fill" style="width:${Math.min(100, Math.max(0, score * 100))}%"></div></div></td>
           <td><span class="badge badge--${escHtml(r.status || 'new')}">${escHtml(r.status || 'new')}</span></td>
           <td>${escHtml(relativeTime(r.created_at))}</td>
-          <td><button class="kebab" aria-label="Actions">${svgIcon('more-horizontal')}</button></td>
         </tr>
       `);
     });
-    if (padBot) html.push(`<tr style="height:${padBot}px"><td colspan="8"></td></tr>`);
+    if (padBot) html.push(`<tr style="height:${padBot}px"><td colspan="7"></td></tr>`);
     tbody.innerHTML = html.join('');
   }
 
@@ -699,9 +702,11 @@
     });
 
     const slider = document.getElementById('backlog-score');
+    const scoreLabel = document.getElementById('backlog-score-val');
+    scoreLabel.textContent = Number(slider.value).toFixed(2);
     slider.oninput = () => {
       state.backlog.minScore = Number(slider.value);
-      document.getElementById('backlog-score-val').textContent = slider.value;
+      scoreLabel.textContent = Number(slider.value).toFixed(2);
       renderBacklog();
     };
 
@@ -726,10 +731,6 @@
       if (idCell) {
         e.stopPropagation();
         copyId(idCell.dataset.copyId);
-        return;
-      }
-      if (e.target.closest('.kebab')) {
-        openDrawer(id);
         return;
       }
       openDrawer(id);
@@ -780,6 +781,7 @@
       <div>
         <div class="badge ${platformClass(media.kind || idea.source_type)}">${escHtml(media.kind || idea.source_type || 'source')}</div>
         <span class="badge badge--${escHtml(idea.status || 'new')}" style="margin-left:8px">${escHtml(idea.status || 'new')}</span>
+        <span class="badge" style="margin-left:8px">score ${Number(idea.score || 0).toFixed(2)}</span>
       </div>
       ${idea.summary ? `<p style="color:var(--text-2);line-height:1.6">${escHtml(idea.summary)}</p>` : ''}
       ${idea.transcript ? `<details><summary style="cursor:pointer;color:var(--text-2)">Transcript</summary><div style="margin-top:8px;white-space:pre-wrap;color:var(--text-2);max-height:300px;overflow:auto">${escHtml(idea.transcript)}</div></details>` : ''}
