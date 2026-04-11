@@ -13,7 +13,8 @@
 #   FORCE_RESEARCH=1   bypass cache and regenerate brief even if file exists
 #
 # Parallel-safe rules:
-#   - NEVER call `notebooklm use` (writes to ~/.notebooklm/context.json — breaks parallel agents)
+#   - NEVER call the notebooklm context-switch subcommand (writes to
+#     ~/.notebooklm/context.json — breaks parallel agents). Always pass -n.
 #   - Every subcommand passes -n "$NOTEBOOK_ID" explicitly
 #
 # Exit codes:
