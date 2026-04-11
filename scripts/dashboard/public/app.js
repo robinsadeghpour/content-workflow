@@ -1041,7 +1041,7 @@
 
       ${draft.idea_source_url ? `<a href="${escHtml(draft.idea_source_url)}" target="_blank" rel="noopener" style="font-size:13px;color:var(--text-2)">→ Open original source</a>` : ''}
 
-      <div style="display:flex;gap:8px;margin-top:auto;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--border)">
+      <div style="display:flex;gap:8px;flex-wrap:wrap;padding-top:12px;border-top:1px solid var(--border)">
         ${(draft.status === 'draft' || draft.status === 'generated') ? `<button class="btn btn--ghost" data-draft-drawer-action="critic">Run Critic</button>` : ''}
         ${(draft.status === 'draft' || draft.status === 'critic_approved') ? `<button class="btn btn--ghost" data-draft-drawer-action="approve">Approve</button>` : ''}
         ${(draft.status === 'approved' || draft.status === 'user-approved' || draft.status === 'critic_approved') ? `<button class="btn btn--primary" data-draft-drawer-action="schedule">Schedule</button>` : ''}
