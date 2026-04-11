@@ -98,6 +98,20 @@
     return `<svg class="icon" aria-hidden="true"><use href="#icon-${name}"/></svg>`;
   }
 
+  function copyId(id) {
+    if (!id) return;
+    const show = () => showToast(`Copied ${String(id).slice(0, 8)}…`);
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(id).then(show).catch(() => show());
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = id; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); } catch (_) {}
+      document.body.removeChild(ta);
+      show();
+    }
+  }
+
   // Derive media info client-side from source_url if server didn't supply it
   function deriveMedia(idea) {
     if (idea.media && (idea.media.thumbnail || idea.media.embed)) return idea.media;
@@ -370,6 +384,7 @@
       </div>
       <div class="feed-card__footer">
         <span>${escHtml(media.host || idea.source_type || '')}</span>
+        <code class="feed-card__id" title="${escHtml(idea.id || '')}" data-copy-id="${escHtml(idea.id || '')}">${escHtml(String(idea.id || '').slice(0, 8))}</code>
         <span>${escHtml(relativeTime(idea.created_at))}</span>
       </div>
     `;
@@ -383,6 +398,11 @@
       });
       const embedBtn = card.querySelector('[data-action="embed"]');
       if (embedBtn) embedBtn.addEventListener('click', (e) => { e.stopPropagation(); toggleEmbed(); });
+      const idChip = card.querySelector('[data-copy-id]');
+      if (idChip) idChip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        copyId(idChip.dataset.copyId);
+      });
     }
 
     return card;
@@ -401,7 +421,13 @@
     const mediaEl = activeCardEl()?.querySelector('.feed-card__media');
     if (!mediaEl) return;
     const existing = mediaEl.querySelector('iframe');
-    if (existing) { existing.remove(); return; }
+    if (existing) {
+      existing.remove();
+      mediaEl.classList.remove('is-embed-tall');
+      const hidden = mediaEl.querySelector('img');
+      if (hidden) hidden.style.display = '';
+      return;
+    }
     const img = mediaEl.querySelector('img');
     if (img) img.style.display = 'none';
     const iframe = document.createElement('iframe');
@@ -410,11 +436,39 @@
     iframe.allowFullscreen = true;
     iframe.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
     mediaEl.appendChild(iframe);
+    const closeBtn = document.createElement('button');
+    closeBtn.type = 'button';
+    closeBtn.className = 'feed-card__embed-close';
+    closeBtn.setAttribute('aria-label', 'Close embed');
+    closeBtn.textContent = '×';
+    closeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      unmountActiveEmbed();
+      const card = activeCardEl();
+      if (card) card.focus({ preventScroll: true });
+    });
+    mediaEl.appendChild(closeBtn);
+    if (media.kind === 'tiktok' || media.orientation === 'portrait') {
+      mediaEl.classList.add('is-embed-tall');
+    }
+    const card = activeCardEl();
+    if (card) {
+      card.setAttribute('tabindex', '-1');
+      card.focus({ preventScroll: true });
+    }
   }
 
   function unmountActiveEmbed() {
+    const container = document.querySelector('#feed-stack .feed-card__media');
     const iframe = document.querySelector('#feed-stack iframe');
+    const closeBtn = document.querySelector('#feed-stack .feed-card__embed-close');
     if (iframe) iframe.remove();
+    if (closeBtn) closeBtn.remove();
+    if (container) {
+      container.classList.remove('is-embed-tall');
+      const hidden = container.querySelector('img');
+      if (hidden) hidden.style.display = '';
+    }
   }
 
   async function decide(status) {
@@ -495,7 +549,7 @@
     let pointerId = null;
 
     function onDown(e) {
-      if (e.target.closest('button, a, iframe, details, summary')) return;
+      if (e.target.closest('button, a, details, summary')) return;
       dragging = true;
       pointerId = e.pointerId;
       startX = e.clientX; startY = e.clientY;
@@ -607,15 +661,17 @@
 
     const chunk = rows.slice(startIdx, endIdx);
     const html = [];
-    if (padTop) html.push(`<tr style="height:${padTop}px"><td colspan="7"></td></tr>`);
+    if (padTop) html.push(`<tr style="height:${padTop}px"><td colspan="8"></td></tr>`);
     chunk.forEach((r) => {
       const checked = state.backlog.selected.has(r.id) ? 'checked' : '';
       const score = r.score != null ? Number(r.score) : 0;
       const media = deriveMedia(r);
       const src = media.host || r.source_type || '--';
+      const shortId = String(r.id || '').slice(0, 8);
       html.push(`
         <tr data-id="${escHtml(r.id)}">
           <td><input type="checkbox" class="backlog-row-check" ${checked} aria-label="Select row" /></td>
+          <td><code class="idea-id" title="${escHtml(r.id || '')}" data-copy-id="${escHtml(r.id || '')}">${escHtml(shortId)}</code></td>
           <td class="cell-title">${escHtml(truncate(r.title || 'Untitled', 100))}</td>
           <td>${escHtml(src)}</td>
           <td><div class="score-bar"><div class="score-bar__fill" style="width:${Math.min(100, Math.max(0, score * 100))}%"></div></div></td>
@@ -625,7 +681,7 @@
         </tr>
       `);
     });
-    if (padBot) html.push(`<tr style="height:${padBot}px"><td colspan="7"></td></tr>`);
+    if (padBot) html.push(`<tr style="height:${padBot}px"><td colspan="8"></td></tr>`);
     tbody.innerHTML = html.join('');
   }
 
@@ -664,6 +720,12 @@
         if (e.target.checked) state.backlog.selected.add(id);
         else state.backlog.selected.delete(id);
         updateBulkBar();
+        return;
+      }
+      const idCell = e.target.closest('[data-copy-id]');
+      if (idCell) {
+        e.stopPropagation();
+        copyId(idCell.dataset.copyId);
         return;
       }
       if (e.target.closest('.kebab')) {
@@ -713,6 +775,7 @@
     document.getElementById('drawer-title').textContent = idea.title || 'Idea';
     const body = document.getElementById('drawer-body');
     body.innerHTML = `
+      <div class="drawer__id"><code data-copy-id="${escHtml(idea.id)}" title="Click to copy">${escHtml(idea.id)}</code></div>
       ${media.thumbnail ? `<div class="feed-card__media" style="border-radius:var(--radius-sm);overflow:hidden;position:relative"><img src="${escHtml(media.thumbnail)}" alt="" loading="lazy" /></div>` : ''}
       <div>
         <div class="badge ${platformClass(media.kind || idea.source_type)}">${escHtml(media.kind || idea.source_type || 'source')}</div>
@@ -727,6 +790,8 @@
         <button class="btn btn--ghost" data-drawer-action="skipped">Skip</button>
       </div>
     `;
+    const idNode = body.querySelector('[data-copy-id]');
+    if (idNode) idNode.onclick = () => copyId(idNode.dataset.copyId);
     body.querySelectorAll('[data-drawer-action]').forEach((btn) => {
       btn.onclick = async () => {
         try {
@@ -758,15 +823,18 @@
   // ============================================================
   const KANBAN_COLS = [
     { key: 'draft', title: 'Draft', match: (s) => s === 'draft' || s === 'generated' },
-    { key: 'critic', title: 'Critic', match: (s) => s === 'critic_approved' },
-    { key: 'approved', title: 'Approved', match: (s) => s === 'approved' || s === 'user-approved' },
-    { key: 'scheduled', title: 'Scheduled', match: (s) => s === 'scheduled' || s === 'published' || s === 'pending-schedule' },
+    { key: 'ready', title: 'Ready', match: (s) => s === 'critic_approved' },
+    { key: 'approved', title: 'Approved', match: (s) => s === 'approved' || s === 'user-approved' || s === 'pending-schedule' },
+    { key: 'shipped', title: 'Shipped', match: (s) => s === 'scheduled' || s === 'published' },
   ];
+
+  const pipelineState = { drafts: [] };
 
   views.pipeline = {
     async mount() {
       try {
         const drafts = await api.get('/api/drafts');
+        pipelineState.drafts = drafts;
         renderKanban(drafts);
       } catch (e) {
         document.getElementById('kanban').innerHTML = `<div style="color:var(--text-2)">Error: ${escHtml(e.message)}</div>`;
@@ -794,6 +862,22 @@
       </div>
     `).join('');
 
+    kanban.querySelectorAll('.kanban__card').forEach((card) => {
+      card.addEventListener('click', (e) => {
+        if (e.target.closest('[data-draft-action]') || e.target.closest('[data-copy-id]')) return;
+        const id = card.dataset.id;
+        const draft = pipelineState.drafts.find((x) => String(x.id) === String(id));
+        if (draft) openDraftDrawer(draft);
+      });
+    });
+
+    kanban.querySelectorAll('[data-copy-id]').forEach((el) => {
+      el.addEventListener('click', (e) => {
+        e.stopPropagation();
+        copyId(el.dataset.copyId);
+      });
+    });
+
     kanban.querySelectorAll('[data-draft-action]').forEach((btn) => {
       btn.onclick = async (e) => {
         e.stopPropagation();
@@ -805,6 +889,7 @@
           else if (action === 'approve') await api.post(`/api/drafts/${encodeURIComponent(id)}/approve`);
           else if (action === 'schedule') await api.post('/api/trigger/approve-schedule', { draftId: id });
           const drafts2 = await api.get('/api/drafts');
+          pipelineState.drafts = drafts2;
           renderKanban(drafts2);
         } catch (err) { showToast(`Failed: ${err.message}`); btn.disabled = false; }
       };
@@ -813,6 +898,14 @@
 
   function kanbanCardHtml(d) {
     const p = platformClass(d.platform);
+    const shortIdeaId = String(d.idea_id || '').slice(0, 8);
+    const files = Array.isArray(d.media_files) ? d.media_files : [];
+    const previewHtml = files.length ? `
+      <div class="kanban__card-preview">
+        ${files.slice(0, 4).map((f) => `<img loading="lazy" decoding="async" src="${escHtml(f)}" alt="" />`).join('')}
+        ${files.length > 4 ? `<span class="kanban__card-more">+${files.length - 4}</span>` : ''}
+      </div>` : '';
+    const textHtml = d.post_text ? `<div class="kanban__card-text">${escHtml(truncate(d.post_text, 220))}</div>` : '';
     return `
       <div class="kanban__card" data-id="${escHtml(d.id)}">
         <div class="kanban__card-meta">
@@ -823,6 +916,9 @@
           <span style="margin-left:auto">${escHtml(relativeTime(d.updated_at))}</span>
         </div>
         <div class="kanban__card-title">${escHtml(d.idea_title || 'Untitled')}</div>
+        ${shortIdeaId ? `<code class="idea-id" title="${escHtml(d.idea_id)}" data-copy-id="${escHtml(d.idea_id)}">${escHtml(shortIdeaId)}</code>` : ''}
+        ${previewHtml}
+        ${textHtml}
         <div class="kanban__card-actions">
           ${(d.status === 'draft' || d.status === 'generated') ? `<button class="btn btn--ghost" data-draft-action="critic" data-draft-id="${escHtml(d.id)}">Run Critic</button>` : ''}
           ${(d.status === 'draft' || d.status === 'critic_approved') ? `<button class="btn btn--ghost" data-draft-action="approve" data-draft-id="${escHtml(d.id)}">Approve</button>` : ''}
@@ -830,6 +926,163 @@
         </div>
       </div>
     `;
+  }
+
+  function platformPreviewHtml(draft, files) {
+    const platform = String(draft.platform || '').toLowerCase();
+    const firstSlide = files[0] || null;
+    const text = draft.post_text || '';
+
+    if (platform === 'linkedin') {
+      const galleryClass = firstSlide ? 'preview__media preview__media--document' : '';
+      const n = files.length;
+      return `
+        <div class="preview preview--linkedin">
+          <div class="preview__header">
+            <div class="preview__avatar">R</div>
+            <div>
+              <div class="preview__name">Robin Sadeghpour</div>
+              <div class="preview__meta">Building AI content workflows · Now · 🌐</div>
+            </div>
+          </div>
+          <p class="preview__text preview__text--clamp" data-preview-text>${escHtml(text || '(no text)')}</p>
+          ${text.length > 220 ? `<button class="preview__seemore" data-preview-more>…see more</button>` : ''}
+          ${firstSlide ? `
+            <div class="${galleryClass}">
+              <img loading="lazy" src="${escHtml(firstSlide)}" alt="" />
+              ${n > 1 ? `<span class="preview__page">1 / ${n}</span>` : ''}
+            </div>` : ''}
+          <div class="preview__actions">👍 Like &nbsp; 💬 Comment &nbsp; 🔁 Repost &nbsp; ✈ Send</div>
+        </div>`;
+    }
+
+    if (platform === 'instagram') {
+      const n = files.length;
+      const dots = n > 1 ? `<div class="preview__dots">${Array.from({length: Math.min(n, 8)}).map((_,i)=>`<span class="${i===0?'is-active':''}"></span>`).join('')}</div>` : '';
+      return `
+        <div class="preview preview--instagram">
+          <div class="preview__header">
+            <div class="preview__avatar">R</div>
+            <div class="preview__name">robinsadeghpour</div>
+            <div style="margin-left:auto;color:#111">•••</div>
+          </div>
+          ${firstSlide ? `
+            <div class="preview__media preview__media--square">
+              <img loading="lazy" src="${escHtml(firstSlide)}" alt="" />
+              ${dots}
+            </div>` : ''}
+          <div class="preview__icons">♡ &nbsp; 💬 &nbsp; ➤ <span style="margin-left:auto">🔖</span></div>
+          <div class="preview__likes">1,248 likes</div>
+          <div class="preview__caption"><b>robinsadeghpour</b>${escHtml(text || '')}</div>
+        </div>`;
+    }
+
+    if (platform === 'tiktok_en' || platform === 'tiktok_de' || platform === 'tiktok') {
+      const handle = platform === 'tiktok_de' ? '@robinsadeghpour.de' : '@robinsadeghpour';
+      return `
+        <div class="preview preview--tiktok">
+          <div class="tiktok-phone">
+            ${firstSlide ? `<img src="${escHtml(firstSlide)}" alt="" />` : '<div style="height:100%;background:#111"></div>'}
+            <div class="tiktok-phone__overlay">
+              <div class="tiktok-phone__handle">${escHtml(handle)}</div>
+              <div class="tiktok-phone__caption">${escHtml(text || '')}</div>
+            </div>
+            <div class="tiktok-phone__side">
+              <div><div class="tiktok-phone__icon">♡</div>12.4K</div>
+              <div><div class="tiktok-phone__icon">💬</div>284</div>
+              <div><div class="tiktok-phone__icon">↗</div>96</div>
+            </div>
+            <div class="tiktok-phone__bottom">🎵 original sound — robin</div>
+          </div>
+        </div>`;
+    }
+
+    // Fallback: generic card with first slide + text.
+    return `
+      <div class="preview">
+        ${firstSlide ? `<div class="preview__media"><img src="${escHtml(firstSlide)}" alt="" /></div>` : ''}
+        <p class="preview__text">${escHtml(text || '(no text)')}</p>
+      </div>`;
+  }
+
+  function openDraftDrawer(draft) {
+    const title = draft.idea_title || 'Draft';
+    document.getElementById('drawer-title').textContent = title;
+    const body = document.getElementById('drawer-body');
+    const files = Array.isArray(draft.media_files) ? draft.media_files : [];
+    const p = platformClass(draft.platform);
+    const isIg = String(draft.platform || '').toLowerCase() === 'instagram';
+    body.innerHTML = `
+      <div class="drawer__id">
+        idea <code data-copy-id="${escHtml(draft.idea_id || '')}" title="Click to copy">${escHtml(draft.idea_id || '')}</code>
+        &nbsp;·&nbsp;
+        draft <code data-copy-id="${escHtml(draft.id || '')}" title="Click to copy">${escHtml(draft.id || '')}</code>
+      </div>
+      <div>
+        <span class="badge ${p}">${escHtml(draft.platform || '')}</span>
+        <span class="badge badge--${escHtml(draft.status || 'draft')}" style="margin-left:8px">${escHtml(draft.status || 'draft')}</span>
+        ${draft.visual_approach ? `<span class="badge" style="margin-left:8px">${escHtml(draft.visual_approach)}</span>` : ''}
+      </div>
+
+      <div class="drawer__section-label">Platform preview</div>
+      ${platformPreviewHtml(draft, files)}
+
+      ${files.length ? `
+        <div class="drawer__section-label">All slides (${files.length})</div>
+        <div class="drawer__gallery ${isIg ? 'drawer__gallery--square' : ''}">
+          ${files.map((f) => `<a href="${escHtml(f)}" target="_blank" rel="noopener"><img loading="lazy" src="${escHtml(f)}" alt="" /></a>`).join('')}
+        </div>` : ''}
+
+      <div class="drawer__section-label">Full post text <button class="btn btn--ghost" style="padding:2px 8px;font-size:11px" data-copy-text>Copy</button></div>
+      <pre class="drawer__raw-text">${draft.post_text ? escHtml(draft.post_text) : '(empty)'}</pre>
+
+      ${draft.idea_source_url ? `<a href="${escHtml(draft.idea_source_url)}" target="_blank" rel="noopener" style="font-size:13px;color:var(--text-2)">→ Open original source</a>` : ''}
+
+      <div style="display:flex;gap:8px;margin-top:auto;flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--border)">
+        ${(draft.status === 'draft' || draft.status === 'generated') ? `<button class="btn btn--ghost" data-draft-drawer-action="critic">Run Critic</button>` : ''}
+        ${(draft.status === 'draft' || draft.status === 'critic_approved') ? `<button class="btn btn--ghost" data-draft-drawer-action="approve">Approve</button>` : ''}
+        ${(draft.status === 'approved' || draft.status === 'user-approved' || draft.status === 'critic_approved') ? `<button class="btn btn--primary" data-draft-drawer-action="schedule">Schedule</button>` : ''}
+      </div>
+    `;
+    body.querySelectorAll('[data-copy-id]').forEach((el) => {
+      el.onclick = () => copyId(el.dataset.copyId);
+    });
+    const copyTextBtn = body.querySelector('[data-copy-text]');
+    if (copyTextBtn) copyTextBtn.onclick = () => {
+      if (draft.post_text) { copyId(draft.post_text); }
+    };
+    const moreBtn = body.querySelector('[data-preview-more]');
+    if (moreBtn) moreBtn.onclick = () => {
+      const t = body.querySelector('[data-preview-text]');
+      if (t) t.classList.toggle('preview__text--clamp');
+      moreBtn.remove();
+    };
+    body.querySelectorAll('[data-draft-drawer-action]').forEach((btn) => {
+      btn.onclick = async () => {
+        btn.disabled = true;
+        const action = btn.dataset.draftDrawerAction;
+        try {
+          if (action === 'critic') await api.post('/api/trigger/critic', { draftId: draft.id });
+          else if (action === 'approve') await api.post(`/api/drafts/${encodeURIComponent(draft.id)}/approve`);
+          else if (action === 'schedule') await api.post('/api/trigger/approve-schedule', { draftId: draft.id });
+          const drafts2 = await api.get('/api/drafts');
+          pipelineState.drafts = drafts2;
+          renderKanban(drafts2);
+          const updated = drafts2.find((x) => String(x.id) === String(draft.id));
+          if (updated) openDraftDrawer(updated);
+          else closeDrawer();
+        } catch (e) {
+          showToast(`Failed: ${e.message}`);
+          btn.disabled = false;
+        }
+      };
+    });
+    document.getElementById('drawer').hidden = false;
+    document.getElementById('drawer-backdrop').hidden = false;
+    requestAnimationFrame(() => {
+      document.getElementById('drawer').classList.add('is-open');
+      document.getElementById('drawer-backdrop').classList.add('is-open');
+    });
   }
 
   // ============================================================
@@ -1013,7 +1266,16 @@
     document.getElementById('drawer-close').addEventListener('click', closeDrawer);
     document.getElementById('drawer-backdrop').addEventListener('click', closeDrawer);
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && !document.getElementById('drawer').hidden) closeDrawer();
+      if (e.key !== 'Escape') return;
+      const iframe = document.querySelector('#feed-stack iframe');
+      if (iframe) {
+        e.preventDefault();
+        unmountActiveEmbed();
+        const card = activeCardEl();
+        if (card) card.focus({ preventScroll: true });
+        return;
+      }
+      if (!document.getElementById('drawer').hidden) closeDrawer();
     });
 
     // Global search — jumps to backlog with search set
