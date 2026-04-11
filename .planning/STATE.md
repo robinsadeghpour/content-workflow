@@ -3,11 +3,11 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed quick/260409-uht
-last_updated: "2026-04-11T11:26:01.387Z"
+stopped_at: Phase 06.1 context gathered
+last_updated: "2026-04-11T16:15:17.424Z"
 last_activity: 2026-04-11 -- Phase 6 planning complete
 progress:
-  total_phases: 6
+  total_phases: 7
   completed_phases: 5
   total_plans: 14
   completed_plans: 13
@@ -103,6 +103,10 @@ Recent decisions affecting current work:
 - [Phase 04-publishing-analytics]: Idempotency via SELECT-then-UPDATE in apply-critic.js protects true original on re-runs
 - [Phase 05]: Postiz CLI available via npx; integration IDs still FILL_AT_SETUP — user config step
 
+### Roadmap Evolution
+
+- Phase 06.1 inserted after Phase 6: Content Quality: Research + Writer-Critic Loop + Slide Cap (URGENT)
+
 ### Pending Todos
 
 None yet.
@@ -122,6 +126,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-04-09T19:17:17.281Z
-Stopped at: Completed quick/260409-uht
-Resume file: None
+Last session: 2026-04-11T16:15:17.420Z
+Stopped at: Phase 06.1 context gathered
+Resume file: .planning/phases/06.1-content-quality-research-writer-critic-loop-slide-cap/06.1-CONTEXT.md
