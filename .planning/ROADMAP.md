@@ -127,3 +127,16 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 4. Publishing & Analytics | 3/3 | Complete   | 2026-04-09 |
 | 5. Fix Publishing Pipeline | 0/1 | Not Started | — |
 | 6. Tech Debt Cleanup | 0/1 | Not Started | — |
+
+### Phase 06.1: Content Quality: Research + Writer-Critic Loop + Slide Cap (INSERTED)
+
+**Goal:** Every `/generate-content` run produces drafts grounded in real research, and the writer-critic loop actually improves drafts (not the current shallow-merge behavior) before Robin sees them.
+**Requirements**: D-01 through D-17 (locked decisions in 06.1-CONTEXT.md act as pseudo-requirements for this tech-debt phase)
+**Depends on:** Phase 6
+**Plans:** 4 plans
+
+Plans:
+- [ ] 06.1-01-PLAN.md — Foundation: schema ALTERs, NotebookLM research bash module, critic rubric JSON
+- [ ] 06.1-02-PLAN.md — Content orchestrator wiring: Step 1.5 research + critic loop rewrite (replace-not-merge, 2-iter cap, best-iter, flag persistence) + writer brief inlining
+- [ ] 06.1-03-PLAN.md — Critic agent rewrite: hook/facts/economy dimensions, cut-test, research-brief fact grounding, replace-not-merge revise contract
+- [ ] 06.1-04-PLAN.md — Dashboard flag surfacing + generate-content skill doc sync
