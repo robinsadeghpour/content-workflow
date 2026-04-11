@@ -31,6 +31,51 @@ You receive from the `/generate-content` skill:
 - `idea_id` — UUID of a kept idea
 - `linkedin_format` (optional) — override for LinkedIn format
 
+## Critic Loop (shared by Steps 6, 9, 13)
+
+Before invoking the loop, Read `.claude/agents/data/critic-rubric.json`. This gives you `pass_threshold` (8), `max_revisions` (2), and the `weights[<platform>]` vector used for best-iteration selection on max-iters.
+
+Loop state (per platform):
+- `iterations = []` — each entry `{ draft, scores }` where scores has hook_score, facts_score, economy_score
+- `revision_count = 0`
+
+Loop:
+
+1. **Evaluate:** Spawn **critic** with mode `evaluate`, passing:
+   - Platform
+   - Current draft content JSON
+   - Source material: idea title, summary, transcript, source_url
+   - Research brief path (BRIEF_PATH from Step 1.5)
+   Critic returns `{ hook_score, facts_score, economy_score, overall_pass, rewrite_instructions }`.
+   Append `{ draft, scores }` to `iterations`.
+
+2. **Check pass bar (D-11):** If `hook_score >= 8 AND facts_score >= 8 AND economy_score >= 8` → pass. Use this draft as the final. Set `did_not_pass_critic = 0`. Exit loop.
+
+3. **Check revision cap (D-10):** If `revision_count >= 2` → max-iters hit. Go to step 6.
+
+4. **Revise:** Spawn **critic** with mode `revise`, passing:
+   - Previous draft content JSON
+   - The critic's `rewrite_instructions` + the three dimension feedback strings
+   - Research brief path (so the reviser can ground facts)
+   Critic returns a complete replacement draft JSON.
+
+   CRITICAL (D-13 — load-bearing CR-01 fix): The revise output REPLACES the previous draft entirely. Do NOT merge, do NOT spread, do NOT preserve fields from the prior draft. The reviser's returned JSON IS the new authoritative draft. Assign it wholesale to the loop's current draft variable. Pass this exact JSON as the `Draft content JSON` input to the next evaluate call.
+
+5. Increment `revision_count`. Go back to step 1.
+
+6. **Max-iters hit — select best iteration (D-12):** Compute a weighted score for each iteration:
+   ```
+   weights = rubric.weights[platform]
+   score(it) = it.scores.hook_score * weights.hook
+             + it.scores.facts_score * weights.facts
+             + it.scores.economy_score * weights.economy
+   ```
+   Select `best = argmax(iterations, score)`. The final draft is `best.draft`. Set `did_not_pass_critic = 1`.
+
+Persist both flags on the Step 15 db-write-draft.js invocation for this platform:
+- `--research-thin` if the Step 1.5 `research_thin` state is 1
+- `--did-not-pass` if the critic loop ended at step 6
+
 ## Workflow
 
 ### Step 1: Load Idea from DB
@@ -108,17 +153,7 @@ Validate: at least 2 slides, each slide has `text` and `photo_description`.
 
 ### Step 6: Critic Review — TikTok EN
 
-Spawn a **critic** agent with:
-- Mode: `evaluate`
-- Platform: `tiktok_en`
-- Draft content JSON
-- Source material: idea title, summary, transcript, source_url
-
-If `overall_pass` is false and attempts < 3:
-1. Spawn **critic** with mode: `revise`, passing the draft + feedback
-2. Critic returns revised content
-3. Re-spawn **critic** with mode: `evaluate` on revised content
-4. Repeat up to 3 total attempts
+Run the Critic Loop (see shared spec above) for platform `tiktok_en`. Persist `did_not_pass_critic` and `research_thin` flags for use in Step 15.
 
 ### Step 7: Render TikTok EN Slides
 
@@ -145,7 +180,7 @@ The writer returns JSON with `slides` (array of German text strings) and `captio
 
 ### Step 9: Critic Review — TikTok DE
 
-Same pattern as Step 6 but for the DE draft.
+Run the Critic Loop (see shared spec above) for platform `tiktok_de`.
 
 ### Step 10: Render TikTok DE Slides
 
@@ -177,7 +212,7 @@ The writer returns post text (and optional slide texts for carousel format).
 
 ### Step 13: Critic Review — LinkedIn
 
-Same pattern as Step 6 but for the LinkedIn draft.
+Run the Critic Loop (see shared spec above) for platform `linkedin`.
 
 ### Step 14: Render LinkedIn Media
 
@@ -197,8 +232,12 @@ node scripts/db-write-draft.js \
   --platform <platform> \
   --content '<json>' \
   --visual-approach <approach> \
-  --media-dir media/output/<idea_id>/<platform-dir>
+  --media-dir media/output/<idea_id>/<platform-dir> \
+  [--research-thin] \
+  [--did-not-pass]
 ```
+
+Append `--research-thin` when Step 1.5 set `research_thin = 1`. Append `--did-not-pass` when the Critic Loop for that platform ended by hitting the 2-revision cap (step 6 of the shared spec).
 
 For large content JSON, pipe via stdin:
 ```bash
@@ -231,8 +270,8 @@ Files: media/output/<idea_id>/
 Next step: Run /approve to review and schedule drafts.
 ```
 
-If any drafts failed critic after 3 attempts, warn:
-> **Warning:** X draft(s) failed critic review after 3 attempts — review manually before scheduling.
+If any drafts hit the 2-revision cap without passing, warn:
+> **Warning:** X draft(s) did not pass the critic bar — best-scored iteration kept with `did_not_pass_critic=true`. Review manually before scheduling.
 
 ## Key Rules
 
@@ -249,6 +288,6 @@ If any drafts failed critic after 3 attempts, warn:
 ## Error Handling
 
 - If writer returns invalid JSON: retry once, then report failure for that platform
-- If critic fails all 3 attempts: mark draft as `critic_failed`, continue to next platform
+- If critic hits max_revisions (2) without passing, keep the best-scored iteration and flag did_not_pass_critic=true — do NOT skip the draft
 - If media rendering fails: report error but still save the text draft to DB
 - Always attempt all 4 platforms even if one fails — report per-platform status
