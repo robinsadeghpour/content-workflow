@@ -282,7 +282,7 @@ If any drafts hit the 2-revision cap without passing, warn:
 - **Instagram is ALWAYS cropped from TikTok EN** (D-11) — no separate generation.
 - **TikTok DE reuses EN photos** (D-10) — only text changes.
 - **No emoji in slide text** — canvas cannot render them.
-- **NEVER use gpt-image-1 or gpt-image-1.5** — AI slides use Gemini (D-01).
+- **This pipeline uses Gemini (nano-banana) for AI slide generation, NOT OpenAI gpt-image-*** (D-01). The Larry 1.0.0 pipeline in `Larry 1.0.0/` still uses `gpt-image-1.5` per CLAUDE.md; do not conflate the two codebases. The orchestrator itself never invokes image models directly — always delegate to the media-producer skill.
 - **No post publishes without Robin's approval** — this pipeline only generates and gates drafts.
 
 ## Error Handling
