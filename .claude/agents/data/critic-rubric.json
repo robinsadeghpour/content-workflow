@@ -1,0 +1,12 @@
+{
+  "pass_threshold": 8,
+  "max_revisions": 2,
+  "dimensions": ["hook", "facts", "economy"],
+  "weights": {
+    "tiktok_en": { "hook": 0.45, "facts": 0.20, "economy": 0.35 },
+    "tiktok_de": { "hook": 0.45, "facts": 0.20, "economy": 0.35 },
+    "instagram": { "hook": 0.40, "facts": 0.25, "economy": 0.35 },
+    "linkedin":  { "hook": 0.25, "facts": 0.50, "economy": 0.25 }
+  },
+  "notes": "pass_threshold applies per-dimension (D-11: every dimension >= 8). weights used ONLY for best-iteration selection when max_revisions is hit (D-12). Tune empirically — these are v1 defaults per CONTEXT.md intent (D-15)."
+}
