@@ -109,6 +109,10 @@ Plans:
   1. `/review` SKILL.md schedule table and next-step pointer reflect current state
   2. `config/schedule-defaults.json` includes `perf_check` section with multiplier bounds
   3. Voice profile XML format deviation is documented
+**Plans:** 1 plan
+
+Plans:
+- [ ] 06-01-PLAN.md — Fix /review SKILL.md stale references, add perf_check config section, document voice profile XML format
 
 ## Progress
 
@@ -122,4 +126,4 @@ Phases execute in numeric order: 1 → 2 → 3 → 4
 | 3. Content Generation | 4/4 | Complete   | 2026-04-09 |
 | 4. Publishing & Analytics | 3/3 | Complete   | 2026-04-09 |
 | 5. Fix Publishing Pipeline | 0/1 | Not Started | — |
-| 6. Tech Debt Cleanup | 0/0 | Not Started | — |
+| 6. Tech Debt Cleanup | 0/1 | Not Started | — |
