@@ -241,21 +241,27 @@ function trackChild(res, child, jobId, label) {
     for (const fn of job.listeners) fn(event);
   };
 
+  const pushOutput = (text) => {
+    job.output.push(text);
+    if (job.output.length > 500) job.output.splice(0, job.output.length - 500);
+  };
+
   child.stdout && child.stdout.on('data', (data) => {
     const text = data.toString();
-    job.output.push(text);
+    pushOutput(text);
     emit({ type: 'stdout', text });
   });
 
   child.stderr && child.stderr.on('data', (data) => {
     const text = data.toString();
-    job.output.push(text);
+    pushOutput(text);
     emit({ type: 'stderr', text });
   });
 
   child.on('close', (code) => {
     job.status = code === 0 ? 'done' : 'error';
     job.exitCode = code;
+    job.ended = new Date().toISOString();
     emit({ type: 'end', status: job.status, code });
     // Clean up after 5 minutes
     setTimeout(() => runningJobs.delete(jobId), 5 * 60 * 1000);
@@ -569,12 +575,10 @@ function handleApi(req, res, db, dbWrite) {
       const pulseScript = path.join(PROJECT_ROOT, 'scripts', 'pulse.js');
       const child = spawn('node', [pulseScript], {
         cwd: PROJECT_ROOT,
-        detached: true,
-        stdio: 'ignore',
+        stdio: ['ignore', 'pipe', 'pipe'],
         env: { ...process.env },
       });
-      child.unref();
-      return sendJson(res, 200, { triggered: true, script: 'pulse.js' });
+      return streamChildOutput(res, child, 'pulse');
     }
 
     // POST /api/trigger/perf-check
@@ -582,12 +586,10 @@ function handleApi(req, res, db, dbWrite) {
       const perfScript = path.join(PROJECT_ROOT, 'scripts', 'perf-check.js');
       const child = spawn('node', [perfScript], {
         cwd: PROJECT_ROOT,
-        detached: true,
-        stdio: 'ignore',
+        stdio: ['ignore', 'pipe', 'pipe'],
         env: { ...process.env },
       });
-      child.unref();
-      return sendJson(res, 200, { triggered: true, script: 'perf-check.js' });
+      return streamChildOutput(res, child, 'perf-check');
     }
 
     // POST /api/trigger/generate — generate content for a kept idea
@@ -637,12 +639,13 @@ function handleApi(req, res, db, dbWrite) {
       });
     }
 
-    // GET /api/jobs — list running jobs
+    // GET /api/jobs — list running + recently completed jobs
     if (method === 'GET' && pathname === '/api/jobs') {
       const jobs = [];
       for (const [id, job] of runningJobs) {
-        jobs.push({ id, label: job.label, started: job.started, status: job.status });
+        jobs.push({ id, label: job.label, started: job.started, ended: job.ended || null, status: job.status, exitCode: job.exitCode });
       }
+      jobs.sort((a, b) => (b.started || '').localeCompare(a.started || ''));
       return sendJson(res, 200, jobs);
     }
 

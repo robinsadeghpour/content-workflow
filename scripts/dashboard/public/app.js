@@ -1179,12 +1179,18 @@
       const data = await api.get('/api/cron-status');
       const dot = document.querySelector('#cron-status .status-dot');
       const label = document.getElementById('cron-label');
+      const pulseSched = data.pulse && data.pulse.schedule ? data.pulse.schedule : '';
+      const perfSched = data.perfCheck && data.perfCheck.schedule ? data.perfCheck.schedule : '';
+      const parts = [];
+      if (pulseSched) parts.push(`Pulse ${pulseSched}`);
+      if (perfSched) parts.push(`Perf ${perfSched}`);
+      const tail = parts.length ? ` · ${parts.join(' · ')}` : '';
       if (data.running) {
         dot.className = 'status-dot running';
-        label.textContent = 'Cron daemon running';
+        label.textContent = `Cron running${tail}`;
       } else {
         dot.className = 'status-dot stopped';
-        label.textContent = 'Cron daemon not running — start with: node scripts/cron-daemon.js';
+        label.textContent = `Cron not running${tail} — start with: node scripts/cron-daemon.js`;
       }
     } catch (e) { console.error('[cron]', e.message); }
   }
@@ -1240,14 +1246,50 @@
     es.onerror = () => { es.close(); state.activeStreams.delete(jobId); };
   }
 
+  const runningTriggers = new Set();
   async function triggerScript(script) {
+    if (runningTriggers.has(script)) return;
     const endpoint = script === 'pulse' ? '/api/trigger/pulse' : '/api/trigger/perf-check';
+    const buttons = Array.from(document.querySelectorAll(`[data-trigger="${script}"]`));
+    if (script === 'pulse') {
+      const top = document.getElementById('btn-run-pulse');
+      if (top) buttons.push(top);
+      const empty = document.getElementById('feed-empty-pulse');
+      if (empty) buttons.push(empty);
+    }
+    runningTriggers.add(script);
+    buttons.forEach((b) => { b.disabled = true; b.dataset.prevLabel = b.textContent; b.textContent = `${script} running…`; });
     try {
       const data = await api.post(endpoint);
-      if (data.triggered) showToast(`${script} triggered`);
-      else showToast(`${script} failed`);
+      showToast(`${script} started`);
       loadJobs();
-    } catch (e) { showToast(`Error: ${e.message}`); }
+      const jobId = data && data.jobId;
+      if (jobId) {
+        const poll = async () => {
+          try {
+            const jobs = await api.get('/api/jobs');
+            const job = jobs.find((j) => j.id === jobId);
+            if (!job || job.status !== 'running') {
+              runningTriggers.delete(script);
+              buttons.forEach((b) => { b.disabled = false; if (b.dataset.prevLabel) { b.textContent = b.dataset.prevLabel; delete b.dataset.prevLabel; } });
+              loadJobs();
+              loadStats();
+              showToast(`${script} ${job ? job.status : 'done'}`);
+              return;
+            }
+            setTimeout(poll, 2000);
+          } catch (e) { setTimeout(poll, 2000); }
+        };
+        setTimeout(poll, 2000);
+      } else {
+        runningTriggers.delete(script);
+        buttons.forEach((b) => { b.disabled = false; if (b.dataset.prevLabel) { b.textContent = b.dataset.prevLabel; delete b.dataset.prevLabel; } });
+      }
+    } catch (e) {
+      runningTriggers.delete(script);
+      buttons.forEach((b) => { b.disabled = false; if (b.dataset.prevLabel) { b.textContent = b.dataset.prevLabel; delete b.dataset.prevLabel; } });
+      showToast(`Error: ${e.message}`);
+    }
   }
 
   // ============================================================
