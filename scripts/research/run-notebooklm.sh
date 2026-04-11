@@ -114,22 +114,15 @@ if [ "$RESEARCH_THIN" = "true" ]; then
   ANSWER="(Research returned insufficient info. Writer should lean on idea.title / idea.summary / idea.transcript.)"
 fi
 
-# ---- write brief (heredoc, NOT echo) -------------------------------------
+# ---- write brief (printf, heredoc-free to avoid EOF-in-answer corruption) -
 
 RESEARCHED_AT=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
-cat > "$BRIEF_PATH" <<EOF
----
-idea_id: ${IDEA_ID}
-researched_at: ${RESEARCHED_AT}
-research_thin: ${RESEARCH_THIN}
-notebooklm_notebook_id: ${NOTEBOOK_ID}
----
-
-# Research Brief: ${IDEA_TITLE}
-
-${ANSWER}
-EOF
+{
+  printf -- '---\nidea_id: %s\nresearched_at: %s\nresearch_thin: %s\nnotebooklm_notebook_id: %s\n---\n\n# Research Brief: %s\n\n' \
+    "$IDEA_ID" "$RESEARCHED_AT" "$RESEARCH_THIN" "${NOTEBOOK_ID:-none}" "$IDEA_TITLE"
+  printf '%s\n' "$ANSWER"
+} > "$BRIEF_PATH"
 
 # ---- final stdout line ---------------------------------------------------
 
