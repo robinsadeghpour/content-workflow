@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Carousel Slides</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* --- Brand Tokens (shared with LinkedIn) --- */
+    :root {
+      --bg: #050505;
+      --fg: #FAFAFA;
+      --surface: #141414;
+      --surface-2: #1C1C1C;
+      --border: #2A2A2A;
+      --text-secondary: #B5B5B5;
+      --text-muted: #8A8A8A;
+      --accent: #F8863A;
+      --accent-soft: #E8B87A;
+      --positive: #8AAE6A;
+      --negative: #C93B32;
+      --gradient-rgb: linear-gradient(
+        90deg,
+        #33090F 0%, #C93B32 13%, #F8863A 25%,
+        #C8D47A 38%, #6A8E50 50%, #002211 62%,
+        #001A3D 74%, #3B7FCC 86%, #99CCFF 97%
+      );
+      --slide-w: 1080px;
+      --slide-h: 1350px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #1a1a1a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      padding: 60px 20px;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .page-label {
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      width: var(--slide-w);
+      max-width: 100%;
+    }
+
+    /* --- Slide Base --- */
+    .slide {
+      width: var(--slide-w);
+      height: var(--slide-h);
+      background: var(--bg);
+      color: var(--fg);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+    }
+
+    /* 4px gradient bar at top */
+    .slide::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient-rgb);
+      flex-shrink: 0;
+    }
+
+    /* --- Header: label pill left, counter right --- */
+    .slide-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px 64px 0;
+      flex-shrink: 0;
+    }
+
+    .label-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--border);
+      background: var(--surface);
+      padding: 10px 22px;
+      border-radius: 999px;
+    }
+
+    .label-pill .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .slide-counter {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* --- Footer: handle left, swipe right --- */
+    .slide-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 64px 56px;
+      flex-shrink: 0;
+    }
+
+    .footer-handle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      color: var(--text-muted);
+      letter-spacing: 0.02em;
+    }
+
+    .footer-swipe {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 24px;
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+    }
+
+    /* --- Content Area --- */
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 40px 64px;
+    }
+
+    /* --- Typography: CHUNKY CAPS headlines (IG energy) --- */
+    .headline {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      color: var(--fg);
+    }
+
+    .headline--xl { font-size: 140px; }
+    .headline--lg { font-size: 118px; }
+    .headline--md { font-size: 96px; }
+    .headline--sm { font-size: 72px; }
+
+    .body-text {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 34px;
+      line-height: 1.5;
+      color: var(--text-secondary);
+    }
+
+    .body-text + .body-text { margin-top: 24px; }
+
+    /* Orange accent word inside headlines */
+    .accent { color: var(--accent); }
+
+    .accent-gradient {
+      background: linear-gradient(90deg, #F8863A 0%, #E8B87A 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .accent-underline {
+      display: inline-block;
+      border-bottom: 4px solid var(--accent);
+      padding-bottom: 2px;
+    }
+
+    /* Small divider */
+    .divider {
+      width: 72px;
+      height: 3px;
+      background: var(--accent);
+      margin: 32px 0;
+    }
+
+    /* --- Numbered circle list (signature IG component) --- */
+    .numbered-list {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .numbered-row {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px 28px;
+    }
+
+    .numbered-row .circle {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .numbered-row .row-body {
+      flex: 1;
+    }
+
+    .numbered-row .row-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 30px;
+      color: var(--fg);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+
+    .numbered-row .row-desc {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 26px;
+      line-height: 1.4;
+      color: var(--text-secondary);
+    }
+
+    /* --- Comparison cards (Without / With) --- */
+    .compare {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 36px;
+    }
+
+    .compare-card {
+      border-radius: 14px;
+      padding: 28px 26px;
+      border: 1px solid var(--border);
+    }
+
+    .compare-card.neg {
+      background: rgba(201, 59, 50, 0.08);
+      border-color: rgba(201, 59, 50, 0.35);
+    }
+
+    .compare-card.pos {
+      background: rgba(138, 174, 106, 0.08);
+      border-color: rgba(138, 174, 106, 0.4);
+    }
+
+    .compare-card .compare-head {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .compare-card.neg .compare-head { color: var(--negative); }
+    .compare-card.pos .compare-head { color: var(--positive); }
+
+    .compare-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .compare-card li {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 1.35;
+      color: var(--text-secondary);
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .compare-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .compare-card.neg li::before { background: var(--negative); }
+    .compare-card.pos li::before { background: var(--positive); }
+
+    /* --- CTA Slide (last) --- */
+    .slide--cta .slide-content {
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .cta-handle {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 44px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-top: 32px;
+      letter-spacing: 0.02em;
+    }
+
+    .cta-button {
+      margin-top: 48px;
+      background: var(--accent);
+      color: var(--bg);
+      font-family: 'Outfit', sans-serif;
+      font-weight: 600;
+      font-size: 32px;
+      padding: 20px 44px;
+      border-radius: 14px;
+      display: inline-block;
+    }
+
+    /* --- Person photo (optional, same pattern as LinkedIn) --- */
+    .person-photo {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 560px;
+      width: auto;
+      object-fit: contain;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-label">SLIDE 1 — HOOK</div>
+  <div class="slide slide--hook">
+    <div class="slide-header">
+      <span class="label-pill"><span class="dot"></span>Memory — Solved</span>
+      <span class="slide-counter">1 / 10</span>
+    </div>
+    <div class="slide-content">
+      <h1 class="headline headline--xl">
+        Memory<br>
+        <span class="accent">solved.</span><br>
+        Claude Code<br>
+        + Obsidian.
+      </h1>
+      <p class="body-text" style="margin-top: 40px;">
+        Claude forgets everything when a session ends. Here's the setup that fixes it — permanently.
+      </p>
+    </div>
+    <div class="slide-footer">
+      <span class="footer-handle">@robinfaraj</span>
+      <span class="footer-swipe">swipe to start →</span>
+    </div>
+  </div>
+
+  <div class="page-label">SLIDE 2 — SOLUTION</div>
+  <div class="slide slide--solution">
+    <div class="slide-header">
+      <span class="label-pill"><span class="dot"></span>The Solution</span>
+      <span class="slide-counter">3 / 10</span>
+    </div>
+    <div class="slide-content">
+      <h2 class="headline headline--lg">
+        Obsidian is<br>
+        your <span class="accent">Claude's</span><br>
+        brain.
+      </h2>
+      <p class="body-text" style="margin-top: 32px;">
+        Obsidian is a local Markdown note app. Connect it to Claude Code via MCP and Claude can read, write, and search your entire vault — across every session, forever.
+      </p>
+      <div class="compare">
+        <div class="compare-card neg">
+          <div class="compare-head">Without this setup</div>
+          <ul>
+            <li>Explain project context every time</li>
+            <li>Re-paste architecture decisions</li>
+            <li>Claude re-discovers your codebase</li>
+            <li>Decisions vanish after the session</li>
+          </ul>
+        </div>
+        <div class="compare-card pos">
+          <div class="compare-head">With Claude + Obsidian</div>
+          <ul>
+            <li>Claude reads vault at session start</li>
+            <li>Decisions stored as notes permanently</li>
+            <li>Full project history always available</li>
+            <li>Knowledge compounds over time</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="footer-handle">@robinfaraj</span>
+      <span class="footer-swipe">swipe to know more →</span>
+    </div>
+  </div>
+
+  <div class="page-label">SLIDE 3 — HOW IT WORKS</div>
+  <div class="slide slide--how">
+    <div class="slide-header">
+      <span class="label-pill"><span class="dot"></span>How It Works</span>
+      <span class="slide-counter">4 / 10</span>
+    </div>
+    <div class="slide-content">
+      <h2 class="headline headline--md">
+        The bridge:<br>
+        <span class="accent">MCP.</span>
+      </h2>
+      <p class="body-text" style="margin-top: 24px;">
+        MCP (Model Context Protocol) is a standard that lets Claude Code talk directly to external tools. The Obsidian MCP plugin turns your vault into a live database Claude can query.
+      </p>
+      <div class="numbered-list">
+        <div class="numbered-row">
+          <div class="circle">1</div>
+          <div class="row-body">
+            <div class="row-title">Obsidian runs the MCP server</div>
+            <div class="row-desc">Install the obsidian-claude-code-mcp plugin. It opens a WebSocket on port 22360 — a live connection to your vault.</div>
+          </div>
+        </div>
+        <div class="numbered-row">
+          <div class="circle">2</div>
+          <div class="row-body">
+            <div class="row-title">Claude Code auto-discovers it</div>
+            <div class="row-desc">No manual config. It can read files, search notes, and write new ones.</div>
+          </div>
+        </div>
+        <div class="numbered-row">
+          <div class="circle">3</div>
+          <div class="row-body">
+            <div class="row-title">Bidirectional. Local. Private.</div>
+            <div class="row-desc">Claude reads context from Obsidian and writes decisions back. Everything stays on your machine — zero cloud dependency.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="footer-handle">@robinfaraj</span>
+      <span class="footer-swipe">swipe to know more →</span>
+    </div>
+  </div>
+
+  <div class="page-label">SLIDE 4 — CTA</div>
+  <div class="slide slide--cta">
+    <div class="slide-header">
+      <span class="label-pill"><span class="dot"></span>That's a wrap</span>
+      <span class="slide-counter">10 / 10</span>
+    </div>
+    <div class="slide-content">
+      <h2 class="headline headline--lg">
+        Follow for<br>
+        <span class="accent">daily AI</span><br>
+        drops.
+      </h2>
+      <div class="divider" style="margin: 40px auto;"></div>
+      <p class="body-text" style="text-align: center;">
+        Workflows, setups, and tools that actually make AI useful — every day.
+      </p>
+      <div class="cta-handle">@robinfaraj</div>
+      <div class="cta-button">Follow for daily AI drops</div>
+    </div>
+  </div>
+
+</body>
+</html>

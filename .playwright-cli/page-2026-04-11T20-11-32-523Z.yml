@@ -1,0 +1,115 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "66"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: youtube
+          - generic [ref=e56]: "0.65"
+          - button "Play embed" [ref=e57] [cursor=pointer]:
+            - img [ref=e59]
+          - iframe [active] [ref=e138]:
+            - generic [active] [ref=f3e1]:
+              - generic "YouTube Video Player" [ref=f3e3]
+              - button "Show player controls" [ref=f3e134] [cursor=pointer]
+        - generic [ref=e61]:
+          - 'heading "Claude Code Monitor: The AI That Never Sleeps" [level=2] [ref=e62]'
+          - paragraph [ref=e63]: "YouTube video by AI News Today | Julian Goldie Podcast. Views: 880 views."
+          - group [ref=e64]:
+            - generic "Show transcript" [ref=e65] [cursor=pointer]
+        - generic [ref=e66]:
+          - button "Skip (Left arrow)" [ref=e67] [cursor=pointer]:
+            - img [ref=e68]
+            - generic [ref=e70]: Skip
+          - button "Keep (Right arrow)" [ref=e71] [cursor=pointer]:
+            - img [ref=e72]
+            - generic [ref=e74]: Keep
+          - button "Star (Up arrow)" [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e78]: Star
+        - generic [ref=e79]:
+          - generic [ref=e80]: youtube
+          - code [ref=e81] [cursor=pointer]: 4c9a2000
+          - generic [ref=e82]: 18h ago
+      - article [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e86]: youtube
+          - generic [ref=e87]: "0.80"
+        - generic [ref=e88]:
+          - heading [level=2] [ref=e89]: "AI Agent Full Tutorial for Beginners 2026: How to Build AI Agents in Minutes"
+          - paragraph [ref=e90]: "YouTube video by Mikey No Code. Views: 50.3K views."
+          - group [ref=e91]:
+            - generic [ref=e92] [cursor=pointer]: Show transcript
+        - generic [ref=e93]:
+          - button [ref=e94] [cursor=pointer]:
+            - img [ref=e95]
+            - generic [ref=e97]: Skip
+          - button [ref=e98] [cursor=pointer]:
+            - img [ref=e99]
+            - generic [ref=e101]: Keep
+          - button [ref=e102] [cursor=pointer]:
+            - img [ref=e103]
+            - generic [ref=e105]: Star
+        - generic [ref=e106]:
+          - generic [ref=e107]: youtube
+          - code [ref=e108] [cursor=pointer]: 4988499e
+          - generic [ref=e109]: 18h ago
+      - article [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: tiktok
+          - generic [ref=e114]: "0.69"
+        - generic [ref=e116]:
+          - heading [level=2] [ref=e117]: "i don't type to claude anymore. i just... talk. brain dumps, meetings, random thoughts in the car. all of it goes straight into claude without writing a single thing. here's how: - talk to claude directly. open the app, hit the mic (or use wspr flow), and yap away. - record your meetings. otter.ai, zoom transcripts, anything you're already talking through, capture it. - voice storage that integrates with claude. so all those brain dumps and meeting notes actually go somewhere useful and can b"
+          - paragraph [ref=e118]: TikTok by @leadwithzoe. 2070 plays.
+          - group [ref=e119]:
+            - generic [ref=e120] [cursor=pointer]: Show transcript
+        - generic [ref=e121]:
+          - button [ref=e122] [cursor=pointer]:
+            - img [ref=e123]
+            - generic [ref=e125]: Skip
+          - button [ref=e126] [cursor=pointer]:
+            - img [ref=e127]
+            - generic [ref=e129]: Keep
+          - button [ref=e130] [cursor=pointer]:
+            - img [ref=e131]
+            - generic [ref=e133]: Star
+        - generic [ref=e134]:
+          - generic [ref=e135]: tiktok
+          - code [ref=e136] [cursor=pointer]: 3c032b37
+          - generic [ref=e137]: 18h ago

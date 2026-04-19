@@ -1,0 +1,18 @@
+- generic [ref=e2]:
+  - separator [ref=e3]
+  - iframe [ref=e8]:
+    - generic [ref=f2e2]:
+      - generic [ref=f2e3]:
+        - checkbox "I'm not a robot" [ref=f2e7]
+        - generic [ref=f2e11]: I'm not a robot
+      - generic [ref=f2e15]: reCAPTCHA
+  - separator [ref=e9]
+  - generic [ref=e10]:
+    - text: About this page
+    - text: Our systems have detected unusual traffic from your computer network. This page checks to see if it's really you sending the requests, and not a robot.
+    - link "Why did this happen?" [ref=e11] [cursor=pointer]:
+      - /url: "#"
+    - generic [ref=e12]:
+      - text: "IP address: 2003:ea:c740:7469:201e:13d0:5f0:20e"
+      - text: "Time: 2026-04-13T10:29:29Z"
+      - text: "URL: https://www.google.com/search?q=Anthropic+Claude+Builder+leak+screenshots+Tensor+2026&udm=2&sei=iMXcabGbFseSxc8PoYqRyQ0"

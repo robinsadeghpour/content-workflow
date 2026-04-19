@@ -1,0 +1,108 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "78"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "6"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: youtube
+          - generic [ref=e56]: "0.86"
+          - button "Play embed" [ref=e57] [cursor=pointer]:
+            - img [ref=e59]
+        - generic [ref=e61]:
+          - heading "How I use Claude Code for real engineering" [level=2] [ref=e62]
+          - paragraph [ref=e63]: "YouTube video by Matt Pocock. Views: 240.6K views."
+          - group [ref=e64]:
+            - generic "Show transcript" [ref=e65] [cursor=pointer]
+        - generic [ref=e66]:
+          - button "Skip (Left arrow)" [ref=e67] [cursor=pointer]:
+            - img [ref=e68]
+            - generic [ref=e70]: Skip
+          - button "Keep (Right arrow)" [ref=e71] [cursor=pointer]:
+            - img [ref=e72]
+            - generic [ref=e74]: Keep
+          - button "Star (Up arrow)" [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e78]: Star
+        - generic [ref=e79]:
+          - generic [ref=e80]: youtube
+          - generic [ref=e81]: 10h ago
+      - article [ref=e82]:
+        - generic [ref=e83]:
+          - generic [ref=e85]: tiktok
+          - generic [ref=e86]: "0.72"
+        - generic [ref=e88]:
+          - heading [level=2] [ref=e89]: "Just started using Claude? And want to hit the ground running. There are 3 simple things that separate people getting incredible results from people getting average ones. Here’s exactly what they are. #ai #claude #aitips #chatgpt"
+          - paragraph [ref=e90]: TikTok by @lukegarv.ai. 4063 plays.
+          - group [ref=e91]:
+            - generic [ref=e92] [cursor=pointer]: Show transcript
+        - generic [ref=e93]:
+          - button [ref=e94] [cursor=pointer]:
+            - img [ref=e95]
+            - generic [ref=e97]: Skip
+          - button [ref=e98] [cursor=pointer]:
+            - img [ref=e99]
+            - generic [ref=e101]: Keep
+          - button [ref=e102] [cursor=pointer]:
+            - img [ref=e103]
+            - generic [ref=e105]: Star
+        - generic [ref=e106]:
+          - generic [ref=e107]: tiktok
+          - generic [ref=e108]: 10h ago
+      - article [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e112]: tiktok
+          - generic [ref=e113]: "0.67"
+        - generic [ref=e115]:
+          - heading [level=2] [ref=e116]: "Claude Code + NotebookLM Will Change How You Use AI… Wait Until The End 🤯 #AI #ClaudeAI #NotebookLM #AITools #coding"
+          - paragraph [ref=e117]: TikTok by @benkimball.ai. 1173 plays.
+          - group [ref=e118]:
+            - generic [ref=e119] [cursor=pointer]: Show transcript
+        - generic [ref=e120]:
+          - button [ref=e121] [cursor=pointer]:
+            - img [ref=e122]
+            - generic [ref=e124]: Skip
+          - button [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - generic [ref=e128]: Keep
+          - button [ref=e129] [cursor=pointer]:
+            - img [ref=e130]
+            - generic [ref=e132]: Star
+        - generic [ref=e133]:
+          - generic [ref=e134]: tiktok
+          - generic [ref=e135]: 10h ago

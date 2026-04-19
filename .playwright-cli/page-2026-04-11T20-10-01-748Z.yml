@@ -1,0 +1,146 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "67"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: youtube
+          - generic [ref=e56]: "0.75"
+          - button "Play embed" [active] [ref=e57] [cursor=pointer]:
+            - img [ref=e59]
+          - iframe [ref=e137]:
+            - generic [active] [ref=f1e1]:
+              - generic "YouTube Video Player" [ref=f1e3]
+              - generic [ref=f1e5]:
+                - generic:
+                  - generic:
+                    - button "Play video" [ref=f1e10] [cursor=pointer]:
+                      - generic [ref=f1e13]:
+                        - img
+                    - button "Hide player controls" [ref=f1e14] [cursor=pointer]
+                    - generic [ref=f1e16]:
+                      - generic [ref=f1e21]:
+                        - generic [ref=f1e22]:
+                          - link "Best AI No-Code App Builder for Businesses in 2026 (I Tested Them All)" [ref=f1e23] [cursor=pointer]:
+                            - /url: https://www.youtube.com/watch?v=ZwJO7JXg3Kw
+                          - link "Mikey No Code" [ref=f1e24] [cursor=pointer]:
+                            - /url: /channel/UCde0vB0fTwC8AT3sJofFV0w
+                            - generic [ref=f1e25]: Mikey No Code
+                        - generic [ref=f1e26]:
+                          - button "thumbnail-image" [ref=f1e27] [cursor=pointer]:
+                            - img "thumbnail-image" [ref=f1e28]
+                          - generic [ref=f1e30]:
+                            - generic: Mikey No Code
+                            - generic: 119K subscribers
+                      - generic [ref=f1e31]:
+                        - button "Copy link" [ref=f1e34] [cursor=pointer]:
+                          - generic [ref=f1e38]:
+                            - img
+                        - link "Watch on YouTube" [ref=f1e45] [cursor=pointer]:
+                          - /url: https://www.youtube.com/watch?v=ZwJO7JXg3Kw
+                          - generic [ref=f1e48]:
+                            - text: Watch on
+                            - img [ref=f1e50]:
+                              - generic [ref=f1e52]:
+                                - img
+        - generic [ref=e61]:
+          - heading "Best AI No-Code App Builder for Businesses in 2026 (I Tested Them All)" [level=2] [ref=e62]
+          - paragraph [ref=e63]: "YouTube video by Mikey No Code. Views: 12.4K views."
+          - group [ref=e64]:
+            - generic "Show transcript" [ref=e65] [cursor=pointer]
+        - generic [ref=e66]:
+          - button "Skip (Left arrow)" [ref=e67] [cursor=pointer]:
+            - img [ref=e68]
+            - generic [ref=e70]: Skip
+          - button "Keep (Right arrow)" [ref=e71] [cursor=pointer]:
+            - img [ref=e72]
+            - generic [ref=e74]: Keep
+          - button "Star (Up arrow)" [ref=e75] [cursor=pointer]:
+            - img [ref=e76]
+            - generic [ref=e78]: Star
+        - generic [ref=e79]:
+          - generic [ref=e80]: youtube
+          - code [ref=e81] [cursor=pointer]: 61d1428d
+          - generic [ref=e82]: 18h ago
+      - article [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e86]: youtube
+          - generic [ref=e87]: "0.65"
+        - generic [ref=e88]:
+          - heading [level=2] [ref=e89]: "Claude Code Monitor: The AI That Never Sleeps"
+          - paragraph [ref=e90]: "YouTube video by AI News Today | Julian Goldie Podcast. Views: 880 views."
+          - group [ref=e91]:
+            - generic [ref=e92] [cursor=pointer]: Show transcript
+        - generic [ref=e93]:
+          - button [ref=e94] [cursor=pointer]:
+            - img [ref=e95]
+            - generic [ref=e97]: Skip
+          - button [ref=e98] [cursor=pointer]:
+            - img [ref=e99]
+            - generic [ref=e101]: Keep
+          - button [ref=e102] [cursor=pointer]:
+            - img [ref=e103]
+            - generic [ref=e105]: Star
+        - generic [ref=e106]:
+          - generic [ref=e107]: youtube
+          - code [ref=e108] [cursor=pointer]: 4c9a2000
+          - generic [ref=e109]: 18h ago
+      - article [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: youtube
+          - generic [ref=e114]: "0.80"
+        - generic [ref=e115]:
+          - heading [level=2] [ref=e116]: "AI Agent Full Tutorial for Beginners 2026: How to Build AI Agents in Minutes"
+          - paragraph [ref=e117]: "YouTube video by Mikey No Code. Views: 50.3K views."
+          - group [ref=e118]:
+            - generic [ref=e119] [cursor=pointer]: Show transcript
+        - generic [ref=e120]:
+          - button [ref=e121] [cursor=pointer]:
+            - img [ref=e122]
+            - generic [ref=e124]: Skip
+          - button [ref=e125] [cursor=pointer]:
+            - img [ref=e126]
+            - generic [ref=e128]: Keep
+          - button [ref=e129] [cursor=pointer]:
+            - img [ref=e130]
+            - generic [ref=e132]: Star
+        - generic [ref=e133]:
+          - generic [ref=e134]: youtube
+          - code [ref=e135] [cursor=pointer]: 4988499e
+          - generic [ref=e136]: 18h ago

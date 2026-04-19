@@ -1,0 +1,231 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - complementary "Primary navigation" [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5]
+        - generic [ref=e7]: Workflow
+      - navigation [ref=e8]:
+        - button "Feed" [ref=e9] [cursor=pointer]:
+          - img [ref=e10]
+          - generic [ref=e12]: Feed
+        - button "Backlog" [ref=e13] [cursor=pointer]:
+          - img [ref=e14]
+          - generic [ref=e16]: Backlog
+        - button "Pipeline" [ref=e17] [cursor=pointer]:
+          - img [ref=e18]
+          - generic [ref=e20]: Pipeline
+        - button "Performance" [ref=e21] [cursor=pointer]:
+          - img [ref=e22]
+          - generic [ref=e24]: Performance
+        - button "Workflows" [ref=e25] [cursor=pointer]:
+          - img [ref=e26]
+          - generic [ref=e28]: Workflows
+    - main [ref=e29]:
+      - generic [ref=e30]:
+        - generic [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]: New
+            - generic [ref=e34]: "69"
+          - generic [ref=e35]:
+            - generic [ref=e36]: Kept
+            - generic [ref=e37]: "10"
+          - generic [ref=e38]:
+            - generic [ref=e39]: Starred
+            - generic [ref=e40]: "0"
+        - generic [ref=e41]:
+          - img [ref=e42]
+          - searchbox "Search" [ref=e44]
+        - button "Run Pulse" [ref=e45] [cursor=pointer]:
+          - img [ref=e46]
+          - text: Run Pulse
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - generic [ref=e142]:
+            - generic [ref=e143]: Draft
+            - generic [ref=e144]: "4"
+          - generic [ref=e145]:
+            - generic [ref=e146] [cursor=pointer]:
+              - generic [ref=e147]:
+                - generic [ref=e148]: linkedin
+                - generic [ref=e149]: html_screenshot
+                - generic [ref=e150]: 10h ago
+              - generic [ref=e151]: 7 new open source AI tools you need right now…
+              - code [ref=e152]: 1d8fb8c9
+              - generic [ref=e154]: "+5"
+              - generic [ref=e155]: The CEO of Replit said coding experience is becoming a disadvantage. I had to sit with that. Here is my breakdown of 7 open-source AI tools reshaping how serious builders work in 2026. Not hype — these are already shippi...
+              - button "Run Critic" [ref=e157]
+            - generic [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]:
+                - generic [ref=e160]: instagram
+                - generic [ref=e161]: photo_overlay
+                - generic [ref=e162]: 10h ago
+              - generic [ref=e163]: 7 new open source AI tools you need right now…
+              - code [ref=e164]: 1d8fb8c9
+              - generic [ref=e166]: "+4"
+              - generic [ref=e167]: "7 open source AI tools that are changing how builders actually build in 2026. the game shifted. adapt or get left behind. #AITools #OpenSource #BuildInPublic #DevLife #IndieHacker"
+              - button "Run Critic" [ref=e169]
+            - generic [ref=e170] [cursor=pointer]:
+              - generic [ref=e171]:
+                - generic [ref=e172]: tiktok_de
+                - generic [ref=e173]: photo_overlay
+                - generic [ref=e174]: 10h ago
+              - generic [ref=e175]: 7 new open source AI tools you need right now…
+              - code [ref=e176]: 1d8fb8c9
+              - generic [ref=e178]: "+4"
+              - generic [ref=e179]: "7 open-source AI tools die 2026 alles veraendern. wer jetzt nicht umdenkt verliert den anschluss. #AITools #OpenSource #BuildInPublic #Developer #Startup"
+              - button "Run Critic" [ref=e181]
+            - generic [ref=e182] [cursor=pointer]:
+              - generic [ref=e183]:
+                - generic [ref=e184]: tiktok_en
+                - generic [ref=e185]: photo_overlay
+                - generic [ref=e186]: 10h ago
+              - generic [ref=e187]: 7 new open source AI tools you need right now…
+              - code [ref=e188]: 1d8fb8c9
+              - generic [ref=e190]: "+4"
+              - generic [ref=e191]: "7 open source AI tools that are changing how builders actually build in 2026. the game shifted. adapt or get left behind. #AITools #OpenSource #BuildInPublic #DevLife #IndieHacker"
+              - button "Run Critic" [ref=e193]
+        - generic [ref=e194]:
+          - generic [ref=e195]:
+            - generic [ref=e196]: Ready
+            - generic [ref=e197]: "8"
+          - generic [ref=e198]:
+            - generic [ref=e199] [cursor=pointer]:
+              - generic [ref=e200]:
+                - generic [ref=e201]: linkedin
+                - generic [ref=e202]: html_screenshot
+                - generic [ref=e203]: 2h ago
+              - generic [ref=e204]: Comment "CLAUDE" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs to install right now. All free, all installed by telling Claude to do it. 1. Frontend Design. Stops Claude from building generic AI-looking interfaces. Type /plugin, search frontend design, install. 2. Simplify. After Claude writes code, this spawns 3 agents to review it for quality and fix everything automatically. Type /simplify after any coding task. 3. Skill Creator. Tell it what workflow you
+              - code [ref=e205]: 703369c8
+              - generic [ref=e207]: "+4"
+              - generic [ref=e208]: "I spent months building in Claude Code before discovering these 5 free skills existed. Each one takes 30 seconds to install. All of them changed how I work. Here's what you're missing: 1. Frontend Design Stops Claude ..."
+              - generic [ref=e209]:
+                - button "Approve" [ref=e210]
+                - button "Schedule" [ref=e211]
+            - generic [ref=e212] [cursor=pointer]:
+              - generic [ref=e213]:
+                - generic [ref=e214]: instagram
+                - generic [ref=e215]: html_screenshot
+                - generic [ref=e216]: 2h ago
+              - generic [ref=e217]: Comment "CLAUDE" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs to install right now. All free, all installed by telling Claude to do it. 1. Frontend Design. Stops Claude from building generic AI-looking interfaces. Type /plugin, search frontend design, install. 2. Simplify. After Claude writes code, this spawns 3 agents to review it for quality and fix everything automatically. Type /simplify after any coding task. 3. Skill Creator. Tell it what workflow you
+              - code [ref=e218]: 703369c8
+              - generic [ref=e220]: "+4"
+              - generic [ref=e221]: "5 Claude Code skills that changed how I build. all free. skill 1: frontend design (no more generic UIs) skill 2: simplify (3 agents review + fix your code) skill 3: skill creator (automate any workflow) skill 4: web app..."
+              - generic [ref=e222]:
+                - button "Approve" [ref=e223]
+                - button "Schedule" [ref=e224]
+            - generic [ref=e225] [cursor=pointer]:
+              - generic [ref=e226]:
+                - generic [ref=e227]: tiktok_de
+                - generic [ref=e228]: photo_overlay
+                - generic [ref=e229]: 2h ago
+              - generic [ref=e230]: Comment "CLAUDE" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs to install right now. All free, all installed by telling Claude to do it. 1. Frontend Design. Stops Claude from building generic AI-looking interfaces. Type /plugin, search frontend design, install. 2. Simplify. After Claude writes code, this spawns 3 agents to review it for quality and fix everything automatically. Type /simplify after any coding task. 3. Skill Creator. Tell it what workflow you
+              - code [ref=e231]: 703369c8
+              - generic [ref=e233]: "+3"
+              - generic [ref=e234]: "5 Claude Code Skills die ich jeden Tag nutze. alle kostenlos. einfach Claude sagen und er installiert sie. skill 1: frontend design (kein generisches KI-Design) skill 2: simplify (3 Agenten reviewen und fixen deinen Cod..."
+              - generic [ref=e235]:
+                - button "Approve" [ref=e236]
+                - button "Schedule" [ref=e237]
+            - generic [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - generic [ref=e240]: tiktok_en
+                - generic [ref=e241]: photo_overlay
+                - generic [ref=e242]: 2h ago
+              - generic [ref=e243]: Comment "CLAUDE" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs to install right now. All free, all installed by telling Claude to do it. 1. Frontend Design. Stops Claude from building generic AI-looking interfaces. Type /plugin, search frontend design, install. 2. Simplify. After Claude writes code, this spawns 3 agents to review it for quality and fix everything automatically. Type /simplify after any coding task. 3. Skill Creator. Tell it what workflow you
+              - code [ref=e244]: 703369c8
+              - generic [ref=e246]: "+3"
+              - generic [ref=e247]: "5 Claude Code skills that changed how I build. all free. all installed by just telling Claude to do it. skill 1: frontend design (no more generic UIs) skill 2: simplify (3 agents review + fix your code) skill 3: skill c..."
+              - generic [ref=e248]:
+                - button "Approve" [ref=e249]
+                - button "Schedule" [ref=e250]
+            - generic [ref=e251] [cursor=pointer]:
+              - generic [ref=e252]:
+                - generic [ref=e253]: linkedin
+                - generic [ref=e254]: none
+                - generic [ref=e255]: 3h ago
+              - generic [ref=e256]: "'Terrifying warning sign': Anthropic delays AI model over security concerns"
+              - code [ref=e257]: 372e5a73
+              - generic [ref=e258]: "Anthropic just weakened its own safety policy — then immediately proved why it existed. In February, Anthropic released RSP v3.0. The headline change: they removed the mandatory requirement to pause development when a m..."
+              - generic [ref=e259]:
+                - button "Approve" [ref=e260]
+                - button "Schedule" [ref=e261]
+            - generic [ref=e262] [cursor=pointer]:
+              - generic [ref=e263]:
+                - generic [ref=e264]: instagram
+                - generic [ref=e265]: photo_overlay
+                - generic [ref=e266]: 3h ago
+              - generic [ref=e267]: "'Terrifying warning sign': Anthropic delays AI model over security concerns"
+              - code [ref=e268]: 372e5a73
+              - generic [ref=e270]: "+3"
+              - generic [ref=e271]:
+                - button "Approve" [ref=e272]
+                - button "Schedule" [ref=e273]
+            - generic [ref=e274] [cursor=pointer]:
+              - generic [ref=e275]:
+                - generic [ref=e276]: tiktok_de
+                - generic [ref=e277]: photo_overlay
+                - generic [ref=e278]: 3h ago
+              - generic [ref=e279]: "'Terrifying warning sign': Anthropic delays AI model over security concerns"
+              - code [ref=e280]: 372e5a73
+              - generic [ref=e282]: "+3"
+              - generic [ref=e283]:
+                - button "Approve" [ref=e284]
+                - button "Schedule" [ref=e285]
+            - generic [ref=e286] [cursor=pointer]:
+              - generic [ref=e287]:
+                - generic [ref=e288]: tiktok_en
+                - generic [ref=e289]: photo_overlay
+                - generic [ref=e290]: 3h ago
+              - generic [ref=e291]: "'Terrifying warning sign': Anthropic delays AI model over security concerns"
+              - code [ref=e292]: 372e5a73
+              - generic [ref=e294]: "+3"
+              - generic [ref=e295]:
+                - button "Approve" [ref=e296]
+                - button "Schedule" [ref=e297]
+        - generic [ref=e298]:
+          - generic [ref=e299]:
+            - generic [ref=e300]: Approved
+            - generic [ref=e301]: "0"
+          - generic [ref=e303]: Empty
+        - generic [ref=e304]:
+          - generic [ref=e305]:
+            - generic [ref=e306]: Shipped
+            - generic [ref=e307]: "0"
+          - generic [ref=e309]: Empty
+  - complementary "Idea details" [ref=e311]:
+    - generic [ref=e312]:
+      - heading "Comment \"CLAUDE\" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs to install right now. All free, all installed by telling Claude to do it. 1. Frontend Design. Stops Claude from building generic AI-looking interfaces. Type /plugin, search frontend design, install. 2. Simplify. After Claude writes code, this spawns 3 agents to review it for quality and fix everything automatically. Type /simplify after any coding task. 3. Skill Creator. Tell it what workflow you" [level=2] [ref=e313]
+      - button "Close" [ref=e314] [cursor=pointer]:
+        - img [ref=e315]
+    - generic [ref=e317]:
+      - generic [ref=e318]:
+        - text: idea
+        - code [ref=e319] [cursor=pointer]: 703369c8-3091-4a20-b338-d0a45ff2a517
+        - text: draft
+        - code [ref=e320] [cursor=pointer]: e9f327af-e7be-481e-b698-7248ff0f1a0e
+      - generic [ref=e321]:
+        - generic [ref=e322]: linkedin
+        - generic [ref=e323]: critic_approved
+        - generic [ref=e324]: html_screenshot
+      - generic [ref=e325]: "I spent months building in Claude Code before discovering these 5 free skills existed. Each one takes 30 seconds to install. All of them changed how I work. Here's what you're missing: 1. Frontend Design Stops Claude from generating generic AI-looking interfaces. Before this, every app I built looked like a ChatGPT wrapper. Install: /plugin, search \"frontend design\". 2. Simplify After Claude writes code, this spawns 3 agents that review it for quality and fix the issues automatically. I run this after every coding session now. 3. Skill Creator Tell it what workflow you want to automate and it builds the Claude Code skill for you, complete with eval so you can actually measure whether your prompt changes work. 4. Web App Testing Gives Claude the ability to actually test your app, not just write it. Playwright-based, runs against your live dev server. 5. MCP Builder Teaches Claude how to connect to any API or tool. This is the one that unlocked the most for me. Once you understand MCP, you stop copy-pasting between tools. All 5 are free. Install by typing a slash command or just asking Claude to do it. The people building the fastest right now aren't necessarily the best coders. They're the ones who set up their tools properly. What's in your Claude Code setup?"
+      - generic [ref=e326]:
+        - link [ref=e327] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-1.png
+        - link [ref=e328] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-2.png
+        - link [ref=e329] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-3.png
+        - link [ref=e330] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-4.png
+        - link [ref=e331] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-5.png
+        - link [ref=e332] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-6.png
+        - link [ref=e333] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-7.png
+        - link [ref=e334] [cursor=pointer]:
+          - /url: /media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides/slide-8.png
+      - link "Open original source" [ref=e335] [cursor=pointer]:
+        - /url: https://www.tiktok.com/@sabrina_ramonov/video/7623028220656487694
+      - generic [ref=e336]:
+        - button "Approve" [ref=e337] [cursor=pointer]
+        - button "Schedule" [ref=e338] [cursor=pointer]

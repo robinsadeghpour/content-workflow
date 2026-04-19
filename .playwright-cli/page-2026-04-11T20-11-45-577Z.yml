@@ -1,0 +1,149 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "66"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e137]:
+      - generic [ref=e138]:
+        - generic [ref=e139]:
+          - button "All" [ref=e140] [cursor=pointer]
+          - button "New" [ref=e141] [cursor=pointer]
+          - button "Kept" [active] [ref=e142] [cursor=pointer]
+          - button "Starred" [ref=e143] [cursor=pointer]
+          - button "Skipped" [ref=e144] [cursor=pointer]
+        - generic [ref=e145]:
+          - generic [ref=e146]: Min score
+          - slider "Min score 0.00" [ref=e147]: "0"
+          - generic [ref=e148]: "0.00"
+        - searchbox "Search title or summary..." [ref=e149]
+      - table [ref=e151]:
+        - rowgroup [ref=e152]:
+          - row "Select all ID Title Source Score Status Scraped" [ref=e153]:
+            - columnheader "Select all" [ref=e154]:
+              - checkbox "Select all" [ref=e155]
+            - columnheader "ID" [ref=e156]
+            - columnheader "Title" [ref=e157]
+            - columnheader "Source" [ref=e158]
+            - columnheader "Score" [ref=e159]
+            - columnheader "Status" [ref=e160]
+            - columnheader "Scraped" [ref=e161]
+            - columnheader [ref=e162]
+        - rowgroup [ref=e163]:
+          - row "Select row edda4a02 Just started using Claude? And want to hit the ground running. There are 3 simple things that separ... tiktok kept 18h ago Actions" [ref=e1683]:
+            - cell "Select row" [ref=e1684]:
+              - checkbox "Select row" [ref=e1685]
+            - cell "edda4a02" [ref=e1686]:
+              - code [ref=e1687] [cursor=pointer]: edda4a02
+            - cell "Just started using Claude? And want to hit the ground running. There are 3 simple things that separ..." [ref=e1688]
+            - cell "tiktok" [ref=e1689]
+            - cell [ref=e1690]
+            - cell "kept" [ref=e1693]:
+              - generic [ref=e1694]: kept
+            - cell "18h ago" [ref=e1695]
+            - cell "Actions" [ref=e1696]:
+              - button "Actions" [ref=e1697] [cursor=pointer]:
+                - img [ref=e1698]
+          - 'row "Select row e8e9478d Claude Code + NotebookLM Will Change How You Use AI… Wait Until The End 🤯 #AI #ClaudeAI #NotebookLM... tiktok kept 18h ago Actions" [ref=e1700]':
+            - cell "Select row" [ref=e1701]:
+              - checkbox "Select row" [ref=e1702]
+            - cell "e8e9478d" [ref=e1703]:
+              - code [ref=e1704] [cursor=pointer]: e8e9478d
+            - 'cell "Claude Code + NotebookLM Will Change How You Use AI… Wait Until The End 🤯 #AI #ClaudeAI #NotebookLM..." [ref=e1705]'
+            - cell "tiktok" [ref=e1706]
+            - cell [ref=e1707]
+            - cell "kept" [ref=e1710]:
+              - generic [ref=e1711]: kept
+            - cell "18h ago" [ref=e1712]
+            - cell "Actions" [ref=e1713]:
+              - button "Actions" [ref=e1714] [cursor=pointer]:
+                - img [ref=e1715]
+          - row "Select row dd42048a Comment \"19\" and follow me to get the 19 agent skills repo. A Google engineer open sourced the cheat... tiktok kept 18h ago Actions" [ref=e1717]:
+            - cell "Select row" [ref=e1718]:
+              - checkbox "Select row" [ref=e1719]
+            - cell "dd42048a" [ref=e1720]:
+              - code [ref=e1721] [cursor=pointer]: dd42048a
+            - cell "Comment \"19\" and follow me to get the 19 agent skills repo. A Google engineer open sourced the cheat..." [ref=e1722]
+            - cell "tiktok" [ref=e1723]
+            - cell [ref=e1724]
+            - cell "kept" [ref=e1727]:
+              - generic [ref=e1728]: kept
+            - cell "18h ago" [ref=e1729]
+            - cell "Actions" [ref=e1730]:
+              - button "Actions" [ref=e1731] [cursor=pointer]:
+                - img [ref=e1732]
+          - row "Select row 703369c8 Comment \"CLAUDE\" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs... tiktok kept 18h ago Actions" [ref=e1734]:
+            - cell "Select row" [ref=e1735]:
+              - checkbox "Select row" [ref=e1736]
+            - cell "703369c8" [ref=e1737]:
+              - code [ref=e1738] [cursor=pointer]: 703369c8
+            - cell "Comment \"CLAUDE\" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs..." [ref=e1739]
+            - cell "tiktok" [ref=e1740]
+            - cell [ref=e1741]
+            - cell "kept" [ref=e1744]:
+              - generic [ref=e1745]: kept
+            - cell "18h ago" [ref=e1746]
+            - cell "Actions" [ref=e1747]:
+              - button "Actions" [ref=e1748] [cursor=pointer]:
+                - img [ref=e1749]
+          - row "Select row 66e53aac 3 Claude Code skills every designer needs right now. The last one changed everything. Comment \"SKIL... tiktok kept 18h ago Actions" [ref=e1751]:
+            - cell "Select row" [ref=e1752]:
+              - checkbox "Select row" [ref=e1753]
+            - cell "66e53aac" [ref=e1754]:
+              - code [ref=e1755] [cursor=pointer]: 66e53aac
+            - cell "3 Claude Code skills every designer needs right now. The last one changed everything. Comment \"SKIL..." [ref=e1756]
+            - cell "tiktok" [ref=e1757]
+            - cell [ref=e1758]
+            - cell "kept" [ref=e1761]:
+              - generic [ref=e1762]: kept
+            - cell "18h ago" [ref=e1763]
+            - cell "Actions" [ref=e1764]:
+              - button "Actions" [ref=e1765] [cursor=pointer]:
+                - img [ref=e1766]
+          - row "Select row e1ffb6ee AI Agents, Clearly Explained youtube kept 2d ago Actions" [ref=e1768]:
+            - cell "Select row" [ref=e1769]:
+              - checkbox "Select row" [ref=e1770]
+            - cell "e1ffb6ee" [ref=e1771]:
+              - code [ref=e1772] [cursor=pointer]: e1ffb6ee
+            - cell "AI Agents, Clearly Explained" [ref=e1773]
+            - cell "youtube" [ref=e1774]
+            - cell [ref=e1775]
+            - cell "kept" [ref=e1778]:
+              - generic [ref=e1779]: kept
+            - cell "2d ago" [ref=e1780]
+            - cell "Actions" [ref=e1781]:
+              - button "Actions" [ref=e1782] [cursor=pointer]:
+                - img [ref=e1783]

@@ -1,0 +1,297 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [active] [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "84"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - button "All" [ref=e142] [cursor=pointer]
+          - button "New" [ref=e143] [cursor=pointer]
+          - button "Kept" [ref=e144] [cursor=pointer]
+          - button "Starred" [ref=e145] [cursor=pointer]
+          - button "Skipped" [ref=e146] [cursor=pointer]
+        - generic [ref=e147]:
+          - generic [ref=e148]: Min score
+          - slider "Min score 0.00" [ref=e149]: "0"
+          - generic [ref=e150]: "0.00"
+        - searchbox "Search title or summary..." [ref=e151]
+      - table [ref=e153]:
+        - rowgroup [ref=e154]:
+          - row "Select all ID Title Source Score Status Scraped" [ref=e155]:
+            - columnheader "Select all" [ref=e156]:
+              - checkbox "Select all" [ref=e157]
+            - columnheader "ID" [ref=e158]
+            - columnheader "Title" [ref=e159]
+            - columnheader "Source" [ref=e160]
+            - columnheader "Score" [ref=e161]
+            - columnheader "Status" [ref=e162]
+            - columnheader "Scraped" [ref=e163]
+        - rowgroup [ref=e164]:
+          - row "Select row fb4c8248 Claude Cowork is one of the most underused AI setups right now, and most people skip it because they... tiktok new 2h ago" [ref=e165]:
+            - cell "Select row" [ref=e166]:
+              - checkbox "Select row" [ref=e167]
+            - cell "fb4c8248" [ref=e168]:
+              - code [ref=e169] [cursor=pointer]: fb4c8248
+            - cell "Claude Cowork is one of the most underused AI setups right now, and most people skip it because they..." [ref=e170]
+            - cell "tiktok" [ref=e171]
+            - cell [ref=e172]
+            - cell "new" [ref=e175]:
+              - generic [ref=e176]: new
+            - cell "2h ago" [ref=e177]
+          - row "Select row fb3daeb3 Tragic mistake... Anthropic leaks Claude’s source code youtube new 2h ago" [ref=e178]:
+            - cell "Select row" [ref=e179]:
+              - checkbox "Select row" [ref=e180]
+            - cell "fb3daeb3" [ref=e181]:
+              - code [ref=e182] [cursor=pointer]: fb3daeb3
+            - cell "Tragic mistake... Anthropic leaks Claude’s source code" [ref=e183]
+            - cell "youtube" [ref=e184]
+            - cell [ref=e185]
+            - cell "new" [ref=e188]:
+              - generic [ref=e189]: new
+            - cell "2h ago" [ref=e190]
+          - row "Select row eb0cd66d Comment \"TOKENS\" and follow me to get Claude token-saving tips. Claude Code is charging people $200+... tiktok new 2h ago" [ref=e191]:
+            - cell "Select row" [ref=e192]:
+              - checkbox "Select row" [ref=e193]
+            - cell "eb0cd66d" [ref=e194]:
+              - code [ref=e195] [cursor=pointer]: eb0cd66d
+            - cell "Comment \"TOKENS\" and follow me to get Claude token-saving tips. Claude Code is charging people $200+..." [ref=e196]
+            - cell "tiktok" [ref=e197]
+            - cell [ref=e198]
+            - cell "new" [ref=e201]:
+              - generic [ref=e202]: new
+            - cell "2h ago" [ref=e203]
+          - 'row "Select row d97db9bb Full Claude Tutorial: Beginner to Advanced in 19 Minutes youtube new 2h ago" [ref=e204]':
+            - cell "Select row" [ref=e205]:
+              - checkbox "Select row" [ref=e206]
+            - cell "d97db9bb" [ref=e207]:
+              - code [ref=e208] [cursor=pointer]: d97db9bb
+            - 'cell "Full Claude Tutorial: Beginner to Advanced in 19 Minutes" [ref=e209]'
+            - cell "youtube" [ref=e210]
+            - cell [ref=e211]
+            - cell "new" [ref=e214]:
+              - generic [ref=e215]: new
+            - cell "2h ago" [ref=e216]
+          - 'row "Select row c41bfbd6 Claude AI, Claude code, Claude cowork do you really know the difference? #ai #claudecode #claudeco... tiktok new 2h ago" [ref=e217]':
+            - cell "Select row" [ref=e218]:
+              - checkbox "Select row" [ref=e219]
+            - cell "c41bfbd6" [ref=e220]:
+              - code [ref=e221] [cursor=pointer]: c41bfbd6
+            - 'cell "Claude AI, Claude code, Claude cowork do you really know the difference? #ai #claudecode #claudeco..." [ref=e222]'
+            - cell "tiktok" [ref=e223]
+            - cell [ref=e224]
+            - cell "new" [ref=e227]:
+              - generic [ref=e228]: new
+            - cell "2h ago" [ref=e229]
+          - row "Select row b5a4b053 thank you for helping me make one of her dreams come true. millions of people now know her name and ... tiktok new 2h ago" [ref=e230]:
+            - cell "Select row" [ref=e231]:
+              - checkbox "Select row" [ref=e232]
+            - cell "b5a4b053" [ref=e233]:
+              - code [ref=e234] [cursor=pointer]: b5a4b053
+            - cell "thank you for helping me make one of her dreams come true. millions of people now know her name and ..." [ref=e235]
+            - cell "tiktok" [ref=e236]
+            - cell [ref=e237]
+            - cell "new" [ref=e240]:
+              - generic [ref=e241]: new
+            - cell "2h ago" [ref=e242]
+          - 'row "Select row b3eb6384 Lock in. We’re doing this together. It’s Day 1 of the Absolute Beginner’s Guide to Claude. #ai #ai... tiktok new 2h ago" [ref=e243]':
+            - cell "Select row" [ref=e244]:
+              - checkbox "Select row" [ref=e245]
+            - cell "b3eb6384" [ref=e246]:
+              - code [ref=e247] [cursor=pointer]: b3eb6384
+            - 'cell "Lock in. We’re doing this together. It’s Day 1 of the Absolute Beginner’s Guide to Claude. #ai #ai..." [ref=e248]'
+            - cell "tiktok" [ref=e249]
+            - cell [ref=e250]
+            - cell "new" [ref=e253]:
+              - generic [ref=e254]: new
+            - cell "2h ago" [ref=e255]
+          - row "Select row b13eca29 Replying to @myko_in_phhere are the numbers from a few different sources. Running AI models (LLMs) ... tiktok new 2h ago" [ref=e256]:
+            - cell "Select row" [ref=e257]:
+              - checkbox "Select row" [ref=e258]
+            - cell "b13eca29" [ref=e259]:
+              - code [ref=e260] [cursor=pointer]: b13eca29
+            - cell "Replying to @myko_in_phhere are the numbers from a few different sources. Running AI models (LLMs) ..." [ref=e261]
+            - cell "tiktok" [ref=e262]
+            - cell [ref=e263]
+            - cell "new" [ref=e266]:
+              - generic [ref=e267]: new
+            - cell "2h ago" [ref=e268]
+          - row "Select row 9e8a6eeb Anthropic Just Broke Software Forever youtube new 2h ago" [ref=e269]:
+            - cell "Select row" [ref=e270]:
+              - checkbox "Select row" [ref=e271]
+            - cell "9e8a6eeb" [ref=e272]:
+              - code [ref=e273] [cursor=pointer]: 9e8a6eeb
+            - cell "Anthropic Just Broke Software Forever" [ref=e274]
+            - cell "youtube" [ref=e275]
+            - cell [ref=e276]
+            - cell "new" [ref=e279]:
+              - generic [ref=e280]: new
+            - cell "2h ago" [ref=e281]
+          - 'row "Select row 9109fd45 How to connect Claude Code to your ad account #ai #claude tiktok new 2h ago" [ref=e282]':
+            - cell "Select row" [ref=e283]:
+              - checkbox "Select row" [ref=e284]
+            - cell "9109fd45" [ref=e285]:
+              - code [ref=e286] [cursor=pointer]: 9109fd45
+            - 'cell "How to connect Claude Code to your ad account #ai #claude" [ref=e287]'
+            - cell "tiktok" [ref=e288]
+            - cell [ref=e289]
+            - cell "new" [ref=e292]:
+              - generic [ref=e293]: new
+            - cell "2h ago" [ref=e294]
+          - row "Select row 8d1cba53 You can now vibe code with Claude Code directly inside VS Code. Here’s the actual setup in under 2 m... tiktok new 2h ago" [ref=e295]:
+            - cell "Select row" [ref=e296]:
+              - checkbox "Select row" [ref=e297]
+            - cell "8d1cba53" [ref=e298]:
+              - code [ref=e299] [cursor=pointer]: 8d1cba53
+            - cell "You can now vibe code with Claude Code directly inside VS Code. Here’s the actual setup in under 2 m..." [ref=e300]
+            - cell "tiktok" [ref=e301]
+            - cell [ref=e302]
+            - cell "new" [ref=e305]:
+              - generic [ref=e306]: new
+            - cell "2h ago" [ref=e307]
+          - row "Select row 7391eb41 AI Coding Tools Ranked from Worst to Best (2026) youtube new 2h ago" [ref=e308]:
+            - cell "Select row" [ref=e309]:
+              - checkbox "Select row" [ref=e310]
+            - cell "7391eb41" [ref=e311]:
+              - code [ref=e312] [cursor=pointer]: 7391eb41
+            - cell "AI Coding Tools Ranked from Worst to Best (2026)" [ref=e313]
+            - cell "youtube" [ref=e314]
+            - cell [ref=e315]
+            - cell "new" [ref=e318]:
+              - generic [ref=e319]: new
+            - cell "2h ago" [ref=e320]
+          - 'row "Select row 613b31a7 #LLM #MIKE #BLUELINE #HTX tiktok new 2h ago" [ref=e321]':
+            - cell "Select row" [ref=e322]:
+              - checkbox "Select row" [ref=e323]
+            - cell "613b31a7" [ref=e324]:
+              - code [ref=e325] [cursor=pointer]: 613b31a7
+            - 'cell "#LLM #MIKE #BLUELINE #HTX" [ref=e326]'
+            - cell "tiktok" [ref=e327]
+            - cell [ref=e328]
+            - cell "new" [ref=e331]:
+              - generic [ref=e332]: new
+            - cell "2h ago" [ref=e333]
+          - 'row "Select row 5cf2db87 Big AI News: So Many Gemini Updates, Claude’s Scary New Model + A New Google AI App… youtube new 2h ago" [ref=e334]':
+            - cell "Select row" [ref=e335]:
+              - checkbox "Select row" [ref=e336]
+            - cell "5cf2db87" [ref=e337]:
+              - code [ref=e338] [cursor=pointer]: 5cf2db87
+            - 'cell "Big AI News: So Many Gemini Updates, Claude’s Scary New Model + A New Google AI App…" [ref=e339]'
+            - cell "youtube" [ref=e340]
+            - cell [ref=e341]
+            - cell "new" [ref=e344]:
+              - generic [ref=e345]: new
+            - cell "2h ago" [ref=e346]
+          - 'row "Select row 5a0cd3af Top 5 Claude desktop skill! 🤓 #ai #claude #skills #aitips #aihacks tiktok new 2h ago" [ref=e347]':
+            - cell "Select row" [ref=e348]:
+              - checkbox "Select row" [ref=e349]
+            - cell "5a0cd3af" [ref=e350]:
+              - code [ref=e351] [cursor=pointer]: 5a0cd3af
+            - 'cell "Top 5 Claude desktop skill! 🤓 #ai #claude #skills #aitips #aihacks" [ref=e352]'
+            - cell "tiktok" [ref=e353]
+            - cell [ref=e354]
+            - cell "new" [ref=e357]:
+              - generic [ref=e358]: new
+            - cell "2h ago" [ref=e359]
+          - row "Select row 502a207b AI Agents in 38 Minutes - Complete Course from Beginner to Pro youtube new 2h ago" [ref=e360]:
+            - cell "Select row" [ref=e361]:
+              - checkbox "Select row" [ref=e362]
+            - cell "502a207b" [ref=e363]:
+              - code [ref=e364] [cursor=pointer]: 502a207b
+            - cell "AI Agents in 38 Minutes - Complete Course from Beginner to Pro" [ref=e365]
+            - cell "youtube" [ref=e366]
+            - cell [ref=e367]
+            - cell "new" [ref=e370]:
+              - generic [ref=e371]: new
+            - cell "2h ago" [ref=e372]
+          - 'row "Select row 4a52dae6 These best Claude Skills will automate hours of work and make Claude even more powerful #claudeskill... tiktok new 2h ago" [ref=e373]':
+            - cell "Select row" [ref=e374]:
+              - checkbox "Select row" [ref=e375]
+            - cell "4a52dae6" [ref=e376]:
+              - code [ref=e377] [cursor=pointer]: 4a52dae6
+            - 'cell "These best Claude Skills will automate hours of work and make Claude even more powerful #claudeskill..." [ref=e378]'
+            - cell "tiktok" [ref=e379]
+            - cell [ref=e380]
+            - cell "new" [ref=e383]:
+              - generic [ref=e384]: new
+            - cell "2h ago" [ref=e385]
+          - 'row "Select row 2e873182 Claude’s new feature: Managed Agents is one of the most important AI releases. It allows you to bui... tiktok new 2h ago" [ref=e386]':
+            - cell "Select row" [ref=e387]:
+              - checkbox "Select row" [ref=e388]
+            - cell "2e873182" [ref=e389]:
+              - code [ref=e390] [cursor=pointer]: "2e873182"
+            - 'cell "Claude’s new feature: Managed Agents is one of the most important AI releases. It allows you to bui..." [ref=e391]'
+            - cell "tiktok" [ref=e392]
+            - cell [ref=e393]
+            - cell "new" [ref=e396]:
+              - generic [ref=e397]: new
+            - cell "2h ago" [ref=e398]
+          - 'row "Select row 26dfeb4d 5 Must Have Claude Skills. Comment “Claude” for the full guide and more🔗🤝 #claude #claudecode #vib... tiktok new 2h ago" [ref=e399]':
+            - cell "Select row" [ref=e400]:
+              - checkbox "Select row" [ref=e401]
+            - cell "26dfeb4d" [ref=e402]:
+              - code [ref=e403] [cursor=pointer]: 26dfeb4d
+            - 'cell "5 Must Have Claude Skills. Comment “Claude” for the full guide and more🔗🤝 #claude #claudecode #vib..." [ref=e404]'
+            - cell "tiktok" [ref=e405]
+            - cell [ref=e406]
+            - cell "new" [ref=e409]:
+              - generic [ref=e410]: new
+            - cell "2h ago" [ref=e411]
+          - row "Select row f7037177 How I use Claude Code for real engineering youtube skipped 18h ago" [ref=e412]:
+            - cell "Select row" [ref=e413]:
+              - checkbox "Select row" [ref=e414]
+            - cell "f7037177" [ref=e415]:
+              - code [ref=e416] [cursor=pointer]: f7037177
+            - cell "How I use Claude Code for real engineering" [ref=e417]
+            - cell "youtube" [ref=e418]
+            - cell [ref=e419]
+            - cell "skipped" [ref=e422]:
+              - generic [ref=e423]: skipped
+            - cell "18h ago" [ref=e424]
+          - row "Select row edda4a02 Just started using Claude? And want to hit the ground running. There are 3 simple things that separ... tiktok kept 18h ago" [ref=e425]:
+            - cell "Select row" [ref=e426]:
+              - checkbox "Select row" [ref=e427]
+            - cell "edda4a02" [ref=e428]:
+              - code [ref=e429] [cursor=pointer]: edda4a02
+            - cell "Just started using Claude? And want to hit the ground running. There are 3 simple things that separ..." [ref=e430]
+            - cell "tiktok" [ref=e431]
+            - cell [ref=e432]
+            - cell "kept" [ref=e435]:
+              - generic [ref=e436]: kept
+            - cell "18h ago" [ref=e437]
+          - row [ref=e438]:
+            - cell [ref=e439]

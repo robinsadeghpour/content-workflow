@@ -1,0 +1,106 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "74"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "9"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: tiktok
+          - generic [ref=e56]: "0.73"
+          - button "Play embed" [ref=e58] [cursor=pointer]:
+            - img [ref=e60]
+        - generic [ref=e62]:
+          - 'heading "And yes. Every ai system is in fact a woman in my mind. Idk #claude #ai #medtok #premed #medstudent" [level=2] [ref=e63]'
+          - paragraph [ref=e64]: TikTok by @caitsmd. 5272 plays.
+          - group [ref=e65]:
+            - generic "Show transcript" [ref=e66] [cursor=pointer]
+        - generic [ref=e67]:
+          - button "Skip (Left arrow)" [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e71]: Skip
+          - button "Keep (Right arrow)" [ref=e72] [cursor=pointer]:
+            - img [ref=e73]
+            - generic [ref=e75]: Keep
+          - button "Star (Up arrow)" [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - generic [ref=e79]: Star
+        - generic [ref=e80]:
+          - generic [ref=e81]: tiktok
+          - generic [ref=e82]: 10h ago
+      - article [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e86]: tiktok
+          - generic [ref=e87]: "0.74"
+        - generic [ref=e89]:
+          - heading [level=2] [ref=e90]: "Replying to @Plan I love my LLM degree & the opportunities it gave me. But I by no means think it’s necessary. As with all things related to law school, you should assess how much/ if you will incur debt & if it’s a good choice for you. #lawschool #llm #lawyer"
+          - paragraph [ref=e91]: TikTok by @dominiquedavillier. 8644 plays.
+          - group [ref=e92]:
+            - generic [ref=e93] [cursor=pointer]: Show transcript
+        - generic [ref=e94]:
+          - button [ref=e95] [cursor=pointer]:
+            - img [ref=e96]
+            - generic [ref=e98]: Skip
+          - button [ref=e99] [cursor=pointer]:
+            - img [ref=e100]
+            - generic [ref=e102]: Keep
+          - button [ref=e103] [cursor=pointer]:
+            - img [ref=e104]
+            - generic [ref=e106]: Star
+        - generic [ref=e107]:
+          - generic [ref=e108]: tiktok
+          - generic [ref=e109]: 10h ago
+      - article [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e113]: tiktok
+          - generic [ref=e114]: "0.78"
+        - generic [ref=e116]:
+          - heading [level=2] [ref=e117]: "This new AI tool is unlike anything you’ve ever seen #aitools"
+          - paragraph [ref=e118]: TikTok by @digitalsamaritan. 19700 plays.
+        - generic [ref=e119]:
+          - button [ref=e120] [cursor=pointer]:
+            - img [ref=e121]
+            - generic [ref=e123]: Skip
+          - button [ref=e124] [cursor=pointer]:
+            - img [ref=e125]
+            - generic [ref=e127]: Keep
+          - button [ref=e128] [cursor=pointer]:
+            - img [ref=e129]
+            - generic [ref=e131]: Star
+        - generic [ref=e132]:
+          - generic [ref=e133]: tiktok
+          - generic [ref=e134]: 10h ago

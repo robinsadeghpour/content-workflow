@@ -1,0 +1,111 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "80"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: tiktok
+          - generic [ref=e56]: "0.66"
+          - button "Play embed" [ref=e58] [cursor=pointer]:
+            - img [ref=e60]
+        - generic [ref=e62]:
+          - 'heading "Claude AI, Claude code, Claude cowork do you really know the difference? #ai #claudecode #claudecowork #claudeai" [level=2] [ref=e63]'
+          - paragraph [ref=e64]: TikTok by @thepmfguy. 810 plays.
+          - group [ref=e65]:
+            - generic "Show transcript" [ref=e66] [cursor=pointer]
+        - generic [ref=e67]:
+          - button "Skip (Left arrow)" [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e71]: Skip
+          - button "Keep (Right arrow)" [ref=e72] [cursor=pointer]:
+            - img [ref=e73]
+            - generic [ref=e75]: Keep
+          - button "Star (Up arrow)" [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - generic [ref=e79]: Star
+        - generic [ref=e80]:
+          - generic [ref=e81]: tiktok
+          - code [ref=e82] [cursor=pointer]: c41bfbd6
+          - generic [ref=e83]: 2h ago
+      - article [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e87]: tiktok
+          - generic [ref=e88]: "0.84"
+        - generic [ref=e90]:
+          - heading [level=2] [ref=e91]: "thank you for helping me make one of her dreams come true. millions of people now know her name and are standing up for her. let’s turn that love into action; let’s keep pushing, keep applying pressure, and let’s make sure there is real accountability so that our precious girl can finally rest in peace. #justiceformakayla #LLM #forever18 #mentalhealthawareness"
+          - paragraph [ref=e92]: TikTok by @crystallacachetona. 62400 plays.
+          - group [ref=e93]:
+            - generic [ref=e94] [cursor=pointer]: Show transcript
+        - generic [ref=e95]:
+          - button [ref=e96] [cursor=pointer]:
+            - img [ref=e97]
+            - generic [ref=e99]: Skip
+          - button [ref=e100] [cursor=pointer]:
+            - img [ref=e101]
+            - generic [ref=e103]: Keep
+          - button [ref=e104] [cursor=pointer]:
+            - img [ref=e105]
+            - generic [ref=e107]: Star
+        - generic [ref=e108]:
+          - generic [ref=e109]: tiktok
+          - code [ref=e110] [cursor=pointer]: b5a4b053
+          - generic [ref=e111]: 2h ago
+      - article [ref=e112]:
+        - generic [ref=e113]:
+          - generic [ref=e115]: tiktok
+          - generic [ref=e116]: "0.64"
+        - generic [ref=e118]:
+          - heading [level=2] [ref=e119]: "Lock in. We’re doing this together. It’s Day 1 of the Absolute Beginner’s Guide to Claude. #ai #aitips #claude #chatgpt #techtips @Claude"
+          - paragraph [ref=e120]: TikTok by @bigpictureclub. 443 plays.
+          - group [ref=e121]:
+            - generic [ref=e122] [cursor=pointer]: Show transcript
+        - generic [ref=e123]:
+          - button [ref=e124] [cursor=pointer]:
+            - img [ref=e125]
+            - generic [ref=e127]: Skip
+          - button [ref=e128] [cursor=pointer]:
+            - img [ref=e129]
+            - generic [ref=e131]: Keep
+          - button [ref=e132] [cursor=pointer]:
+            - img [ref=e133]
+            - generic [ref=e135]: Star
+        - generic [ref=e136]:
+          - generic [ref=e137]: tiktok
+          - code [ref=e138] [cursor=pointer]: b3eb6384
+          - generic [ref=e139]: 2h ago

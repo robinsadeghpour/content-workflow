@@ -1,0 +1,2915 @@
+[
+  {
+    "type": "post",
+    "id": "7447652009031368704",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-just-dropped-a-free-3-hour-advanced-claude-activity-7447652009031368704-RpCk",
+    "content": "I just dropped a free 3-hour advanced Claude Code course on YouTube.\n\nThis picks up where my beginner course left off and covers the stuff that took me months of real usage and real money burned on tokens to figure out.\n\nI use Claude Code every day across a business generating over $4 million a year in profit, and I teach over 2,000 people how to do the same inside Maker School. This course is everything I wish someone handed me when I was past the basics.\n\nWhat's inside:\n\n→ How to structure your CLAUDE .md so it actually saves you tokens and improves output quality (it's four things, and most people only do one of them)\n\n→ Agent harnesses, agent teams, and parallelization with fan-out/fan-in research flows and stochastic consensus\n\n→ Karpathy's auto-research loop and how I'm using it to optimize my own websites and cold email campaigns\n\n→ Browser automation across three levels: HTTP requests, Chrome DevTools MCP, and full computer use and when to use each\n\n→ How to diversify away from Claude Code dependency so you don't lose a full day of productivity during an outage\n\n→ Workspace organization for personal, business, and client projects\n\n→ A full security module covering API key leaks, hallucinated package names, database RLS, and a copy-paste audit prompt\n\nComment \"ADVANCED\" and I'll send you the direct link plus a companion doc with my actual CLAUDE .md setup, the auto-research framework files, and the security audit prompt I walk through in the course.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775658609636,
+      "date": "2026-04-08T14:30:09.636Z",
+      "postedAgoShort": "17h",
+      "postedAgoText": "17 hours ago • Edited • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGSKP4wupW8pA/feedshare-shrink_2048_1536/B56Z1JrKCkKEAk-/0/1775057543685?e=1777507200&v=beta&t=eddigwLxJFoJcGwS-g_CIdwqmOTeI5YYWKxQ8VKkGas",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-just-dropped-a-free-3-hour-advanced-claude-activity-7447652009031368704-RpCk?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7447652009031368704",
+    "shareUrn": "urn:li:share:7445130959664021505",
+    "engagement": {
+      "id": "7447652009031368704",
+      "likes": 486,
+      "comments": 889,
+      "shares": 6,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 417
+        },
+        {
+          "type": "EMPATHY",
+          "count": 29
+        },
+        {
+          "type": "PRAISE",
+          "count": 22
+        },
+        {
+          "type": "INTEREST",
+          "count": 12
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 6
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7446927240149311489",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_8-ways-to-make-money-with-claude-computer-activity-7446927240149311489-kydY",
+    "content": "Anthropic just released computer use, which gives Claude access to your browser and your keyboard.\n\nMost people out there are using it for toy demos like organizing files or renaming folders.\n\nI spent the last week testing it on real business tasks and put together 8 use cases that go way beyond the demos. Swipe through for the breakdown.\n\nIf you want to see the full walkthrough with setup instructions and the browser workaround I use to bypass Anthropic's built-in restrictions, I made a video covering everything step by step, comment “COMPUTER” and I’ll send it to you.\n\n~\n\nP.S. If you're serious about turning tools like this into real revenue and you want to see how I apply them across businesses generating over $4 million a year in profit, Maker School is where I go deep on all of it with over 2,000 members.\n\nJoin here: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775485811269,
+      "date": "2026-04-06T14:30:11.269Z",
+      "postedAgoShort": "2d",
+      "postedAgoText": "2 days ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "8 Ways to Make Money with Claude Computer Use",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQGrNaJt-fXB2g/feedshare-document-url-metadata-scrapper-pdf/B56Z1JqVTXJ8A4-/0/1775057329745?e=1776326400&v=beta&t=DK48XUIrbBLObeu2rVofzi8jEUzW2SBNHEO_SWviJZU",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQGrNaJt-fXB2g/feedshare-document-cover-images_1920/B56Z1JqVTXJ8BQ-/0/1775057332357?e=1776326400&v=beta&t=We636ATs0YmlZP_J_ZFO71FYg1gRC-_lx1VYzLimk58",
+            "https://media.licdn.com/dms/image/v2/D561FAQGrNaJt-fXB2g/feedshare-document-cover-images_1920/B56Z1JqVTXJ8BQ-/1/1775057332357?e=1776326400&v=beta&t=-OPPVsRyso7XKy2MJKu7SH_VH08oQDOqh_vyM3zszFE",
+            "https://media.licdn.com/dms/image/v2/D561FAQGrNaJt-fXB2g/feedshare-document-cover-images_1920/B56Z1JqVTXJ8BQ-/2/1775057332357?e=1776326400&v=beta&t=eVTn0k8MpcdqYS7BZUJFAio6XFN9SjXc6JmfLpDpKkI"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 9
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_8-ways-to-make-money-with-claude-computer-activity-7446927240149311489-kydY?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7446927240149311489",
+    "shareUrn": "urn:li:ugcPost:7445130320506482690",
+    "engagement": {
+      "id": "7445130320506482690",
+      "likes": 107,
+      "comments": 65,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 98
+        },
+        {
+          "type": "EMPATHY",
+          "count": 7
+        },
+        {
+          "type": "PRAISE",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7447289607538442242",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_how-id-start-ai-consulting-in-2026-activity-7447289607538442242-tPH7",
+    "content": "I scaled two agencies past $160,000/month in combined revenue, and I spent many hundreds of thousands of dollars of my own money mapping out the best route to do it.\n\nBut most of that money was wasted because I didn't have a system. I was figuring it out as I went, which is the most expensive way to learn anything.\n\nSo I sat down and broke the entire AI consulting business model into five pillars: marketing, sales, onboarding, fulfillment, and retention. Every single client flows through these in order, and if any one of them breaks, the whole thing stalls.\n\nI put together a full playbook covering all five, with the exact templates, scripts, and SOPs I actually use. Swipe through the carousel for the breakdown, and if you want the full deep dive with all the copy-and-paste assets, I made a video walking through everything step by step (link in comments).\n\n~\n\nIf you're serious about building this into a real business and you want daily accountability plus a community of people who've been in your exact shoes, Maker School is where we do that. We have over 2,000 members learning, testing, and building their businesses, and I'm in there personally every single day.\n\nJoin here: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775572206387,
+      "date": "2026-04-07T14:30:06.387Z",
+      "postedAgoShort": "1d",
+      "postedAgoText": "1 day ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "How I'd Start AI Consulting in 2026",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQEYNzSGuUMiVg/feedshare-document-chunked-pdf/B56Z1Jp7zpJgBk-/0/1775057224839?e=1776326400&v=beta&t=zJqdMqoflW7_cp6zVWcQ3yx7ls1WlYcZZNAcZ74OEhk",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQEYNzSGuUMiVg/feedshare-document-cover-images_1920/B56Z1Jp7zpJgBQ-/0/1775057225169?e=1776326400&v=beta&t=EOEkivKsfN007zfM0hq0IfFKzmIj-zT6H5jaxmYBuQ0",
+            "https://media.licdn.com/dms/image/v2/D561FAQEYNzSGuUMiVg/feedshare-document-cover-images_1920/B56Z1Jp7zpJgBQ-/1/1775057225169?e=1776326400&v=beta&t=pAsiR_k3evXCBPlNdXRrGacJvKo6gGR-pHkDvPt7Ks4",
+            "https://media.licdn.com/dms/image/v2/D561FAQEYNzSGuUMiVg/feedshare-document-cover-images_1920/B56Z1Jp7zpJgBQ-/2/1775057225169?e=1776326400&v=beta&t=fNiaZUO0k1A4zBXyooKky--6gzZF4OixJG4oj--5bmg"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 11
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_how-id-start-ai-consulting-in-2026-activity-7447289607538442242-tPH7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7447289607538442242",
+    "shareUrn": "urn:li:ugcPost:7445129804921835521",
+    "engagement": {
+      "id": "7445129804921835521",
+      "likes": 137,
+      "comments": 14,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 118
+        },
+        {
+          "type": "EMPATHY",
+          "count": 13
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        },
+        {
+          "type": "ENTERTAINMENT",
+          "count": 1
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7445115321981775872",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_7-principles-of-outbound-activity-7445115321981775872-yjco",
+    "content": "I went to school for behavioral neuroscience and everything about how human beings make decisions has been documented in psychological literature for hundreds of years. \n\nCold email is no different—the reason people say yes to messages from total strangers is applied psychology.\n\nI broke down the 7 core principles in my new cold email course, but I figured I'd give you the condensed version here. These are the same principles I've used across $15 million in outbound sales, and they apply whether you're sending emails, LinkedIn DMs, SMS, Instagram messages, or literally anything else.\n\nSwipe through the carousel for all 7, and if you want the full deep dive—the 4-hour course is free on YouTube. Comment \"COLD\" and I'll send you the link.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775053816314,
+      "date": "2026-04-01T14:30:16.314Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "7 Principles of Outbound",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQHsHeKkCs-Chw/feedshare-document-chunked-pdf/B56Z0hd3MFHIBo-/0/1774382971261?e=1776326400&v=beta&t=hV08Te4h2S1gb43DFBnFVdqREz9Wkdm5tyMQUzo90z0",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQHsHeKkCs-Chw/feedshare-document-cover-images_1920/B56Z0hd3MFHIBU-/0/1774382971565?e=1776326400&v=beta&t=j7CoAd8oXyKO6SlecJDg9eDP2TSNIGYsScfbea_zXDo",
+            "https://media.licdn.com/dms/image/v2/D561FAQHsHeKkCs-Chw/feedshare-document-cover-images_1920/B56Z0hd3MFHIBU-/1/1774382971565?e=1776326400&v=beta&t=JqL-2Zp4UuExDO9hd7Wpv79lP3XMp8mrcQ6r4yTw9bc",
+            "https://media.licdn.com/dms/image/v2/D561FAQHsHeKkCs-Chw/feedshare-document-cover-images_1920/B56Z0hd3MFHIBU-/2/1774382971565?e=1776326400&v=beta&t=aivxuGeV4QnsixLA7hJE45KHsbdhgCFvnIDDBwXxi0A"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 9
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_7-principles-of-outbound-activity-7445115321981775872-yjco?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7445115321981775872",
+    "shareUrn": "urn:li:ugcPost:7442301765326192640",
+    "engagement": {
+      "id": "7442301765326192640",
+      "likes": 89,
+      "comments": 54,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 79
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7438592306414456832",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-manage-a-4myear-business-primarily-through-activity-7438592306414456832-VV6_",
+    "content": "I manage a $4M/year business primarily through AI agents and skills. I just put out a course showing you how.\n\nMost skills content right now is centered around the personal assistant angle—flashy demos that look great in a screen recording but don't produce meaningful returns for anyone's business.\n\nI currently have 30 to 40 skills managing most aspects of my business. In the course I walk through a bunch of them.\n\nThe lead follow-up skill is probably the one that saves me the most time. It goes through my entire CRM, pulls the full email chain for each prospect, figures out where they are in the pipeline, and sends a personalized check-in that matches the tone of the original conversation. A booked meeting gets a different follow-up than a proposal that's been sitting for a week. My salesperson triggers it in the morning, clears the whole pipeline, and spends the rest of the day on new business.\n\nThere's also a lead scraping skill that pulls directly from LinkedIn Sales Navigator into a Google Sheet. Most other scraping services just scrape from Sales Navigator anyway, so I go straight to the source. 50 management consultants in Arizona, 3 to 4 minutes, done.\n\nI also cover how to build skills from scratch. The short version is if you have any SOP in your business, you basically just paste it into Claude alongside a skill spec file and it turns your task list into a working skill. It creates the files, writes the scripts, and tests it end to end. And every time it runs after that, if it hits a problem, it patches its own skill file so the issue doesn't happen again.\n\nThe course is about 50 minutes, completely free, and I included the skill spec file in the description so you can start building immediately.\n\nFull course: https://lnkd.in/gzxq5Uui",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773498608211,
+      "date": "2026-03-14T14:30:08.211Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGuK4_ZKDTzqw/feedshare-shrink_1280/B56ZzYTux0KcAM-/0/1773155577208?e=1777507200&v=beta&t=4vQkTgZmYvJfSHr_Oe2d8H4JcQDNv5Hydwi5m4voMsg",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-manage-a-4myear-business-primarily-through-activity-7438592306414456832-VV6_?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7438592306414456832",
+    "shareUrn": "urn:li:share:7437153532538949633",
+    "engagement": {
+      "id": "7438592306414456832",
+      "likes": 178,
+      "comments": 29,
+      "shares": 4,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 153
+        },
+        {
+          "type": "EMPATHY",
+          "count": 12
+        },
+        {
+          "type": "PRAISE",
+          "count": 6
+        },
+        {
+          "type": "INTEREST",
+          "count": 6
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7444761248811892736",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_the-initial-stage-of-ai-coding-was-vibe-coding-activity-7444761248811892736-IZbM",
+    "content": "The initial stage of AI coding was vibe coding: You write the prompts, AI writes the code, you review it. Your role was basically a writer.\n\nThen we moved to agentic engineering, which is where most of us are now. You orchestrate multiple agents doing multiple things simultaneously, and your role shifted to director.\n\nAuto-research represents the next jump. You define a goal, hand over a metric and an assessment method, and the agents run completely autonomously. You set the direction, but you're no longer directing individual tasks. Your role is more like a principal investigator at a research lab—you tell the RAs what to investigate and they go run the experiments.\n\nI think what comes after that is each of us becoming the CEO of our own company, whether it's a real company or just the way we organize our personal productivity. You'll have fleets of agents running constantly on your behalf, optimizing things, handling tasks, making small decisions—and your job is just to set the vision and course-correct when needed.\n\nTo make a long story short, this is a spectrum of decreasing human involvement, and it's moving fast. Cloud Code went from 30-second tasks last year to 15-minute autonomous runs today. Auto mode just shipped. Automated testing is coming. Every piece of the loop—planning, implementation, QA—is being internalized by the agent.\n\nThe people who understand how agent harnesses work, who know how to use tools like Claude Code to do economically valuable things, are a vanishingly small percentage of the population right now. We're talking sub-1%. And the gap between what that group can produce in a day versus everyone else is already massive and growing.\n\nWilliam Gibson said it best: the future is here, it's just unevenly distributed. You have access to technology right now that lets you do in a day what used to take a team months.\n\nIf you want to be around people who are building with this stuff every day and turning it into real revenue, Maker School is where I do that with over 2,000 members.\n\nJoin here: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774969398692,
+      "date": "2026-03-31T15:03:18.692Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQE6gG2jhgggZA/videocover-high/B56Z1EazCMK0BY-/0/1774969372137?e=1776326400&v=beta&t=WgHxsJZ4fR5c6NYKYTp-XzzvB5pPTsoa5AtFPvdu6Z4",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQE6gG2jhgggZA/mp4-720p-30fp-crf28/B56Z1EazCMK0CI-/0/1774969392258?e=1776326400&v=beta&t=XpvNJ0GO89B1hqVx0CerOgf-8F7_G0WvTBr93xgJSww"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_the-initial-stage-of-ai-coding-was-vibe-coding-activity-7444761248811892736-IZbM?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7444761248811892736",
+    "shareUrn": "urn:li:ugcPost:7444761061540425728",
+    "engagement": {
+      "id": "7444761061540425728",
+      "likes": 166,
+      "comments": 21,
+      "shares": 10,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 143
+        },
+        {
+          "type": "EMPATHY",
+          "count": 10
+        },
+        {
+          "type": "INTEREST",
+          "count": 10
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7443303421400592384",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-built-four-websites-the-other-day-in-about-activity-7443303421400592384-kLYt",
+    "content": "I built four websites the other day in about 15 minutes total and they all have 3D scroll effects, rotating assets, and exploding view animations. \n\nA few years back when I was selling websites for a living, something like this would have been $5,000 to $10,000 a pop. Now you can do it for about $2 to $3 in tokens. The whole process is three steps and it is nowhere near as complicated as people are making it out to be. \n\nFirst, you write a few bullet points into Claude Code telling it what you want. Second, you use a skill created by a really cracked 16-year-old named Leon that instills high-end website design principles—spacing, luxury aesthetics, typography—so you get a clean one-shot website from a simple prompt. Third, you generate an animated asset using a model called Kling 3.0, which I access through a platform called Higgsfield. You feed it a prompt like \"generate a high quality 3D render of panning through an interior design scene, white background, 16 by 9\" and a few seconds later you have a video you can drop right into the hero header.\n\nI had an animation running as the background of my hero header but the text was hard to read, so I told Claude Code \"the subtext is small and hard to read, make it more prominent\" and it fixed it in seconds. Then I wanted an exploding view of a house that played frame by frame as you scroll down, so I generated that on Kling, told Claude to create a scroll animation tying the frames to scroll position, and it set up locomotive scroll with preloaded JPEGs automatically. As a former web developer, some of this would have taken me 3 days to build manually and it was done in 30 seconds.\n\nOnce you're happy with the site, you can tell Claude Code \"make it live on Netlify\" and it deploys. Blank page to live URL with 3D animations—maybe $3 in compute and 15 minutes of my time.\n\nThis is the kind of stuff I teach inside Maker School. Over 2,000 members in there building and selling real systems like this every week. Live calls, real builds, and I help you land your first paying client in 90 days or your money back: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774621825552,
+      "date": "2026-03-27T14:30:25.552Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGZn8fODL746A/feedshare-shrink_1280/B56Z0hZWHcJIAQ-/0/1774381785865?e=1777507200&v=beta&t=G5PAqdCIFlGxEkcJGHu1rhfanZ0oV_Eq4K1NkE89rag",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-built-four-websites-the-other-day-in-about-activity-7443303421400592384-kLYt?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7443303421400592384",
+    "shareUrn": "urn:li:share:7442296626313854976",
+    "engagement": {
+      "id": "7443303421400592384",
+      "likes": 160,
+      "comments": 15,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 145
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "INTEREST",
+          "count": 5
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7446202443945902080",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_ive-sold-the-exact-same-system-for-500-activity-7446202443945902080--BG6",
+    "content": "I've sold the exact same system for $500 and $5,000. What changed was my ability to deliver value.\n\nFirst, I started solving problems that cost more money. I'd get on a call with a marketing agency charging $10K/month and discover they had two needs.\n\nExpense reporting—admin staff manually submitting receipts, accounting team spending 3-4 hours a week categorizing them. That costs them maybe $1,000 a month. Then speed to lead—they're responding to inbound inquiries in 3 hours instead of 5 minutes, and five leads a month are leaking through the funnel. At their conversion rate and contract value, that costs them $30,000 a month. Both take me 3-4 hours to solve with a Make.com workflow. Both use a webhook trigger, some data storage, and a transformation step.\n\nIn general, the closer your solution is to revenue generation, the more people will be willing to pay for it.\n\nSecond, I stopped just giving people the system and started giving them an experience.\n\nThink about coffee. You can make a cup at home for 30 cents or buy the same cup at a cafe for $6. What's the difference? Certainly not 20x worth of beans and water. It's the smells, the barista, the interior, the Wi-Fi, and the energy. That cafe increased the perceived value by 20x by changing everything about the coffee except the coffee itself.\n\nSo instead of just delivering a speed-to-lead system for $3,000, I deliver the same system plus a full environment config, weekly strategy calls, Slack access, Loom documentation, seven additional automation templates, CRM integrations, and a 90-day optimization SOP. I charge $9,000. The extra work is maybe 5 hours on top of the 10 I was already spending. The client thinks they're getting a whole agency relationship.\n\nThird, I just started charging more.\n\nWhen I was starting LeftClick, I would routinely see people sell the same systems I was selling for $700 for 10 grand. And I would think to myself, how the hell can they sell such a simple system for that much money while I'm here slaving away for a fifteenth of that?\n\nSo I took my $1,500 projects and priced them at $4,000. I did not change a single thing about the service—I just got a completely different base of clients. These guys had money and things to do, so incentives insisted they trust my process and give me as much control as possible. Way fewer fixed costs, way less of a pain to deal with, and significantly more upsell opportunity later. You can get away with charging a lot more than you probably think. Most people never stress test it.\n\nI broke all of this down in the video below, including how to price based on business impact instead of hours worked.\n\nPS - If you want to learn how to position and sell AI services at premium prices, Maker School is where I teach this with over 2,000 members and a 90-day customer guarantee.\n\nJoin here: https://bit.ly/4l09oQQ\n\nFull video: https://lnkd.in/gEb-yUJA",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775313006388,
+      "date": "2026-04-04T14:30:06.388Z",
+      "postedAgoShort": "4d",
+      "postedAgoText": "4 days ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQGMTJFatAILDw/feedshare-shrink_2048_1536/B56Z1JpE2DKYAg-/0/1775056998058?e=1777507200&v=beta&t=QQJi_aXv4a3WCUCc_O__7jW8iHhXfQFdvGdzEjaGuvw",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_ive-sold-the-exact-same-system-for-500-activity-7446202443945902080--BG6?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7446202443945902080",
+    "shareUrn": "urn:li:share:7445128673965322240",
+    "engagement": {
+      "id": "7446202443945902080",
+      "likes": 130,
+      "comments": 14,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 117
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "PRAISE",
+          "count": 4
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7444028103322161152",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-put-together-an-exhaustive-list-of-every-activity-7444028103322161152-Eer7",
+    "content": "I put together an exhaustive list of every working method I currently know of to scrape and generate leads for outbound. \n\nWe use these every day over at LeftClick to generate hundreds of thousands of dollars across a variety of industries for clients, so this is the full sauce.\n\nI put together a full Google doc that lays out every single one top to bottom with step-by-step instructions, the tools I use, and the enrichment rates I get from each. I'm giving it away for free because I think most people overcomplicating their lead gen when the fundamentals are surprisingly straightforward.\n\nJust to give you a taste of what's inside—one of the methods takes advantage of a little-known hack inside Anymailfinder where you can download all known emails at a company domain at a ratio of about 1 credit to 40 emails. If you're doing enterprise sales and targeting a handful of big companies, this alone can save you hundreds of dollars a month on enrichment.\n\nAnother one that I don't see nearly enough people using is scraping LinkedIn Jobs. These are companies that are literally hiring for the thing you sell. They have money in hand, they have an active need, and they're telling you exactly what they want in the job description. You scrape the listings, feed the company names into an enrichment tool, and you get validity rates close to 100% because these are established businesses with discoverable domains.\n\nThe method I personally get the highest reply rates from is building custom scrapers for data sources that nobody else is hitting. I built one for Skool communities a while back and got 11.5% reply rates on the cold emails I sent from that list. The leads were warmer because they hadn't been burned out by everyone else running the same Apollo or Instantly campaigns.\n\nAll 12 methods are in the doc along with the exact tools, workflows, and enrichment pipelines I use for each one. Grab it here: https://lnkd.in/gqBPiEiJ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774794603186,
+      "date": "2026-03-29T14:30:03.186Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQFHC2YtqiAFjQ/videocover-low/B56Z0hdSDcIMBU-/0/1774382819332?e=1776326400&v=beta&t=9zNO8_xgKosqFBYv4t3_hM1-eA9znSK8TBne-6_1I0E",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQFHC2YtqiAFjQ/mp4-720p-30fp-crf28/B56Z0hdSDcIMCI-/0/1774382822291?e=1776326400&v=beta&t=yNiawOYucYiM53htLpQr9GxdKcMCRh1gjneTRnQ92mM"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-put-together-an-exhaustive-list-of-every-activity-7444028103322161152-Eer7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7444028103322161152",
+    "shareUrn": "urn:li:ugcPost:7442300425267064833",
+    "engagement": {
+      "id": "7442300425267064833",
+      "likes": 132,
+      "comments": 20,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 122
+        },
+        {
+          "type": "EMPATHY",
+          "count": 5
+        },
+        {
+          "type": "INTEREST",
+          "count": 4
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7440766666541785088",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_im-giving-away-the-exact-process-i-used-activity-7440766666541785088-Hf4m",
+    "content": "I’m giving away the exact process I used to hit $72K selling automation services.\n\nThe problem isn't that most people can't build automations—it's that automation is expensive and the deliverables are hard to explain, so getting your foot in the door is brutal.\n\nThat's where no-brainer offers come in. A no-brainer offer is a simple, productized deliverable you can fulfill quickly, at low cost, that demonstrates value and naturally leads into your more expensive services.\n\nThree requirements for an offer to qualify:\n\nYou can do it quickly. Under one week turnaround, minimal client involvement, a few scheduled progress updates to give the impression of momentum.\n\nYou can do it cheaply. If you're solo, something you can fulfill in under 2 hours. If you're delegating, under $200. Both are possible if you're using templates.\n\nThere's little or no risk for the client. This is the biggest lever most people ignore. I think of conversion rate as (cost x ease x desire) / risk. You can't eliminate risk entirely, but you can mitigate most of it.\n\nReal example from my business: \"I'll build you a world-class cold email outreach system in 14 days for $1,325. We source 5,000 prospects, write your campaigns, and you get positive responses directly in your inbox. If you don't get at least 20 leads in two months, you get all your money back.\"\n\nThat cheapest templated lead gen system took us 45 minutes to fulfill and cost us under $50.\n\nThe real money isn't in the no-brainer offer though—it's in the upsell. If your offer logically leads into a recurring retainer, 5 clients a month at $3K with a 6-month average lifespan is $90K from the same number of customers.\n\nI put together a full breakdown of this framework including example offers you can copy, risk mitigation strategies, and how to structure the upsell path.\n\nWant it?\n\n1. Like this post\n2. Comment \"OFFER\"\n\nI'll DM you the link.\n\nPS - Connect with me if we're not already so I can send it to you.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774017016063,
+      "date": "2026-03-20T14:30:16.063Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_im-giving-away-the-exact-process-i-used-activity-7440766666541785088-Hf4m?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7440766666541785088",
+    "shareUrn": "urn:li:share:7439431319626948608",
+    "engagement": {
+      "id": "7440766666541785088",
+      "likes": 384,
+      "comments": 805,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 356
+        },
+        {
+          "type": "EMPATHY",
+          "count": 14
+        },
+        {
+          "type": "INTEREST",
+          "count": 7
+        },
+        {
+          "type": "PRAISE",
+          "count": 4
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7437505192289468417",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_im-giving-away-the-blueprint-i-use-to-one-shot-activity-7437505192289468417-wGb7",
+    "content": "I'm giving away the blueprint I use to one-shot cinematic landing pages with Gemini 3.1 Pro.\n\nIt includes the prompt, four aesthetic presets with complete design systems, component architecture for every section, and animation specs…basically everything you need to turn Gemini into a website builder.\n\nYou answer four questions: brand name, aesthetic direction, value props, and CTA, and it spits out a full landing page with scroll animations, hover interactions, and frosted glass effects in minutes.\n\nI've made about 10 websites with this approach now and 9 out of 10 have been pixel-perfect one-shots. As a former website designer, it kind of pisses me off because that's basically my whole business commoditized.\n\nThe prompt helps, but honestly it's the model doing the heavy lifting here. Gemini 3.1 Pro High is absurdly good at translating visual references into working front-end code. The prompt just gives it the right structure so you don't have to think about navbar logic, hero sections, animation lifecycles, or any of that yourself.\n\nTo get it:\n\n1. Like this post\n2. Connect with me (Nick Saraev)\n3. Comment \"WEBSITE\"",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773239420006,
+      "date": "2026-03-11T14:30:20.006Z",
+      "postedAgoShort": "4w",
+      "postedAgoText": "0 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQEVO0N-CRMPCQ/videocover-high/B56ZywG_DwG4BY-/0/1772481149159?e=1776326400&v=beta&t=GLFMmamNP15KZJ3YQCnHECj61VrJbhZwFDNaNgplIzs",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQEVO0N-CRMPCQ/mp4-720p-30fp-crf28/B56ZywG_DwG4CI-/0/1772481156734?e=1776326400&v=beta&t=4ahGTvhcfRXa2DvHykMni98ZDK73EMiBkm808HIZvJs"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_im-giving-away-the-blueprint-i-use-to-one-shot-activity-7437505192289468417-wGb7?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7437505192289468417",
+    "shareUrn": "urn:li:ugcPost:7434324700253786112",
+    "engagement": {
+      "id": "7434324700253786112",
+      "likes": 1057,
+      "comments": 1937,
+      "shares": 12,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 995
+        },
+        {
+          "type": "EMPATHY",
+          "count": 42
+        },
+        {
+          "type": "PRAISE",
+          "count": 14
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 4
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7437867547493871616",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_3-agentic-workflows-that-run-my-youtube-channel-activity-7437867547493871616-NNZq",
+    "content": "I automated most of my YouTube workflow in 24 mins. Three separate systems now handle the stuff I used to spend hours on every week.\n\nThe first one edits my videos. I record a talking head, and the workflow automatically cuts out all the silences and verbal mistakes, does audio enhancement and color grading, adds an intro animation, and exports. What you're watching in the video is the output of that workflow.\n\nThe second one finds me video ideas. It scrapes YouTube channels in niches adjacent to mine, scores each video by how much it outperformed that channel's average, and then dumps the best ones into a Google Sheet with the thumbnail, title, and three alternative titles adapted for my channel. This is actually how I came up with the idea for this video.\n\nThe third one generates thumbnails. Most AI face swaps look terrible because the face angle doesn't match the source image. This workflow figures out the exact angle of the face in the thumbnail I want to replicate, finds the best matching photo of me at that same angle, and generates three variations.\n\nI built all three the same way — described what I wanted, had Claude Code research the best tools, picked a plan, and let it build. I know nothing about the programming behind any of it. The video editor cost me about $25 in API costs. The other two were basically free.\n\nFull video walking through all three builds live, workflows shared for free in the description: https://lnkd.in/g4QNYwwt",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773325812219,
+      "date": "2026-03-12T14:30:12.219Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "3 agentic workflows that run my YouTube channel",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQHAZl6zle9qLg/feedshare-document-chunked-pdf/B56ZzYRjqiKUBo-/0/1773155008979?e=1776326400&v=beta&t=pZnmv-S_Tp0v2GWE__frioiCNWBYjiuAJZNcUH6xHbo",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQHAZl6zle9qLg/feedshare-document-cover-images_1920/B56ZzYRjqiKUBU-/0/1773155011392?e=1776326400&v=beta&t=63qqBEMP_2Alvlf8wud-gRb08yXipsxEnazKIyj5qFs",
+            "https://media.licdn.com/dms/image/v2/D561FAQHAZl6zle9qLg/feedshare-document-cover-images_1920/B56ZzYRjqiKUBU-/1/1773155011392?e=1776326400&v=beta&t=69YErGXnxTU2z0geha1CLWLp9r0kqWbPFxqaBluUe20",
+            "https://media.licdn.com/dms/image/v2/D561FAQHAZl6zle9qLg/feedshare-document-cover-images_1920/B56ZzYRjqiKUBU-/2/1773155011392?e=1776326400&v=beta&t=NjQc95ItKTUhVHXKt7l7AxU9RKNoGMQwopeNhpA74cE"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 8
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_3-agentic-workflows-that-run-my-youtube-channel-activity-7437867547493871616-NNZq?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7437867547493871616",
+    "shareUrn": "urn:li:ugcPost:7437151397630046208",
+    "engagement": {
+      "id": "7437151397630046208",
+      "likes": 144,
+      "comments": 27,
+      "shares": 4,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 127
+        },
+        {
+          "type": "EMPATHY",
+          "count": 14
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7437150485553303552",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-just-put-out-a-full-course-on-ai-agents-activity-7437150485553303552-ii-d",
+    "content": "I just put out a full course on AI agents, and I want to walk you through something from it that I think will change how a lot of you use these tools.\n\nMost people interact with AI agents the same way they interact with ChatGPT. They type a request, get a response, and if it isn't great, they type a slightly different request. But most people are underwhelmed because they treat every session as a blank slate. The agent has no memory of what went wrong last time, accumulated preferences, or learned rules. So it keeps making the same mistakes over and over.\n\nOne of the things I cover in the course is self-modifying system prompts. You add a section to your Claude.md or Gemini.md or Agents.md that tells the agent to update its own rules every time you correct it. So if I'm building a website and I say \"quit doing things in dark mode,\" the agent writes a new rule to its own file that says never use dark mode.\n\nBy session five or six, the number of errors the agent makes relative to your preferences drops close to zero. Your agent basically trains itself on you over time, and all it cost you was one line of instruction in your system prompt telling it to do so.\n\nThat's one technique out of maybe a dozen in the course.\n\nIt also covers things like having Claude orchestrate a project while delegating frontend work to Gemini and backend work to Codex simultaneously, spawning 10 agents on the same problem to surface ideas that any single agent would statistically never generate, feeding YouTube tutorials directly into agents so they can learn from video the same way we do, and using fresh agents to review the work of other agents because the original agent is too biased by its own decision history to catch its own mistakes.\n\nThe whole course is platform agnostic across Codex, Claude Code, and Antigravity. You don't need any programming experience.\n\nI don't have a CS degree myself—I learned everything I know from free resources like this one. 2+ hours, completely free, every technique gets a real implementation walkthrough.\n\nFull course: https://lnkd.in/geqZ85NG",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773154851330,
+      "date": "2026-03-10T15:00:51.330Z",
+      "postedAgoShort": "4w",
+      "postedAgoText": "0 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQHu23dpssReaA/feedshare-shrink_2048_1536/B56ZzYQ9IQHUAg-/0/1773154849616?e=1777507200&v=beta&t=O2EBARNiuEPdNHHTkoIQNsW3AUD3W4cXRhPc0ZjuMlw",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-just-put-out-a-full-course-on-ai-agents-activity-7437150485553303552-ii-d?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7437150485553303552",
+    "shareUrn": "urn:li:share:7437150482520965120",
+    "engagement": {
+      "id": "7437150485553303552",
+      "likes": 201,
+      "comments": 23,
+      "shares": 4,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 170
+        },
+        {
+          "type": "PRAISE",
+          "count": 10
+        },
+        {
+          "type": "INTEREST",
+          "count": 9
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        },
+        {
+          "type": "ENTERTAINMENT",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7442578601390227456",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_pick-one-channel-activity-7442578601390227456-rY4G",
+    "content": "My Instagram has almost 500,000 followers right now. Last month it probably made me around $35,000, which sounds like a lot until you compare it to YouTube. YouTube made me roughly $275,000 in the same period, and I have fewer subscribers on YouTube than I do followers on Instagram.\n\nThat's about an 8x difference in revenue with a smaller audience. And the reason is pretty simple—Instagram is a short form platform, and short form platforms just convert way less. You're one swipe away from the next person. It's much harder to build any sort of real relationship with people when they're consuming your content in 15-second increments.\n\nI get a lot of DMs from people in Maker School who are just starting to think about content, and the question is always the same—should I be posting on LinkedIn, X, Instagram, YouTube, TikTok, all of it? And my answer is always no. Pick one platform and go all in on it.\n\nWhen people try to get into content they try doing everything everywhere all at once. They spin up profiles on 10 different platforms and then they can't maintain the volume necessary to actually succeed on any of them. If you pick one platform, the probability of success on that one platform goes way up because you're actually able to dedicate the time and energy to make things people would consider good.\n\nI also wouldn't recommend shorts. Everybody and their mom can make shorts now—there are talking AI head avatars, fully synthetic content, the supply side is absolutely bonkers. If you throw your hat into the ring on short form right now, the probability you'll be able to stand out in the algorithm is pretty low in my opinion. Long form is what actually converts people into customers, and the revenue difference between a single short form view and a single long form view is staggering.\n\nThe reason you see people like me eventually branch out into multiple channels is because YouTube only lets you publish a certain amount of content before your primary subscribers get annoyed. So the play is you have your main channel, you publish as often as your cadence allows, and then you build satellite channels that deal with specific things—daily updates, shorts, unfiltered stuff, whatever. But you don't do that until you're well past 10,000 subscribers on your main thing. \n\nBefore that, you're just spreading yourself too thin.\n\nSo if you're just getting started with content right now, here's the roadmap: pick one platform, pick one format, and ride that up to about 10,000 subscribers. Don't experiment with the format or the platform along the way—experiment with the topics until you find one that works. Once you're at 10K, then you can start branching out. \n\nI put together a one-shot content roadmap in the carousel below. It's what I'd do if I were starting from zero today.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774449014995,
+      "date": "2026-03-25T14:30:14.995Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "Pick One Channel",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQFgdGNUytBvuQ/feedshare-document-sanitized-pdf/B56Z0hXRutJYA8-/0/1774381244983?e=1776326400&v=beta&t=x3ydewogFfubjnrjaXfhaO52yjn9gG_3juH5-dAfp3c",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQFgdGNUytBvuQ/feedshare-document-cover-images_1920/B56Z0hXRutJYBQ-/0/1774381245722?e=1776326400&v=beta&t=fu_esO9W4wU3rhzgRc9D8ZxPaVlGnFGtdxRD3PSVnMk",
+            "https://media.licdn.com/dms/image/v2/D561FAQFgdGNUytBvuQ/feedshare-document-cover-images_1920/B56Z0hXRutJYBQ-/1/1774381245722?e=1776326400&v=beta&t=PYycMPSm1HfkzjmIjVF4eYjX736GnLmLP7urrl95e9c",
+            "https://media.licdn.com/dms/image/v2/D561FAQFgdGNUytBvuQ/feedshare-document-cover-images_1920/B56Z0hXRutJYBQ-/2/1774381245722?e=1776326400&v=beta&t=KPT4hO5c_HLnsUN5Quq7BM5kPG_pOdbH0oEXNKonKOI"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 8
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_pick-one-channel-activity-7442578601390227456-rY4G?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7442578601390227456",
+    "shareUrn": "urn:li:ugcPost:7442294500917669888",
+    "engagement": {
+      "id": "7442294500917669888",
+      "likes": 166,
+      "comments": 25,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 146
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "INTEREST",
+          "count": 8
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7442216190418190336",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_most-people-are-applying-autoresearch-to-activity-7442216190418190336-Xn_4",
+    "content": "Most people are applying autoresearch to prompts and skills. Great starting point, but the real unlock is realizing this works on anything with a measurable output.\n\nI had an old web app loading in about 1,100 milliseconds. I applied the same autoresearch approach at it: defined load speed as the objective metric, used Google Lighthouse as the measurement tool, let the agent iterate on code changes autonomously. 67 runs later, load time was down to 67 milliseconds. 81.3% improvement. I didn't touch it once.\n\nI'm now running it on my cold email campaigns. The objective metric is reply rate, the measurement tool is my Instantly analytics API, and the agent iterates on the email copy between runs.\n\nThe framework is always three ingredients: You need an objective metric, an automated measurement tool so there's no human in the loop slowing things down and you need something the agent can actually modify between runs.\n\nOnce you have those three things, you just let it loop. The agent makes a change, measures the result, keeps the winner, tries again over and over until it converges on something significantly better than what you started with.\n\nEvery run generates research data—a full log of what the agent tried, what worked, what didn't, and why. When the next generation of models comes out, you hand them the entire history and they pick up where the last one left off. To make a long story short, you're building a compounding asset every time you run this.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774362609486,
+      "date": "2026-03-24T14:30:09.486Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQEO06UIdQaKMQ/videocover-high/B56Zz4tE..KMBY-/0/1773699095112?e=1776326400&v=beta&t=AdrRmfwVQVfpakiDT6Gsa1ZXxob9oOBeb63jIaOCDoA",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQEO06UIdQaKMQ/mp4-720p-30fp-crf28/B56Zz4tE..KMCI-/0/1773699117096?e=1776326400&v=beta&t=2trTkTa7sY1k-NzAmT1yP5KmHTvyXQryZx3gBlW3URA"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_most-people-are-applying-autoresearch-to-activity-7442216190418190336-Xn_4?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7442216190418190336",
+    "shareUrn": "urn:li:ugcPost:7439432988704288768",
+    "engagement": {
+      "id": "7439432988704288768",
+      "likes": 167,
+      "comments": 22,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 154
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "PRAISE",
+          "count": 3
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7442941008268685313",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-just-released-a-4-hour-cold-email-copywriting-activity-7442941008268685313-YoGu",
+    "content": "I just released a 4-hour cold email copywriting course on YouTube for free. It covers basically everything I've learned about outbound sales over the last decade, which includes generating over $15 million in outbound revenue for myself and my clients.\n\nI call it a cold email course but I want you to know that what you're going to learn applies to basically every form of outbound communication—LinkedIn DMs, Instagram, SMS, iMessage, cold calls, whatever. The underlying psychology is the same everywhere, and I spend a good chunk of the course breaking down exactly why people say yes to messages from total strangers.\n\nInside, I walk through the 7 psychological principles behind why outbound works, my personal 4-step copywriting framework, how to construct offers where the prospect risks nothing and you risk everything, and then there's about an hour and a half where I literally just pull up real cold emails from my inbox and roast them live before rewriting them in front of you. I also cover how to optimize for each platform individually, subject lines, follow-ups, iteration, how to use AI in your copywriting without making it sound like a robot, and then some advanced grey hat techniques at the very end for people who want to push the envelope.\n\nIf outbound is any part of how you're getting clients right now, I would genuinely carve out some time this week for it.\n\nWant the video + all Cold Email Assets in a Google Drive Folder?\n\n1. Like this post\n2. Comment \"COLD\"\n\nI'll DM you.\n\nPS - Connect with me if we're not already so I can send it to you.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774535419528,
+      "date": "2026-03-26T14:30:19.528Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQGL0PWdFxus2w/videocover-high/B56Z0hY_ehGYBY-/0/1774381695753?e=1776326400&v=beta&t=XnYbvujLbpnVwtGrfjwZUZAEftIv1M7VNGnNmey9xkA",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQGL0PWdFxus2w/mp4-720p-30fp-crf28/B56Z0hY_ehGYCI-/0/1774381717156?e=1776326400&v=beta&t=M5t1nul1r-QW9OsR-N4xW9i5_hb6MQTAqxEaI5mpoRw"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-just-released-a-4-hour-cold-email-copywriting-activity-7442941008268685313-YoGu?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7442941008268685313",
+    "shareUrn": "urn:li:ugcPost:7442294877524176896",
+    "engagement": {
+      "id": "7442294877524176896",
+      "likes": 777,
+      "comments": 1058,
+      "shares": 5,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 704
+        },
+        {
+          "type": "EMPATHY",
+          "count": 47
+        },
+        {
+          "type": "PRAISE",
+          "count": 12
+        },
+        {
+          "type": "INTEREST",
+          "count": 9
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 5
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7440404234031984640",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_how-to-make-your-claude-code-skills-self-activity-7440404234031984640-T4BW",
+    "content": "My Claude Code skills work about 70% of the time. The other 30% is a bag of rocks.\n\nI wanted to fix that without sitting there rewriting prompts by hand, so I took a concept from Andrej Karpathy's new autoresearch repo and applied it to my own skill library.\n\nThe idea is simple. You define a few binary yes/no evaluation criteria for your skill, then you let an agent run the skill dozens of times, score every output, tweak the prompt, and keep the winner.\n\nI tested it on my diagram generator. Four criteria: Is all the text legible? Does it match my pastel color palette? Is the layout linear? Is it free of unnecessary numbering? Max score of 40.\n\nThe agent generated 10 diagrams every 2 minutes, evaluated all 10, mutated the prompt, ran again.\n\nStarted at 32 out of 40. Hit 39 out of 40 within a handful of runs. That's 97.5%. Total cost was about $10.\n\nOne thing I learned fast: keep your evals binary. Yes/no, pass/fail. The moment you introduce scoring scales, you compound variability at every step and your results get noisy. And don't make criteria so narrow the model starts gaming the test instead of actually improving the output. That's the equivalent of a student who doesn't understand the material but still aces the exam.\n\nIf you have skills that work most of the time but not all of the time, this is how you close that gap.\n\nHere’s the full walkthrough for free: https://lnkd.in/gDyviY-d",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773930605419,
+      "date": "2026-03-19T14:30:05.419Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "How to make your Claude Code skills self improve",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQGK5QrmXlJh7w/feedshare-document-sanitized-pdf/B56Zz4qoj3KMA8-/0/1773698455253?e=1776326400&v=beta&t=-YhEVywsub9X7CD2_vVTFPl7_T1zKOPe1tuO7NOqIZA",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQGK5QrmXlJh7w/feedshare-document-cover-images_1920/B56Zz4qoj3KMBQ-/0/1773698457938?e=1776326400&v=beta&t=UPSLuDZ0no-lxwNKRam0tS0dqSlUrJBmgQnnd3IU4G8",
+            "https://media.licdn.com/dms/image/v2/D561FAQGK5QrmXlJh7w/feedshare-document-cover-images_1920/B56Zz4qoj3KMBQ-/1/1773698457938?e=1776326400&v=beta&t=CAho1RDqcALrl045RB1tLJHneAaK0w40_tMzZBRNZ-I",
+            "https://media.licdn.com/dms/image/v2/D561FAQGK5QrmXlJh7w/feedshare-document-cover-images_1920/B56Zz4qoj3KMBQ-/2/1773698457938?e=1776326400&v=beta&t=MrhqcVjpkWH4FEbPiMg-3SbvkySw4eRVMjsUTA3eCxI"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 9
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_how-to-make-your-claude-code-skills-self-activity-7440404234031984640-T4BW?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7440404234031984640",
+    "shareUrn": "urn:li:ugcPost:7439430601952100352",
+    "engagement": {
+      "id": "7439430601952100352",
+      "likes": 140,
+      "comments": 26,
+      "shares": 6,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 124
+        },
+        {
+          "type": "EMPATHY",
+          "count": 7
+        },
+        {
+          "type": "INTEREST",
+          "count": 7
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7436780363559104512",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_5-things-thatll-get-your-vibe-coded-app-activity-7436780363559104512-NqYo",
+    "content": "83% of exposed Supabase databases have zero Row-Level Security enabled.\n\nWhat that means is anyone with your project URL and your anon key—both of which are often sitting right there in your front-end code—can read, write, and delete your entire database.\n\nThe problem is that most people building with AI right now are shipping real apps with real user data and skipping security entirely because the model didn't bring it up and they didn't know to ask. The AI builds the app, it works, it looks great, and nobody thinks to check whether the doors are actually locked.\n\nI walked through the 5 most common vulnerabilities I keep seeing and how to fix each one. Most of these take under 10 minutes and a couple take 30 seconds. There's no reason to leave them open.\n\nSwipe through the carousel and go fix yours today.\n\nPS - if you want the full security audit checklist, comment “secure” and I’ll send it over.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773066607370,
+      "date": "2026-03-09T14:30:07.370Z",
+      "postedAgoShort": "4w",
+      "postedAgoText": "0 months ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "5 things that'll get your vibe-coded app hacked",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQF5U8RR-EllPQ/feedshare-document-sanitized-pdf/B56ZywGYlBJMBA-/0/1772480990986?e=1776326400&v=beta&t=V9-wqgmYWxNUKd5BBwtTIe1Mk_svdO98guLPZaRwt3I",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQF5U8RR-EllPQ/feedshare-document-cover-images_1920/B56ZywGYlBJMBU-/0/1772480991430?e=1776326400&v=beta&t=oE3MnCdA5GxpY1QYEmX-xr8CdAa_CsQ0CnuBvpXWPkA",
+            "https://media.licdn.com/dms/image/v2/D561FAQF5U8RR-EllPQ/feedshare-document-cover-images_1920/B56ZywGYlBJMBU-/1/1772480991430?e=1776326400&v=beta&t=YO_N8u94gYMWZpbeQ1ZdLUcJZKqrJcsd_KlujjWxSGM",
+            "https://media.licdn.com/dms/image/v2/D561FAQF5U8RR-EllPQ/feedshare-document-cover-images_1920/B56ZywGYlBJMBU-/2/1772480991430?e=1776326400&v=beta&t=x1-3kqwNnx9uw5ipN0tciKSbX4PNTRZ_UntPslHxdI8"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 7
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_5-things-thatll-get-your-vibe-coded-app-activity-7436780363559104512-NqYo?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7436780363559104512",
+    "shareUrn": "urn:li:ugcPost:7434324251320451072",
+    "engagement": {
+      "id": "7434324251320451072",
+      "likes": 292,
+      "comments": 350,
+      "shares": 7,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 262
+        },
+        {
+          "type": "EMPATHY",
+          "count": 15
+        },
+        {
+          "type": "INTEREST",
+          "count": 11
+        },
+        {
+          "type": "PRAISE",
+          "count": 4
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7443665714156216322",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_claude-just-dropped-channels-which-is-a-activity-7443665714156216322-p-_A",
+    "content": "Claude just dropped Channels, which is a Telegram and Discord integration that lets you text your Claude Code agents the same way you text other human beings every day. \n\nI already have it running on my phone. I texted my agent from Telegram to redesign a thumbnail while I was out, and it pulled from my local skills, upscaled the images, and sent me the results right back in the chat. I also had it scrape 100 leads from Apify through Discord and it sent me back a CSV file I could open on my phone and start working from immediately. All of this runs locally on my computer with the same Claude Code tooling I already had—it's just accessible from a messaging app now.\n\nThe setup takes maybe 10 minutes: You create a bot on Telegram through BotFather, grab the token, install the channel plugin on Claude Code, configure it, and you're done. Discord is almost identical except you set up a quick app on their developer portal and add a few permissions. Once it's running, your computer just needs to stay awake and it'll listen for messages indefinitely.\n\nThe security model is one of the things I like most about this. Every approved channel plugin has a sender allow list, so only specific IDs you've added ahead of time can push messages. Everything else gets silently dropped. This was my biggest concern with OpenClaw and the various forks that came before it—they were unsecured wrappers that gave random developers access to your system through a Telegram interface.\n\nI know a lot of people are big fans of OpenClaw and the whole decentralized agent ecosystem, and there's nothing wrong with the underlying idea. But the vast majority of use cases people were using it for are now covered by Claude Channels and the Claude Dispatch update that Anthropic dropped a few days earlier. And I just feel a lot more comfortable having my data handled by one of the biggest and most competent AI companies on the planet than by some random repo on GitHub that got half its stars from a shitcoin pump.\n\nIf you're building with Claude Code or AI agents in general, this is the kind of stuff we stay on top of inside Maker School every single week. Over 2,000 members in there right now building real businesses with these tools—live calls, implementation help, and I answer questions daily: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774708202876,
+      "date": "2026-03-28T14:30:02.876Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQF7LETAFM4B6g/videocover-high/B56Z0hbseNJYBY-/0/1774382404904?e=1776326400&v=beta&t=PqU4vNrsFowZbEBCvilMh1P6e69WJMreVYDdxzq5sqY",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQF7LETAFM4B6g/mp4-720p-30fp-crf28/B56Z0hbseNJYCI-/0/1774382425807?e=1776326400&v=beta&t=YEVk5kEiVyqDUF0aNUnrSuLAzGt8bE2OYkIO8FX1OVI"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_claude-just-dropped-channels-which-is-a-activity-7443665714156216322-p-_A?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7443665714156216322",
+    "shareUrn": "urn:li:ugcPost:7442297273012891649",
+    "engagement": {
+      "id": "7442297273012891649",
+      "likes": 185,
+      "comments": 17,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 169
+        },
+        {
+          "type": "PRAISE",
+          "count": 6
+        },
+        {
+          "type": "INTEREST",
+          "count": 6
+        },
+        {
+          "type": "EMPATHY",
+          "count": 3
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7439317072620285954",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_3-agentic-workflows-that-will-make-you-5000-activity-7439317072620285954-g20t",
+    "content": "You don't need to know how to code to build agentic workflows that make you money. I built three workflows in under 15 minutes that can realistically make you $5,000+ this month, and I'm sharing all of them for free.\n\nThe Upwork workflow scrapes the platform for jobs, ranks them by client spend so you know who's serious, writes your cover letters, generates a one-page proposal, and gives you a one-click apply link for each job.\n\nThe cold email one takes a client name and an offer and generates multiple split-test variants, then sets them up directly in Instantly through the API. What used to take me 3 to 4 hours now takes minutes.\n\nAnd the lead scraper hits Google Maps for businesses in a specific area, crawls their websites for contact info, and extracts owner names, emails, and phone numbers into a Google Sheet at about a cent per lead.\n\nThe build process is the same for all of them. You describe what you want in bullet points and the agent researches the best tools, presents you with a few approaches, and you pick one. It handles all the code, all the testing, and if it breaks something it fixes itself. You just define the what and it figures out the how.\n\nFull breakdown of each one is in the carousel below.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773671405940,
+      "date": "2026-03-16T14:30:05.940Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "3 agentic workflows that will make you $5,000+",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQEoUPj-vuj12w/feedshare-document-sanitized-pdf/B56ZzYUeOjHcA8-/0/1773155772890?e=1776326400&v=beta&t=R7vTk8nyBSUoV2Ht0gZo-QmK3ahUmhhtmXY8hzxZyKs",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQEoUPj-vuj12w/feedshare-document-cover-images_1920/B56ZzYUeOjHcBQ-/0/1773155773399?e=1776326400&v=beta&t=B4k1wtdV5aEVO4YovlcKORyYWgdphKbnExNbGDDQaR0",
+            "https://media.licdn.com/dms/image/v2/D561FAQEoUPj-vuj12w/feedshare-document-cover-images_1920/B56ZzYUeOjHcBQ-/1/1773155773399?e=1776326400&v=beta&t=09u422YsnvUxhamOMJ6dM8DtN1rEnQW4yuWox5yYcIk",
+            "https://media.licdn.com/dms/image/v2/D561FAQEoUPj-vuj12w/feedshare-document-cover-images_1920/B56ZzYUeOjHcBQ-/2/1773155773399?e=1776326400&v=beta&t=tFqJrkuO8ICEvmL5y1BBHrGgjW_tmpECHCnsOsUF6so"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 8
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_3-agentic-workflows-that-will-make-you-5000-activity-7439317072620285954-g20t?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7439317072620285954",
+    "shareUrn": "urn:li:ugcPost:7437154463586549760",
+    "engagement": {
+      "id": "7437154463586549760",
+      "likes": 159,
+      "comments": 27,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 137
+        },
+        {
+          "type": "EMPATHY",
+          "count": 13
+        },
+        {
+          "type": "INTEREST",
+          "count": 7
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7438229900488056832",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-spent-2026-and-generated-93000-views-activity-7438229900488056832-KLct",
+    "content": "I spent $20.26 and generated 93,000 views. With $100 and the same math, you could be looking at roughly 500,000 views.\n\nThere's maybe a 3-6 month window to do this effectively before it gets completely saturated, so I want to explain how it works while it's still worth doing.\n\nThere are two technologies intersecting right now that make this possible. The first is AI UGC platforms—tools like Arcads and Higgsfield that let you produce human-level content where the production cost tends towards zero. You can generate realistic talking head videos, screen share content, news breakdowns, whatever format you want, without recording anything yourself.\n\nThe second is clipping farms. You treat your content like advertising and then pay other people to distribute it for you. The way it works is you set a campaign on a clipping platform that says something like \"if you get me 1,000 views, I'll pay you $2.\" But the economics are interesting—most of these platforms have view thresholds where the clipper has to hit a certain number of views before they get paid out at all. If they don't hit it, you don't pay. So your effective cost per view ends up being dramatically lower than what you'd expect on paper.\n\nYou combine both of these, and you have near-zero production cost with near-zero distribution cost.\n\nThe play from there is straightforward. Once you have that distribution you can market products, run affiliates, or build a brand.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773412203905,
+      "date": "2026-03-13T14:30:03.905Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQEtQK8DtkRSiQ/videocover-low/B56ZzYTLa6KMBU-/0/1773155435392?e=1776326400&v=beta&t=ufLAYfQeDLb1bQB4q3BjxxBd-tAm2ZGIjQcoTDziTes",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQEtQK8DtkRSiQ/mp4-720p-30fp-crf28/B56ZzYTLa6KMCI-/0/1773155451139?e=1776326400&v=beta&t=Fq7zmd9z95mr1m-jbO2GiXuOwU0PavTnaD0OkxggkRM"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-spent-2026-and-generated-93000-views-activity-7438229900488056832-KLct?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7438229900488056832",
+    "shareUrn": "urn:li:ugcPost:7437152683242840064",
+    "engagement": {
+      "id": "7437152683242840064",
+      "likes": 181,
+      "comments": 23,
+      "shares": 3,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 164
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "INTEREST",
+          "count": 5
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7441128993401253888",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_5-things-i-wish-i-knew-about-automation-agencies-activity-7441128993401253888-VyA-",
+    "content": "I hit $72K/month with my automation agency. If I'd known these five things when I started, I would have gotten there a lot faster.\n\nThese problems ate into every part of my business. Lead generation, fulfillment, retention. All of it. If you solve them early, you'll save yourself hundreds of thousands of dollars.\n\nThe biggest one: being good at automation has almost nothing to do with being good at running an automation business. Those are two completely different skill sets. I spent way too long leveling up my engineering knowledge when the actual bottleneck was sales, client management, and knowing how to structure a project so it doesn't blow up in my face.\n\nThe second thing that caught me off guard was how invisible most of your work is to the client. You can spend 30 hours optimizing their backend and all they see at the end is an email showing up in their inbox. That sounds like a problem but it's actually a massive advantage once you learn to use templates and focus your energy on presentation. I record a video at the end of every project now and spend a disproportionate amount of time making the documentation look great. That's what the client actually evaluates you on.\n\nI broke down all five lessons in the carousel below including the practical fixes for each one.\n\n↓ Swipe through for the full breakdown.\n\nPS - If you want to learn the business side of automation alongside 2,000+ people doing the same thing, that's what Maker School is for: https://lnkd.in/g-rJ-Rae",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774103401518,
+      "date": "2026-03-21T14:30:01.518Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "5 things I wish I knew about automation agencies",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQE7-7OPWaWsxg/feedshare-document-chunked-pdf/B56Zz4r1N7HIBo-/0/1773698767404?e=1776326400&v=beta&t=T6-MGM3wE5qB25M6fTMJP33Cg_-wGWU37AcWDj3nvaE",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQE7-7OPWaWsxg/feedshare-document-cover-images_1920/B56Zz4r1N7HIBU-/0/1773698767739?e=1776326400&v=beta&t=eKy-RPKCN-zKf1KqOkTdlIUShMzCvGQqoL-ckNznlik",
+            "https://media.licdn.com/dms/image/v2/D561FAQE7-7OPWaWsxg/feedshare-document-cover-images_1920/B56Zz4r1N7HIBU-/1/1773698767739?e=1776326400&v=beta&t=23CFFRpUTclTpQ4j3uns02kCBGEoHpJyI9civmclOyY",
+            "https://media.licdn.com/dms/image/v2/D561FAQE7-7OPWaWsxg/feedshare-document-cover-images_1920/B56Zz4r1N7HIBU-/2/1773698767739?e=1776326400&v=beta&t=vrvfm1Uxq_bQ8jhDblEv116JxDDcwSTDm_JQBsO3wn0"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 7
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_5-things-i-wish-i-knew-about-automation-agencies-activity-7441128993401253888-VyA-?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7441128993401253888",
+    "shareUrn": "urn:li:ugcPost:7439431915280957440",
+    "engagement": {
+      "id": "7439431915280957440",
+      "likes": 189,
+      "comments": 21,
+      "shares": 7,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 167
+        },
+        {
+          "type": "EMPATHY",
+          "count": 11
+        },
+        {
+          "type": "INTEREST",
+          "count": 10
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7445840033795960832",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_i-used-to-spend-5-to-10-hours-onboarding-activity-7445840033795960832-v8pK",
+    "content": "I used to spend 5 to 10 hours onboarding every new client at my cold email agency. Now it takes about 90 seconds.\n\nI tell my agentic workflow: \"Hey, new client, onboard them.\" It pulls the sales call transcript, generates a full proposal with personalized problem statements and ROI math, sends a three-part welcome email sequence from different team members, scrapes and enriches leads with the right filters, casualizes every company name so the outreach doesn't read like spam, writes three split-tested cold email campaigns based on our highest performers, sets up an automated reply system with a knowledge base for each campaign, and uploads everything to Instantly ready to send.\n\nAll I have to do is a quick QA pass at the end—checking copy, previewing emails, and adjusting any spacing issues.\n\nThe way this works is a framework I call DOE—Directive, Orchestration, Execution. You store high-level instructions in plain language files, which are basically your SOPs. You give the agent access to execution scripts it builds itself. And then the orchestration layer figures out how to chain everything together. I don't know how to read most of this code. I don't worry about most of this code. That's the AI's job. The AI is much better at coding than I would ever be, even given a decade of learning.\n\nWhat's really cool is when something breaks, the workflow just self-heals. During one run, it hit a deprecated API key, found a working one stored somewhere else in my system, updated its own documentation to reference the correct key, and kept going. If I were running a procedural workflow on Make.com or n8n, that would have just errored out. This thing is like Wolverine—it gets shot and the skin comes back.\n\nIf you want to do this for your own business, the process is straightforward. Start by compiling your SOPs in natural language. Write them so a monkey could understand them. Send each one to the agent and test it once. AI is only going to get this right maybe 75% of the time the first run, and that's okay. Second time it's 97%. Third time it's 99%. Rinse and repeat across every SOP in your business, then create one meta directive that chains them all together top to bottom.\n\nI went deeper on this in a video—link in comments.\n\nIf you want to build systems like this and get paid to implement them in other people's companies, Maker School is where I teach this with over 2,000 members and a 90-day customer guarantee.\n\nJoin here: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775226601075,
+      "date": "2026-04-03T14:30:01.075Z",
+      "postedAgoShort": "5d",
+      "postedAgoText": "5 days ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQEu4mX1lw7Ddg/feedshare-shrink_2048_1536/B56Z1JmcfPKgAg-/0/1775056308404?e=1777507200&v=beta&t=6fDRlzpHhv1MrNlgtqZtMgLQuAW6A4NBhDZKZckdclw",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_i-used-to-spend-5-to-10-hours-onboarding-activity-7445840033795960832-v8pK?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7445840033795960832",
+    "shareUrn": "urn:li:share:7445125779966992384",
+    "engagement": {
+      "id": "7445840033795960832",
+      "likes": 123,
+      "comments": 25,
+      "shares": 2,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 112
+        },
+        {
+          "type": "EMPATHY",
+          "count": 5
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7445477738481889280",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_how-about-some-mrr-little-bro-thats-what-activity-7445477738481889280-2Adm",
+    "content": "How about some MRR, little bro?\n\nThat's what I think every time I see someone post about their Paperclip setup with 500 AI CMOs running autonomously. It sounds futuristic and incredible, but at the end of the day, it's setup theater.\n\nYou've seen the threads on X and LinkedIn—\"I just set up my Paperclip Hermes agent Maximizer to run my Telegram topics on Ventro.\" And I'm sitting here thinking, first of all, what the heck are any of these platforms? And second, what have you shipped this week? How much money have you made in the last 30 days?\n\nI pulled up a few real examples: One guy had four agents running simultaneously, and three out of four tasks were just building stuff that helps you build stuff. Research and evaluate community platforms? That's a Google search. Improving the admin dashboard UX? So you're making your Paperclip dashboard better so you can make your Paperclip dashboard better? It's a lot of motion but not a lot of movement.\n\nAnother one was trying to make viral TikTok videos using Paperclip, and his agents were doing research on Reddit and Hacker News and scheduling posts. The only thing that matters when you make videos is whether your videos are good. Why are you spending 99% of your time on everything except the main thing?\n\nThere's no fundamental reason why an AI company has to look like a human company. You're borrowing an organizational hierarchy from 100 years ago and slapping it onto agents that think completely differently than we do. AI intelligences are spiky, massively parallelizable, and can do tightly scoped tasks thousands of times faster than humans. The most efficient AI company of the future is going to look nothing like a human org chart with an AI CEO delegating to an AI COO.\n\nI'll say it plainly: I sell AI for a living, I teach people AI and I use AI every single day across a business doing over $4 million a year in profit. It is not in my best interest to talk down agent frameworks. But the reality is you don't need 500 agents to get things done. You need a healthy dose of gumption and high agency to go do the thing yourself, and then use AI as a tool to do it faster.\n\nI talk more about this in a video I dropped—link in comments.\n\n~\n\nBtw, if you want to be around people who are focused on building things that make real money with AI—not just setting up setups—Maker School is where we do that with over 2,000 members.\n\nJoin here: https://bit.ly/4l09oQQ",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1775140223141,
+      "date": "2026-04-02T14:30:23.141Z",
+      "postedAgoShort": "6d",
+      "postedAgoText": "6 days ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [
+      {
+        "url": "https://media.licdn.com/dms/image/v2/D5622AQFF5kkE4QPkog/feedshare-shrink_1280/B56Z1JkJndIIAM-/0/1775055706855?e=1777507200&v=beta&t=rSZbB90P4xQBjotEdyL3iwbHedF2Uncda39xh1iOmBA",
+        "width": 1280,
+        "height": 720,
+        "expiresAt": 1777507200000
+      }
+    ],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_how-about-some-mrr-little-bro-thats-what-activity-7445477738481889280-2Adm?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7445477738481889280",
+    "shareUrn": "urn:li:share:7445123256791162881",
+    "engagement": {
+      "id": "7445477738481889280",
+      "likes": 98,
+      "comments": 27,
+      "shares": 1,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 86
+        },
+        {
+          "type": "PRAISE",
+          "count": 6
+        },
+        {
+          "type": "EMPATHY",
+          "count": 5
+        },
+        {
+          "type": "INTEREST",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7441853850438844416",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_scope-creep-is-the-single-fastest-way-to-activity-7441853850438844416-70IB",
+    "content": "Scope creep is the single fastest way to turn a profitable project into a money pit.\n\nYou quoted $2,500 for a specific set of deliverables. Halfway through the build, the client says \"hey, could you also just quickly add...\" and suddenly you're doing 40% more work for the same price. Most people eat it because they don't want to damage the relationship.\n\nThe fix isn't saying no to clients—it's structuring things upfront so scope creep barely happens in the first place.\n\nI think about client quality as a formula: return divided by the work you put in plus the bullshit you have to deal with. Scope creep destroys both sides of that equation. Your return stays flat while the work and bullshit go through the roof.\n\nFour things I do to prevent it:\n\nHave extraordinarily detailed SOWs. I'm talking line-by-line specifics of what they're getting. Airtable database with this structure, Slack integration that does this, Instantly campaign with this many leads and this many variants. When everything is spelled out, \"can you also just...\" becomes a much harder ask.\n\nOverdeliver on things that don't take a lot of internal work. A three-page copywriting doc you wrote last year that you just swap the first name on. Loom walkthroughs that double as delivery documentation. Stuff that looks high-value to the client but costs you almost nothing.\n\nFrame everything in terms of ROI from the first call. When the client understands this is a mutually beneficial arrangement and your goal is to get them on a long-term retainer, the whole dynamic shifts.\n\nExplicitly discuss revision requests before the project starts. Outline what a \"significant change\" looks like so they know you've thought about it. This adds credibility and inoculates you against BS later.\n\nI put together a full visual breakdown of this framework including the exact language I use on kickoff calls.\n\nWant it?\n\n1. Like this post\n2. Comment \"SCOPE\"\n\nI'll DM you the link.\n\nPS - Connect with me if we're not already so I can send it to you.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774276220903,
+      "date": "2026-03-23T14:30:20.903Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_scope-creep-is-the-single-fastest-way-to-activity-7441853850438844416-70IB?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7441853850438844416",
+    "shareUrn": "urn:li:share:7439432777760096256",
+    "engagement": {
+      "id": "7441853850438844416",
+      "likes": 124,
+      "comments": 153,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 113
+        },
+        {
+          "type": "EMPATHY",
+          "count": 8
+        },
+        {
+          "type": "INTEREST",
+          "count": 2
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7444390517041430530",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_4-step-copywriting-framework-activity-7444390517041430530-81XE",
+    "content": "I've used the same 4-step copywriting framework for basically my entire career in outbound—cold email, LinkedIn DMs, SMS, iMessage, even scripts for cold calls. It's generated me and my clients over $15 million, and I've now taught it to over 2,000 people inside Maker School who use it to land clients every single week.\n\nThe framework is four things in a specific order, and once you internalize it, you can write a strong piece of outbound in about 5 minutes regardless of the platform. The issue is most people either skip one of the four steps or do them out of order, and that's usually why their campaigns underperform.\n\nI broke the whole thing down in the carousel below. If you want the full version—including an hour and a half of me roasting and rewriting real cold emails live—I just dropped a free 4-hour course on YouTube. Comment \"COLD\" on my post and I'll send you the link.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774881009350,
+      "date": "2026-03-30T14:30:09.350Z",
+      "postedAgoShort": "1w",
+      "postedAgoText": "1 week ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "4-Step Copywriting Framework",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQHVXXCRzuCWIA/feedshare-document-chunked-pdf/B56Z0hcUgbGYBk-/0/1774382567235?e=1776326400&v=beta&t=5rmTMZkGnDXKksLp78MsmEE0PNgWpIYiIDUU4a7JvRs",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQHVXXCRzuCWIA/feedshare-document-cover-images_1920/B56Z0hcUgbGYBQ-/0/1774382569450?e=1776326400&v=beta&t=7FGba5_Jgz2Bj9j96AZllRcNUdxQwojtkY5yEds0DEs",
+            "https://media.licdn.com/dms/image/v2/D561FAQHVXXCRzuCWIA/feedshare-document-cover-images_1920/B56Z0hcUgbGYBQ-/1/1774382569450?e=1776326400&v=beta&t=QUxhx51EWaB8eeZDzTeCYCo3aHZob3Uat_flvy1RxKI",
+            "https://media.licdn.com/dms/image/v2/D561FAQHVXXCRzuCWIA/feedshare-document-cover-images_1920/B56Z0hcUgbGYBQ-/2/1774382569450?e=1776326400&v=beta&t=39Pf6NYh7rTEDocZFMqZvI-5iFlAR2YWqL8b3knZI5k"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 7
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_4-step-copywriting-framework-activity-7444390517041430530-81XE?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7444390517041430530",
+    "shareUrn": "urn:li:ugcPost:7442300007287877632",
+    "engagement": {
+      "id": "7442300007287877632",
+      "likes": 97,
+      "comments": 53,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 84
+        },
+        {
+          "type": "EMPATHY",
+          "count": 7
+        },
+        {
+          "type": "INTEREST",
+          "count": 4
+        },
+        {
+          "type": "PRAISE",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7438954671278534656",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_for-under-100-you-can-market-to-about-6000-activity-7438954671278534656--xBi",
+    "content": "For under $100, you can market to about 6,000 people with highly personalized messages right now. I want to break down how because I think most people drastically overestimate what it costs to get started.\n\nYou get mailboxes for about $3 each through a service like Zapmail. You add them to a sending platform like Instantly. You scrape leads using Apify for about $1.50 per thousand. With enrichment rates around 80%, that gets you roughly 6,000 usable leads for about $8 to $10.\n\nTotal cost is somewhere around $100—$50 for the mailboxes, $40 for the sending platform, $10 for the leads, and a few hours of your time. And then AI handles the personalization at scale so every email looks like you sat down and wrote it individually.\n\nAt even a 1.5% positive reply rate on 6,000 emails, you're looking at 90 potential meetings. Not all of them will show up or convert. But even a third of that is one meeting a day with somebody in your target market who is interested in what you're selling. For a hundred bucks.\n\nFour years ago, I used a version of this approach to scale a content writing company to over $90K/mo. The models back then were way worse—we only had GPT-3. If you're smart about how you systematize and productize your service, you can push that a lot further now.\n\nThe window for this is unfortunately shrinking. There's only so much time before agents are going to be better at doing these things than you will. If you want to carve out a foothold, now is the time to start executing.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773585002727,
+      "date": "2026-03-15T14:30:02.727Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQGK02rmWpa3uA/videocover-low/B56ZzYT88iIkBU-/0/1773155636877?e=1776326400&v=beta&t=JSUZgjZrm9MdM_2JDoHRM0UsW3J5gSoP5YCd0fNxa4Y",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQGK02rmWpa3uA/mp4-720p-30fp-crf28/B56ZzYT88iIkCI-/0/1773155643563?e=1776326400&v=beta&t=ZgXPIKgIMTOu4apZyyqPM-qvVezPKtVBL0DdXtq38Fg"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_for-under-100-you-can-market-to-about-6000-activity-7438954671278534656--xBi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7438954671278534656",
+    "shareUrn": "urn:li:ugcPost:7437153737598451712",
+    "engagement": {
+      "id": "7437153737598451712",
+      "likes": 349,
+      "comments": 69,
+      "shares": 7,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 320
+        },
+        {
+          "type": "INTEREST",
+          "count": 11
+        },
+        {
+          "type": "EMPATHY",
+          "count": 9
+        },
+        {
+          "type": "PRAISE",
+          "count": 6
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7441491390053888000",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_everything-you-need-to-know-about-productizing-activity-7441491390053888000-QmZi",
+    "content": "Most agencies struggle with scope creep and variable costs that eat into their margins. Projects get bloated, take longer than expected, and the client experience suffers.\n\nProductization fixes almost all of this. It's when you provide the same or very similar deliverables every time you work with someone. We recently calculated it will add roughly 30% to the margins of a reputable agency we're working with. And I don't mean improve their margins by 30%. I mean literally take them from 20% profitability to 50%. That's a 2.5x increase in net income.\n\nThe reason it works so well is it lets you reverse engineer your costs ahead of time. You know that for X deliverables you need Y people and Z licenses. You can staff based on output, build streamlined systems, deliver the exact same client experience every time, and grow autonomously.\n\nI broke down the full step-by-step process in the carousel below including a real example from a PR company I work with where we productized their earned media service down to a $2,250/month product with 80% gross margins.\n\n↓ Swipe through for the full breakdown.\n\nPS - This is the kind of operational thinking we work on inside Maker School every week. If you want to learn how to build and scale an automation business alongside 2,000+ people doing the same thing: https://lnkd.in/g-rJ-Rae",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1774189803613,
+      "date": "2026-03-22T14:30:03.613Z",
+      "postedAgoShort": "2w",
+      "postedAgoText": "2 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "document": {
+      "title": "Everything you need to know about productizing",
+      "transcribedDocumentUrl": "https://media.licdn.com/dms/document/media/v2/D561FAQFwf2ug5FVnlg/feedshare-document-sanitized-pdf/B56Zz4sW0TH0BA-/0/1773698905364?e=1776326400&v=beta&t=r2-RyuL_FL6Ps3md0oE8ukxmocqOPHf3IMtvuHS4LBk",
+      "coverPages": [
+        {
+          "width": 1541,
+          "imageUrls": [
+            "https://media.licdn.com/dms/image/v2/D561FAQFwf2ug5FVnlg/feedshare-document-cover-images_1920/B56Zz4sW0TH0BU-/0/1773698908132?e=1776326400&v=beta&t=XpxcGT0eHGJsX8Xx8a8hOKUn1wOX8Sg8y4nlO5A5_Hc",
+            "https://media.licdn.com/dms/image/v2/D561FAQFwf2ug5FVnlg/feedshare-document-cover-images_1920/B56Zz4sW0TH0BU-/1/1773698908132?e=1776326400&v=beta&t=8Icm3WVduocDt9WXJUSs6dJiwSMNdtNjf0qcPTI9RBA",
+            "https://media.licdn.com/dms/image/v2/D561FAQFwf2ug5FVnlg/feedshare-document-cover-images_1920/B56Zz4sW0TH0BU-/2/1773698908132?e=1776326400&v=beta&t=fecI3WOvWd5mcErZRGEQEykW802Rfy5ZyaiwzPpOpNU"
+          ],
+          "height": 1926
+        }
+      ],
+      "totalPageCount": 9
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_everything-you-need-to-know-about-productizing-activity-7441491390053888000-QmZi?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7441491390053888000",
+    "shareUrn": "urn:li:ugcPost:7439432586587795456",
+    "engagement": {
+      "id": "7439432586587795456",
+      "likes": 99,
+      "comments": 13,
+      "shares": 0,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 90
+        },
+        {
+          "type": "EMPATHY",
+          "count": 4
+        },
+        {
+          "type": "INTEREST",
+          "count": 4
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7439679484955598848",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_your-client-just-sent-you-2500-and-the-activity-7439679484955598848-PrOX",
+    "content": "Your client just sent you $2,500 and the first thing they feel is regret.\n\nThis is normal and it happens with every client no matter how good your sales process is. The client pays, hears nothing for a day or two, and by the time you reach out to start the project they're already in their head about it. From there, the whole relationship is playing catch-up.\n\nSo I put together a guide on my exact onboarding process. It covers three things: how to kill buyer's remorse within minutes of payment, how to set expectations around communication and timelines and deliverables so you're never dealing with a confused or frustrated client mid-project, and how to get access to all the platforms and credentials you need on a single onboarding call instead of chasing 2FA codes weeks into the build.\n\nIt also includes the onboarding call template I use and the timeline structure that lets me deliver projects ahead of schedule consistently.\n\n1. Like this post\n2. Connect with me (so I can DM you)\n3. Comment \"ONBOARD\"\n\nI'll send it over.",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773757811774,
+      "date": "2026-03-17T14:30:11.774Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQGrnAGC-6FVmw/videocover-high/B56ZzYU2a0HMBY-/0/1773155872739?e=1776326400&v=beta&t=yz45aW_2JXIpM3QnxK-hMS0RlFcmJe1-f9ua6lf7OeM",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQGrnAGC-6FVmw/mp4-720p-30fp-crf28/B56ZzYU2a0HMCI-/0/1773155880755?e=1776326400&v=beta&t=2LZ6n0UXEy333VQxeJtmPmhFrXK1xxfSAEN-UQO9fO8"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_your-client-just-sent-you-2500-and-the-activity-7439679484955598848-PrOX?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7439679484955598848",
+    "shareUrn": "urn:li:ugcPost:7437154691702104064",
+    "engagement": {
+      "id": "7437154691702104064",
+      "likes": 489,
+      "comments": 770,
+      "shares": 5,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 458
+        },
+        {
+          "type": "EMPATHY",
+          "count": 18
+        },
+        {
+          "type": "INTEREST",
+          "count": 7
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 4
+        },
+        {
+          "type": "PRAISE",
+          "count": 2
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  },
+  {
+    "type": "post",
+    "id": "7440041872292675584",
+    "linkedinUrl": "https://www.linkedin.com/posts/nick-saraev_andrej-karpathy-just-dropped-an-open-source-activity-7440041872292675584-Os4b",
+    "content": "Andrej Karpathy just dropped an open source repo called autoresearch that when you combine it with something like Claude Code becomes self-improving AI.\n\nKarpathy is widely regarded as one of the foremost voices in machine learning. He was a founding member at OpenAI and later head of AI at Tesla. So when he releases something, I pay attention.\n\nThe idea is pretty elegant: You give an AI agent a small but real setup and let it experiment autonomously overnight. It modifies something, runs a test, checks if the results improved, keeps or discards the change, and repeats. You wake up in the morning to a log of experiments and hopefully a better outcome than what you started with.\n\nIn his case, he was training a machine learning model. The agent would adjust hyperparameters, train for 5 minutes, measure validation loss, and loop. After just a few runs his model got significantly better without him doing anything.\n\nNow I'm not in machine learning. I take models other people have made and use them to make money. But the moment this dropped, I started thinking about ways to apply the same principle to my own business.\n\nTo make a long story short, the requirement is simple. You need an objective metric you can track, an API you can call to measure it, and something the agent can modify between runs. If you have those three things, you can build an autonomous experimentation pipeline for almost anything.\n\nI've already set this up for my cold email campaigns. Reply rate is the metric, the Instantly API is the measurement tool, and the agent iterates on the email copy. It runs every hour via GitHub Actions. I'm not even in the loop anymore.\n\nI'm also running it on my Claude Code skills and I used it to take an old web app from 1,100ms load time down to 67ms across 67 autonomous runs.\n\nLanding pages, ad creatives, product descriptions, YouTube titles, pricing pages, chatbot scripts. If you can measure it and an agent can change it, autoresearch applies.\n\nI dove into more detail on YouTube: https://lnkd.in/gzWACx_i",
+    "contentAttributes": [],
+    "author": {
+      "id": "ACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "universalName": null,
+      "publicIdentifier": "nick-saraev",
+      "type": "profile",
+      "name": "Nick Saraev",
+      "linkedinUrl": "https://www.linkedin.com/in/nick-saraev?miniProfileUrn=urn%3Ali%3Afsd_profile%3AACoAABc3H7cBiZb8sZz0cDuMXD40bnTdn4Ezbrg",
+      "info": "Founder at Maker School: the straightest-line path to building an AI agency (2K+ members, ~$250K MRR) | Co-founder at LeftClick, an AI growth agency serving multibillion dollar portfolio companies.",
+      "website": "https://bit.ly/4l09oQQ",
+      "websiteLabel": "Visit my website",
+      "avatar": {
+        "url": "https://media.licdn.com/dms/image/v2/D5603AQGr6sbLtlT1EQ/profile-displayphoto-shrink_800_800/B56ZPCB7xMGwAo-/0/1734127109028?e=1777507200&v=beta&t=nUGR8Bps4Yt2Nd7skDkHBLEP82-a3sgPIyhSlsmtjF8",
+        "width": 800,
+        "height": 800,
+        "expiresAt": 1777507200000
+      },
+      "urn": "389488567"
+    },
+    "postedAt": {
+      "timestamp": 1773844211648,
+      "date": "2026-03-18T14:30:11.648Z",
+      "postedAgoShort": "3w",
+      "postedAgoText": "3 weeks ago • Visible to anyone on or off LinkedIn"
+    },
+    "postImages": [],
+    "postVideo": {
+      "thumbnailUrl": "https://media.licdn.com/dms/image/v2/D5605AQEiAOS5GyoeGA/videocover-low/B56Zz4qKoCHUBU-/0/1773698331045?e=1776326400&v=beta&t=ItYwWsxQ1QocDfd6Ks2D9k43NfO5PpHIuOgpxsNkt7I",
+      "videoUrl": "https://dms.licdn.com/playlist/vid/v2/D5605AQEiAOS5GyoeGA/mp4-720p-30fp-crf28/B56Zz4qKoCHUCI-/0/1773698340453?e=1776326400&v=beta&t=ctRxlAeBYFoz6w19twfm-IsyByZQXCKH27S14_XR5TM"
+    },
+    "socialContent": {
+      "hideCommentsCount": false,
+      "hideReactionsCount": false,
+      "hideSocialActivityCounts": false,
+      "hideShareAction": true,
+      "hideSendAction": true,
+      "hideRepostsCount": false,
+      "hideViewsCount": false,
+      "trustInterventionBanner": null,
+      "hideReactAction": false,
+      "hideCommentAction": false,
+      "shareUrl": "https://www.linkedin.com/posts/nick-saraev_andrej-karpathy-just-dropped-an-open-source-activity-7440041872292675584-Os4b?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAGNrW14BEEdwq1snqzdCBSWH-fBSZaPY__w",
+      "showContributionExperience": false,
+      "showSocialDetail": true
+    },
+    "comments": [],
+    "header": {
+      "text": null
+    },
+    "entityId": "7440041872292675584",
+    "shareUrn": "urn:li:ugcPost:7439429978594893824",
+    "engagement": {
+      "id": "7439429978594893824",
+      "likes": 200,
+      "comments": 17,
+      "shares": 4,
+      "reactions": [
+        {
+          "type": "LIKE",
+          "count": 175
+        },
+        {
+          "type": "INTEREST",
+          "count": 15
+        },
+        {
+          "type": "EMPATHY",
+          "count": 5
+        },
+        {
+          "type": "APPRECIATION",
+          "count": 3
+        },
+        {
+          "type": "ENTERTAINMENT",
+          "count": 1
+        },
+        {
+          "type": "PRAISE",
+          "count": 1
+        }
+      ]
+    },
+    "reactions": [],
+    "reactionIds": [],
+    "commentIds": [],
+    "query": {
+      "sortBy": "date",
+      "page": "1",
+      "profilePublicIdentifier": "https://www.linkedin.com/in/nick-saraev/",
+      "sessionId": "96b52115-9dd6-4622-80d9-ca6ac5e25012"
+    }
+  }
+]

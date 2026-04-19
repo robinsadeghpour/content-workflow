@@ -1,0 +1,111 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "65"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e139]:
+        - generic [ref=e140]:
+          - generic [ref=e142]: youtube
+          - generic [ref=e143]: "0.80"
+          - button "Play embed" [ref=e144] [cursor=pointer]:
+            - img [ref=e146]
+        - generic [ref=e148]:
+          - 'heading "AI Agent Full Tutorial for Beginners 2026: How to Build AI Agents in Minutes" [level=2] [ref=e149]'
+          - paragraph [ref=e150]: "YouTube video by Mikey No Code. Views: 50.3K views."
+          - group [ref=e151]:
+            - generic "Show transcript" [ref=e152] [cursor=pointer]
+        - generic [ref=e153]:
+          - button "Skip (Left arrow)" [ref=e154] [cursor=pointer]:
+            - img [ref=e155]
+            - generic [ref=e157]: Skip
+          - button "Keep (Right arrow)" [ref=e158] [cursor=pointer]:
+            - img [ref=e159]
+            - generic [ref=e161]: Keep
+          - button "Star (Up arrow)" [ref=e162] [cursor=pointer]:
+            - img [ref=e163]
+            - generic [ref=e165]: Star
+        - generic [ref=e166]:
+          - generic [ref=e167]: youtube
+          - code [ref=e168] [cursor=pointer]: 4988499e
+          - generic [ref=e169]: 18h ago
+      - article [ref=e170]:
+        - generic [ref=e171]:
+          - generic [ref=e173]: tiktok
+          - generic [ref=e174]: "0.69"
+        - generic [ref=e175]:
+          - heading [level=2] [ref=e176]: "i don't type to claude anymore. i just... talk. brain dumps, meetings, random thoughts in the car. all of it goes straight into claude without writing a single thing. here's how: - talk to claude directly. open the app, hit the mic (or use wspr flow), and yap away. - record your meetings. otter.ai, zoom transcripts, anything you're already talking through, capture it. - voice storage that integrates with claude. so all those brain dumps and meeting notes actually go somewhere useful and can b"
+          - paragraph [ref=e177]: TikTok by @leadwithzoe. 2070 plays.
+          - group [ref=e178]:
+            - generic [ref=e179] [cursor=pointer]: Show transcript
+        - generic [ref=e180]:
+          - button [ref=e181] [cursor=pointer]:
+            - img [ref=e182]
+            - generic [ref=e184]: Skip
+          - button [ref=e185] [cursor=pointer]:
+            - img [ref=e186]
+            - generic [ref=e188]: Keep
+          - button [ref=e189] [cursor=pointer]:
+            - img [ref=e190]
+            - generic [ref=e192]: Star
+        - generic [ref=e193]:
+          - generic [ref=e194]: tiktok
+          - code [ref=e195] [cursor=pointer]: 3c032b37
+          - generic [ref=e196]: 18h ago
+      - article [ref=e197]:
+        - generic [ref=e198]:
+          - generic [ref=e200]: tiktok
+          - generic [ref=e201]: "0.82"
+        - generic [ref=e202]:
+          - heading [level=2] [ref=e203]: "Claude Code is now basically free forever 🤯 Just connect Google Gemma through OpenRouter and you can run Claude Code with millions of free tokens. People are already using over 90 million tokens with this setup inside Claude Code and OpenClaw. No more expensive subscriptions. Just Claude Code running for free. 🚀 #ClaudeCode #Gemma #OpenRouter #AI #ArtificialIntelligence"
+          - paragraph [ref=e204]: TikTok by @jgoldieseo. 72200 plays.
+          - group [ref=e205]:
+            - generic [ref=e206] [cursor=pointer]: Show transcript
+        - generic [ref=e207]:
+          - button [ref=e208] [cursor=pointer]:
+            - img [ref=e209]
+            - generic [ref=e211]: Skip
+          - button [ref=e212] [cursor=pointer]:
+            - img [ref=e213]
+            - generic [ref=e215]: Keep
+          - button [ref=e216] [cursor=pointer]:
+            - img [ref=e217]
+            - generic [ref=e219]: Star
+        - generic [ref=e220]:
+          - generic [ref=e221]: tiktok
+          - code [ref=e222] [cursor=pointer]: 3b82da03
+          - generic [ref=e223]: 18h ago

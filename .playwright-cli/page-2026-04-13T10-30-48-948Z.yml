@@ -1,0 +1,594 @@
+- generic [ref=e72]:
+  - banner [ref=e74]:
+    - generic [ref=e76]:
+      - generic [ref=e77]:
+        - button "Guide" [ref=e79] [cursor=pointer]:
+          - generic [ref=e82]:
+            - img
+        - generic [ref=e83]:
+          - link "YouTube Home" [ref=e84] [cursor=pointer]:
+            - /url: /
+            - generic [ref=e89]:
+              - img
+          - generic [ref=e90]: DE
+        - button "Skip navigation" [ref=e94] [cursor=pointer]:
+          - generic [ref=e95]: Skip navigation
+      - generic [ref=e99]:
+        - search [ref=e100]:
+          - generic [ref=e101]:
+            - combobox "Search" [expanded] [ref=e104]
+            - button "Search" [ref=e105] [cursor=pointer]:
+              - generic [ref=e108]:
+                - img
+        - generic [ref=e110]:
+          - button "Search with your voice" [ref=e112] [cursor=pointer]:
+            - generic [ref=e116]:
+              - img
+          - tooltip "tooltip"
+      - generic [ref=e121]:
+        - button "Settings" [ref=e126] [cursor=pointer]:
+          - generic [ref=e129]:
+            - img
+        - link "Sign in" [ref=e132] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3Dhttps%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253D47ASrHLXzxU&hl=en&ec=65620
+          - generic [ref=e136]:
+            - img
+          - generic [ref=e137]: Sign in
+  - main [ref=e142]:
+    - generic [ref=e143]:
+      - generic [ref=e145]:
+        - complementary [ref=e152]:
+          - generic "YouTube Video Player" [active] [ref=e5]:
+            - button "Channel watermark" [ref=e9] [cursor=pointer]:
+              - img "Channel watermark" [ref=e10]
+            - generic [ref=e13]:
+              - generic [ref=e14] [cursor=pointer]:
+                - slider "Seek slider" [ref=e15]
+                - generic:
+                  - generic:
+                    - generic:
+                      - slider "Click or scroll the panel for the precise seeking."
+              - generic [ref=e24]:
+                - generic [ref=e25]:
+                  - button "Pause (k)" [ref=e26] [cursor=pointer]:
+                    - img
+                  - generic [ref=e27]:
+                    - button "Mute (m)" [ref=e29] [cursor=pointer]:
+                      - img
+                    - slider "Volume"
+                  - button "0 Minutes 12 Seconds of 10 Minutes 11 Seconds" [ref=e1219] [cursor=pointer]: 0:12 / 10:11
+                - generic [ref=e34]:
+                  - generic [ref=e35]:
+                    - button "Autoplay is on" [ref=e158] [cursor=pointer]
+                    - button "Subtitles/closed captions (c)" [ref=e36] [cursor=pointer]:
+                      - generic [ref=e37]:
+                        - img
+                    - button "Settings" [ref=e38] [cursor=pointer]:
+                      - img
+                  - generic [ref=e39]:
+                    - button "Theater mode (t)" [ref=e40] [cursor=pointer]:
+                      - img
+                    - button "Full screen (f)" [ref=e41] [cursor=pointer]:
+                      - img
+        - generic [ref=e161]:
+          - generic [ref=e163]:
+            - 'heading "Anthropic LEAKED: NEW Claude Builder, Mythos Benchmarks & Opus 4.6 NERFED!" [level=1] [ref=e165]'
+            - generic [ref=e166]:
+              - generic [ref=e167]:
+                - generic [ref=e168]:
+                  - link [ref=e169] [cursor=pointer]:
+                    - /url: /@UniverseofAIz
+                  - generic [ref=e171]:
+                    - generic "Universe of AI" [ref=e175]:
+                      - link "Universe of AI" [ref=e176] [cursor=pointer]:
+                        - /url: /@UniverseofAIz
+                    - generic "22.1 thousand subscribers" [ref=e177]: 22.1K subscribers
+                - generic [ref=e181]:
+                  - button "Subscribe to Universe of AI." [ref=e183] [cursor=pointer]:
+                    - generic [ref=e184]: Subscribe
+                  - generic:
+                    - generic:
+                      - generic:
+                        - img
+                    - generic:
+                      - img
+              - generic [ref=e191]:
+                - generic [ref=e192]:
+                  - generic [ref=e196]:
+                    - button "like this video along with 200 other people" [ref=e200] [cursor=pointer]:
+                      - generic [ref=e204]:
+                        - img
+                      - generic [ref=e205]: "200"
+                    - button "Dislike this video" [ref=e212] [cursor=pointer]:
+                      - generic [ref=e216]:
+                        - img
+                  - button "Share" [ref=e222] [cursor=pointer]:
+                    - generic [ref=e226]:
+                      - img
+                    - generic [ref=e227]: Share
+                - button "Save to playlist" [ref=e1223] [cursor=pointer]:
+                  - generic [ref=e1227]:
+                    - img
+                  - generic [ref=e1228]: Save
+                - button "More actions" [ref=e244] [cursor=pointer]:
+                  - generic [ref=e248]:
+                    - img
+            - generic [ref=e254] [cursor=pointer]:
+              - generic [ref=e255]:
+                - generic [ref=e257]:
+                  - text: 6,211 views 10 hours ago
+                  - link "#claude" [ref=e258]:
+                    - /url: /hashtag/claude
+                  - link "#anthropic" [ref=e259]:
+                    - /url: /hashtag/anthropic
+                  - link "#ainews" [ref=e260]:
+                    - /url: /hashtag/ainews
+                - tooltip "tooltip"
+              - generic [ref=e261]:
+                - generic [ref=e262]:
+                  - generic [ref=e1220]: Anthropic got leaked today -- screenshots show a brand new full-stack builder coming to Claude, going directly after Lovable and Bolt. Plus early benchmark numbers between Mythos Preview and GPT-5.4 Pro, and Claude Opus 4.6 appears to have been quietly nerfed according to BridgeBench data.
+                  - generic: …
+                - button "...more" [ref=e266]
+          - text: •
+      - generic [ref=e346]:
+        - generic [ref=e355]:
+          - generic [ref=e356] [cursor=pointer]:
+            - generic [ref=e357]:
+              - link "A CISO’s guide to AI risk" [ref=e360]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CFycdw8XcaYzjK9HghcIPgafY8QLY0aK2hgHa063E9BWwkB8QASAAYJX68IGMB4IBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAGhu8PhAqgDBMgDCqoE5QJP0I5wr4Egng4stjVXN95wtr1jEm6ocGG1k3bwCN2PWkAxcIMkCVYSqcJ686ChAhy5DIIADc0HfxNyy7c1JHKYNRJ8DGgHZxYmiC0BoOggoWj4r0RT9Upr4oi13_61dTSgjJUQaNisVhlT4tWBv2O3pHO6FbAI6pJrSFbO6q8vOCP5AsFV5l4Yqi46Cixq6bqg_0A7_qUQFRduP4-LzzIOzLbo1XcDhKR8oZTqRQGXWjZux30cEpz3s7KFzSzvHDuga-wBQeyKPOpO29-gW9hGNDm77OlKCi1tCkhhrmknZf7b2lIXRHGZeWSNX9oxcN83-Q_OmkzrlJ561blpZpyREvPD5vRLBikc76OAA_KuuakbOCu9w8Xb1nSLF37O8PRtvg-Oyneijh8saVbtyVpC9a4rvcqvwm7OVXQOoJgJpdU4iz73FXybqmdvdZp13ZLbWnZxsXujJprUhfjKfwn365K4K4uIBfDm87dYkgUKCBNoAnjo96b-AaAGboAHnIDe3AGQBwSoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAex3BuoB7CbsQKoB66xsQKoB-a8sQKoB8q6sQKoB_2ysQKoB_e4sQKoB_i4sQKoB8jPsQKoB8nPsQKoB63gsQKoB83HsQKoB_HRsQKoB_zVsQKoB_vVsQKoB4zWsQKoB4vWsQKoB5rhsQKoB53XsQKoB53UsQKoB4HGG6gH_K-xAqgHq8UbqAe3obECqAfVqbECqAfetbEC0gg3CIDBgBAQARheMgiigoCAgICgCDoSgMKAgICQgAaAgICAgJCAgAIqSNmg0jVQFFi4v5bFz-qTA_IIH2NhLXl0LWhvc3QtcHViLTk4Njk4MTM4NDc3NDQ3NzaaCWhodHRwczovL3d3dy5va3RhLmNvbS9uZXdzcm9vbS9hcnRpY2xlcy9uYXZpZ2F0aW5nLWFpLXMtaW1wYWN0LW9uLXNlY3VyaXR5LXdpdGgtZ3VpZGV3aXJlLWNpc28tamFtZXMtZG9sL7EJMJIcxQHOGRbICQDICYoCmAsBoQscv42mZrc9TroLQQgBEAUYBCAIKAEwGkABSABYAWAAaABwAYgBAJgBAaIBCAoAqAIC2AIBqAEB2AEBgAIBiAIFugMJdmlicnV6YWJh0AsS0gwCEAGaDQESqg0CREXIDQHSDbACaHR0cHM6Ly93d3cub2t0YS5jb20vbmV3c3Jvb20vYXJ0aWNsZXMvbmF2aWdhdGluZy1haS1zLWltcGFjdC1vbi1zZWN1cml0eS13aXRoLWd1aWRld2lyZS1jaXNvLWphbWVzLWRvbC8_dXRtX3NvdXJjZT1nb29nbGUmdXRtX2NhbXBhaWduPWVtZWFfdWtpX211bHRfYWxsX2NpYW0tYWxsX2F3LXJtbV9hLWludGFrZV9kaXNwbGF5X2dvb2dsZV9kaXNwbGF5X3JldGFyZ2V0X29zYWktYXdfdXRtMiZ1dG1fbWVkaXVtPWNwYyZ1dG1faWQ9YU5LV1IwMDAwMDM5cmhoNEFBJmdhZF9zb3VyY2U9MiZnYWRfY2FtcGFpZ25pZD0yMzczOTU2MDgxNrgT____________AbAUAcAVgYCAQNAVAdgVAeIWAggBgBcBihcYCAMYASABKAEwATgBQAFIAVABWAFgAmgBoBcBqRfnJUE4OBZDy7oXBigAMAA4AdAYAfAYAcIZAggB&gclid=EAIaIQobChMIzNCWxc_qkwMVUXBBAh2BEzYuEAEYASAAEgLaHvD_BwE&num=1&cid=CAASFeRo4bBVINvUIFOJ80_UUUPcRpdSLg&sig=AOD64_3DndRE7tMkPfA532sGOZ6rfrohQw&ms=%5BCLICK_MS%5D&nb=0&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+              - link "Learn how CISOs are adapting security strategies for AI-driven risk." [ref=e363]:
+                - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CFycdw8XcaYzjK9HghcIPgafY8QLY0aK2hgHa063E9BWwkB8QASAAYJX68IGMB4IBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAGhu8PhAqgDBMgDCqoE5QJP0I5wr4Egng4stjVXN95wtr1jEm6ocGG1k3bwCN2PWkAxcIMkCVYSqcJ686ChAhy5DIIADc0HfxNyy7c1JHKYNRJ8DGgHZxYmiC0BoOggoWj4r0RT9Upr4oi13_61dTSgjJUQaNisVhlT4tWBv2O3pHO6FbAI6pJrSFbO6q8vOCP5AsFV5l4Yqi46Cixq6bqg_0A7_qUQFRduP4-LzzIOzLbo1XcDhKR8oZTqRQGXWjZux30cEpz3s7KFzSzvHDuga-wBQeyKPOpO29-gW9hGNDm77OlKCi1tCkhhrmknZf7b2lIXRHGZeWSNX9oxcN83-Q_OmkzrlJ561blpZpyREvPD5vRLBikc76OAA_KuuakbOCu9w8Xb1nSLF37O8PRtvg-Oyneijh8saVbtyVpC9a4rvcqvwm7OVXQOoJgJpdU4iz73FXybqmdvdZp13ZLbWnZxsXujJprUhfjKfwn365K4K4uIBfDm87dYkgUKCBNoAnjo96b-AaAGboAHnIDe3AGQBwSoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAex3BuoB7CbsQKoB66xsQKoB-a8sQKoB8q6sQKoB_2ysQKoB_e4sQKoB_i4sQKoB8jPsQKoB8nPsQKoB63gsQKoB83HsQKoB_HRsQKoB_zVsQKoB_vVsQKoB4zWsQKoB4vWsQKoB5rhsQKoB53XsQKoB53UsQKoB4HGG6gH_K-xAqgHq8UbqAe3obECqAfVqbECqAfetbEC0gg3CIDBgBAQARheMgiigoCAgICgCDoSgMKAgICQgAaAgICAgJCAgAIqSNmg0jVQFFi4v5bFz-qTA_IIH2NhLXl0LWhvc3QtcHViLTk4Njk4MTM4NDc3NDQ3NzaaCWhodHRwczovL3d3dy5va3RhLmNvbS9uZXdzcm9vbS9hcnRpY2xlcy9uYXZpZ2F0aW5nLWFpLXMtaW1wYWN0LW9uLXNlY3VyaXR5LXdpdGgtZ3VpZGV3aXJlLWNpc28tamFtZXMtZG9sL7EJMJIcxQHOGRbICQDICYoCmAsBoQscv42mZrc9TroLQQgBEAUYBCAIKAEwGkABSABYAWAAaABwAYgBAJgBAaIBCAoAqAIC2AIBqAEB2AEBgAIBiAIFugMJdmlicnV6YWJh0AsS0gwCEAGaDQESqg0CREXIDQHSDbACaHR0cHM6Ly93d3cub2t0YS5jb20vbmV3c3Jvb20vYXJ0aWNsZXMvbmF2aWdhdGluZy1haS1zLWltcGFjdC1vbi1zZWN1cml0eS13aXRoLWd1aWRld2lyZS1jaXNvLWphbWVzLWRvbC8_dXRtX3NvdXJjZT1nb29nbGUmdXRtX2NhbXBhaWduPWVtZWFfdWtpX211bHRfYWxsX2NpYW0tYWxsX2F3LXJtbV9hLWludGFrZV9kaXNwbGF5X2dvb2dsZV9kaXNwbGF5X3JldGFyZ2V0X29zYWktYXdfdXRtMiZ1dG1fbWVkaXVtPWNwYyZ1dG1faWQ9YU5LV1IwMDAwMDM5cmhoNEFBJmdhZF9zb3VyY2U9MiZnYWRfY2FtcGFpZ25pZD0yMzczOTU2MDgxNrgT____________AbAUAcAVgYCAQNAVAdgVAeIWAggBgBcBihcYCAMYASABKAEwATgBQAFIAVABWAFgAmgBoBcBqRfnJUE4OBZDy7oXBigAMAA4AdAYAfAYAcIZAggB&gclid=EAIaIQobChMIzNCWxc_qkwMVUXBBAh2BEzYuEAEYASAAEgLaHvD_BwE&num=1&cid=CAASFeRo4bBVINvUIFOJ80_UUUPcRpdSLg&sig=AOD64_3DndRE7tMkPfA532sGOZ6rfrohQw&ms=%5BCLICK_MS%5D&nb=7&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+              - generic [ref=e364]:
+                - generic [ref=e366]:
+                  - generic [ref=e367]: Sponsored
+                  - text: ·
+                - generic [ref=e369]: Okta
+            - button "My Ad Center" [ref=e372]:
+              - generic [ref=e376]:
+                - img
+          - link "Learn more" [ref=e381] [cursor=pointer]:
+            - /url: https://www.googleadservices.com/pagead/aclk?sa=L&ai=CFycdw8XcaYzjK9HghcIPgafY8QLY0aK2hgHa063E9BWwkB8QASAAYJX68IGMB4IBF2NhLXB1Yi02MjE5ODExNzQ3MDQ5MzcxoAGhu8PhAqgDBMgDCqoE5QJP0I5wr4Egng4stjVXN95wtr1jEm6ocGG1k3bwCN2PWkAxcIMkCVYSqcJ686ChAhy5DIIADc0HfxNyy7c1JHKYNRJ8DGgHZxYmiC0BoOggoWj4r0RT9Upr4oi13_61dTSgjJUQaNisVhlT4tWBv2O3pHO6FbAI6pJrSFbO6q8vOCP5AsFV5l4Yqi46Cixq6bqg_0A7_qUQFRduP4-LzzIOzLbo1XcDhKR8oZTqRQGXWjZux30cEpz3s7KFzSzvHDuga-wBQeyKPOpO29-gW9hGNDm77OlKCi1tCkhhrmknZf7b2lIXRHGZeWSNX9oxcN83-Q_OmkzrlJ561blpZpyREvPD5vRLBikc76OAA_KuuakbOCu9w8Xb1nSLF37O8PRtvg-Oyneijh8saVbtyVpC9a4rvcqvwm7OVXQOoJgJpdU4iz73FXybqmdvdZp13ZLbWnZxsXujJprUhfjKfwn365K4K4uIBfDm87dYkgUKCBNoAnjo96b-AaAGboAHnIDe3AGQBwSoB_LAsQKoB7jEsQKoB-G2sQKoB6XPsQKoB-edsQKoB-idsQKoB--1sQKoB_C1sQKoB_nTsQKoB8nasQKoB6ngsQKoB4QIqAem1LECqAeo0huoB7YHqAex3BuoB7CbsQKoB66xsQKoB-a8sQKoB8q6sQKoB_2ysQKoB_e4sQKoB_i4sQKoB8jPsQKoB8nPsQKoB63gsQKoB83HsQKoB_HRsQKoB_zVsQKoB_vVsQKoB4zWsQKoB4vWsQKoB5rhsQKoB53XsQKoB53UsQKoB4HGG6gH_K-xAqgHq8UbqAe3obECqAfVqbECqAfetbEC0gg3CIDBgBAQARheMgiigoCAgICgCDoSgMKAgICQgAaAgICAgJCAgAIqSNmg0jVQFFi4v5bFz-qTA_IIH2NhLXl0LWhvc3QtcHViLTk4Njk4MTM4NDc3NDQ3NzaaCWhodHRwczovL3d3dy5va3RhLmNvbS9uZXdzcm9vbS9hcnRpY2xlcy9uYXZpZ2F0aW5nLWFpLXMtaW1wYWN0LW9uLXNlY3VyaXR5LXdpdGgtZ3VpZGV3aXJlLWNpc28tamFtZXMtZG9sL7EJMJIcxQHOGRbICQDICYoCmAsBoQscv42mZrc9TroLQQgBEAUYBCAIKAEwGkABSABYAWAAaABwAYgBAJgBAaIBCAoAqAIC2AIBqAEB2AEBgAIBiAIFugMJdmlicnV6YWJh0AsS0gwCEAGaDQESqg0CREXIDQHSDbACaHR0cHM6Ly93d3cub2t0YS5jb20vbmV3c3Jvb20vYXJ0aWNsZXMvbmF2aWdhdGluZy1haS1zLWltcGFjdC1vbi1zZWN1cml0eS13aXRoLWd1aWRld2lyZS1jaXNvLWphbWVzLWRvbC8_dXRtX3NvdXJjZT1nb29nbGUmdXRtX2NhbXBhaWduPWVtZWFfdWtpX211bHRfYWxsX2NpYW0tYWxsX2F3LXJtbV9hLWludGFrZV9kaXNwbGF5X2dvb2dsZV9kaXNwbGF5X3JldGFyZ2V0X29zYWktYXdfdXRtMiZ1dG1fbWVkaXVtPWNwYyZ1dG1faWQ9YU5LV1IwMDAwMDM5cmhoNEFBJmdhZF9zb3VyY2U9MiZnYWRfY2FtcGFpZ25pZD0yMzczOTU2MDgxNrgT____________AbAUAcAVgYCAQNAVAdgVAeIWAggBgBcBihcYCAMYASABKAEwATgBQAFIAVABWAFgAmgBoBcBqRfnJUE4OBZDy7oXBigAMAA4AdAYAfAYAcIZAggB&gclid=EAIaIQobChMIzNCWxc_qkwMVUXBBAh2BEzYuEAEYASAAEgLaHvD_BwE&num=1&cid=CAASFeRo4bBVINvUIFOJ80_UUUPcRpdSLg&sig=AOD64_3DndRE7tMkPfA532sGOZ6rfrohQw&ms=%5BCLICK_MS%5D&nb=8&nx=%5BNX%5D&ny=%5BNY%5D&dim=%5BDIM%5D
+            - generic [ref=e382]: Learn more
+        - generic [ref=e387] [cursor=pointer]:
+          - link [ref=e388]:
+            - /url: /watch?v=x1SkQpKd8a8&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e395]: 17:42
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - heading "Senior Developer Reviews My AI Built App (Brutally Honest) 17 minutes" [level=3] [ref=e399]:
+                - link "Senior Developer Reviews My AI Built App (Brutally Honest) 17 minutes" [ref=e400]:
+                  - /url: /watch?v=x1SkQpKd8a8&pp=ugUEEgJlbg%3D%3D
+                  - text: Senior Developer Reviews My AI Built App (Brutally Honest)
+              - generic [ref=e402]:
+                - generic [ref=e404]: Crema
+                - generic [ref=e405]:
+                  - generic [ref=e406]: 37K views
+                  - generic [ref=e407]: •
+                  - generic [ref=e408]: 5 days ago
+                - generic [ref=e413]: New
+            - button "More actions" [ref=e416]:
+              - generic [ref=e420]:
+                - img
+        - generic [ref=e425] [cursor=pointer]:
+          - link [ref=e426]:
+            - /url: /watch?v=qUGypBKW_sQ&pp=ugUEEgJlbtIHCQnaCgGHKiGM7w%3D%3D
+            - generic [ref=e433]: 19:36
+          - generic [ref=e435]:
+            - generic [ref=e436]:
+              - heading "MiniMax 2.7 JUST Dropped And The Timing Couldn't Be Better 19 minutes" [level=3] [ref=e437]:
+                - link "MiniMax 2.7 JUST Dropped And The Timing Couldn't Be Better 19 minutes" [ref=e438]:
+                  - /url: /watch?v=qUGypBKW_sQ&pp=ugUEEgJlbtIHCQnaCgGHKiGM7w%3D%3D
+                  - text: MiniMax 2.7 JUST Dropped And The Timing Couldn't Be Better
+              - generic [ref=e440]:
+                - generic [ref=e442]: Tim Carambat
+                - generic [ref=e443]:
+                  - generic [ref=e444]: 30K views
+                  - generic [ref=e445]: •
+                  - generic [ref=e446]: 18 hours ago
+                - generic [ref=e451]: New
+            - button "More actions" [ref=e454]:
+              - generic [ref=e458]:
+                - img
+        - generic [ref=e463] [cursor=pointer]:
+          - link [ref=e464]:
+            - /url: /watch?v=MXZ9cfkYuRI
+            - generic [ref=e471]: 12:51
+          - generic [ref=e473]:
+            - generic [ref=e474]:
+              - heading "Claude Opus 4.7 Leaked, Anthropic Full Stack App, New GPT Model, M2.7, Claude Code Update! AI NEWS 12 minutes, 51 seconds" [level=3] [ref=e475]:
+                - link "Claude Opus 4.7 Leaked, Anthropic Full Stack App, New GPT Model, M2.7, Claude Code Update! AI NEWS 12 minutes, 51 seconds" [ref=e476]:
+                  - /url: /watch?v=MXZ9cfkYuRI
+                  - text: Claude Opus 4.7 Leaked, Anthropic Full Stack App, New GPT Model, M2.7, Claude Code Update! AI NEWS
+              - generic [ref=e478]:
+                - generic [ref=e480]:
+                  - text: WorldofAI
+                  - img [ref=e483]:
+                    - generic [ref=e485]:
+                      - img
+                - generic [ref=e486]:
+                  - generic [ref=e487]: 9.4K views
+                  - generic [ref=e488]: •
+                  - generic [ref=e489]: 3 hours ago
+                - generic [ref=e494]: New
+            - button "More actions" [ref=e497]:
+              - generic [ref=e501]:
+                - img
+        - generic [ref=e506] [cursor=pointer]:
+          - link [ref=e507]:
+            - /url: /watch?v=ZLSX-R2FTyI
+            - generic [ref=e514]: 34:30
+          - generic [ref=e516]:
+            - generic [ref=e517]:
+              - heading "Claude „Mythos\" BRICHT das Internet! Projekt Glasswing, Meta Muse Spark, HeyGen-5 & weitere KI-News 34 minutes" [level=3] [ref=e518]:
+                - link "Claude „Mythos\" BRICHT das Internet! Projekt Glasswing, Meta Muse Spark, HeyGen-5 & weitere KI-News 34 minutes" [ref=e519]:
+                  - /url: /watch?v=ZLSX-R2FTyI
+                  - text: Claude „Mythos" BRICHT das Internet! Projekt Glasswing, Meta Muse Spark, HeyGen-5 & weitere KI-News
+              - generic [ref=e521]:
+                - generic [ref=e523]: Everlast AI
+                - generic [ref=e524]:
+                  - generic [ref=e525]: 35K views
+                  - generic [ref=e526]: •
+                  - generic [ref=e527]: 1 day ago
+                - generic [ref=e532]: New
+            - button "More actions" [ref=e535]:
+              - generic [ref=e539]:
+                - img
+        - generic [ref=e544] [cursor=pointer]:
+          - link [ref=e545]:
+            - /url: /watch?v=celLbDMGy8w
+            - generic [ref=e552]: 31:25
+          - generic [ref=e554]:
+            - generic [ref=e555]:
+              - 'heading "GSD vs Superpowers vs Claude Code: A New AI King? 31 minutes" [level=3] [ref=e556]':
+                - 'link "GSD vs Superpowers vs Claude Code: A New AI King? 31 minutes" [ref=e557]':
+                  - /url: /watch?v=celLbDMGy8w
+                  - text: "GSD vs Superpowers vs Claude Code: A New AI King?"
+              - generic [ref=e559]:
+                - generic [ref=e561]: Chase AI
+                - generic [ref=e562]:
+                  - generic [ref=e563]: 8.7K views
+                  - generic [ref=e564]: •
+                  - generic [ref=e565]: 4 hours ago
+                - generic [ref=e570]: New
+            - button "More actions" [ref=e573]:
+              - generic [ref=e577]:
+                - img
+        - generic [ref=e582] [cursor=pointer]:
+          - link [ref=e583]:
+            - /url: /watch?v=5jp0H9mz0Rc
+            - generic [ref=e590]: 8:55
+          - generic [ref=e592]:
+            - generic [ref=e593]:
+              - heading "Everything is getting worse... 8 minutes, 55 seconds" [level=3] [ref=e594]:
+                - link "Everything is getting worse... 8 minutes, 55 seconds" [ref=e595]:
+                  - /url: /watch?v=5jp0H9mz0Rc
+                  - text: Everything is getting worse...
+              - generic [ref=e597]:
+                - generic [ref=e599]: Awesome
+                - generic [ref=e600]:
+                  - generic [ref=e601]: 4.2K views
+                  - generic [ref=e602]: •
+                  - generic [ref=e603]: 1 hour ago
+                - generic [ref=e608]: New
+            - button "More actions" [ref=e611]:
+              - generic [ref=e615]:
+                - img
+        - generic [ref=e620] [cursor=pointer]:
+          - link [ref=e621]:
+            - /url: /watch?v=9MEJ4syOVrQ
+            - generic [ref=e628]: 58:08
+          - generic [ref=e630]:
+            - generic [ref=e631]:
+              - 'heading "Anthropic’s Felix Rieseberg: Claude Cowork, Mythos, and the SaaS Extinction 58 minutes" [level=3] [ref=e632]':
+                - 'link "Anthropic’s Felix Rieseberg: Claude Cowork, Mythos, and the SaaS Extinction 58 minutes" [ref=e633]':
+                  - /url: /watch?v=9MEJ4syOVrQ
+                  - text: "Anthropic’s Felix Rieseberg: Claude Cowork, Mythos, and the SaaS Extinction"
+              - generic [ref=e635]:
+                - generic [ref=e637]: The MAD Podcast with Matt Turck
+                - generic [ref=e638]:
+                  - generic [ref=e639]: 37K views
+                  - generic [ref=e640]: •
+                  - generic [ref=e641]: 2 days ago
+                - generic [ref=e646]: New
+            - button "More actions" [ref=e649]:
+              - generic [ref=e653]:
+                - img
+        - generic [ref=e658] [cursor=pointer]:
+          - link [ref=e659]:
+            - /url: /watch?v=aFcVKzfkJPk
+            - generic [ref=e666]: 26:25
+          - generic [ref=e668]:
+            - generic [ref=e669]:
+              - heading "Claude Mythos and the end of software 26 minutes" [level=3] [ref=e670]:
+                - link "Claude Mythos and the end of software 26 minutes" [ref=e671]:
+                  - /url: /watch?v=aFcVKzfkJPk
+                  - text: Claude Mythos and the end of software
+              - generic [ref=e673]:
+                - generic [ref=e675]:
+                  - text: Theo - t3․gg
+                  - img [ref=e678]:
+                    - generic [ref=e680]:
+                      - img
+                - generic [ref=e681]:
+                  - generic [ref=e682]: 270K views
+                  - generic [ref=e683]: •
+                  - generic [ref=e684]: 5 days ago
+                - generic [ref=e689]: New
+            - button "More actions" [ref=e692]:
+              - generic [ref=e696]:
+                - img
+        - generic [ref=e701] [cursor=pointer]:
+          - link [ref=e702]:
+            - /url: /watch?v=RDUGbxslOcM
+            - generic [ref=e709]: 16:02
+          - generic [ref=e711]:
+            - generic [ref=e712]:
+              - heading "Anthropic Just Broke Software Forever 16 minutes" [level=3] [ref=e713]:
+                - link "Anthropic Just Broke Software Forever 16 minutes" [ref=e714]:
+                  - /url: /watch?v=RDUGbxslOcM
+                  - text: Anthropic Just Broke Software Forever
+              - generic [ref=e716]:
+                - generic [ref=e718]:
+                  - text: Tech With Tim
+                  - img [ref=e721]:
+                    - generic [ref=e723]:
+                      - img
+                - generic [ref=e724]:
+                  - generic [ref=e725]: 53K views
+                  - generic [ref=e726]: •
+                  - generic [ref=e727]: 1 day ago
+                - generic [ref=e732]: New
+            - button "More actions" [ref=e735]:
+              - generic [ref=e739]:
+                - img
+        - generic [ref=e744] [cursor=pointer]:
+          - link [ref=e745]:
+            - /url: /watch?v=8BaSBjxNg-M
+            - generic [ref=e752]: 31:52
+          - generic [ref=e754]:
+            - generic [ref=e755]:
+              - heading "Mark Zuckerberg Spent $88 Billion on a World With No Legs 31 minutes" [level=3] [ref=e756]:
+                - link "Mark Zuckerberg Spent $88 Billion on a World With No Legs 31 minutes" [ref=e757]:
+                  - /url: /watch?v=8BaSBjxNg-M
+                  - text: Mark Zuckerberg Spent $88 Billion on a World With No Legs
+              - generic [ref=e759]:
+                - generic [ref=e761]:
+                  - text: Patrick Boyle
+                  - img [ref=e764]:
+                    - generic [ref=e766]:
+                      - img
+                - generic [ref=e767]:
+                  - generic [ref=e768]: 513K views
+                  - generic [ref=e769]: •
+                  - generic [ref=e770]: 21 hours ago
+                - generic [ref=e775]: New
+            - button "More actions" [ref=e778]:
+              - generic [ref=e782]:
+                - img
+        - generic [ref=e787] [cursor=pointer]:
+          - link [ref=e788]:
+            - /url: /watch?v=jG4bp_w4GK4&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e795]: 10:18
+          - generic [ref=e797]:
+            - generic [ref=e798]:
+              - 'heading "Claude Mythos: Anthropic''s Most POWERFUL Model Ever + OpenAI''s Secret \"Spud\" Model! 10 minutes, 18 seconds" [level=3] [ref=e799]':
+                - 'link "Claude Mythos: Anthropic''s Most POWERFUL Model Ever + OpenAI''s Secret \"Spud\" Model! 10 minutes, 18 seconds" [ref=e800]':
+                  - /url: /watch?v=jG4bp_w4GK4&pp=ugUEEgJlbg%3D%3D
+                  - text: "Claude Mythos: Anthropic's Most POWERFUL Model Ever + OpenAI's Secret \"Spud\" Model!"
+              - generic [ref=e802]:
+                - generic [ref=e804]: Universe of AI
+                - generic [ref=e805]:
+                  - generic [ref=e806]: 20K views
+                  - generic [ref=e807]: •
+                  - generic [ref=e808]: 2 weeks ago
+            - button "More actions" [ref=e811]:
+              - generic [ref=e815]:
+                - img
+        - generic [ref=e820] [cursor=pointer]:
+          - link [ref=e821]:
+            - /url: /watch?v=GAyNvq6Ayps
+            - generic [ref=e828]: 21:52
+          - generic [ref=e830]:
+            - generic [ref=e831]:
+              - heading "Running LLMs Locally Just Got Way Better - Ollama + MCP 21 minutes" [level=3] [ref=e832]:
+                - link "Running LLMs Locally Just Got Way Better - Ollama + MCP 21 minutes" [ref=e833]:
+                  - /url: /watch?v=GAyNvq6Ayps
+                  - text: Running LLMs Locally Just Got Way Better - Ollama + MCP
+              - generic [ref=e835]:
+                - generic [ref=e837]:
+                  - text: Tech With Tim
+                  - img [ref=e840]:
+                    - generic [ref=e842]:
+                      - img
+                - generic [ref=e843]:
+                  - generic [ref=e844]: 18K views
+                  - generic [ref=e845]: •
+                  - generic [ref=e846]: 21 hours ago
+                - generic [ref=e851]: New
+            - button "More actions" [ref=e854]:
+              - generic [ref=e858]:
+                - img
+        - generic [ref=e863] [cursor=pointer]:
+          - link [ref=e864]:
+            - /url: /watch?v=1zlD0K09IKE&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e871]: 16:52
+          - generic [ref=e873]:
+            - generic [ref=e874]:
+              - heading "MIT Just Found The Cause Of The AI Bubble 16 minutes" [level=3] [ref=e875]:
+                - link "MIT Just Found The Cause Of The AI Bubble 16 minutes" [ref=e876]:
+                  - /url: /watch?v=1zlD0K09IKE&pp=ugUEEgJlbg%3D%3D
+                  - text: MIT Just Found The Cause Of The AI Bubble
+              - generic [ref=e878]:
+                - generic [ref=e880]:
+                  - text: Economics Explained
+                  - img [ref=e883]:
+                    - generic [ref=e885]:
+                      - img
+                - generic [ref=e886]:
+                  - generic [ref=e887]: 549K views
+                  - generic [ref=e888]: •
+                  - generic [ref=e889]: 3 days ago
+                - generic [ref=e894]: New
+            - button "More actions" [ref=e897]:
+              - generic [ref=e901]:
+                - img
+        - generic [ref=e906] [cursor=pointer]:
+          - link [ref=e907]:
+            - /url: /watch?v=z9rdrNrkvDY
+            - generic [ref=e914]: 18:55
+          - generic [ref=e916]:
+            - generic [ref=e917]:
+              - heading "Learn 80% of Claude Cowork in Under 20 Minutes 18 minutes" [level=3] [ref=e918]:
+                - link "Learn 80% of Claude Cowork in Under 20 Minutes 18 minutes" [ref=e919]:
+                  - /url: /watch?v=z9rdrNrkvDY
+                  - text: Learn 80% of Claude Cowork in Under 20 Minutes
+              - generic [ref=e921]:
+                - generic [ref=e923]:
+                  - text: Jeff Su
+                  - img [ref=e926]:
+                    - generic [ref=e928]:
+                      - img
+                - generic [ref=e929]:
+                  - generic [ref=e930]: 263K views
+                  - generic [ref=e931]: •
+                  - generic [ref=e932]: 5 days ago
+                - generic [ref=e937]: New
+            - button "More actions" [ref=e940]:
+              - generic [ref=e944]:
+                - img
+        - generic [ref=e949] [cursor=pointer]:
+          - link [ref=e950]:
+            - /url: /watch?v=Mnvk9gK4e9A&pp=ugUEEgJlbtIHCQnaCgGHKiGM7w%3D%3D
+            - generic [ref=e957]: 13:04
+          - generic [ref=e959]:
+            - generic [ref=e960]:
+              - heading "Pi's Advantage Over Claude Code Is Insane 13 minutes, 4 seconds" [level=3] [ref=e961]:
+                - link "Pi's Advantage Over Claude Code Is Insane 13 minutes, 4 seconds" [ref=e962]:
+                  - /url: /watch?v=Mnvk9gK4e9A&pp=ugUEEgJlbtIHCQnaCgGHKiGM7w%3D%3D
+                  - text: Pi's Advantage Over Claude Code Is Insane
+              - generic [ref=e964]:
+                - generic [ref=e966]: Eric Michaud
+                - generic [ref=e967]:
+                  - generic [ref=e968]: 38K views
+                  - generic [ref=e969]: •
+                  - generic [ref=e970]: 3 days ago
+                - generic [ref=e975]: New
+            - button "More actions" [ref=e978]:
+              - generic [ref=e982]:
+                - img
+        - generic [ref=e987] [cursor=pointer]:
+          - link [ref=e988]:
+            - /url: /watch?v=4XqVR6xI6Kw&pp=ugUEEgJlbtIHCQnaCgGHKiGM7w%3D%3D
+            - generic [ref=e995]: 15:14
+          - generic [ref=e997]:
+            - generic [ref=e998]:
+              - heading "This One Plugin Just 10x’d Claude Code 15 minutes" [level=3] [ref=e999]:
+                - link "This One Plugin Just 10x’d Claude Code 15 minutes" [ref=e1000]:
+                  - /url: /watch?v=4XqVR6xI6Kw&pp=ugUEEgJlbtIHCQnaCgGHKiGM7w%3D%3D
+                  - text: This One Plugin Just 10x’d Claude Code
+              - generic [ref=e1002]:
+                - generic [ref=e1004]:
+                  - text: Nate Herk | AI Automation
+                  - img [ref=e1007]:
+                    - generic [ref=e1009]:
+                      - img
+                - generic [ref=e1010]:
+                  - generic [ref=e1011]: 42K views
+                  - generic [ref=e1012]: •
+                  - generic [ref=e1013]: 17 hours ago
+                - generic [ref=e1018]: New
+            - button "More actions" [ref=e1021]:
+              - generic [ref=e1025]:
+                - img
+        - generic [ref=e1030] [cursor=pointer]:
+          - link [ref=e1031]:
+            - /url: /watch?v=-zs2v7b_aP0
+            - generic [ref=e1038]: 21:04
+          - generic [ref=e1040]:
+            - generic [ref=e1041]:
+              - heading "Claude just unlocked the SHOGGOTH... 21 minutes" [level=3] [ref=e1042]:
+                - link "Claude just unlocked the SHOGGOTH... 21 minutes" [ref=e1043]:
+                  - /url: /watch?v=-zs2v7b_aP0
+                  - text: Claude just unlocked the SHOGGOTH...
+              - generic [ref=e1045]:
+                - generic [ref=e1047]:
+                  - text: Wes Roth
+                  - img [ref=e1050]:
+                    - generic [ref=e1052]:
+                      - img
+                - generic [ref=e1053]:
+                  - generic [ref=e1054]: 73K views
+                  - generic [ref=e1055]: •
+                  - generic [ref=e1056]: 1 day ago
+                - generic [ref=e1061]: New
+            - button "More actions" [ref=e1064]:
+              - generic [ref=e1068]:
+                - img
+        - generic [ref=e1073] [cursor=pointer]:
+          - link [ref=e1074]:
+            - /url: /watch?v=NDHWUhGzKg0
+            - generic [ref=e1081]: 31:27
+          - generic [ref=e1083]:
+            - generic [ref=e1084]:
+              - heading "Every Claude Cowork Concept Explained for Normal People 31 minutes" [level=3] [ref=e1085]:
+                - link "Every Claude Cowork Concept Explained for Normal People 31 minutes" [ref=e1086]:
+                  - /url: /watch?v=NDHWUhGzKg0
+                  - text: Every Claude Cowork Concept Explained for Normal People
+              - generic [ref=e1088]:
+                - generic [ref=e1090]: Brock Mesarich | AI for Non Techies
+                - generic [ref=e1091]:
+                  - generic [ref=e1092]: 11K views
+                  - generic [ref=e1093]: •
+                  - generic [ref=e1094]: 19 hours ago
+                - generic [ref=e1099]: New
+            - button "More actions" [ref=e1102]:
+              - generic [ref=e1106]:
+                - img
+        - generic [ref=e1111] [cursor=pointer]:
+          - link [ref=e1112]:
+            - /url: /watch?v=1_5sSJK2rU0&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e1119]: 40:47
+          - generic [ref=e1121]:
+            - generic [ref=e1122]:
+              - 'heading "Claude Mythos, Deepseek v4, HappyHorse, Meta’s new AI, realtime video games: AI NEWS 40 minutes" [level=3] [ref=e1123]':
+                - 'link "Claude Mythos, Deepseek v4, HappyHorse, Meta’s new AI, realtime video games: AI NEWS 40 minutes" [ref=e1124]':
+                  - /url: /watch?v=1_5sSJK2rU0&pp=ugUEEgJlbg%3D%3D
+                  - text: "Claude Mythos, Deepseek v4, HappyHorse, Meta’s new AI, realtime video games: AI NEWS"
+              - generic [ref=e1126]:
+                - generic [ref=e1128]:
+                  - text: AI Search
+                  - img [ref=e1131]:
+                    - generic [ref=e1133]:
+                      - img
+                - generic [ref=e1134]:
+                  - generic [ref=e1135]: 80K views
+                  - generic [ref=e1136]: •
+                  - generic [ref=e1137]: 1 day ago
+                - generic [ref=e1142]: New
+            - button "More actions" [ref=e1145]:
+              - generic [ref=e1149]:
+                - img
+        - generic [ref=e1154] [cursor=pointer]:
+          - link [ref=e1155]:
+            - /url: /watch?v=Jqet1889kT8&pp=ugUEEgJlbg%3D%3D
+            - generic [ref=e1162]: 15:57
+          - generic [ref=e1164]:
+            - generic [ref=e1165]:
+              - heading "The RAM Crisis Just Got Worse, but not for us 15 minutes" [level=3] [ref=e1166]:
+                - link "The RAM Crisis Just Got Worse, but not for us 15 minutes" [ref=e1167]:
+                  - /url: /watch?v=Jqet1889kT8&pp=ugUEEgJlbg%3D%3D
+                  - text: The RAM Crisis Just Got Worse, but not for us
+              - generic [ref=e1169]:
+                - generic [ref=e1171]:
+                  - text: Vex
+                  - img [ref=e1174]:
+                    - generic [ref=e1176]:
+                      - img
+                - generic [ref=e1177]:
+                  - generic [ref=e1178]: 128K views
+                  - generic [ref=e1179]: •
+                  - generic [ref=e1180]: 23 hours ago
+                - generic [ref=e1185]: New
+            - button "More actions" [ref=e1188]:
+              - generic [ref=e1192]:
+                - img

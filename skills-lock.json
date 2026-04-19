@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "skills": {
+    "apify-ultimate-scraper": {
+      "source": "apify/agent-skills",
+      "sourceType": "github",
+      "computedHash": "94d190fc6c2fe7d99780f5108ef91477d930cd37fa6a0a28ed3133a427631636"
+    }
+  }
+}

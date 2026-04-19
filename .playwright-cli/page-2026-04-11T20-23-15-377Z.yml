@@ -1,0 +1,186 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "84"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "11"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [active] [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: tiktok
+          - generic [ref=e56]: "0.64"
+          - button "Play embed" [ref=e58] [cursor=pointer]:
+            - img [ref=e60]
+          - iframe [ref=e139]:
+            - main [ref=f1e3]:
+              - generic [ref=f1e5]:
+                - generic [ref=f1e9]:
+                  - generic:
+                    - link [ref=f1e10] [cursor=pointer]:
+                      - /url: https://www.tiktok.com?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_logo&referer_video_id=7627577878170897677
+                    - img [ref=f1e13] [cursor=pointer]
+                    - generic [ref=f1e23]:
+                      - link [ref=f1e24] [cursor=pointer]:
+                        - /url: https://www.tiktok.com/@shanarra_goode?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_head&referer_video_id=7627577878170897677
+                      - link:
+                        - /url: https://www.tiktok.com/@shanarra_goode?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_head&referer_video_id=7627577878170897677
+                        - img [ref=f1e27] [cursor=pointer]
+                      - link "40" [ref=f1e32] [cursor=pointer]:
+                        - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_like&referer_video_id=7627577878170897677
+                        - generic [ref=f1e33]:
+                          - img [ref=f1e34]
+                          - generic [ref=f1e38]: "40"
+                      - link "8" [ref=f1e39] [cursor=pointer]:
+                        - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_comment_button&referer_video_id=7627577878170897677
+                        - generic [ref=f1e40]:
+                          - img [ref=f1e41]
+                          - generic [ref=f1e45]: "8"
+                      - link "2" [ref=f1e46] [cursor=pointer]:
+                        - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_share&referer_video_id=7627577878170897677
+                        - generic [ref=f1e47]:
+                          - img [ref=f1e48]
+                          - generic [ref=f1e53]: "2"
+                - generic [ref=f1e54]:
+                  - link "Watch more exciting videos on TikTok Watch more exciting videos on TikTokWatch more exciting videos on TikTok Watch now" [ref=f1e56] [cursor=pointer]:
+                    - /url: https://www.tiktok.com?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_discover_button
+                    - generic [ref=f1e58]:
+                      - text: Watch more exciting videos on TikTok
+                      - generic [ref=f1e59]: Watch more exciting videos on TikTokWatch more exciting videos on TikTok
+                    - button "Watch now" [ref=f1e60]
+                  - generic [ref=f1e61]:
+                    - link:
+                      - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                    - generic [ref=f1e62] [cursor=pointer]:
+                      - link:
+                        - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                      - link "@shanarra_goode" [ref=f1e63]:
+                        - /url: https://www.tiktok.com/@shanarra_goode?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_name&referer_video_id=7627577878170897677
+                        - generic [ref=f1e65]: "@shanarra_goode"
+                      - generic [ref=f1e66]:
+                        - link "Claude Cowork is one of the most underused AI setups right now, and most people skip it because they assume it's complicated. It's not. Five minutes, a $20 plan, and you go from AI that answers questions to AI that actually does things for you. Full setup in the video. Save it so you can come back. More AI tutorials coming, so follow along." [ref=f1e67]:
+                          - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                        - link "#claudeai" [ref=f1e68]:
+                          - /url: https://www.tiktok.com/tag/claudeai?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_hashtag&referer_video_id=7627577878170897677
+                          - generic [ref=f1e69]: "#claudeai"
+                        - link [ref=f1e70]:
+                          - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                        - link "#aitools" [ref=f1e71]:
+                          - /url: https://www.tiktok.com/tag/aitools?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_hashtag&referer_video_id=7627577878170897677
+                          - generic [ref=f1e72]: "#aitools"
+                        - link [ref=f1e73]:
+                          - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                        - link "#claudecowork" [ref=f1e74]:
+                          - /url: https://www.tiktok.com/tag/claudecowork?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_hashtag&referer_video_id=7627577878170897677
+                          - generic [ref=f1e75]: "#claudecowork"
+                        - link [ref=f1e76]:
+                          - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                        - link "#contentcreatortips" [ref=f1e77]:
+                          - /url: https://www.tiktok.com/tag/contentcreatortips?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_hashtag&referer_video_id=7627577878170897677
+                          - generic [ref=f1e78]: "#contentcreatortips"
+                        - link [ref=f1e79]:
+                          - /url: https://www.tiktok.com/@shanarra_goode/video/7627577878170897677?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_blank&referer_video_id=7627577878170897677
+                        - link "#aiagents" [ref=f1e80]:
+                          - /url: https://www.tiktok.com/tag/aiagents?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_hashtag&referer_video_id=7627577878170897677
+                          - generic [ref=f1e81]: "#aiagents"
+                      - link "original sound - Shanarra | CEO & SaaS Founder" [ref=f1e82]:
+                        - /url: https://www.tiktok.com/music/original-sound-7627577963604658957?referer_url=localhost%3A3456%2F&refer=embed&embed_source=null%3Bnull%3Bembed_song_name
+                        - generic [ref=f1e83]: original sound - Shanarra | CEO & SaaS Founder
+          - button "Close embed" [ref=e140] [cursor=pointer]: ×
+        - generic [ref=e62]:
+          - 'heading "Claude Cowork is one of the most underused AI setups right now, and most people skip it because they assume it''s complicated. It''s not. Five minutes, a $20 plan, and you go from AI that answers questions to AI that actually does things for you. Full setup in the video. Save it so you can come back. More AI tutorials coming, so follow along. #claudeai #aitools #claudecowork #contentcreatortips #aiagents" [level=2]'
+          - paragraph: TikTok by @shanarra_goode. 360 plays.
+          - group [ref=e65]:
+            - generic "Show transcript" [ref=e66] [cursor=pointer]
+        - generic [ref=e67]:
+          - button "Skip (Left arrow)" [ref=e68] [cursor=pointer]:
+            - img [ref=e69]
+            - generic [ref=e71]: Skip
+          - button "Keep (Right arrow)" [ref=e72] [cursor=pointer]:
+            - img [ref=e73]
+            - generic [ref=e75]: Keep
+          - button "Star (Up arrow)" [ref=e76] [cursor=pointer]:
+            - img [ref=e77]
+            - generic [ref=e79]: Star
+        - generic [ref=e80]:
+          - generic [ref=e81]: tiktok
+          - code [ref=e82] [cursor=pointer]: fb4c8248
+          - generic [ref=e83]: 2h ago
+      - article [ref=e84]:
+        - generic [ref=e85]:
+          - generic [ref=e87]: youtube
+          - generic [ref=e88]: "0.96"
+        - generic [ref=e89]:
+          - heading [level=2] [ref=e90]: Tragic mistake... Anthropic leaks Claude’s source code
+          - paragraph [ref=e91]: "YouTube video by Fireship. Views: 3.1M views."
+          - group [ref=e92]:
+            - generic [ref=e93] [cursor=pointer]: Show transcript
+        - generic [ref=e94]:
+          - button [ref=e95] [cursor=pointer]:
+            - img [ref=e96]
+            - generic [ref=e98]: Skip
+          - button [ref=e99] [cursor=pointer]:
+            - img [ref=e100]
+            - generic [ref=e102]: Keep
+          - button [ref=e103] [cursor=pointer]:
+            - img [ref=e104]
+            - generic [ref=e106]: Star
+        - generic [ref=e107]:
+          - generic [ref=e108]: youtube
+          - code [ref=e109] [cursor=pointer]: fb3daeb3
+          - generic [ref=e110]: 2h ago
+      - article [ref=e111]:
+        - generic [ref=e112]:
+          - generic [ref=e114]: tiktok
+          - generic [ref=e115]: "0.79"
+        - generic [ref=e117]:
+          - heading [level=2] [ref=e118]: Comment "TOKENS" and follow me to get Claude token-saving tips. Claude Code is charging people $200+ a month. Here's how to run it for free. Claude Code works with any API endpoint, so you swap the underlying model. Install Ollama, pull a free coding model, run 1 command. Done. Runs on your machine, open source, $0 forever. For non-technical tasks like writing, planning, and brainstorming, the free models are surprisingly close. You won't notice a difference. But for actual coding and complex pl
+          - paragraph [ref=e119]: TikTok by @sabrina_ramonov. 29900 plays.
+          - group [ref=e120]:
+            - generic [ref=e121] [cursor=pointer]: Show transcript
+        - generic [ref=e122]:
+          - button [ref=e123] [cursor=pointer]:
+            - img [ref=e124]
+            - generic [ref=e126]: Skip
+          - button [ref=e127] [cursor=pointer]:
+            - img [ref=e128]
+            - generic [ref=e130]: Keep
+          - button [ref=e131] [cursor=pointer]:
+            - img [ref=e132]
+            - generic [ref=e134]: Star
+        - generic [ref=e135]:
+          - generic [ref=e136]: tiktok
+          - code [ref=e137] [cursor=pointer]: eb0cd66d
+          - generic [ref=e138]: 2h ago

@@ -1,0 +1,102 @@
+- generic [ref=e2]:
+  - complementary "Primary navigation" [ref=e3]:
+    - generic [ref=e4]:
+      - img [ref=e5]
+      - generic [ref=e7]: Workflow
+    - navigation [ref=e8]:
+      - button "Feed" [ref=e9] [cursor=pointer]:
+        - img [ref=e10]
+        - generic [ref=e12]: Feed
+      - button "Backlog" [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+        - generic [ref=e16]: Backlog
+      - button "Pipeline" [ref=e17] [cursor=pointer]:
+        - img [ref=e18]
+        - generic [ref=e20]: Pipeline
+      - button "Performance" [ref=e21] [cursor=pointer]:
+        - img [ref=e22]
+        - generic [ref=e24]: Performance
+      - button "Workflows" [ref=e25] [cursor=pointer]:
+        - img [ref=e26]
+        - generic [ref=e28]: Workflows
+  - main [ref=e29]:
+    - generic [ref=e30]:
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: New
+          - generic [ref=e34]: "72"
+        - generic [ref=e35]:
+          - generic [ref=e36]: Kept
+          - generic [ref=e37]: "9"
+        - generic [ref=e38]:
+          - generic [ref=e39]: Starred
+          - generic [ref=e40]: "0"
+      - generic [ref=e41]:
+        - img [ref=e42]
+        - searchbox "Search" [ref=e44]
+      - button "Run Pulse" [ref=e45] [cursor=pointer]:
+        - img [ref=e46]
+        - text: Run Pulse
+    - generic [ref=e51]:
+      - article [ref=e52]:
+        - generic [ref=e53]:
+          - generic [ref=e55]: tiktok
+          - generic [ref=e56]: "0.78"
+          - button "Play embed" [ref=e58] [cursor=pointer]:
+            - img [ref=e60]
+        - generic [ref=e62]:
+          - 'heading "This new AI tool is unlike anything you’ve ever seen #aitools" [level=2] [ref=e63]'
+          - paragraph [ref=e64]: TikTok by @digitalsamaritan. 19700 plays.
+        - generic [ref=e65]:
+          - button "Skip (Left arrow)" [ref=e66] [cursor=pointer]:
+            - img [ref=e67]
+            - generic [ref=e69]: Skip
+          - button "Keep (Right arrow)" [ref=e70] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e73]: Keep
+          - button "Star (Up arrow)" [ref=e74] [cursor=pointer]:
+            - img [ref=e75]
+            - generic [ref=e77]: Star
+        - generic [ref=e78]:
+          - generic [ref=e79]: tiktok
+          - generic [ref=e80]: 10h ago
+      - article [ref=e81]:
+        - generic [ref=e83]: "0.40"
+        - generic [ref=e84]:
+          - heading [level=2] [ref=e85]: Claude Code 2.1.101
+          - paragraph [ref=e86]: "- Added `/team-onboarding` command to generate a teammate ramp-up guide from your local Claude Code usage - Added OS CA certificate store trust by default, so enterprise TLS proxies work without extra setup (set `CLAUDE_CODE_CERT_STORE=bundled` to use only bundled CAs) - `/ultraplan` and other remote-session features now auto-create a default cloud environment instead of requiring web setup first - Improved brief mode to retry once when Claude responds with plain text instead of a structured message - Improved focus mode: Claude now writes more self-contained summaries since it knows you only see its final message"
+        - generic [ref=e87]:
+          - button [ref=e88] [cursor=pointer]:
+            - img [ref=e89]
+            - generic [ref=e91]: Skip
+          - button [ref=e92] [cursor=pointer]:
+            - img [ref=e93]
+            - generic [ref=e95]: Keep
+          - button [ref=e96] [cursor=pointer]:
+            - img [ref=e97]
+            - generic [ref=e99]: Star
+        - generic [ref=e100]:
+          - generic [ref=e101]: github.com
+          - generic [ref=e102]: 10h ago
+      - article [ref=e103]:
+        - generic [ref=e104]:
+          - generic [ref=e106]: tiktok
+          - generic [ref=e107]: "0.84"
+        - generic [ref=e109]:
+          - heading [level=2] [ref=e110]: Comment "CLAUDE" and follow me to get free Claude lessons. 5 Claude Code skills every beginner needs to install right now. All free, all installed by telling Claude to do it. 1. Frontend Design. Stops Claude from building generic AI-looking interfaces. Type /plugin, search frontend design, install. 2. Simplify. After Claude writes code, this spawns 3 agents to review it for quality and fix everything automatically. Type /simplify after any coding task. 3. Skill Creator. Tell it what workflow you
+          - paragraph [ref=e111]: TikTok by @sabrina_ramonov. 100800 plays.
+          - group [ref=e112]:
+            - generic [ref=e113] [cursor=pointer]: Show transcript
+        - generic [ref=e114]:
+          - button [ref=e115] [cursor=pointer]:
+            - img [ref=e116]
+            - generic [ref=e118]: Skip
+          - button [ref=e119] [cursor=pointer]:
+            - img [ref=e120]
+            - generic [ref=e122]: Keep
+          - button [ref=e123] [cursor=pointer]:
+            - img [ref=e124]
+            - generic [ref=e126]: Star
+        - generic [ref=e127]:
+          - generic [ref=e128]: tiktok
+          - generic [ref=e129]: 10h ago

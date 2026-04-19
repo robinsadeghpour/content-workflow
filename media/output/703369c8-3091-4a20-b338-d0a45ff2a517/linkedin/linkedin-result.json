@@ -1,0 +1,12 @@
+{
+  "format": "carousel",
+  "post_text": "I spent months building in Claude Code before discovering these 5 free skills existed.\n\nEach one takes 30 seconds to install. All of them changed how I work.\n\nHere's what you're missing:\n\n1. Frontend Design\nStops Claude from generating generic AI-looking interfaces. Before this, every app I built looked like a ChatGPT wrapper. Install: /plugin, search \"frontend design\".\n\n2. Simplify\nAfter Claude writes code, this spawns 3 agents that review it for quality and fix the issues automatically. I run this after every coding session now.\n\n3. Skill Creator\nTell it what workflow you want to automate and it builds the Claude Code skill for you, complete with eval so you can actually measure whether your prompt changes work.\n\n4. Web App Testing\nGives Claude the ability to actually test your app, not just write it. Playwright-based, runs against your live dev server.\n\n5. MCP Builder\nTeaches Claude how to connect to any API or tool. This is the one that unlocked the most for me. Once you understand MCP, you stop copy-pasting between tools.\n\nAll 5 are free. Install by typing a slash command or just asking Claude to do it.\n\nThe people building the fastest right now aren't necessarily the best coders. They're the ones who set up their tools properly.\n\nWhat's in your Claude Code setup?",
+  "html_path": "media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/linkedin-carousel-703369c8.html",
+  "pdf_path": "media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/linkedin-carousel.pdf",
+  "slides_dir": "media/output/703369c8-3091-4a20-b338-d0a45ff2a517/linkedin/slides",
+  "slide_count": 8,
+  "idea_id": "703369c8-3091-4a20-b338-d0a45ff2a517",
+  "idea_title": "5 Claude Code skills every beginner needs to install right now",
+  "source_type": "tiktok",
+  "format_was_suggested": false
+}
