@@ -41,6 +41,7 @@ Then open http://localhost:3456. The dashboard can also trigger `/pulse`, `/revi
 - **Python 3.10+** with Playwright (`pip install playwright && playwright install chromium`) — used by `scripts/dashboard/screenshot-slides.py` and the LinkedIn carousel renderer
 - **Cairo system libs** (macOS only, for `canvas`): `brew install pkg-config cairo pango libpng jpeg giflib librsvg`
 - **Claude Code CLI** — the primary runtime; every slash command above lives as a skill in `.claude/skills/`
+- **NotebookLM CLI** — `/generate-content` runs a research pass via `notebooklm-py` before drafting, and reuses its venv Python to drive Playwright for LinkedIn slide screenshots. Install once with `/notebooklm-setup`.
 
 ### Install
 
@@ -85,7 +86,7 @@ Review files for each day land in `data/review/YYYY-MM-DD.md`.
 ```
 .claude/skills/   Pipeline skills (pulse, review, generate-content, approve, writing,
                   humanizer, media-producer, postiz, supadata, apify-ultimate-scraper,
-                  nano-banana, yt-search-setup)
+                  nano-banana, notebooklm-py, notebooklm-setup, yt-search-setup)
 scripts/          Node.js implementations called by the skills
   pulse/          Scrapers, scorers, transcript fetcher
   dashboard/      Local web UI (server.js + public/)

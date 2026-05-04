@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LinkedIn — Content Slide (Quote)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+
+    :root {
+      --bg: #fafaf8;
+      --accent-600: #4f46e5;
+      --accent-500: #6366f1;
+      --text-950: #0f172a;
+      --frame: #0a0a0a;
+      --slide-w: 1080px;
+      --slide-h: 1350px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 32px 16px 64px;
+    }
+
+    .slide-frame {
+      width: var(--slide-w);
+      height: var(--slide-h);
+      flex-shrink: 0;
+    }
+
+    .slide {
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg);
+      background-image: url("../assets/example-background.png");
+      background-size: cover;
+      background-position: center;
+      color: var(--text-950);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-rule {
+      position: relative;
+      padding: 54px 56px 0;
+      flex-shrink: 0;
+      z-index: 2;
+      height: 112px;
+    }
+
+    .top-rule__logotype {
+      height: 52px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      position: absolute;
+      left: 56px;
+      bottom: 22px;
+      z-index: 2;
+    }
+
+    .top-rule__logo-underline {
+      position: absolute;
+      left: 56px;
+      width: 136px;
+      bottom: 22px;
+      height: 3px;
+      background: var(--accent-600);
+    }
+
+    .top-rule__line {
+      position: absolute;
+      left: 122px;
+      right: 56px;
+      bottom: 22px;
+      height: 3px;
+      background: var(--accent-600);
+    }
+
+    .top-rule__line-bottom {
+      position: absolute;
+      left: 56px;
+      right: 56px;
+      bottom: 14px;
+      height: 3px;
+      background: var(--accent-600);
+    }
+
+    .slide-content {
+      position: relative;
+      z-index: 2;
+      padding: 56px 96px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex: 1;
+    }
+
+    .slide-quotemark {
+      font-family: "Inter", system-ui, sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-size: 240px;
+      line-height: 0.8;
+      color: var(--accent-600);
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .slide-quote {
+      font-family: "Inter", system-ui, sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 72px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+      color: var(--text-950);
+      max-width: 16ch;
+      margin-bottom: 40px;
+    }
+
+    .slide-attribution {
+      font-family: "Inter", system-ui, sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      color: var(--accent-600);
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="slide-frame" aria-hidden="true">
+    <div class="slide" role="img" aria-label="LinkedIn carousel content slide — quote">
+      <div class="top-rule">
+        <img
+          class="top-rule__logotype"
+          src="../assets/example-logotype.svg"
+          alt=""
+        />
+        <span class="top-rule__logo-underline"></span>
+        <span class="top-rule__line"></span>
+        <span class="top-rule__line-bottom"></span>
+      </div>
+
+      <div class="slide-content">
+        <span class="slide-quotemark" aria-hidden="true">&ldquo;</span>
+        <p class="slide-quote">
+          The best agents don&rsquo;t just answer — they delegate, verify, and ship.
+        </p>
+        <span class="slide-attribution">— example Agency</span>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

@@ -1,5 +1,46 @@
 node_modules/
 .env
+.DS_Store
+**/.DS_Store
+
+# Database
 data/*.db
 data/*.db-wal
 data/*.db-shm
+
+# Personal research briefs (generated per idea, contain external content)
+data/research/
+
+# Personal photo library (don't ship Robin's photos publicly)
+media/images/
+
+# Generated content output (per-idea slide PNGs, captions, drafts)
+media/output/
+
+# Cached repo screenshots (third-party content, don't redistribute)
+media/overlays/
+
+# Personal brand assets — example placeholders are committed in their place
+.claude/skills/generate-branded-slides/assets/social-background-main.png
+.claude/skills/generate-branded-slides/assets/logotype-11x.svg
+
+# Local article workspace
+.x-article-workspace/
+postiz-x-article-FINAL.md
+postiz-x-article-draft.md
+postiz-x-article-team-FINAL.md
+postiz_tweets_analysis.md
+postiz_tweets_raw.md
+
+# Dev/dashboard screenshots
+*.preview.png
+drawer-*.png
+feed-*.png
+fix-bug*.png
+workflows-*.png
+*-preview.png
+*-bug.png
+current-state.png
+perf-view.png
+pipeline-*.png
+pipeline-*.yml
