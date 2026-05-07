@@ -11,6 +11,15 @@ data/*.db-shm
 # Personal research briefs (generated per idea, contain external content)
 data/research/
 
+# Daily review files (curated personal idea decisions)
+data/review/
+
+# Performance reports (personal channel analytics)
+data/performance/
+
+# Local prompt experiments and reference docs
+prompts/
+
 # Personal photo library (don't ship Robin's photos publicly)
 media/images/
 
