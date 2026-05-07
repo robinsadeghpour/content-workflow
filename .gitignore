@@ -20,6 +20,13 @@ data/performance/
 # Local prompt experiments and reference docs
 prompts/
 
+# Third-party skills installed by /setup (not vendored, separate licenses)
+.claude/skills/apify-ultimate-scraper/
+.claude/skills/humanizer/
+.claude/skills/nano-banana/
+.claude/skills/supadata/
+.claude/skills/postiz/
+
 # Personal photo library (don't ship Robin's photos publicly)
 media/images/
 

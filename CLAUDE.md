@@ -144,25 +144,35 @@ Architecture not yet mapped. Follow existing patterns found in the codebase.
 <!-- GSD:skills-start source:skills/ -->
 ## Project Skills
 
-Skills are listed in pipeline order: daily discovery → morning review → content generation → approval & scheduling, followed by supporting skills invoked by the pipeline.
+Skills are listed in pipeline order: setup → daily discovery → morning review → content generation → approval & scheduling, followed by supporting skills invoked by the pipeline.
+
+### Owned by this repo
 
 | Skill | Description | Path |
 |-------|-------------|------|
+| setup | One-time setup for a fresh clone. Verifies prerequisites, installs Node deps, creates `.env`, and installs the five third-party skills. Trigger: `/setup`. | `.claude/skills/setup/SKILL.md` |
 | pulse | Daily content discovery pipeline that scrapes YouTube, X/Twitter, TikTok, and Anthropic changelogs for trending AI/tech topics. Scores, deduplicates, eagerly extracts transcripts, writes to `data/content.db`, and generates a dated review file at `data/review/YYYY-MM-DD.md`. Triggered by `/pulse` or the 6 AM daily schedule via `scripts/cron-daemon.js`. | `.claude/skills/pulse/SKILL.md` |
 | review | Morning batch review of discovered ideas. Presents top ideas from `data/content.db` for KEEP/SKIP/STAR decisions via CLI. One focused pass to select what gets turned into content today. Trigger: `/review`. | `.claude/skills/review/SKILL.md` |
-| generate-content | Orchestrator that generates platform-native content for all channels from a kept idea. Produces TikTok EN, TikTok DE, Instagram, and LinkedIn drafts with voice profiles applied and critic review completed. Calls writer agents, critic agents, and `generate-branded-slides` / `generate-personal-slides` directly for visuals. Trigger: `/generate-content`. | `.claude/skills/generate-content/SKILL.md` |
+| generate-content | Orchestrator that generates platform-native content for all channels from a kept idea. Produces TikTok EN, TikTok DE, Instagram, and LinkedIn drafts with voice profiles applied and critic review completed. Trigger: `/generate-content`. | `.claude/skills/generate-content/SKILL.md` |
 | approve | Interactive approval and scheduling workflow. Reviews critic-approved drafts, shows before/after humanizer diffs and voice scores, then schedules approved drafts via Postiz. Trigger: `/approve`. | `.claude/skills/approve/SKILL.md` |
-| writing | Voice profile management and humanizer orchestration. Applies Robin's authentic voice to a draft, updates the voice profile from new samples, or shows the current profile. Used by generate-content to humanize every draft before the critic pass. | `.claude/skills/writing/SKILL.md` |
-| humanizer | Remove signs of AI-generated writing from text. Detects and fixes inflated symbolism, promotional language, em dash overuse, rule of three, AI vocabulary, passive voice, and 20+ other patterns. Invoked by the writing skill and the critic agent. | `.claude/skills/humanizer/SKILL.md` |
+| writing | Voice profile management and humanizer orchestration. Applies the user's authentic voice to a draft, updates the voice profile from new samples, or shows the current profile. Used by generate-content to humanize every draft before the critic pass. | `.claude/skills/writing/SKILL.md` |
 | generate-branded-slides | Branded LinkedIn carousel renderer at 1080×1350. HTML templates → Playwright screenshot. 5 layouts: hook, numbered, bullets, quote, image-overlay. **LinkedIn only.** | `.claude/skills/generate-branded-slides/SKILL.md` |
 | generate-personal-slides | Real-photo + text overlay renderer for TikTok (1080×1920) and Instagram (1080×1350). Pulls photos from `media/images/tiktok/catalog.json`. **TikTok and Instagram always use this — never branded templates.** | `.claude/skills/generate-personal-slides/SKILL.md` |
-| postiz | Scheduling and publishing to 28+ channels (LinkedIn, TikTok EN, TikTok DE, Instagram, etc.) plus the analytics API used by the end-of-day performance feedback loop. | `.claude/skills/postiz/SKILL.md` |
-| supadata | YouTube/TikTok/Instagram transcript extraction and web scraping. Used by `scripts/pulse/transcript-fetcher.js` during discovery to pull video transcripts for scoring and content generation. | `.claude/skills/supadata/SKILL.md` |
-| apify-ultimate-scraper | Universal Apify-actor-based scraper for TikTok, X/Twitter, Instagram, YouTube, and more. Used by the pulse pipeline to pull trending content from social platforms. | `.claude/skills/apify-ultimate-scraper/SKILL.md` |
-| nano-banana | Generate and edit images using Gemini image models. Used by `scripts/generate-ai-slides.js` as a fallback when no real visuals are available for a slide. | `.claude/skills/nano-banana/SKILL.md` |
 | notebooklm-py | Headless Google NotebookLM CLI. `scripts/research/run-notebooklm.sh` calls it during `/generate-content` to produce a per-idea research brief at `data/research/<idea_id>.md`. Its venv Python is also reused by `scripts/generate-linkedin-content.js` to drive Playwright for slide screenshots. | `.claude/skills/notebooklm-py/SKILL.md` |
 | notebooklm-setup | One-time installer for `notebooklm-py` (pipx install, Playwright Chromium, Google OAuth login). Run via `/notebooklm-setup` on a fresh machine. | `.claude/skills/notebooklm-setup/SKILL.md` |
 | yt-search-setup | One-time installer for the `/yt-search` slash command (yt-dlp + search script). Used to seed YouTube discovery before the pulse pipeline runs. | `.claude/skills/yt-search-setup/SKILL.md` |
+
+### Third-party (install via `/setup`)
+
+These five skills are authored by other people and not vendored in this repo. The `/setup` skill installs them. See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licenses and source repos.
+
+| Skill | Purpose | License | Source |
+|-------|---------|---------|--------|
+| humanizer | Remove signs of AI-generated writing from text. Invoked by `writing` and the critic agent. | MIT | [blader/humanizer](https://github.com/blader/humanizer) |
+| postiz | Scheduling and publishing to 28+ channels plus analytics. | **AGPL-3.0** | [gitroomhq/postiz-agent](https://github.com/gitroomhq/postiz-agent) |
+| supadata | YouTube/TikTok/Instagram transcript extraction and web scraping. | per upstream | [Smithery: vm0-ai/supadata](https://smithery.ai/skills/vm0-ai/supadata) |
+| apify-ultimate-scraper | Universal Apify-actor scraper for TikTok, X, Instagram, YouTube. | Apache-2.0 | [apify/agent-skills](https://github.com/apify/agent-skills) |
+| nano-banana | Gemini image generation fallback for slides. | MIT | [kkoppenhaver/cc-nano-banana](https://github.com/kkoppenhaver/cc-nano-banana) |
 <!-- GSD:skills-end -->
 
 <!-- GSD:workflow-start source:GSD defaults -->

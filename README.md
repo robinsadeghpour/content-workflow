@@ -49,17 +49,25 @@ Then open http://localhost:3456. The dashboard can also trigger `/pulse`, `/revi
 npm install
 ```
 
+### One-command setup
+
+After cloning, run `/setup` in Claude Code. It walks you through:
+
+1. Verifying Node 20+, Python 3.10+, and the Claude Code CLI
+2. `npm install`
+3. Creating `.env` from `.env.example` (fill in the keys before continuing)
+4. Installing the five third-party skills this project depends on (apify-ultimate-scraper, humanizer, nano-banana, supadata, postiz). See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing and what each does.
+5. Pointing you at `/notebooklm-setup` and `/yt-search-setup` for the optional research/discovery skills
+
 ### Environment variables
 
-Create a `.env` in the repo root:
+`.env.example` has the full list. Required keys:
 
-```
-ANTHROPIC_API_KEY=...
-OPENAI_API_KEY=...         # Gemini image fallback via nano-banana
-POSTIZ_API_KEY=...
-APIFY_API_KEY=...          # apify-ultimate-scraper
-SUPADATA_API_KEY=...       # transcript extraction
-```
+- `ANTHROPIC_API_KEY` — only if scripts call the SDK directly; Claude Code uses your CLI auth
+- `APIFY_TOKEN` — trend scraping
+- `SUPADATA_API_KEY` — video transcripts
+- `GEMINI_API_KEY` — fallback image generation
+- `POSTIZ_API_KEY` — scheduling and publishing
 
 ### Connect publishing channels
 
