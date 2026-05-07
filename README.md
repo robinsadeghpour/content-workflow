@@ -25,9 +25,21 @@ The end-of-day `perf-check` job (20:00 Berlin) pulls Postiz analytics for posts 
 
 A local web UI for browsing ideas, drafts, and performance without leaving the browser.
 
+![Feed view](docs/screenshots/dashboard-feed.png)
+
 ```bash
 node scripts/dashboard/server.js
 ```
+
+The dashboard has four main views:
+
+| | |
+|---|---|
+| ![Backlog](docs/screenshots/dashboard-backlog.png) | ![Pipeline](docs/screenshots/dashboard-pipeline.png) |
+| **Backlog** — sortable, filterable table of every idea pulled by `/pulse`, with score and decision status. | **Pipeline** — kanban of drafts moving through Draft → Ready → Approved → Shipped. |
+
+![Draft drawer](docs/screenshots/dashboard-drawer.png)
+*Click any draft to inspect the platform preview, slide deck, and metadata.*
 
 Then open http://localhost:3456. The dashboard can also trigger `/pulse`, `/review`, `/generate-content`, and `/approve` runs via the `claude` CLI.
 
