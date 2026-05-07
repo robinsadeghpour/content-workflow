@@ -1,14 +1,22 @@
 {
   "name": "content-workflow",
   "version": "1.0.0",
-  "description": "Content automation pipeline for multi-platform publishing",
+  "description": "Claude Code-native content automation pipeline for multi-platform publishing (LinkedIn, TikTok, Instagram).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["claude-code", "content-automation", "social-media", "postiz", "linkedin", "tiktok", "instagram"],
+  "author": "Robin Sadeghpour",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinsadeghpour/content-workflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robinsadeghpour/content-workflow/issues"
+  },
+  "homepage": "https://github.com/robinsadeghpour/content-workflow#readme",
   "type": "commonjs",
   "dependencies": {
     "@date-fns/tz": "^1.4.1",
