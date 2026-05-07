@@ -43,25 +43,27 @@ Then open http://localhost:3456. The dashboard can also trigger `/pulse`, `/revi
 - **Claude Code CLI** — the primary runtime; every slash command above lives as a skill in `.claude/skills/`
 - **NotebookLM CLI** — `/generate-content` runs a research pass via `notebooklm-py` before drafting, and reuses its venv Python to drive Playwright for LinkedIn slide screenshots. Install once with `/notebooklm-setup`.
 
-### Install
+### Quick setup (recommended)
+
+After cloning, run `/setup` in Claude Code. It walks you through prerequisite checks, `npm install`, `.env` creation, and installing the five third-party skills this project depends on (with a checkpoint for the AGPL-licensed Postiz skill so you opt in knowingly). See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing details.
+
+### Manual setup
+
+If you'd rather not use `/setup`, do the steps below.
+
+**1. Install Node dependencies**
 
 ```bash
 npm install
 ```
 
-### One-command setup
+**2. Create `.env`**
 
-After cloning, run `/setup` in Claude Code. It walks you through:
+```bash
+cp .env.example .env
+```
 
-1. Verifying Node 20+, Python 3.10+, and the Claude Code CLI
-2. `npm install`
-3. Creating `.env` from `.env.example` (fill in the keys before continuing)
-4. Installing the five third-party skills this project depends on (apify-ultimate-scraper, humanizer, nano-banana, supadata, postiz). See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing and what each does.
-5. Pointing you at `/notebooklm-setup` and `/yt-search-setup` for the optional research/discovery skills
-
-### Environment variables
-
-`.env.example` has the full list. Required keys:
+Then fill in the keys. Required keys:
 
 - `ANTHROPIC_API_KEY` — only if scripts call the SDK directly; Claude Code uses your CLI auth
 - `APIFY_TOKEN` — trend scraping
@@ -69,7 +71,42 @@ After cloning, run `/setup` in Claude Code. It walks you through:
 - `GEMINI_API_KEY` — fallback image generation
 - `POSTIZ_API_KEY` — scheduling and publishing
 
-### Connect publishing channels
+**3. Install third-party skills**
+
+These five skills are authored by other people and not vendored. Install each into `.claude/skills/<name>/` (several scripts hard-code these paths). Read [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for license details — Postiz is AGPL-3.0 and has redistribution implications.
+
+```bash
+# Apify Ultimate Scraper (Apache-2.0)
+git clone --depth=1 https://github.com/apify/agent-skills /tmp/apify-skills
+cp -r /tmp/apify-skills/skills/apify-ultimate-scraper .claude/skills/
+rm -rf /tmp/apify-skills
+
+# Humanizer (MIT)
+git clone --depth=1 https://github.com/blader/humanizer .claude/skills/humanizer
+rm -rf .claude/skills/humanizer/.git
+
+# Nano Banana (MIT)
+git clone --depth=1 https://github.com/kkoppenhaver/cc-nano-banana .claude/skills/nano-banana
+rm -rf .claude/skills/nano-banana/.git
+
+# Supadata — install via Smithery (see https://smithery.ai/skills/vm0-ai/supadata)
+# Place the resulting SKILL.md at .claude/skills/supadata/SKILL.md
+
+# Postiz (AGPL-3.0) — read the license before installing
+git clone --depth=1 https://github.com/gitroomhq/postiz-agent .claude/skills/postiz
+rm -rf .claude/skills/postiz/.git
+```
+
+**4. Install the optional research/discovery skills**
+
+Both have their own setup commands:
+
+```
+/notebooklm-setup    # Google NotebookLM CLI (used by /generate-content)
+/yt-search-setup     # YouTube search (seeds /pulse discovery)
+```
+
+**5. Connect publishing channels**
 
 Open the Postiz dashboard once and connect LinkedIn, TikTok EN, TikTok DE, and Instagram. After that, all scheduling happens via the `@postiz/node` SDK called from `/approve`.
 
