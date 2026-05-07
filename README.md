@@ -78,10 +78,10 @@ cp .env.example .env
 Then fill in the keys. Required keys:
 
 - `ANTHROPIC_API_KEY` — only if scripts call the SDK directly; Claude Code uses your CLI auth
-- `APIFY_TOKEN` — trend scraping
-- `SUPADATA_API_KEY` — video transcripts
+- `APIFY_TOKEN` — trend scraping ([apify.com](https://apify.com))
+- `SUPADATA_API_KEY` — video transcripts ([supadata.ai](https://supadata.ai/?ref=robin))
 - `GEMINI_API_KEY` — fallback image generation
-- `POSTIZ_API_KEY` — scheduling and publishing
+- `POSTIZ_API_KEY` — scheduling and publishing ([postiz.pro](https://postiz.pro/robin-sadeghpour-faraj))
 
 **3. Install third-party skills**
 
@@ -120,7 +120,7 @@ Both have their own setup commands:
 
 **5. Connect publishing channels**
 
-Open the Postiz dashboard once and connect LinkedIn, TikTok EN, TikTok DE, and Instagram. After that, all scheduling happens via the `@postiz/node` SDK called from `/approve`.
+Open the [Postiz dashboard](https://postiz.pro/robin-sadeghpour-faraj) once and connect LinkedIn, TikTok EN, TikTok DE, and Instagram. After that, all scheduling happens via the `@postiz/node` SDK called from `/approve`.
 
 ---
 

@@ -7,6 +7,7 @@ description: |
   (1) Apply voice to a draft — requires --platform argument
   (2) Update voice profile from new samples — trigger: "update voice profile" or "add these posts to my profile"
   (3) Show current voice profile summary — trigger: "show my voice" or "what's my writing style"
+argument-hint: "[apply|update|show] [--platform tiktok|linkedin|instagram]"
 allowed-tools:
   - Read
   - Write

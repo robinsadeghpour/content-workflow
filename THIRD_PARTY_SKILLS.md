@@ -47,7 +47,12 @@ git clone --depth=1 https://github.com/gitroomhq/postiz-agent .claude/skills/pos
 rm -rf .claude/skills/postiz/.git
 ```
 
-After installing, set the relevant API keys in `.env` (copy from `.env.example`).
+After installing, set the relevant API keys in `.env` (copy from `.env.example`). Sign up for accounts where needed:
+
+- Postiz: [postiz.pro](https://postiz.pro/robin-sadeghpour-faraj)
+- Supadata: [supadata.ai](https://supadata.ai/?ref=robin)
+- Apify: [apify.com](https://apify.com)
+- Gemini: [Google AI Studio](https://aistudio.google.com/apikey)
 
 ---
 

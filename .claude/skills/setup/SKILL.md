@@ -58,10 +58,10 @@ cp .env.example .env
 Then **stop** and tell the user to fill in the API keys before continuing. Show them which keys are which:
 
 - `ANTHROPIC_API_KEY` — only needed if scripts call the SDK directly; Claude Code uses your CLI auth
-- `APIFY_TOKEN` — required for trend scraping
-- `SUPADATA_API_KEY` — required for video transcripts
-- `GEMINI_API_KEY` — required for nano-banana fallback images
-- `POSTIZ_API_KEY` — required to actually schedule posts
+- `APIFY_TOKEN` — required for trend scraping (sign up: https://apify.com)
+- `SUPADATA_API_KEY` — required for video transcripts (sign up: https://supadata.ai/?ref=robin)
+- `GEMINI_API_KEY` — required for nano-banana fallback images (sign up: https://aistudio.google.com/apikey)
+- `POSTIZ_API_KEY` — required to actually schedule posts (sign up: https://postiz.pro/robin-sadeghpour-faraj)
 
 **Checkpoint:** Wait for the user to confirm `.env` is filled in (or that they'll do it later). Then continue.
 
