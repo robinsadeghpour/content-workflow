@@ -1,7 +1,11 @@
 ---
 name: generate-personal-slides
 description: "Render personal photo + text-overlay slides for TikTok and Instagram. Pulls real photos from the catalog at media/images/tiktok/catalog.json, composites the headline text on top, optionally adds a real-image inset (screenshot, repo card, chart). TikTok = 1080×1920, Instagram = 1080×1350. NOT for LinkedIn (use generate-branded-slides instead)."
-allowed-tools: Bash, Read, Write, Edit
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 argument-hint: "<spec.json> [--output <dir>] [--filename <stem>]"
 ---
 

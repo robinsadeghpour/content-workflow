@@ -1,6 +1,5 @@
 ---
 name: review
-version: 1.0.0
 description: |
   Morning batch review of discovered content ideas. Presents top ideas from
   data/content.db for KEEP/SKIP/STAR decisions via CLI. Designed for Robin's

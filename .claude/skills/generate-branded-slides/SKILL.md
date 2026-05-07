@@ -1,7 +1,11 @@
 ---
 name: generate-branded-slides
 description: "Render branded LinkedIn carousel slides from a structured spec using example brand templates. Always 1080×1350. Use when the caller has finalized slide copy and wants on-brand LinkedIn visuals. NOT a content writer — caller supplies the slide copy."
-allowed-tools: Bash, Read, Write, Edit
+allowed-tools:
+  - Bash
+  - Read
+  - Write
+  - Edit
 argument-hint: "<spec.json> [--output <dir>] [--format html|png|pdf|all] [--filename <stem>]"
 ---
 

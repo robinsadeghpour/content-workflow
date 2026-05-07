@@ -1,6 +1,5 @@
 ---
 name: writing
-version: 1.0.0
 description: |
   Voice profile management and humanizer orchestration. Apply Robin's authentic voice to any draft.
   Trigger phrases: /writing, "apply my voice", "humanize this", "write in my style", "apply voice", "make this sound like me".
@@ -17,7 +16,7 @@ allowed-tools:
   - Grep
   - AskUserQuestion
   - Skill(humanizer *)
-  - Task
+  - Agent
 ---
 
 # Writing — Voice Profile and Humanizer Orchestration

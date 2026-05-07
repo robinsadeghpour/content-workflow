@@ -1,6 +1,5 @@
 ---
 name: pulse
-version: 1.0.0
 description: |
   Daily content discovery pipeline that scrapes YouTube, X/Twitter, TikTok, and Anthropic
   changelogs for trending AI/tech topics relevant to Robin's personal brand. Scores and

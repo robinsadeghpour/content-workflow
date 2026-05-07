@@ -1,6 +1,5 @@
 ---
 name: generate-content
-version: 2.0.0
 description: |
   Generate platform-native content for all channels from a kept idea. Produces TikTok EN, TikTok DE, Instagram, and LinkedIn drafts with voice profiles applied and critic review completed. Use when user says '/generate-content', 'create content for idea X', or 'generate posts from this topic'.
 model: sonnet
