@@ -67,41 +67,25 @@ Then **stop** and tell the user to fill in the API keys before continuing. Show 
 
 ### 5. Install third-party skills
 
-These five skills are not vendored. Install them now to `.claude/skills/<name>/` so the scripts that reference them work.
-
-Read THIRD_PARTY_SKILLS.md if you need full context on why these are external.
-
-Show the user this license summary first:
-
-| Skill | License | Notes |
-|-------|---------|-------|
-| apify-ultimate-scraper | Apache-2.0 | safe to use commercially |
-| humanizer | MIT | safe to use commercially |
-| nano-banana | MIT | safe to use commercially |
-| supadata | per Smithery listing | check upstream |
-| postiz | **AGPL-3.0** | copyleft — read terms before redistributing this project with Postiz bundled |
-
-**Checkpoint:** Ask the user to confirm they've read the Postiz AGPL note and want to proceed installing all five. If they say no to Postiz, install the other four and remind them `/approve` will fail until Postiz is installed and configured.
-
-Then run the installs (skip Postiz if the user opted out):
+These five skills are not vendored. Install them now to `.claude/skills/<name>/` so the scripts that reference them work. See THIRD_PARTY_SKILLS.md for licenses and source repos.
 
 ```bash
 mkdir -p .claude/skills
 
-# 1. Apify Ultimate Scraper (Apache-2.0)
+# Apify Ultimate Scraper
 git clone --depth=1 https://github.com/apify/agent-skills /tmp/apify-skills && \
   cp -r /tmp/apify-skills/skills/apify-ultimate-scraper .claude/skills/ && \
   rm -rf /tmp/apify-skills
 
-# 2. Humanizer (MIT)
+# Humanizer
 git clone --depth=1 https://github.com/blader/humanizer .claude/skills/humanizer && \
   rm -rf .claude/skills/humanizer/.git
 
-# 3. Nano Banana (MIT)
+# Nano Banana
 git clone --depth=1 https://github.com/kkoppenhaver/cc-nano-banana .claude/skills/nano-banana && \
   rm -rf .claude/skills/nano-banana/.git
 
-# 5. Postiz (AGPL-3.0) — only if user opted in
+# Postiz
 git clone --depth=1 https://github.com/gitroomhq/postiz-agent .claude/skills/postiz && \
   rm -rf .claude/skills/postiz/.git
 ```
@@ -110,7 +94,7 @@ For Supadata, point the user at https://smithery.ai/skills/vm0-ai/supadata for t
 
 ### 6. Verify install
 
-Confirm all five (or four, if Postiz was skipped) skill folders exist:
+Confirm all five skill folders exist:
 
 ```bash
 ls .claude/skills/ | grep -E "apify-ultimate-scraper|humanizer|nano-banana|supadata|postiz"

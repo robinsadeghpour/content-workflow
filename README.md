@@ -45,7 +45,7 @@ Then open http://localhost:3456. The dashboard can also trigger `/pulse`, `/revi
 
 ### Quick setup (recommended)
 
-After cloning, run `/setup` in Claude Code. It walks you through prerequisite checks, `npm install`, `.env` creation, and installing the five third-party skills this project depends on (with a checkpoint for the AGPL-licensed Postiz skill so you opt in knowingly). See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing details.
+After cloning, run `/setup` in Claude Code. It walks you through prerequisite checks, `npm install`, `.env` creation, and installing the five third-party skills this project depends on. See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing details.
 
 ### Manual setup
 
