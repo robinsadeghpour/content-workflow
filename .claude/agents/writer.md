@@ -56,8 +56,9 @@ If the orchestrator passes `repo_screenshot_path: <abs_path>`, you SHOULD includ
 - No emoji.
 - Use `\n` for manual line breaks. **HARD RULE: each `\n`-separated line ≤ 22 characters.** "they delayed a new AI model" (27 chars) is too long → `they delayed\na new AI model`.
 - 4–6 words per line, ≤ 22 chars — whichever is tighter wins.
-- **Hook slide (slide 1): max 2 short sentences, ≤ 12 words total.** A 2-second-readable punch. NOT a paragraph. Save context/setup for slide 2.
-- **Step/numbered slides: one step per slide, max 3 lines of body text after the heading.** No multi-clause explanations crammed in.
+- **Hook slide (slide 1): ≤ 14 words total, ≤ 3 lines.** Prefer ONE clean sentence over multiple choppy fragments. "Niemand zeigt dir wie Claude Code installiert wird" is better than "Alle reden über Claude Code. Niemand zeigt die Installation. Hier ist sie." Read it out loud — if it sounds like a robot, rewrite it.
+- **Step/numbered slides: one step per slide, ≤ 16 words of body text after the heading.** Write naturally — full sentences are fine. The line-break rule (`≤ 22 chars`) handles wrapping, you don't need to chop sentences for the sake of chopping them.
+- **Sound human.** Read every slide aloud. If it sounds like fragmented marketing-speak ("Das ist dein Zugangsschluessel."), rewrite as one natural sentence. Short ≠ choppy.
 - Slide count: 3–5 for hot takes, 5–8 for tutorials/listicles.
 - Apply 5-part structure: Hook → Context → Tension → Pivot → Payoff.
 - Address one person. Use "I" for problem slides, "you" for result/CTA. Open loop / re-hook in slides 3–4.
