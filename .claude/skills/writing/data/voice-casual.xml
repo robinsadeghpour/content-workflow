@@ -88,6 +88,8 @@
     <principle>Adapt milestone posts to German entrepreneur culture — same raw excitement</principle>
     <principle>Do NOT literal-translate — find German phrases with same casual punch</principle>
     <principle>Avoid formal German grammar — use spoken German</principle>
+    <principle>Use proper Unicode umlauts: ä ö ü ß. NEVER ASCII-transliterate to ae/oe/ue/ss. The slide renderer handles Unicode correctly — "über" must stay "über", not "ueber". This applies to slide text AND captions.</principle>
+    <principle>Compress, don't expand. German is verbose by nature; aggressively cut filler words to keep slide density at or below the EN version. If EN slide has 8 words, DE slide should have ≤ 8 words too. Drop politeness scaffolding.</principle>
   </localization-de>
 
   <banned-patterns>

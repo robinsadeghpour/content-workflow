@@ -56,6 +56,8 @@ If the orchestrator passes `repo_screenshot_path: <abs_path>`, you SHOULD includ
 - No emoji.
 - Use `\n` for manual line breaks. **HARD RULE: each `\n`-separated line ≤ 22 characters.** "they delayed a new AI model" (27 chars) is too long → `they delayed\na new AI model`.
 - 4–6 words per line, ≤ 22 chars — whichever is tighter wins.
+- **Hook slide (slide 1): max 2 short sentences, ≤ 12 words total.** A 2-second-readable punch. NOT a paragraph. Save context/setup for slide 2.
+- **Step/numbered slides: one step per slide, max 3 lines of body text after the heading.** No multi-clause explanations crammed in.
 - Slide count: 3–5 for hot takes, 5–8 for tutorials/listicles.
 - Apply 5-part structure: Hook → Context → Tension → Pivot → Payoff.
 - Address one person. Use "I" for problem slides, "you" for result/CTA. Open loop / re-hook in slides 3–4.
@@ -93,6 +95,8 @@ Spec details: `.claude/skills/generate-personal-slides/SKILL.md`. **Overlays are
 - Lowercase where German grammar allows.
 - Spoken German, not formal grammar.
 - Same line-length rules as EN (≤ 22 chars per `\n`-separated line). German compounds can push over — break them: `wegen Sicherheits-\nbedenken` not `wegen Sicherheitsbedenken`.
+- **Use proper umlauts: ä ö ü ß. NEVER write "ue", "oe", "ae", "ss" as transliterations.** The renderer handles Unicode. "über" stays "über". "schön" stays "schön". "Größe" stays "Größe". Caption AND slide text.
+- **Match EN slide density.** German is verbose — aggressively cut. If EN hook is 2 short sentences, DE hook is 2 short sentences. Drop "Das ist dein Zugangsschluessel"-style filler. Use the same hard limits as EN: hook ≤ 12 words, step body ≤ 3 lines.
 
 **Reuse rule:** keep the SAME `photo_keywords` per slide as EN so the catalog matches the same photos. Only `text` and the `caption` change. Keep `overlay.image` paths as-is.
 
