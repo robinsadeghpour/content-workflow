@@ -21,6 +21,27 @@ The end-of-day `perf-check` job (20:00 Berlin) pulls Postiz analytics for posts 
 
 ---
 
+## X audience research
+
+The optional `/x-audience-research` Skill collects public X audiences through
+the [Xquik X Follower Scraper](https://apify.com/xquik/x-follower-scraper).
+It supports profile, list, community, and overlap research.
+
+```bash
+node scripts/research/x-audience.js nasa SpaceX \
+  --relation followers \
+  --overlap \
+  --max-items 200
+```
+
+Pulse keeps its existing Tweet Actor route by default. Set
+`PULSE_X_ACTOR_ID=xquik/x-tweet-scraper` to select the
+[Xquik X Tweet Scraper](https://apify.com/xquik/x-tweet-scraper).
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.
+
+---
+
 ## Dashboard
 
 A local web UI for browsing ideas, drafts, and performance without leaving the browser.
@@ -57,7 +78,7 @@ Then open http://localhost:3456. The dashboard can also trigger `/pulse`, `/revi
 
 ### Quick setup (recommended)
 
-After cloning, run `/setup` in Claude Code. It walks you through prerequisite checks, `npm install`, `.env` creation, and installing the five third-party skills this project depends on. See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing details.
+After cloning, run `/setup` in Claude Code. It walks through prerequisite checks, `npm install`, `.env` creation, and four third-party skills. See [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for licensing details.
 
 ### Manual setup
 
@@ -75,24 +96,24 @@ npm install
 cp .env.example .env
 ```
 
-Then fill in the keys. Required keys:
+Then fill in the keys you need:
 
 - `ANTHROPIC_API_KEY` — only if scripts call the SDK directly; Claude Code uses your CLI auth
-- `APIFY_TOKEN` — trend scraping ([apify.com](https://apify.com))
+- `APIFY_TOKEN`: Apify Actor authentication ([apify.com](https://apify.com))
+- `PULSE_X_ACTOR_ID`: optional X Actor route
+- `APIFY_MAX_TOTAL_CHARGE_USD`: optional Actor run charge ceiling
 - `SUPADATA_API_KEY` — video transcripts ([supadata.ai](https://supadata.ai/?ref=robin))
 - `GEMINI_API_KEY` — fallback image generation
 - `POSTIZ_API_KEY` — scheduling and publishing ([postiz.pro](https://postiz.pro/robin-sadeghpour-faraj))
 
 **3. Install third-party skills**
 
-These five skills are authored by other people and not vendored. Install each into `.claude/skills/<name>/` (several scripts hard-code these paths). Read [THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for license details — Postiz is AGPL-3.0 and has redistribution implications.
+These four skills are authored by other people and not vendored. Install each
+into `.claude/skills/<name>/`. Read
+[THIRD_PARTY_SKILLS.md](THIRD_PARTY_SKILLS.md) for license details. Postiz is
+AGPL-3.0 and has redistribution implications.
 
 ```bash
-# Apify Ultimate Scraper (Apache-2.0)
-git clone --depth=1 https://github.com/apify/agent-skills /tmp/apify-skills
-cp -r /tmp/apify-skills/skills/apify-ultimate-scraper .claude/skills/
-rm -rf /tmp/apify-skills
-
 # Humanizer (MIT)
 git clone --depth=1 https://github.com/blader/humanizer .claude/skills/humanizer
 rm -rf .claude/skills/humanizer/.git
@@ -142,10 +163,11 @@ Review files for each day land in `data/review/YYYY-MM-DD.md`.
 
 ```
 .claude/skills/   Pipeline skills (pulse, review, generate-content, approve, writing,
-                  humanizer, media-producer, postiz, supadata, apify-ultimate-scraper,
+                  x-audience-research, humanizer, media-producer, postiz, supadata,
                   nano-banana, notebooklm-py, notebooklm-setup, yt-search-setup)
 scripts/          Node.js implementations called by the skills
   pulse/          Scrapers, scorers, transcript fetcher
+  research/       Public X audience research
   dashboard/      Local web UI (server.js + public/)
   generate-*.js   Per-platform rendering scripts
   cron-daemon.js  node-cron scheduler for /pulse and perf-check

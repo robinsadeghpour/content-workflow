@@ -1,36 +1,22 @@
 'use strict';
 
-const { spawnSync } = require('child_process');
-const path = require('path');
-const fs = require('fs');
-const os = require('os');
-
-const ACTOR_SCRIPT = path.join(__dirname, '../../.claude/skills/apify-ultimate-scraper/reference/scripts/run_actor.js');
-const PROJECT_ROOT = path.join(__dirname, '../..');
+const {
+  runActorDatasetItems,
+  splitActorRows,
+  warnDiagnostics,
+} = require('../lib/apify');
 
 const TIKTOK_ACTOR = 'clockworks/tiktok-scraper';
 
 // Hashtags relevant to Robin's content themes: AI, coding, SaaS
 const SEARCH_HASHTAGS = ['claudeai', 'aitools', 'llm', 'claudecode'];
 
-function runApifyActor(actorId, input, outputFile) {
-  const result = spawnSync('node', [
-    '--env-file=.env',
-    ACTOR_SCRIPT,
-    '--actor', actorId,
-    '--input', JSON.stringify(input),
-    '--output', outputFile,
-    '--format', 'json',
-  ], {
-    cwd: PROJECT_ROOT,
-    encoding: 'utf-8',
-    timeout: 180000,
-  });
-
-  if (result.status !== 0) {
-    throw new Error(`Apify actor ${actorId} failed: ${(result.stderr || '').slice(0, 500)}`);
-  }
-  return outputFile;
+function buildTikTokActorInput() {
+  return {
+    hashtags: SEARCH_HASHTAGS,
+    resultsPerPage: 5,
+    maxItems: 20,
+  };
 }
 
 /**
@@ -55,43 +41,35 @@ function normalizeTikTokItem(item) {
   };
 }
 
-async function fetchTikTokIdeas() {
+async function fetchTikTokIdeas({
+  runActor = runActorDatasetItems,
+  warn = console.warn,
+} = {}) {
   const allIdeas = [];
   const seenUrls = new Set();
-  const outputFile = path.join(PROJECT_ROOT, 'data', `tiktok-pulse-${Date.now()}.json`);
+  const input = buildTikTokActorInput();
+  const items = await runActor({
+    actorId: TIKTOK_ACTOR,
+    input,
+    maxItems: input.maxItems,
+  });
+  const { dataRows, diagnostics } = splitActorRows(items);
+  warnDiagnostics('TikTok Scraper', diagnostics, warn);
 
-  try {
-    // Search by hashtags for AI/tech content
-    const input = {
-      hashtags: SEARCH_HASHTAGS,
-      resultsPerPage: 5,
-      maxItems: 20,
-    };
-
-    runApifyActor(TIKTOK_ACTOR, input, outputFile);
-
-    if (!fs.existsSync(outputFile)) {
-      throw new Error('Output file not created by Apify actor');
-    }
-
-    const raw = JSON.parse(fs.readFileSync(outputFile, 'utf-8'));
-    const items = Array.isArray(raw) ? raw : [];
-
-    for (const item of items) {
-      const idea = normalizeTikTokItem(item);
-      if (idea && !seenUrls.has(idea.source_url)) {
-        seenUrls.add(idea.source_url);
-        allIdeas.push(idea);
-      }
-    }
-
-    return allIdeas;
-  } finally {
-    // Clean up temp output file
-    if (fs.existsSync(outputFile)) {
-      try { fs.unlinkSync(outputFile); } catch (_) {}
+  for (const item of dataRows) {
+    const idea = normalizeTikTokItem(item);
+    if (idea && !seenUrls.has(idea.source_url)) {
+      seenUrls.add(idea.source_url);
+      allIdeas.push(idea);
     }
   }
+
+  return allIdeas;
 }
 
-module.exports = { fetchTikTokIdeas };
+module.exports = {
+  TIKTOK_ACTOR,
+  buildTikTokActorInput,
+  fetchTikTokIdeas,
+  normalizeTikTokItem,
+};

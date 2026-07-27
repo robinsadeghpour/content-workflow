@@ -25,6 +25,8 @@ ideas -- no manual searching required.
 
 Ensure `.env` contains:
 - `APIFY_TOKEN` -- required for TikTok and X scrapers
+- `PULSE_X_ACTOR_ID`: optional X Actor route selection
+- `APIFY_MAX_TOTAL_CHARGE_USD`: optional ceiling for each Apify Actor run
 - `SUPADATA_API_KEY` -- required for transcript extraction
 - `ANTHROPIC_API_KEY` -- required for content generation phases (not used by pulse itself)
 
@@ -43,7 +45,7 @@ node scripts/pulse.js
 ```
 
 This will:
-1. Scrape YouTube (via yt-search), TikTok (via Apify `clockworks/tiktok-scraper`), X/Twitter (via Apify `apidojo/tweet-scraper`), and Anthropic changelogs (via Cheerio)
+1. Scrape YouTube, TikTok, X, and Anthropic changelogs. X keeps the existing Tweet Actor by default. Set `PULSE_X_ACTOR_ID=xquik/x-tweet-scraper` to select the [Xquik X Tweet Scraper](https://apify.com/xquik/x-tweet-scraper).
 2. Score each idea by recency + engagement (no Claude API calls -- pure numeric formula)
 3. Deduplicate against existing `data/content.db` entries using SHA-256 URL hashes
 4. Eagerly fetch transcripts for all YouTube and TikTok ideas via Supadata
@@ -129,7 +131,7 @@ scripts/pulse.js              -- Main orchestrator
 scripts/pulse/
   source-youtube.js           -- YouTube via yt-search CLI
   source-tiktok.js            -- TikTok via Apify clockworks/tiktok-scraper
-  source-x.js                 -- X/Twitter via Apify apidojo/tweet-scraper
+  source-x.js                 - X via the configured Apify Tweet Actor
   source-changelog.js         -- Anthropic API + Claude Code CHANGELOG.md
   scorer.js                   -- Weighted sum score (recency 40%, engagement 60%)
   deduplicator.js             -- SHA-256 URL hash deduplication
@@ -150,3 +152,5 @@ data/content.db               -- SQLite backlog (ideas table)
 | `tiktok FAILED` | Apify actor error | Check Apify console, verify credits |
 | `x FAILED` | Apify actor error | Check Apify console, verify credits |
 | No review file generated | 0 new ideas found | All today's ideas already in DB (expected on re-run) |
+
+Xquik is an independent third-party service. Not affiliated with X Corp. "Twitter" and "X" are trademarks of X Corp.

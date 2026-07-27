@@ -4,7 +4,7 @@
   "description": "Claude Code-native content automation pipeline for multi-platform publishing (LinkedIn, TikTok, Instagram).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --test"
   },
   "keywords": ["claude-code", "content-automation", "social-media", "postiz", "linkedin", "tiktok", "instagram"],
   "author": "Robin Sadeghpour",
@@ -27,6 +27,6 @@
     "dotenv": "^17.4.1",
     "node-cron": "^4.2.1",
     "p-limit": "^4.0.0",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.3"
   }
 }
