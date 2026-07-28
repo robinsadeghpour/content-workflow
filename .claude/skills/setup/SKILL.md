@@ -1,6 +1,6 @@
 ---
 name: setup
-description: One-time setup for the content workflow. Installs the five third-party skills (apify-ultimate-scraper, humanizer, nano-banana, supadata, postiz), creates .env from .env.example, and verifies prerequisites. Run this once after cloning the repo. Trigger - /setup.
+description: One-time setup for the content workflow. Installs the four third-party skills (humanizer, nano-banana, supadata, postiz), creates .env from .env.example, and verifies prerequisites. Run this once after cloning the repo. Trigger - /setup.
 ---
 
 # Setup
@@ -59,6 +59,7 @@ Then **stop** and tell the user to fill in the API keys before continuing. Show 
 
 - `ANTHROPIC_API_KEY` — only needed if scripts call the SDK directly; Claude Code uses your CLI auth
 - `APIFY_TOKEN` — required for trend scraping (sign up: https://apify.com)
+- `PULSE_X_ACTOR_ID`: optional; keeps the existing route by default
 - `SUPADATA_API_KEY` — required for video transcripts (sign up: https://supadata.ai/?ref=robin)
 - `GEMINI_API_KEY` — required for nano-banana fallback images (sign up: https://aistudio.google.com/apikey)
 - `POSTIZ_API_KEY` — required to actually schedule posts (sign up: https://postiz.pro/robin-sadeghpour-faraj)
@@ -67,15 +68,10 @@ Then **stop** and tell the user to fill in the API keys before continuing. Show 
 
 ### 5. Install third-party skills
 
-These five skills are not vendored. Install them now to `.claude/skills/<name>/` so the scripts that reference them work. See THIRD_PARTY_SKILLS.md for licenses and source repos.
+These four skills are not vendored. Install them now to `.claude/skills/<name>/` so the scripts that reference them work. See THIRD_PARTY_SKILLS.md for licenses and source repos.
 
 ```bash
 mkdir -p .claude/skills
-
-# Apify Ultimate Scraper
-git clone --depth=1 https://github.com/apify/agent-skills /tmp/apify-skills && \
-  cp -r /tmp/apify-skills/skills/apify-ultimate-scraper .claude/skills/ && \
-  rm -rf /tmp/apify-skills
 
 # Humanizer
 git clone --depth=1 https://github.com/blader/humanizer .claude/skills/humanizer && \
@@ -94,10 +90,10 @@ For Supadata, point the user at https://smithery.ai/skills/vm0-ai/supadata for t
 
 ### 6. Verify install
 
-Confirm all five skill folders exist:
+Confirm all four skill folders exist:
 
 ```bash
-ls .claude/skills/ | grep -E "apify-ultimate-scraper|humanizer|nano-banana|supadata|postiz"
+ls .claude/skills/ | grep -E "humanizer|nano-banana|supadata|postiz"
 ```
 
 If any are missing, retry that specific install or point the user at THIRD_PARTY_SKILLS.md for the manual fallback.

@@ -1,13 +1,17 @@
 'use strict';
 
-const { spawnSync } = require('child_process');
-const path = require('path');
-const fs = require('fs');
+const {
+  runActorDatasetItems,
+  splitActorRows,
+  warnDiagnostics,
+} = require('../lib/apify');
 
-const ACTOR_SCRIPT = path.join(__dirname, '../../.claude/skills/apify-ultimate-scraper/reference/scripts/run_actor.js');
-const PROJECT_ROOT = path.join(__dirname, '../..');
-
-const X_ACTOR = 'apidojo/tweet-scraper';
+const X_ACTORS = Object.freeze({
+  existing: 'apidojo/tweet-scraper',
+  xquik: 'xquik/x-tweet-scraper',
+});
+const X_ACTOR = X_ACTORS.existing;
+const MAX_ITEMS = 20;
 
 // Search queries for AI/tech trending tweets
 const SEARCH_QUERIES = [
@@ -16,90 +20,128 @@ const SEARCH_QUERIES = [
   'Claude Code tips lang:en',
 ];
 
-function runApifyActor(actorId, input, outputFile) {
-  const result = spawnSync('node', [
-    '--env-file=.env',
-    ACTOR_SCRIPT,
-    '--actor', actorId,
-    '--input', JSON.stringify(input),
-    '--output', outputFile,
-    '--format', 'json',
-  ], {
-    cwd: PROJECT_ROOT,
-    encoding: 'utf-8',
-    timeout: 180000,
-  });
-
-  if (result.status !== 0) {
-    throw new Error(`Apify actor ${actorId} failed: ${(result.stderr || '').slice(0, 500)}`);
+function resolveXActorId(actorId = process.env.PULSE_X_ACTOR_ID) {
+  const selected = (actorId || X_ACTOR).trim().replace('~', '/');
+  if (!Object.values(X_ACTORS).includes(selected)) {
+    throw new Error(
+      `PULSE_X_ACTOR_ID must be ${Object.values(X_ACTORS).join(' or ')}.`
+    );
   }
-  return outputFile;
+  return selected;
+}
+
+function buildXActorInput(
+  searchTerms = SEARCH_QUERIES,
+  maxItems = MAX_ITEMS,
+  actorId = X_ACTOR
+) {
+  if (!Array.isArray(searchTerms) || searchTerms.length === 0) {
+    throw new Error('X search terms are required.');
+  }
+  if (!Number.isInteger(maxItems) || maxItems < 1) {
+    throw new Error('X max items must be a positive integer.');
+  }
+
+  const selectedActor = resolveXActorId(actorId);
+  if (selectedActor === X_ACTORS.existing) {
+    return {
+      searchTerms: [...searchTerms],
+      maxTweets: maxItems,
+      filter: 'Latest',
+    };
+  }
+
+  return {
+    mode: 'search',
+    searchTerms: [...searchTerms],
+    maxItems,
+    queryType: 'Latest',
+    outputVariant: 'rich',
+    outputPreset: 'nested',
+    fieldStyle: 'camelCase',
+    includeSearchTerms: true,
+  };
 }
 
 /**
  * Normalize an X/Twitter tweet item from Apify into the common idea shape.
  */
-function normalizeXItem(item) {
-  const text = (item.text || item.full_text || item.content || '').slice(0, 500);
+function normalizeXItem(item, scrapedAt = new Date().toISOString()) {
+  const text = (
+    item.text ||
+    item.fullText ||
+    item.full_text ||
+    item.content ||
+    ''
+  ).slice(0, 500);
   if (!text || text.length < 10) return null;
 
-  // Build tweet URL from id and author if not provided
-  const url = item.url || item.tweetUrl ||
-    (item.id && item.author?.userName
-      ? `https://x.com/${item.author.userName}/status/${item.id}`
+  const author = item.author?.username ||
+    item.author?.userName ||
+    item.authorUsername ||
+    item.author_username ||
+    item.username ||
+    item.user?.screen_name ||
+    'unknown';
+  const url = item.tweetUrl ||
+    item.twitterUrl ||
+    item.tweet_url ||
+    item.url ||
+    (item.id && author !== 'unknown'
+      ? `https://x.com/${author}/status/${item.id}`
       : null);
   if (!url) return null;
 
-  const author = item.author?.userName || item.username || item.user?.screen_name || 'unknown';
-
   return {
     title: text.slice(0, 200),
-    summary: `Tweet by @${author}. ${item.retweetCount || 0} retweets, ${item.likeCount || item.favoriteCount || 0} likes.`.slice(0, 2000),
+    summary: `Tweet by @${author}. ${item.retweetCount || 0} retweets, ${item.likeCount || item.favoriteCount || 0} likes.`.slice(
+      0,
+      2000
+    ),
     source_url: url,
     source_type: 'x',
-    scraped_at: new Date().toISOString(),
+    scraped_at: scrapedAt,
     views: item.viewCount || item.impressionCount || 0,
     likes: item.likeCount || item.favoriteCount || 0,
     comments: item.replyCount || 0,
   };
 }
 
-async function fetchXIdeas() {
+async function fetchXIdeas({
+  runActor = runActorDatasetItems,
+  warn = console.warn,
+  actorId = resolveXActorId(),
+} = {}) {
   const allIdeas = [];
   const seenUrls = new Set();
-  const outputFile = path.join(PROJECT_ROOT, 'data', `x-pulse-${Date.now()}.json`);
+  const selectedActor = resolveXActorId(actorId);
+  const input = buildXActorInput(SEARCH_QUERIES, MAX_ITEMS, selectedActor);
+  const items = await runActor({
+    actorId: selectedActor,
+    input,
+    maxItems: MAX_ITEMS,
+  });
+  const { dataRows, diagnostics } = splitActorRows(items);
+  warnDiagnostics('X Tweet Scraper', diagnostics, warn);
+  const scrapedAt = new Date().toISOString();
 
-  try {
-    // Use first query — scraper runs one at a time to minimize credit usage
-    const input = {
-      searchTerms: SEARCH_QUERIES,
-      maxTweets: 20,
-      filter: 'Latest',
-    };
-
-    runApifyActor(X_ACTOR, input, outputFile);
-
-    if (!fs.existsSync(outputFile)) {
-      throw new Error('Output file not created by Apify actor');
-    }
-
-    const raw = JSON.parse(fs.readFileSync(outputFile, 'utf-8'));
-    const items = Array.isArray(raw) ? raw : [];
-
-    for (const item of items) {
-      const idea = normalizeXItem(item);
-      if (idea && !seenUrls.has(idea.source_url)) {
-        seenUrls.add(idea.source_url);
-        allIdeas.push(idea);
-      }
-    }
-
-    return allIdeas;
-  } finally {
-    if (fs.existsSync(outputFile)) {
-      try { fs.unlinkSync(outputFile); } catch (_) {}
+  for (const item of dataRows) {
+    const idea = normalizeXItem(item, scrapedAt);
+    if (idea && !seenUrls.has(idea.source_url)) {
+      seenUrls.add(idea.source_url);
+      allIdeas.push(idea);
     }
   }
+
+  return allIdeas;
 }
 
-module.exports = { fetchXIdeas };
+module.exports = {
+  SEARCH_QUERIES,
+  X_ACTOR,
+  X_ACTORS,
+  buildXActorInput,
+  fetchXIdeas,
+  normalizeXItem,
+  resolveXActorId,
+};

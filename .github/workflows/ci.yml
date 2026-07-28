@@ -29,3 +29,6 @@ jobs:
       - name: Syntax check JS scripts
         run: |
           find scripts -name '*.js' -not -path '*/node_modules/*' -print0 | xargs -0 -n1 node --check
+
+      - name: Run tests
+        run: npm test
